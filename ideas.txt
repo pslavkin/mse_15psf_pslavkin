@@ -1,0 +1,33 @@
+PABLO 15psf: 
+
++ un poco, solo "un poco" de matematica
++ implementar la FFT en FPGA y hacer un sintetizador de senoides y sacarlo por el jack de audio
++ numpy a full
++ que hacemos con jupiter?? es una clase perdida.. mejor poner el foco en numpy y  que cada cual lo dibuje con lo que quiera
++ transformada Z afuera , que se vea en digitales
+ 
+
+
+
+GONZA digitales
+----------------------------
+tomar la salida de la fft y filtrarla 
+ver de poder usar el XADC de la FPGA
+o sea.. si hacemos filtrado de seniales y no podemos hacer ADC.. que onda.
+
+GUILLERMO:
+----------------------------
+la salida  de audio la mandamos por wapp a un companiero y tinen que decodificar el msg
+o sea un modem
+
+tp final OFDM
+----------------
+enviar por wapp un audio codificado y el alumno devuelve la respuesta codificada al profesor.
+ej. envio 1+1 y el alumno responde 2
+todo por mensaje de audio. 
+
+
+materia de filtrado
+--------------------------
+insertar un patron de sincronismo en el audio para tomar sincronismo con la trama.
+
