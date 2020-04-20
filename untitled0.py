@@ -17,9 +17,8 @@ fourier=np.array([520.5133666992188+273.6791229248047j, 516.5290832519531+270.66
 
 
 fourier=1-fourier/np.real(np.max(fourier))
-fourier+=np.ones(len(fourier))
 fourier=fourier[::5]
-#
+##
 signalFrec=2
 fs=100
 t=np.arange(0,100/fs,1/fs)
@@ -36,20 +35,20 @@ circleFrec=np.arange(0,fs,fs/N)
 fig=plt.figure()
 circleAxe=fig.add_subplot(2,2,1)
 circleLn,promLn, =plt.plot([],[],'r-o',[],[],'b')
-circleAxe.set_xlim(-1,1)
-circleAxe.set_ylim(-1,1)
+circleAxe.set_xlim(-0,0.6)
+circleAxe.set_ylim(-1,0)
 circleData=[]
 promData=[]
 
 signalAxe=fig.add_subplot(2,2,2)
-signalLn, =plt.plot([],[],'b-o')
+signalLn, =plt.plot([],[],'b-')
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
 signalData=[]
 
 ffAxe=fig.add_subplot(2,2,3)
-ffLn, =plt.plot([],[],'g-o')
-ffAxe.set_xlim(-1,1)
+ffLn, =plt.plot([],[],'g-')
+ffAxe.set_xlim(-1,5)
 ffAxe.set_ylim(-1,1)
 ffData=[]
 
@@ -97,15 +96,14 @@ def update2(n):
     global circleData,circleFrec,promData
     circleData=[0]
     for pos in range(N):
-        circleData.append(circleData[-1]+2*circle(signal[pos],circleFrec[pos])[n])
+        circleData.append(circleData[-1]+circle(signal[pos],circleFrec[pos])[n])
     promData.append(circleData[-1])
     promLn.set_data(np.real(promData),np.imag(promData))
     signalLn.set_data(t[:n],np.real(promData[:n]))
     circleLn.set_data(np.real(circleData),np.imag(circleData))
-    if n==(N-1):
-        promData=[]
+    ffLn.set_data(t[:n],np.imag(promData[:n]))
         
     return circleLn, signalLn,promLn,ffLn,
     
-ani=FuncAnimation(fig,update2,N,init,interval=10  ,blit=True,repeat=True)
-
+ani=FuncAnimation(fig,update2,N,init,interval=10 ,blit=True,repeat=False)
+plt.show()

@@ -1,4 +1,4 @@
-PWD /home/pslavkin/mse_15psf_pslavkin/presentacion
+PWD /home/pslavkin/mse_15psf_pslavkin/clases
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -501,6 +501,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1.tfm
+INPUT 1_clase/noise_image.jpg
+INPUT ./1_clase/noise_image.jpg
+INPUT ./1_clase/noise_image.jpg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-Bold-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Bold-lf-t1--base.tfm
@@ -517,11 +520,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1--base.tfm
-INPUT resources/jabberwocky-dark.png
-INPUT ./resources/jabberwocky-dark.png
-INPUT ./resources/jabberwocky-dark.png
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-Italic-lf-t1.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1--base.tfm
+INPUT 1_clase/digital_vs_analogico.jpg
+INPUT ./1_clase/digital_vs_analogico.jpg
+INPUT ./1_clase/digital_vs_analogico.jpg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/arev/zavmr7t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/arev/zavmri7m.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/arev/zavmr7y.tfm
@@ -529,7 +530,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonar.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-Italic-lf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-Italic-lf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/arev/zavmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chb7y.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/arev/favmr7y.tfm
@@ -537,6 +539,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/typoland/carlito/Carlito-lf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/typoland/carlito/Carlito-lf-t1--base.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsss.fd

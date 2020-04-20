@@ -4,9 +4,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[
   main=spanish,activeacute, english]{babel}
+
+
 %%
 %% These macros specify information about the presentation
 \title{Analisis de se\~nales} %% that will be typeset on the
+
 \subtitle{Clase 1 - Introducci\'{o}n} %% title page.
 \author{Pablo Slavkin}
 %% These additional packages are used within the document:
@@ -23,7 +26,15 @@
 %%\includeonlyframes{Jabberwocky,lists,simmonshall}
 \begin{document}
 %  \shorthandoff{-}
-  \frame[c]{\maketitle}
+  \frame[c]{
+  \maketitle
+  \begin{tikzpicture}[overlay,remember picture]
+       \node[anchor=south east,xshift=-30pt,yshift=45pt]
+         at (current page.south east) {
+           \includegraphics[width=45mm]{1_clase/noise_image}
+         };
+     \end{tikzpicture}%
+  }
 
   \AtBeginSection[]{% Print an outline at the beginning of sections
   \begin{frame}<beamer>
@@ -34,31 +45,64 @@
   \begin{darkframes}
     \section{Dark Frames}
     \subsection{Blind Text}
-    \begin{frame}{Jabberwocky}
-      \framesubtitle{Lewis Carroll}%
+
+    \begin{frame}{Porque digital?}
+      \framesubtitle{Digital vs analogico}%
       \begin{tikzpicture}[overlay,remember picture]
-        \node[anchor=south east,xshift=-30pt,yshift=35pt]
+        \node[anchor=south east,xshift=-30pt,yshift=105pt]
           at (current page.south east) {
-            \includegraphics[width=35mm]{resources/jabberwocky-dark}
+            \includegraphics[width=45mm]{1_clase/digital_vs_analogico}
           };
       \end{tikzpicture}%
-      'Twas brillig, and the slithy toves\\
-      Did gyre and gimble in the wabe;\\
-      All mimsy were the borogoves,\\
-      And the mome raths outgrabe.\\\bigskip
-
-      “Beware the Jabberwock, my son!\\
-      The jaws that bite, the claws that catch!\\
-      Beware the Jubjub bird, and shun\\
-      The frumious Bandersnatch!”\\
+      
+      \begin{itemize}
+         \item{Digital}
+            \begin{itemize}
+               \item{Reproducibilidad}
+               \item{Tolerancia de componentes}
+               \item{Partidas todas iguales}
+               \item{Componentes no envejecen}
+               \item{Facil de actualizar}
+               \item{Soluciones de un solo chip}
+            \end{itemize}
+         \item{Analogico}
+            \begin{itemize}
+               \item{Alto ancho de banda}
+               \item{Alta potencia}
+            \end{itemize}
+      \end{itemize}
     \end{frame}
 
-    \begin{frame}[label=lists]{Lists and locales}
-      \framesubtitle{Lorem ipsum dolor sit amet}
+
+    \begin{frame}{Señales y sistemas}
+      \framesubtitle{Que son?}
+      \begin{block}{Señal}
+         Una señal, en función de una o más variables, puede definirse como un cambio observable en una entidad cuantificable
+      \end{block}
+      \begin{block}{Sistema}
+         Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Señales y sistemas}
+      \framesubtitle{Tipos de señales}
+      \begin{itemize}
+         \item{Tiempo continuo y señales de tiempo discreto}
+         \item{Señales deterministas y no deterministas}
+         \item{Señales pares e impares}
+         \item{Señales periódicas y aperiódicas}
+         \item{Energía y señales de energía}
+         \item{Señales reales e imaginarias}
+      \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}[label=lists]{listas y columnas}
+      \framesubtitle{Que es una señal?}
       \begin{columns}[onlytextwidth]
         \column{.5\textwidth}
           \begin{itemize}
-            \item Nulla nec lacinia odio. Curabitur urna tellus.
+            \item {Una señal, en función de una o más variables, puede definirse como un cambio observable en una entidad cuantificable}
             \begin{itemize}
               \item Fusce id sodales dolor. Sed id metus dui.
               \begin{itemize}

@@ -97,7 +97,7 @@
     14\fibeamer@lengths@baseunit}
   \newlength\fibeamer@lengths@logoheight
   \setlength\fibeamer@lengths@logoheight{%
-    0.4\fibeamer@lengths@logowidth}
+    0.3\fibeamer@lengths@logowidth}
   \defbeamertemplate*{navigation symbols}{fibeamer}{}
   \defbeamertemplate*{headline}{fibeamer}{}
   \defbeamertemplate*{frametitle}{fibeamer}{%
@@ -132,7 +132,7 @@
       remember picture,
       overlay,
       xshift=0.5\fibeamer@lengths@logowidth,
-      yshift=0.5\fibeamer@lengths@logoheight
+      yshift=-0.0\fibeamer@lengths@logoheight
     ]
       \node at (0,0) {
         \fibeamer@includeLogo[
@@ -160,6 +160,14 @@
 
       \pgfusepath{stroke}
     \end{pgfpicture}
+
+%     \begin{tikzpicture}[overlay,remember picture]
+%       \node[anchor=south east,xshift=-30pt,yshift=45pt]
+%         at (current page.south east) {
+%           \includegraphics[width=45mm]{1_clase/noise_image}
+%         };
+%     \end{tikzpicture}%
+
     \vfill
     % Input the subtitle
     \usebeamerfont{subtitle}%
