@@ -2,15 +2,13 @@
 \documentclass{beamer}
 \usetheme[faculty=fi]{fibeamer}
 \usepackage[utf8]{inputenc}
-\usepackage[
-  main=spanish,activeacute, english]{babel}
-
+\usepackage[ main=spanish,activeacute, english]{babel}
 
 %%
 %% These macros specify information about the presentation
-\title{Analisis de se\~nales} %% that will be typeset on the
+\title{Analisis de señnales} %% that will be typeset on the
 
-\subtitle{Clase 1 - Introducci\'{o}n} %% title page.
+\subtitle{Clase 1 - Introducción} %% title page.
 \author{Pablo Slavkin}
 %% These additional packages are used within the document:
 \usepackage{ragged2e}  % `\justifying` text
@@ -38,14 +36,14 @@
 
   \AtBeginSection[]{% Print an outline at the beginning of sections
   \begin{frame}<beamer>
-      \frametitle{Outline for Section \thesection}
+      \frametitle{Resumen de seccion \thesection}
       \tableofcontents[currentsection]
     \end{frame}}
 
   \begin{darkframes}
-    \section{Dark Frames}
-    \subsection{Blind Text}
-
+    \section{Señales}
+%-------------------------------------------------------------------------------
+    \subsection{Porque digital?}
     \begin{frame}{Porque digital?}
       \framesubtitle{Digital vs analogico}%
       \begin{tikzpicture}[overlay,remember picture]
@@ -54,7 +52,6 @@
             \includegraphics[width=45mm]{1_clase/digital_vs_analogico}
           };
       \end{tikzpicture}%
-      
       \begin{itemize}
          \item{Digital}
             \begin{itemize}
@@ -72,8 +69,8 @@
             \end{itemize}
       \end{itemize}
     \end{frame}
-
-
+%-------------------------------------------------------------------------------
+    \subsection{Señales}
     \begin{frame}{Señales y sistemas}
       \framesubtitle{Que son?}
       \begin{block}{Señal}
@@ -83,18 +80,187 @@
          Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
       \end{block}
     \end{frame}
-
+%-------------------------------------------------------------------------------
     \begin{frame}{Señales y sistemas}
       \framesubtitle{Tipos de señales}
-      \begin{itemize}
-         \item{Tiempo continuo y señales de tiempo discreto}
-         \item{Señales deterministas y no deterministas}
-         \item{Señales pares e impares}
-         \item{Señales periódicas y aperiódicas}
-         \item{Energía y señales de energía}
-         \item{Señales reales e imaginarias}
-      \end{itemize}
+      \begin{columns}[onlytextwidth]
+        \column{.5\textwidth}
+            \begin{itemize}
+               \item{De tiempo continuo}
+               \item{Pares}
+               \item{Periódicas}
+               \item{De energía}
+               \item{Reales}
+            \end{itemize}
+        \column{.5\textwidth}
+            \begin{itemize}
+               \item{De tiempo discreto}
+               \item{No deterministas}
+               \item{Impares}
+               \item{Aperiódicas}
+               \item{De potencia}
+               \item{Imaginarias}
+            \end{itemize}
+      \end{columns}
     \end{frame}
+%-------------------------------------------------------------------------------
+    \begin{frame}{Señales y sistemas}
+      \framesubtitle{Tipos de señales}
+      \begin{columns}[onlytextwidth]
+        \column{.45\textwidth}
+            \begin{itemize}
+               \item{De tiempo continuo}
+      \end{itemize}
+            Tiene valores para todos los puntos en el tiempo en algún intervalo (posiblemente infinito)
+        \column{.45\textwidth}
+            \begin{itemize}
+               \item{De tiempo discreto}
+            \end{itemize}
+         Tiene valores solo para puntos discretos en el tiempo
+         \end{columns}
+      \vfill
+      \includegraphics[width=\textwidth]{1_clase/continuo_vs_discreto}
+    \end{frame}
+
+    \subsection{Generacion de señales en Python}
+    \begin{frame}{Generacion de señales en Python}{Continuo? vs discreto}
+      \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+      \begin{columns}[onlytextwidth]
+        \column{.6\textwidth}
+      \lstinputlisting[language=Python,tabsize=4]{1_clase/sine.py}
+        \column{.4\textwidth}
+      \includegraphics[width=\textwidth]{1_clase/python_continuo_vs_discreto}
+         \end{columns}
+         Posrian pensarse como muestras de una señal de tiempo continuo $x[n] = x (nT)$ donde n es un número entero y \textbf{T} es el período de muestreo.
+      \vfill
+    \end{frame}
+%-------------------------------------------------------------------------------
+    \begin{frame}{Señales periodicas}
+      \begin{block}{Continua periodica}
+         si existe un $T_0>0$, tal que $x(t+T_0)=x(t)$, para todo $t$\\
+         $T_0$ es el período de $x(t)$ medido en tiempo, y $f_0=1/T_0$ es la frecuencia fundamental de $x(t)$
+   \end{block}
+      \begin{block}{Continua discreta}
+         si existe un entero $N_0>0$ tal que $x[n+N_0]=x[n]$ para
+         todo $n$ \\
+         $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
+         y  $F_0=\Delta t/N_0$ es la frecuencia fundamental de $x[n]$
+   \end{block}
+      \center\includegraphics[width=0.5\textwidth]{1_clase/periodica}
+   \vfill
+   \end{frame}
+%-------------------------------------------------------------------------------
+   \subsection{Sistemas}
+   \begin{frame}{Sistemas}
+      \begin{block}{Sistema}
+         Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
+      \end{block}
+         En términos de ingeniería, muy a menudo la entrada y la salida son señales eléctricas.
+      \vfill
+   \end{frame}
+%-------------------------------------------------------------------------------
+   \begin{frame}{Sistemas}{Lineales}
+      \begin{block}{Lineal}
+         Un sistema es lineal cuando su salida depende linealmente de la entrada.
+         Satisface el principio de superposicion, escalado y adicion
+      \end{block}
+      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion1}
+      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion2}
+      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion3}
+      \vfill
+   \end{frame}
+%-------------------------------------------------------------------------------
+   \begin{frame}{Sistemas}{Invariantes en el tiempo}
+      \begin{block}{Invariantes en el tiempo}
+         Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
+      \end{block}
+      \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo}
+      \vfill
+   \end{frame}
+%-------------------------------------------------------------------------------
+   \begin{frame}{Sistemas}{Lineales invariantes en el tiempo}
+      \begin{block}{LTI}
+         Un sistema es LTI cuando satisface las 2 condiciones anteriores, de linealidad y de invariancia en el tiempo.
+      \end{block}
+      \center\includegraphics[width=1\textwidth]{1_clase/lti}
+      \vfill
+      \begin{alertblock}{*** LTI ***}
+         En este curso, \alert{solo} estudiaremos sistemas lineales invariantes en el tiempo.
+      \end{alertblock}
+   \end{frame}
+%-------------------------------------------------------------------------------
+    \section{ADC}
+   \begin{frame}{ADC}{Bloque generico de procesamiento}
+      \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
+         \begin{alertblock} {Porque el filtro antialising?}
+      \end{alertblock}
+      \vfill
+   \end{frame}
+
+%-------------------------------------------------------------------------------
+    \subsection{Sampling}
+   \begin{frame}{Sanmpleo}{Teorema del sampleo}
+      \center\includegraphics[width=0.8\textwidth]{1_clase/teorema_sampleo}
+      \vfill
+   \end{frame}
+    \subsection{Sampling}
+   \begin{frame}{Sanmpleo}{Teorema del sampleo}
+      \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4,lastline=30]{1_clase/teorema_sampleo.py}
+      \vfill
+   \end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     \begin{frame}[label=lists]{listas y columnas}
@@ -238,89 +404,89 @@
         \caption{The distribution of theses written using \TeX\ during 2010--15 at MU}
       \end{table}
     \end{frame}
-    \begin{frame}[label=figs2]{Figures}
-      \framesubtitle{Tables, graphs, and images}
-      \begin{figure}[b]
-        \centering
-        % Flipping a coin
-        % Author: cis
-        \tikzset{
-          head/.style = {fill = none, label = center:\textsf{H}},
-          tail/.style = {fill = none, label = center:\textsf{T}}}
-        \scalebox{0.65}{\begin{tikzpicture}[
-            scale = 1.5, transform shape, thick,
-            every node/.style = {draw, circle, minimum size = 10mm},
-            grow = down,  % alignment of characters
-            level 1/.style = {sibling distance=3cm},
-            level 2/.style = {sibling distance=4cm},
-            level 3/.style = {sibling distance=2cm},
-            level distance = 1.25cm
-          ]
-          \node[shape = rectangle,
-            minimum width = 6cm, font = \sffamily] {Coin flipping}
-          child { node[shape = circle split, draw, line width = 1pt,
-                  minimum size = 10mm, inner sep = 0mm, rotate = 30] (Start)
-                  { \rotatebox{-30}{H} \nodepart{lower} \rotatebox{-30}{T}}
-           child {   node [head] (A) {}
-             child { node [head] (B) {}}
-             child { node [tail] (C) {}}
-           }
-           child {   node [tail] (D) {}
-             child { node [head] (E) {}}
-             child { node [tail] (F) {}}
-           }
-          };
-
-          % Filling the root (Start)
-          \begin{scope}[on background layer, rotate=30]
-            \fill[head] (Start.base) ([xshift = 0mm]Start.east) arc (0:180:5mm)
-              -- cycle;
-            \fill[tail] (Start.base) ([xshift = 0pt]Start.west) arc (180:360:5mm)
-              -- cycle;
-          \end{scope}
-
-          % Labels
-          \begin{scope}[nodes = {draw = none}]
-            \path (Start) -- (A) node [near start, left]  {$0.5$};
-            \path (A)     -- (B) node [near start, left]  {$0.5$};
-            \path (A)     -- (C) node [near start, right] {$0.5$};
-            \path (Start) -- (D) node [near start, right] {$0.5$};
-            \path (D)     -- (E) node [near start, left]  {$0.5$};
-            \path (D)     -- (F) node [near start, right] {$0.5$};
-            \begin{scope}[nodes = {below = 11pt}]
-              \node [name = X] at (B) {$0.25$};
-              \node            at (C) {$0.25$};
-              \node [name = Y] at (E) {$0.25$};
-              \node            at (F) {$0.25$};
-            \end{scope}
-          \end{scope}
-        \end{tikzpicture}}
-        \caption{Tree of probabilities -- Flipping a coin\footnote[frame]{%
-          A derivative of a diagram from \url{texample.net} by cis, CC BY 2.5 licensed}}
-      \end{figure}
-    \end{frame}
-
-    \defverbatim[colored]\sleepSort{
-      \begin{lstlisting}[language=C,tabsize=2]
-  #include <stdio.h>
-  #include <unistd.h>
-  #include <sys/types.h>
-  #include <sys/wait.h>
-
-  // This is a comment
-  int main(int argc, char **argv)
-  {
-          while (--c > 1 && !fork());
-          sleep(c = atoi(v[c]));
-          printf("%d\n", c);
-          wait(0);
-          return 0;
-  }
-    \end{lstlisting}}
-    \begin{frame}{Code listings}{An example source code in C}
-      \sleepSort
-    \end{frame}
-
+%    \begin{frame}[label=figs2]{Figures}
+%      \framesubtitle{Tables, graphs, and images}
+%      \begin{figure}[b]
+%        \centering
+%        % Flipping a coin
+%        % Author: cis
+%        \tikzset{
+%          head/.style = {fill = none, label = center:\textsf{H}},
+%          tail/.style = {fill = none, label = center:\textsf{T}}}
+%        \scalebox{0.65}{\begin{tikzpicture}[
+%            scale = 1.5, transform shape, thick,
+%            every node/.style = {draw, circle, minimum size = 10mm},
+%            grow = down,  % alignment of characters
+%            level 1/.style = {sibling distance=3cm},
+%            level 2/.style = {sibling distance=4cm},
+%            level 3/.style = {sibling distance=2cm},
+%            level distance = 1.25cm
+%          ]
+%          \node[shape = rectangle,
+%            minimum width = 6cm, font = \sffamily] {Coin flipping}
+%          child { node[shape = circle split, draw, line width = 1pt,
+%                  minimum size = 10mm, inner sep = 0mm, rotate = 30] (Start)
+%                  { \rotatebox{-30}{H} \nodepart{lower} \rotatebox{-30}{T}}
+%           child {   node [head] (A) {}
+%             child { node [head] (B) {}}
+%             child { node [tail] (C) {}}
+%           }
+%           child {   node [tail] (D) {}
+%             child { node [head] (E) {}}
+%             child { node [tail] (F) {}}
+%           }
+%          };
+%
+%          % Filling the root (Start)
+%          \begin{scope}[on background layer, rotate=30]
+%            \fill[head] (Start.base) ([xshift = 0mm]Start.east) arc (0:180:5mm)
+%              -- cycle;
+%            \fill[tail] (Start.base) ([xshift = 0pt]Start.west) arc (180:360:5mm)
+%              -- cycle;
+%          \end{scope}
+%
+%          % Labels
+%          \begin{scope}[nodes = {draw = none}]
+%            \path (Start) -- (A) node [near start, left]  {$0.5$};
+%            \path (A)     -- (B) node [near start, left]  {$0.5$};
+%            \path (A)     -- (C) node [near start, right] {$0.5$};
+%            \path (Start) -- (D) node [near start, right] {$0.5$};
+%            \path (D)     -- (E) node [near start, left]  {$0.5$};
+%            \path (D)     -- (F) node [near start, right] {$0.5$};
+%            \begin{scope}[nodes = {below = 11pt}]
+%              \node [name = X] at (B) {$0.25$};
+%              \node            at (C) {$0.25$};
+%              \node [name = Y] at (E) {$0.25$};
+%              \node            at (F) {$0.25$};
+%            \end{scope}
+%          \end{scope}
+%        \end{tikzpicture}}
+%        \caption{Tree of probabilities -- Flipping a coin\footnote[frame]{%
+%          A derivative of a diagram from \url{texample.net} by cis, CC BY 2.5 licensed}}
+%      \end{figure}
+%    \end{frame}
+%
+%    \defverbatim[colored]\sleepSort{
+%      \begin{lstlisting}[language=C,tabsize=2]
+%  #include <stdio.h>
+%  #include <unistd.h>
+%  #include <sys/types.h>
+%  #include <sys/wait.h>
+%
+%  // This is a comment
+%  int main(int argc, char **argv)
+%  {
+%          while (--c > 1 && !fork());
+%          sleep(c = atoi(v[c]));
+%          printf("%d\n", c);
+%          wait(0);
+%          return 0;
+%  }
+%    \end{lstlisting}}
+%    \begin{frame}{Code listings}{An example source code in C}
+%      \sleepSort
+%    \end{frame}
+%
     \subsection{Citations and Bibliography}
     \begin{frame}[label=citations]{Citations}
       \framesubtitle{\TeX, \LaTeX, and Beamer}

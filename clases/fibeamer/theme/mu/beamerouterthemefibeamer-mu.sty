@@ -73,14 +73,14 @@
   % The side margins
   \newlength\fibeamer@lengths@margin
   \setlength\fibeamer@lengths@margin{%
-    3\fibeamer@lengths@baseunit}
+    1\fibeamer@lengths@baseunit}
   \setbeamersize{
     text margin left=\fibeamer@lengths@margin,
     text margin right=\fibeamer@lengths@margin}
   % The upper margin
   \newlength\fibeamer@lengths@titleline
   \setlength\fibeamer@lengths@titleline{%
-    3\fibeamer@lengths@baseunit}
+    1\fibeamer@lengths@baseunit}
   % The background clipping
   \newlength\fibeamer@lengths@clipbottom
   \setlength\fibeamer@lengths@clipbottom\paperwidth
@@ -160,13 +160,6 @@
 
       \pgfusepath{stroke}
     \end{pgfpicture}
-
-%     \begin{tikzpicture}[overlay,remember picture]
-%       \node[anchor=south east,xshift=-30pt,yshift=45pt]
-%         at (current page.south east) {
-%           \includegraphics[width=45mm]{1_clase/noise_image}
-%         };
-%     \end{tikzpicture}%
 
     \vfill
     % Input the subtitle
