@@ -1,4 +1,5 @@
-\babel@toc {spanish}{}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
 \beamer@sectionintoc {1}{Se\IeC {\~n}ales}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Porque digital?}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Se\IeC {\~n}ales}{4}{0}{1}
@@ -6,8 +7,7 @@
 \beamer@subsectionintoc {1}{4}{Sistemas}{9}{0}{1}
 \beamer@sectionintoc {2}{ADC}{13}{0}{2}
 \beamer@subsectionintoc {2}{1}{Sampling}{15}{0}{2}
-\beamer@subsectionintoc {2}{2}{Sampling}{16}{0}{2}
-\beamer@subsectionintoc {2}{3}{Structuring Elements}{18}{0}{2}
-\beamer@subsectionintoc {2}{4}{Numerals and Mathematics}{20}{0}{2}
-\beamer@subsectionintoc {2}{5}{Figures and Code Listings}{21}{0}{2}
-\beamer@subsectionintoc {2}{6}{Citations and Bibliography}{22}{0}{2}
+\beamer@subsectionintoc {2}{2}{Structuring Elements}{21}{0}{2}
+\beamer@subsectionintoc {2}{3}{Numerals and Mathematics}{23}{0}{2}
+\beamer@subsectionintoc {2}{4}{Figures and Code Listings}{24}{0}{2}
+\beamer@subsectionintoc {2}{5}{Citations and Bibliography}{27}{0}{2}

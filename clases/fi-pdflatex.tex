@@ -3,6 +3,7 @@
 \usetheme[faculty=fi]{fibeamer}
 \usepackage[utf8]{inputenc}
 \usepackage[ main=spanish,activeacute, english]{babel}
+\input{header.tex}
 
 %%
 %% These macros specify information about the presentation
@@ -45,30 +46,43 @@
 %-------------------------------------------------------------------------------
     \subsection{Porque digital?}
     \begin{frame}{Porque digital?}
-      \framesubtitle{Digital vs analogico}%
-      \begin{tikzpicture}[overlay,remember picture]
-        \node[anchor=south east,xshift=-30pt,yshift=105pt]
-          at (current page.south east) {
-            \includegraphics[width=45mm]{1_clase/digital_vs_analogico}
-          };
-      \end{tikzpicture}%
-      \begin{itemize}
-         \item{Digital}
+      \framesubtitle{Digital vs analogico}
+      \begin{columns}[onlytextwidth]
+        \column{.5\textwidth}
             \begin{itemize}
-               \item{Reproducibilidad}
-               \item{Tolerancia de componentes}
-               \item{Partidas todas iguales}
-               \item{Componentes no envejecen}
-               \item{Facil de actualizar}
-               \item{Soluciones de un solo chip}
+               \item{Digital}
+                  \begin{itemize}
+                     \item{Reproducibilidad}
+                     \item{Tolerancia de componentes}
+                     \item{Partidas todas iguales}
+                     \item{Componentes no envejecen}
+                     \item{Facil de actualizar}
+                     \item{Soluciones de un solo chip}
+                  \end{itemize}
+               \item{Analogico}
+                  \begin{itemize}
+                     \item{Alto ancho de banda}
+                     \item{Alta potencia}
+                     \item{Baja latencia}
+                  \end{itemize}
             \end{itemize}
-         \item{Analogico}
-            \begin{itemize}
-               \item{Alto ancho de banda}
-               \item{Alta potencia}
-            \end{itemize}
-      \end{itemize}
+        \column{.5\textwidth}
+               \includegraphics[width=30mm]{1_clase/fpga}
+               \newline
+
+               \includegraphics[width=35mm]{1_clase/transistor_amp}
+      \end{columns}
     \end{frame}
+
+
+%      \begin{tikzpicture}[overlay,remember picture]
+%        \node[anchor=south east,xshift=-30pt,yshift=105pt]
+%          at (current page.south east) {
+%            \includegraphics[width=45mm]{1_clase/transistor_amp}
+%            \includegraphics[width=45mm]{1_clase/fpga}
+%            \includegraphics[width=45mm]{1_clase/digital_vs_analogico}
+%          };
+%      \end{tikzpicture}%
 %-------------------------------------------------------------------------------
     \subsection{Señales}
     \begin{frame}{Señales y sistemas}
@@ -192,7 +206,7 @@
     \section{ADC}
    \begin{frame}{ADC}{Bloque generico de procesamiento}
       \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
-         \begin{alertblock} {Porque el filtro antialising?}
+      \begin{alertblock} {Porque el filtro antialising?}
       \end{alertblock}
       \vfill
    \end{frame}
@@ -200,13 +214,36 @@
 %-------------------------------------------------------------------------------
     \subsection{Sampling}
    \begin{frame}{Sanmpleo}{Teorema del sampleo}
-      \center\includegraphics[width=0.8\textwidth]{1_clase/teorema_sampleo}
+      \handsonicon
+      Diferentes frecuencias de sampleo para capturar una señal de 50hz
+      \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
       \vfill
    \end{frame}
-    \subsection{Sampling}
+
    \begin{frame}{Sanmpleo}{Teorema del sampleo}
-      \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
-      \lstinputlisting[language=Python,tabsize=4,lastline=30]{1_clase/teorema_sampleo.py}
+      Diferentes frecuencias de sampleo para capturar una señal de 50hz
+      \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
+      \vfill
+   \end{frame}
+   \begin{frame}{Sanmpleo}{Teorema del sampleo}
+      Diferentes frecuencias de sampleo para capturar una señal de 50hz
+      \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
+      \vfill
+   \end{frame}
+
+   \begin{frame}{Sanmpleo}{Filtro antialias}
+      \begin{block}{FAA}
+         Filtro \alert{analogico} pasabajos que elimina o al menos mitiga el efecto de aliasing
+      \end{block}
+      \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_aliasing}
+      \vfill
+   \end{frame}
+
+   \begin{frame}{Sanmpleo}{Acondicionamiento de señal}
+      Armar el siguiente circuito:
+      \protoboardicon
+      \center\includegraphics[width=1\textwidth]{1_clase/circuito}
       \vfill
    \end{frame}
 
@@ -404,89 +441,90 @@
         \caption{The distribution of theses written using \TeX\ during 2010--15 at MU}
       \end{table}
     \end{frame}
-%    \begin{frame}[label=figs2]{Figures}
-%      \framesubtitle{Tables, graphs, and images}
-%      \begin{figure}[b]
-%        \centering
-%        % Flipping a coin
-%        % Author: cis
-%        \tikzset{
-%          head/.style = {fill = none, label = center:\textsf{H}},
-%          tail/.style = {fill = none, label = center:\textsf{T}}}
-%        \scalebox{0.65}{\begin{tikzpicture}[
-%            scale = 1.5, transform shape, thick,
-%            every node/.style = {draw, circle, minimum size = 10mm},
-%            grow = down,  % alignment of characters
-%            level 1/.style = {sibling distance=3cm},
-%            level 2/.style = {sibling distance=4cm},
-%            level 3/.style = {sibling distance=2cm},
-%            level distance = 1.25cm
-%          ]
-%          \node[shape = rectangle,
-%            minimum width = 6cm, font = \sffamily] {Coin flipping}
-%          child { node[shape = circle split, draw, line width = 1pt,
-%                  minimum size = 10mm, inner sep = 0mm, rotate = 30] (Start)
-%                  { \rotatebox{-30}{H} \nodepart{lower} \rotatebox{-30}{T}}
-%           child {   node [head] (A) {}
-%             child { node [head] (B) {}}
-%             child { node [tail] (C) {}}
-%           }
-%           child {   node [tail] (D) {}
-%             child { node [head] (E) {}}
-%             child { node [tail] (F) {}}
-%           }
-%          };
-%
-%          % Filling the root (Start)
-%          \begin{scope}[on background layer, rotate=30]
-%            \fill[head] (Start.base) ([xshift = 0mm]Start.east) arc (0:180:5mm)
-%              -- cycle;
-%            \fill[tail] (Start.base) ([xshift = 0pt]Start.west) arc (180:360:5mm)
-%              -- cycle;
-%          \end{scope}
-%
-%          % Labels
-%          \begin{scope}[nodes = {draw = none}]
-%            \path (Start) -- (A) node [near start, left]  {$0.5$};
-%            \path (A)     -- (B) node [near start, left]  {$0.5$};
-%            \path (A)     -- (C) node [near start, right] {$0.5$};
-%            \path (Start) -- (D) node [near start, right] {$0.5$};
-%            \path (D)     -- (E) node [near start, left]  {$0.5$};
-%            \path (D)     -- (F) node [near start, right] {$0.5$};
-%            \begin{scope}[nodes = {below = 11pt}]
-%              \node [name = X] at (B) {$0.25$};
-%              \node            at (C) {$0.25$};
-%              \node [name = Y] at (E) {$0.25$};
-%              \node            at (F) {$0.25$};
-%            \end{scope}
-%          \end{scope}
-%        \end{tikzpicture}}
-%        \caption{Tree of probabilities -- Flipping a coin\footnote[frame]{%
-%          A derivative of a diagram from \url{texample.net} by cis, CC BY 2.5 licensed}}
-%      \end{figure}
-%    \end{frame}
-%
-%    \defverbatim[colored]\sleepSort{
-%      \begin{lstlisting}[language=C,tabsize=2]
-%  #include <stdio.h>
-%  #include <unistd.h>
-%  #include <sys/types.h>
-%  #include <sys/wait.h>
-%
-%  // This is a comment
-%  int main(int argc, char **argv)
-%  {
-%          while (--c > 1 && !fork());
-%          sleep(c = atoi(v[c]));
-%          printf("%d\n", c);
-%          wait(0);
-%          return 0;
-%  }
-%    \end{lstlisting}}
-%    \begin{frame}{Code listings}{An example source code in C}
-%      \sleepSort
-%    \end{frame}
-%
+
+    \begin{frame}[label=figs2]{Figures}
+      \framesubtitle{Tables, graphs, and images}
+      \begin{figure}[b]
+        \centering
+        % Flipping a coin
+        % Author: cis
+        \tikzset{
+          head/.style = {fill = none, label = center:\textsf{H}},
+          tail/.style = {fill = none, label = center:\textsf{T}}}
+        \scalebox{0.65}{\begin{tikzpicture}[
+            scale = 1.5, transform shape, thick,
+            every node/.style = {draw, circle, minimum size = 10mm},
+            grow = down,  % alignment of characters
+            level 1/.style = {sibling distance=3cm},
+            level 2/.style = {sibling distance=4cm},
+            level 3/.style = {sibling distance=2cm},
+            level distance = 1.25cm
+          ]
+          \node[shape = rectangle,
+            minimum width = 6cm, font = \sffamily] {Coin flipping}
+          child { node[shape = circle split, draw, line width = 1pt,
+                  minimum size = 10mm, inner sep = 0mm, rotate = 30] (Start)
+                  { \rotatebox{-30}{H} \nodepart{lower} \rotatebox{-30}{T}}
+           child {   node [head] (A) {}
+             child { node [head] (B) {}}
+             child { node [tail] (C) {}}
+           }
+           child {   node [tail] (D) {}
+             child { node [head] (E) {}}
+             child { node [tail] (F) {}}
+           }
+          };
+
+          % Filling the root (Start)
+          \begin{scope}[on background layer, rotate=30]
+            \fill[head] (Start.base) ([xshift = 0mm]Start.east) arc (0:180:5mm)
+              -- cycle;
+            \fill[tail] (Start.base) ([xshift = 0pt]Start.west) arc (180:360:5mm)
+              -- cycle;
+          \end{scope}
+
+          % Labels
+          \begin{scope}[nodes = {draw = none}]
+            \path (Start) -- (A) node [near start, left]  {$0.5$};
+            \path (A)     -- (B) node [near start, left]  {$0.5$};
+            \path (A)     -- (C) node [near start, right] {$0.5$};
+            \path (Start) -- (D) node [near start, right] {$0.5$};
+            \path (D)     -- (E) node [near start, left]  {$0.5$};
+            \path (D)     -- (F) node [near start, right] {$0.5$};
+            \begin{scope}[nodes = {below = 11pt}]
+              \node [name = X] at (B) {$0.25$};
+              \node            at (C) {$0.25$};
+              \node [name = Y] at (E) {$0.25$};
+              \node            at (F) {$0.25$};
+            \end{scope}
+          \end{scope}
+        \end{tikzpicture}}
+        \caption{Tree of probabilities -- Flipping a coin\footnote[frame]{%
+          A derivative of a diagram from \url{texample.net} by cis, CC BY 2.5 licensed}}
+      \end{figure}
+    \end{frame}
+
+    \defverbatim[colored]\sleepSort{
+      \begin{lstlisting}[language=C,tabsize=2]
+  #include <stdio.h>
+  #include <unistd.h>
+  #include <sys/types.h>
+  #include <sys/wait.h>
+
+  // This is a comment
+  int main(int argc, char **argv)
+  {
+          while (--c > 1 && !fork());
+          sleep(c = atoi(v[c]));
+          printf("%d\n", c);
+          wait(0);
+          return 0;
+  }
+    \end{lstlisting}}
+    \begin{frame}{Code listings}{An example source code in C}
+      \sleepSort
+    \end{frame}
+
     \subsection{Citations and Bibliography}
     \begin{frame}[label=citations]{Citations}
       \framesubtitle{\TeX, \LaTeX, and Beamer}
