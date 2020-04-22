@@ -1,3 +1,28 @@
+%\documentclass[draft]{beamer}
+\documentclass{beamer}
+\usetheme[faculty=fi]{fibeamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ main=spanish,activeacute]{babel}
+
+%%
+%% These macros specify information about the presentation
+\title{Procesamiento de señnales, fundamentos}
+\subtitle{Clase 1 - Introducción}
+\author{Ing. Pablo Slavkin}
+%% These additional packages are used within the document:
+\usepackage{ragged2e}  % `\justifying` text
+\usepackage{booktabs}  % Tables
+\usepackage{tabularx}
+\usepackage{tikz}      % Diagrams
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{amsmath, amssymb}
+\usepackage{url}       % `\url`s
+\usepackage{listings}  % Code listings
+\frenchspacing
+
+%%\includeonlyframes{Jabberwocky,lists,simmonshall}
+
+\newcommand{\asignature}{ PDF MSE2020 }
 \newcommand{\handsonicon}{
   \begin{tikzpicture}[overlay,remember picture]
      \node[anchor=south east,xshift=-5pt,yshift=0.85\textheight]
@@ -15,5 +40,6 @@
          };
      \end{tikzpicture}
   }
+\newcommand{\insertuniversity}{Maestria en sistemas mbebidos MSE2020 - Universidad de Buenos Aires}
 
-
+\newtheorem{teorema}{Teorema} %teorema en spanish

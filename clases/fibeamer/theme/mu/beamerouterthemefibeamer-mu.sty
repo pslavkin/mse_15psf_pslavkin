@@ -119,6 +119,20 @@
             \usebeamercolor[fg]{framenumber}%
             \usebeamerfont{framenumber}%
             \insertframenumber/\inserttotalframenumber};
+        \node[anchor=south west,
+          yshift=\fibeamer@lengths@footerpad,
+          xshift=\fibeamer@lengths@footerpad] at
+          (current page.south west) {
+            \usebeamercolor[fg]{framenumber}%
+            \usebeamerfont{framenumber}%
+         \insertauthor};
+        \node[anchor=south,
+          yshift=\fibeamer@lengths@footerpad,
+          xshift=-0.5\textwidth] at
+          (current page.south east) {
+            \usebeamercolor[fg]{framenumber}%
+            \usebeamerfont{framenumber}%
+         \asignature};
       \end{tikzpicture}
     \fi}
   \defbeamertemplate*{title page}{fibeamer}{%
@@ -160,6 +174,13 @@
 
       \pgfusepath{stroke}
     \end{pgfpicture}
+    \vskip.25\baselineskip
+    \usebeamerfont{university}%
+    \usebeamercolor[fg]{university}%
+    \begin{minipage}{\textwidth}
+      \raggedright%
+      \insertuniversity%
+    \end{minipage}
 
     \vfill
     % Input the subtitle

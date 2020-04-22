@@ -1,28 +1,4 @@
-%\documentclass[draft]{beamer}
-\documentclass{beamer}
-\usetheme[faculty=fi]{fibeamer}
-\usepackage[utf8]{inputenc}
-\usepackage[ main=spanish,activeacute, english]{babel}
 \input{header.tex}
-
-%%
-%% These macros specify information about the presentation
-\title{Analisis de señnales} %% that will be typeset on the
-
-\subtitle{Clase 1 - Introducción} %% title page.
-\author{Pablo Slavkin}
-%% These additional packages are used within the document:
-\usepackage{ragged2e}  % `\justifying` text
-\usepackage{booktabs}  % Tables
-\usepackage{tabularx}
-\usepackage{tikz}      % Diagrams
-\usetikzlibrary{calc, shapes, backgrounds}
-\usepackage{amsmath, amssymb}
-\usepackage{url}       % `\url`s
-\usepackage{listings}  % Code listings
-\frenchspacing
-
-%%\includeonlyframes{Jabberwocky,lists,simmonshall}
 \begin{document}
 %  \shorthandoff{-}
   \frame[c]{
@@ -41,9 +17,18 @@
       \tableofcontents[currentsection]
     \end{frame}}
 
+
+
   \begin{darkframes}
     \section{Señales}
 %-------------------------------------------------------------------------------
+    \subsection{Plan de vuelo}
+    \begin{frame}{Plan de vuelo}
+      \framesubtitle{Ud. esta aqui}
+      \center\includegraphics[width=0.8\textwidth]{1_clase/Esquema_MSE}
+      \vfill
+    \end{frame}
+
     \subsection{Porque digital?}
     \begin{frame}{Porque digital?}
       \framesubtitle{Digital vs analogico}
@@ -212,27 +197,37 @@
    \end{frame}
 
 %-------------------------------------------------------------------------------
-    \subsection{Sampling}
-   \begin{frame}{Sanmpleo}{Teorema del sampleo}
+    \subsection{Aliasing}
+   \begin{frame}{Aliasing}{Simulando en Python}
       \handsonicon
       Diferentes frecuencias de sampleo para capturar una señal de 50hz
       \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
       \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
       \vfill
    \end{frame}
-
-   \begin{frame}{Sanmpleo}{Teorema del sampleo}
+%-------------------------------------------------------------------------------
+   \begin{frame}{Aliasing}{Simulando en Python}
       Diferentes frecuencias de sampleo para capturar una señal de 50hz
       \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
       \vfill
    \end{frame}
-   \begin{frame}{Sanmpleo}{Teorema del sampleo}
-      Diferentes frecuencias de sampleo para capturar una señal de 50hz
+   \begin{frame}{Aliasing}{Simulando en Python}
+      Que pasa si se suma ruido de alta frecuencia?
       \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
       \vfill
    \end{frame}
+   \subsection{Teorema de Shannon}
+   \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+      \begin{teorema}
+       La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está limitada en banda y la tasa de muestreo es superior al doble de su ancho de banda
+      \end{teorema}
+      \center\includegraphics[width=0.5\textwidth]{1_clase/shannon}
+      \par
+      \center\includegraphics[width=0.3\textwidth]{1_clase/claude_shannon}
+      \vfill
+   \end{frame}
 
-   \begin{frame}{Sanmpleo}{Filtro antialias}
+   \begin{frame}{Sampleo}{Filtro antialias}
       \begin{block}{FAA}
          Filtro \alert{analogico} pasabajos que elimina o al menos mitiga el efecto de aliasing
       \end{block}
@@ -240,14 +235,18 @@
       \vfill
    \end{frame}
 
-   \begin{frame}{Sanmpleo}{Acondicionamiento de señal}
-      Armar el siguiente circuito:
+   \begin{frame}{Sampleo}{Acondicionamiento de señal}
+      Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
       \protoboardicon
-      \center\includegraphics[width=1\textwidth]{1_clase/circuito}
+      \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
       \vfill
    \end{frame}
 
 
+   \section{Quantizacion}
+   \begin{frame}{Queantizacion}{Ruido de quantizacion}
+      \vfill
+   \end{frame}
 
 
 
@@ -327,7 +326,7 @@
       \bigskip
       \justifying
 
-      {\uselanguage{english}The quick, brown fox jumps over a lazy
+      {\uselanguage{spanish}The quick, brown fox jumps over a lazy
       dog. DJs flock by when MTV ax quiz prog. “Now fax quiz Jack!”}
     \end{frame}
 
