@@ -6,7 +6,7 @@
   \begin{tikzpicture}[overlay,remember picture]
        \node[anchor=south east,xshift=-30pt,yshift=45pt]
          at (current page.south east) {
-           \includegraphics[width=45mm]{1_clase/noise_image}
+           \includegraphics[width=45mm]{1_clase/python_continuo_vs_discreto}
          };
      \end{tikzpicture}%
   }
@@ -28,6 +28,7 @@
       \center\includegraphics[width=0.8\textwidth]{1_clase/Esquema_MSE}
       \vfill
     \end{frame}
+
 
     \subsection{Porque digital?}
     \begin{frame}{Porque digital?}
@@ -128,126 +129,182 @@
         \column{.6\textwidth}
       \lstinputlisting[language=Python,tabsize=4]{1_clase/sine.py}
         \column{.4\textwidth}
-      \includegraphics[width=\textwidth]{1_clase/python_continuo_vs_discreto}
+         \includegraphics[width=\textwidth]{1_clase/python_continuo_vs_discreto}
+            \end{columns}
+            Posrian pensarse como muestras de una señal de tiempo continuo $x[n] = x (nT)$ donde n es un número entero y \textbf{T} es el período de muestreo.
+         \vfill
+       \end{frame}
+   %-------------------------------------------------------------------------------
+       \begin{frame}{Señales periodicas}
+         \begin{block}{Continua periodica}
+            si existe un $T_0>0$, tal que $x(t+T_0)=x(t)$, para todo $t$\\
+            $T_0$ es el período de $x(t)$ medido en tiempo, y $f_0=1/T_0$ es la frecuencia fundamental de $x(t)$
+      \end{block}
+         \begin{block}{Continua discreta}
+            si existe un entero $N_0>0$ tal que $x[n+N_0]=x[n]$ para
+            todo $n$ \\
+            $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
+            y  $F_0=\Delta t/N_0$ es la frecuencia fundamental de $x[n]$
+      \end{block}
+         \center\includegraphics[width=0.5\textwidth]{1_clase/periodica}
+      \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \subsection{Sistemas}
+      \begin{frame}{Sistemas}
+         \begin{block}{Sistema}
+            Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
+         \end{block}
+            En términos de ingeniería, muy a menudo la entrada y la salida son señales eléctricas.
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Sistemas}{Lineales}
+         \begin{block}{Lineal}
+            Un sistema es lineal cuando su salida depende linealmente de la entrada.
+            Satisface el principio de superposicion, escalado y adicion
+         \end{block}
+         \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion1}
+         \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion2}
+         \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion3}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Sistemas}{Invariantes en el tiempo}
+         \begin{block}{Invariantes en el tiempo}
+            Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
+         \end{block}
+         \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Sistemas}{Lineales invariantes en el tiempo}
+         \begin{block}{LTI}
+            Un sistema es LTI cuando satisface las 2 condiciones anteriores, de linealidad y de invariancia en el tiempo.
+         \end{block}
+         \center\includegraphics[width=1\textwidth]{1_clase/lti}
+         \vfill
+         \begin{alertblock}{*** LTI ***}
+            En este curso, \alert{solo} estudiaremos sistemas lineales invariantes en el tiempo.
+         \end{alertblock}
+      \end{frame}
+   %-------------------------------------------------------------------------------
+       \section{ADC}
+      \begin{frame}{ADC}{Bloque generico de procesamiento}
+         \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
+         \begin{alertblock} {Porque el filtro antialising?}
+         \end{alertblock}
+         \vfill
+      \end{frame}
+
+   %-------------------------------------------------------------------------------
+       \subsection{Aliasing}
+      \begin{frame}{Aliasing}{Simulando en Python}
+         \handsonicon
+         Diferentes frecuencias de sampleo para capturar una señal de 50hz
+         \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+         \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Aliasing}{Simulando en Python}
+         Diferentes frecuencias de sampleo para capturar una señal de 50hz
+         \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
+         \vfill
+      \end{frame}
+      \begin{frame}{Aliasing}{Simulando en Python}
+         Que pasa si se suma ruido de alta frecuencia?
+         \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \subsection{Teorema de Shannon}
+      \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+         \begin{teorema}
+          La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está limitada en banda y la tasa de muestreo es superior al doble de su ancho de banda
+         \end{teorema}
+         \begin{columns}[onlytextwidth]
+            \column{.6\textwidth}
+            \center\includegraphics[width=0.8\textwidth]{1_clase/shannon}
+            \column{.4\textwidth}
+            \center\includegraphics[width=0.6\textwidth]{1_clase/claude_shannon}
          \end{columns}
-         Posrian pensarse como muestras de una señal de tiempo continuo $x[n] = x (nT)$ donde n es un número entero y \textbf{T} es el período de muestreo.
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+         \handsonicon
+         Sampleo e interpolado
+         \lstset{ basicstyle=\fontsize{ 7}{ 1}\selectfont\ttfamily }
+         \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo_interpolado.py}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+         \handsonicon
+         Sampleo e interpolado
+         \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo_interpolado}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Sampleo}{Filtro antialias}
+         \begin{block}{FAA}
+            Filtro \alert{analogico} pasabajos que elimina o al menos mitiga el efecto de aliasing
+         \end{block}
+         \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_aliasing}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Sampleo}{Acondicionamiento de señal}
+         Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
+         \protoboardicon
+         \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \section{Quantizacion}
+      \subsection{Ejemplos}
+      \begin{frame}{Ruido de cuantizacion}{Ejemplo de cuantizacion}
+         Diferentes formas de onda cuantizadas
+         \center\includegraphics[width=1\textwidth]{1_clase/noise_examples}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Ruido de cuantizacion}{Cuantizacion en python}
+         \handsonicon
+         \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily }
+         \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_model.py}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Ruido de cuantizacion}{Histogramas}
+         Histogramas de ruido para cada señal
+         \center\includegraphics[width=1\textwidth]{1_clase/noise_histogram}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \begin{frame}{Ruido de cuantizacion}{Histogramas}
+         Histogramas en Python
+         \handsonicon
+         \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily }
+         \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_histogram.py}
+         \vfill
+      \end{frame}
+   %-------------------------------------------------------------------------------
+      \subsection{Modelo estadistico}
+      \begin{frame}{Ruido de cuantizacion}{Modelo estadistico}
+         En el caso de que se cumplan las siguientes premisas:
+         \begin{itemize}
+                \item La entrada se distancia de los diferentes niveles de cuantizacion con igual probabilidad
+                \item El error de cuantizacion NO esta correlacionado con la entrada
+                \item El cuantizador cuanta con un numero relativamente largo de niveles
+                \item Los niveles de cuantizacion son uniformes
+         \end{itemize}
+            Se puede considerar la cuantizacion como un ruido aditivo a la señal segun el siguiente esquema:
+      \center\includegraphics[width=0.5\textwidth]{1_clase/noise_model}
       \vfill
-    \end{frame}
+   \end{frame}
 %-------------------------------------------------------------------------------
-    \begin{frame}{Señales periodicas}
-      \begin{block}{Continua periodica}
-         si existe un $T_0>0$, tal que $x(t+T_0)=x(t)$, para todo $t$\\
-         $T_0$ es el período de $x(t)$ medido en tiempo, y $f_0=1/T_0$ es la frecuencia fundamental de $x(t)$
-   \end{block}
-      \begin{block}{Continua discreta}
-         si existe un entero $N_0>0$ tal que $x[n+N_0]=x[n]$ para
-         todo $n$ \\
-         $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
-         y  $F_0=\Delta t/N_0$ es la frecuencia fundamental de $x[n]$
-   \end{block}
-      \center\includegraphics[width=0.5\textwidth]{1_clase/periodica}
-   \vfill
-   \end{frame}
-%-------------------------------------------------------------------------------
-   \subsection{Sistemas}
-   \begin{frame}{Sistemas}
-      \begin{block}{Sistema}
-         Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
-      \end{block}
-         En términos de ingeniería, muy a menudo la entrada y la salida son señales eléctricas.
-      \vfill
-   \end{frame}
-%-------------------------------------------------------------------------------
-   \begin{frame}{Sistemas}{Lineales}
-      \begin{block}{Lineal}
-         Un sistema es lineal cuando su salida depende linealmente de la entrada.
-         Satisface el principio de superposicion, escalado y adicion
-      \end{block}
-      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion1}
-      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion2}
-      \center\includegraphics[width=0.5\textwidth]{1_clase/superposicion3}
-      \vfill
-   \end{frame}
-%-------------------------------------------------------------------------------
-   \begin{frame}{Sistemas}{Invariantes en el tiempo}
-      \begin{block}{Invariantes en el tiempo}
-         Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
-      \end{block}
-      \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo}
-      \vfill
-   \end{frame}
-%-------------------------------------------------------------------------------
-   \begin{frame}{Sistemas}{Lineales invariantes en el tiempo}
-      \begin{block}{LTI}
-         Un sistema es LTI cuando satisface las 2 condiciones anteriores, de linealidad y de invariancia en el tiempo.
-      \end{block}
-      \center\includegraphics[width=1\textwidth]{1_clase/lti}
-      \vfill
-      \begin{alertblock}{*** LTI ***}
-         En este curso, \alert{solo} estudiaremos sistemas lineales invariantes en el tiempo.
-      \end{alertblock}
-   \end{frame}
-%-------------------------------------------------------------------------------
-    \section{ADC}
-   \begin{frame}{ADC}{Bloque generico de procesamiento}
-      \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
-      \begin{alertblock} {Porque el filtro antialising?}
-      \end{alertblock}
-      \vfill
-   \end{frame}
-
-%-------------------------------------------------------------------------------
-    \subsection{Aliasing}
-   \begin{frame}{Aliasing}{Simulando en Python}
-      \handsonicon
-      Diferentes frecuencias de sampleo para capturar una señal de 50hz
-      \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
-      \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
-      \vfill
-   \end{frame}
-%-------------------------------------------------------------------------------
-   \begin{frame}{Aliasing}{Simulando en Python}
-      Diferentes frecuencias de sampleo para capturar una señal de 50hz
-      \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
-      \vfill
-   \end{frame}
-   \begin{frame}{Aliasing}{Simulando en Python}
-      Que pasa si se suma ruido de alta frecuencia?
-      \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
-      \vfill
-   \end{frame}
-   \subsection{Teorema de Shannon}
-   \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
-      \begin{teorema}
-       La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está limitada en banda y la tasa de muestreo es superior al doble de su ancho de banda
-      \end{teorema}
-      \center\includegraphics[width=0.5\textwidth]{1_clase/shannon}
-      \par
-      \center\includegraphics[width=0.3\textwidth]{1_clase/claude_shannon}
-      \vfill
-   \end{frame}
-
-   \begin{frame}{Sampleo}{Filtro antialias}
-      \begin{block}{FAA}
-         Filtro \alert{analogico} pasabajos que elimina o al menos mitiga el efecto de aliasing
-      \end{block}
-      \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_aliasing}
-      \vfill
-   \end{frame}
-
-   \begin{frame}{Sampleo}{Acondicionamiento de señal}
-      Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
-      \protoboardicon
-      \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
-      \vfill
-   \end{frame}
-
-
-   \section{Quantizacion}
-   \begin{frame}{Queantizacion}{Ruido de quantizacion}
-      \vfill
-   \end{frame}
-
 
 
 
