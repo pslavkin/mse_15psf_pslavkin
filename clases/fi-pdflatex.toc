@@ -11,7 +11,5 @@
 \beamer@sectionintoc {3}{Quantizacion}{24}{0}{3}
 \beamer@subsectionintoc {3}{1}{Ejemplos}{25}{0}{3}
 \beamer@subsectionintoc {3}{2}{Modelo estadistico}{29}{0}{3}
-\beamer@subsectionintoc {3}{3}{Modelo estadistico}{30}{0}{3}
-\beamer@subsectionintoc {3}{4}{Densidad espectral}{32}{0}{3}
-\beamer@subsectionintoc {3}{5}{SNR}{33}{0}{3}
-\beamer@subsectionintoc {3}{6}{Densidad espectral}{35}{0}{3}
+\beamer@subsectionintoc {3}{3}{SNR}{32}{0}{3}
+\beamer@subsectionintoc {3}{4}{Densidad espectral}{34}{0}{3}

@@ -83,28 +83,22 @@
 \headcommand {\beamer@subsectionentry {0}{3}{2}{29}{Modelo estadistico}}
 \headcommand {\slideentry {3}{2}{1}{29/29}{Modelo estadistico}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\beamer@subsectionpages {29}{29}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{30}{Modelo estadistico}}
-\headcommand {\slideentry {3}{3}{1}{30/30}{Modelo estadistico}{0}}
+\headcommand {\slideentry {3}{2}{2}{30/30}{Modelo estadistico}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {3}{3}{2}{31/31}{Modelo estadistico}{0}}
+\headcommand {\slideentry {3}{2}{3}{31/31}{Modelo estadistico}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\beamer@subsectionpages {30}{31}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{32}{Densidad espectral}}
-\headcommand {\slideentry {3}{4}{1}{32/32}{Densidad espectral}{0}}
+\headcommand {\beamer@subsectionpages {29}{31}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{32}{SNR}}
+\headcommand {\slideentry {3}{3}{1}{32/32}{SNR}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@subsectionpages {32}{32}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{33}{SNR}}
-\headcommand {\slideentry {3}{5}{1}{33/33}{SNR}{0}}
+\headcommand {\slideentry {3}{3}{2}{33/33}{SNR}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {3}{5}{2}{34/34}{SNR}{0}}
+\headcommand {\beamer@subsectionpages {32}{33}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{34}{Densidad espectral}}
+\headcommand {\slideentry {3}{4}{1}{34/34}{Densidad espectral}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\beamer@subsectionpages {33}{34}}
-\headcommand {\beamer@subsectionentry {0}{3}{6}{35}{Densidad espectral}}
-\headcommand {\slideentry {3}{6}{1}{35/35}{Densidad espectral}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@partpages {1}{35}}
-\headcommand {\beamer@subsectionpages {1}{35}}
-\headcommand {\beamer@sectionpages {1}{35}}
-\headcommand {\beamer@documentpages {35}}
-\headcommand {\gdef \inserttotalframenumber {34}}
+\headcommand {\beamer@partpages {1}{34}}
+\headcommand {\beamer@subsectionpages {1}{34}}
+\headcommand {\beamer@sectionpages {1}{34}}
+\headcommand {\beamer@documentpages {34}}
+\headcommand {\gdef \inserttotalframenumber {33}}

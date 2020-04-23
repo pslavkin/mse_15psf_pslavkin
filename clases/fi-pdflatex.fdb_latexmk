@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1587624611 "fi-pdflatex.tex" "fi-pdflatex.pdf" "fi-pdflatex" 1587624617
+["pdflatex"] 1587625168 "fi-pdflatex.tex" "fi-pdflatex.pdf" "fi-pdflatex" 1587625173
   "/etc/texmf/web2c/texmf.cnf" 1572886701 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoml.enc" 1480098666 2921 ae68ca7d9a4902b5e8c8b47846fadadb ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc" 1480098666 3537 5668d9ed3132b78b010223039ece2e6f ""
@@ -305,11 +305,11 @@
   "1_clase/teorema_sampleo_interpolado.py" 1587591813 740 91f73581177e829ad9c61116be4a1e95 ""
   "1_clase/transistor_amp.jpg" 1587588976 88736 8fbed5be4b3fe936a2d7f6bd42c02506 ""
   "beamerthemefibeamer.sty" 1587355664 8272 89a59e6db187f0bafdd64c54eb96e074 ""
-  "fi-pdflatex.aux" 1587624616 10638 58b1a73c55d5e6123c86b53e3d704a17 ""
-  "fi-pdflatex.nav" 1587624616 5831 d353f6df9732a30c788a6323fb0ac8aa ""
-  "fi-pdflatex.out" 1587624616 1011 466482d1fe979ab29665dce3b354bee1 ""
-  "fi-pdflatex.tex" 1587624611 29881 de301d564a9e0e7c4b25e4d5d777e37c ""
-  "fi-pdflatex.toc" 1587624616 920 bfe0a045cef19ee2e8d8eb29c8fd868a ""
+  "fi-pdflatex.aux" 1587625173 10020 11a989b11a05917b4f7903e713dfcd9f ""
+  "fi-pdflatex.nav" 1587625173 5479 a49018939698eb83310cc49baf14a1f0 ""
+  "fi-pdflatex.out" 1587625173 867 686a022bb68d24370765908494782d58 ""
+  "fi-pdflatex.tex" 1587625162 29176 afb85d50b836564860713890fa32d81e ""
+  "fi-pdflatex.toc" 1587625173 798 f899390f78a004bdbd6b3ee3dc6968e4 ""
   "fibeamer/logo/mu/fibeamer-mu-fi-english.pdf" 1587359902 61664 cd632da4c97958360f76accc28b1438c ""
   "fibeamer/theme/mu/beamercolorthemefibeamer-mu-fi.sty" 1587588976 5737 7173dcf5daba177efdd4a6c3551bbdd4 ""
   "fibeamer/theme/mu/beamercolorthemefibeamer-mu.sty" 1587355664 3263 a33f25c34d8682a69e3b6f4119037871 ""
