@@ -1,1 +1,1 @@
-latexmk -pvc -pdf fi-pdflatex
+latexmk -pvc -pdf clases

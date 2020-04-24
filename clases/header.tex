@@ -4,11 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ main=spanish,english,activeacute]{babel}
 
-%%
-%% These macros specify information about the presentation
-\title{Procesamiento de señnales, fundamentos}
-\subtitle{Clase 1 - Introducción}
-\author{Ing. Pablo Slavkin}
 %% These additional packages are used within the document:
 \usepackage{ragged2e}  % `\justifying` text
 \usepackage{booktabs}  % Tables
@@ -19,10 +14,9 @@
 \usepackage{amsmath, amssymb}
 \usepackage{url}       % `\url`s
 \usepackage{listings}  % Code listings
-\frenchspacing
-
-%%\includeonlyframes{Jabberwocky,lists,simmonshall}
-
+%\frenchspacing    %no se para que es
+\usepackage{multiaudience} %para seleccionar que frames sacar en funcio de una variable
+%-------------------------------------------------------------------------------
 \newcommand{\asignature}{ PDF MSE2020 }
 \newcommand{\handsonicon}{
   \begin{tikzpicture}[overlay,remember picture]
@@ -32,7 +26,6 @@
          };
      \end{tikzpicture}
   }
-
 \newcommand{\protoboardicon}{
   \begin{tikzpicture}[overlay,remember picture]
      \node[anchor=south east,xshift=-5pt,yshift=0.81\textheight]
@@ -41,7 +34,20 @@
          };
      \end{tikzpicture}
   }
+\newtheorem{teorema}{Teorema} %teorema en spanish
+
+%-------------------------------------------------------------------------------
 \newcommand{\insertuniversity}{Maestría en sistemas embebidos MSE2020\\
 Universidad de Buenos Aires}
 
-\newtheorem{teorema}{Teorema} %teorema en spanish
+%% These macros specify information about the presentation
+\title{Procesamiento de señnales, fundamentos}
+\author{Ing. Pablo Slavkin}
+% Declare all possible audience groups
+\SetNewAudience{clase1}
+\SetNewAudience{clase2}
+%-------------------------------------------------------------------------------
+\abovedisplayskip= 0pt
+\belowdisplayskip= 0pt
+\abovedisplayshortskip=0pt
+\belowdisplayshortskip=7pt
