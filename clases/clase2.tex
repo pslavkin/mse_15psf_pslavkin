@@ -1,10 +1,141 @@
-\subtitle{Clase 2 - Fourier}
-\frame[c]{
+\subtitle{Clase 2 - Euler | Fourier}
+
+
+\begin{frame}[c]
 \maketitle
 \begin{tikzpicture}[overlay,remember picture]
     \node[anchor=south east,xshift=-30pt,yshift=45pt]
       at (current page.south east) {
-        \includegraphics[width=45mm]{1_clase/python_continuo_vs_discreto}
+        \includegraphics[width=0.2\textwidth]{2_clase/joseph_fourier}
+        \includegraphics[width=0.2\textwidth]{2_clase/leonhard_euler}
       };
-  \end{tikzpicture}%
-}
+  \end{tikzpicture}
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{2.7182818284590450907955982984276488423347473144}
+   \begin{columns}[onlytextwidth]
+      \column{.25\textwidth}
+      \begin{itemize}
+         \item $f(t) =t$
+         \item $f(t) =t^2$
+         \item $f(t) =sin(t)$
+      \end{itemize}
+      \column{.25\textwidth}
+      \begin{itemize}
+         \item $f'(t) = 1$
+         \item $f'(t) = 2*t$
+         \item $f'(t) = cos(t)$
+      \end{itemize}
+      \column{.4\textwidth}
+      \includegraphics[width=1.0\textwidth]{2_clase/derivadas}
+      %codigos en 2_clase/derivadas.py
+   \end{columns}
+   \begin{block}{La derivada es igual a la funcion}
+      \begin{center}
+         $f(t) =e^t    \implies f'(t) = e^t$\\
+         $f(t) =e^{kt} \implies f'(t) =ke^{kt}$
+      \end{center}
+   \end{block}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   Pero que pasa con $\LARGE\textcolor{green}{e^{jt}}$?
+   \begin{columns}[onlytextwidth]
+      \column{.5\textwidth}
+   \begin{block}{La derivada es igual a la funcion}
+      \begin{center}
+         $f(t) =e^{jt} \implies f'(t) =je^{jt}$
+      \end{center}
+   \end{block}
+      \begin{align*}
+         e^{jt}   &= \cos(t) + j \sin(t)\\
+         e^{j\pi} &= -1\\
+         e^{\frac{\pi}{2}} &= i\\
+         e^{\frac{j3\pi}{2}} &= i\\
+      \end{align*}
+      \column{.5\textwidth}
+      \centering\includegraphics[width=0.8\textwidth]{2_clase/euler_senos_cosenos}
+   \end{columns}
+   \vfill
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \column{.6\textwidth}
+      \lstset{ basicstyle=\fontsize{ 5}{ 3}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4]{2_clase/euler1.py}
+      \column{.4\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler1}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \column{.4\textwidth}
+      \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4]{2_clase/euler2.py}
+      \column{.6\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler2}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \column{.4\textwidth}
+      \lstset{ basicstyle=\fontsize{ 3}{ 0}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4]{2_clase/euler3.py}
+      \column{.6\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler3}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \column{.4\textwidth}
+      \lstset{ basicstyle=\fontsize{ 2}{ 0}\selectfont\ttfamily }
+      \lstinputlisting[language=Python,tabsize=4]{2_clase/euler4.py}
+      \column{.6\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler4}
+   \end{columns}
+   \vfill
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \lstset{ basicstyle=\fontsize{ 2}{ 1}\selectfont\ttfamily }
+      \column{.2\textwidth}
+      \lstinputlisting[language=Python,tabsize=4,lastline=45]{2_clase/euler5.py}
+      \column{.2\textwidth}
+      \lstinputlisting[language=Python,tabsize=4,firstline=46]{2_clase/euler5.py}
+      \column{.6\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler5}
+   \end{columns}
+   \vfill
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi t}$}{Euler}
+   \handsonicon
+   \begin{columns}[onlytextwidth]
+      \lstset{ basicstyle=\fontsize{ 2}{ 1}\selectfont\ttfamily }
+      \column{.2\textwidth}
+      \lstinputlisting[language=Python,tabsize=4,lastline=50]{2_clase/euler6.py}
+      \column{.2\textwidth}
+      \lstinputlisting[language=Python,tabsize=4,firstline=51]{2_clase/euler6.py}
+      \column{.6\textwidth}
+      \centering\includegraphics[width=1.0\textwidth]{2_clase/euler6}
+   \end{columns}
+   \vfill
+\end{frame}
+
