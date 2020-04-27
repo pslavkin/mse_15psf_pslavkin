@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
-fs         = 200
+fs         = 10
 N          = 200
+#--------------------------------------
+conejo=np.load("conejo.npy")[::10]
+N=len(conejo)
+#signal=lambda f,n: conejo[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,promLn  = plt.plot([],[],'r-',[],[],'bo')
@@ -23,13 +27,9 @@ signalLn,  = plt.plot([],[],'b-')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
-signalFrec = 2
+signalFrec = 0.1
 signalData=[]
 signal  = lambda f,n: 0.5*np.sin(2*np.pi*f*n*1/fs)+0.5j*np.sin(2*np.pi*f*2*n*1/fs)
-#--------------------------------------
-conejo=np.load("conejo.npy")
-N=len(conejo)
-signal=lambda f,n: conejo[n]
 #--------------------------------------
 fourierAxe  = fig.add_subplot(2,2,3)
 fourierLn,  = plt.plot([],[],'g-o')
@@ -45,27 +45,28 @@ inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
 inversaData = []
 vectorData  = []
-penData  = []
+penData     = []
 #--------------------------------------
 tData=[]
 fData=[]
 
-time=np.arange(0,N,1)
-frec=np.arange(0,fs,fs/N)
-fftData=np.fft.fft(signal(signalFrec,time))/N
+#time=np.arange(0,N,1)
+#frec=np.arange(0,fs,fs/N)
+#fftData=np.fft.fft(signal(signalFrec,time))/N
 
+def init():
+    return circleln,
 def updateF(n):
     global fftData,vectorData,penData,fourierData
-#    if aniT.repeat==True:
-#        return 
+    if aniT.repeat==True:
+        return 
     vectorData=[0]
     for f in range(N):
-        vectorData.append(vectorData[-1]+circleInv(fftData[f],f*fs/N,n))
+        vectorData.append(vectorData[-1]+circleInv(fourierData[f],f*fs/N,n))
     inversaLn.set_data(np.real(vectorData),np.imag(vectorData))
     penData.append(vectorData[-1])
     vectorLn.set_data(np.real(penData),np.imag(penData))
     return inversaLn,vectorLn
-
 
 def updateT(n):
     global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData
@@ -95,6 +96,6 @@ def updateT(n):
         circleAxe.legend()
     return circleLn,circleAxe,signalLn,promLn,fourierLn
 
-aniT=FuncAnimation(fig,updateT,N,interval=10 ,blit=False,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,interval=200 ,blit=False,repeat=True)
+aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,init,interval=200 ,blit=True,repeat=True)
 plt.show()

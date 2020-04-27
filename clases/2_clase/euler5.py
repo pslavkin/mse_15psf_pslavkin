@@ -45,15 +45,17 @@ vectorData  = []
 tData=[]
 fData=[]
 
+def init():
+    return circleln,
 def updateF(n):
-    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,vectorData
+    global fourierData,fData,vectorData
     if aniT.repeat==True:
         return 
     vectorData=[0]
     for f in range(N):
         vectorData.append(vectorData[-1]+circleInv(np.abs(fourierData[f]),f*fs/N,n))
     inversaLn.set_data(np.real(vectorData),np.imag(vectorData))
-    return circleLn,circleAxe,signalLn,promLn,fourierLn,inversaLn
+    return inversaLn,
 
 
 def updateT(n):
@@ -84,6 +86,6 @@ def updateT(n):
         circleAxe.legend()
     return circleLn,circleAxe,signalLn,promLn,fourierLn
 
-aniT=FuncAnimation(fig,updateT,N,interval=10 ,blit=False,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,interval=300 ,blit=False,repeat=True)
+aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,init,interval=300 ,blit=True,repeat=True)
 plt.show()

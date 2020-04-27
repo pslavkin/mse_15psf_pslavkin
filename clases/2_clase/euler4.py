@@ -36,6 +36,8 @@ fourierData=[]
 tData=[]
 fData=[]
 
+def init():
+    return circleln,
 def update(n):
     global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData
     circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
@@ -64,5 +66,5 @@ def update(n):
         circleAxe.legend()
     return circleLn,circleAxe,signalLn,promLn,fourierLn
 
-ani=FuncAnimation(fig,update,N,interval=10 ,blit=False,repeat=True)
+ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

@@ -27,6 +27,8 @@ signal  = lambda f,n: np.cos(2*np.pi*f*n*1/fs)
 #--------------------------------------
 tData=[]
 
+def init():
+    return circleln,
 def update(n):
     global circleData,signalData,tData,promData
     circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
@@ -48,5 +50,5 @@ def update(n):
     circleAxe.legend()
     return circleLn,circleAxe,signalLn,promLn
 
-ani=FuncAnimation(fig,update,N,interval=10 ,blit=False,repeat=True)
+ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

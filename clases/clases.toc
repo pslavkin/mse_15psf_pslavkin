@@ -1,1 +1,2 @@
-\babel@toc {spanish}{}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
