@@ -20,5 +20,5 @@ def update(n):
                       np.imag(circle(1,circleFrec,n)))
     return circleLn,
 
-ani=FuncAnimation(fig,update,N,interval=100 ,blit=False,repeat=True)
+ani=FuncAnimation(fig,update,N,interval=1000 ,blit=False,repeat=True)
 plt.show()

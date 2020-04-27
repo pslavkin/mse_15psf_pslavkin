@@ -6,9 +6,10 @@ fig  = plt.figure()
 fs   = 20
 N    = 40
 #--------------------------------------
-conejo=np.load("conejo.npy")[::10]
-N=len(conejo)
-signal=lambda f,n: conejo[n]
+conejo=np.array([0,0,0.25+0.25j,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.25-0.25j,0])
+#conejo=np.load("conejo.npy")[::10]
+#N=len(conejo)
+#signal=lambda f,n: conejo[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,promLn  = plt.plot([],[],'r-',[],[],'bo')
@@ -29,7 +30,7 @@ signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
 signalFrec = 1
 signalData=[]
-#signal  = lambda f,n: 0.5*np.sin(2*np.pi*f*n*1/fs)+0.5j*np.cos(2*np.pi*f*4*n*1/fs)
+signal  = lambda f,n: 1*np.cos(2*np.pi*f*n*1/fs)#+0.5j*np.cos(2*np.pi*f*4*n*1/fs)
 #--------------------------------------
 fourierAxe  = fig.add_subplot(2,2,3)
 fourierLn,  = plt.plot([],[],'g-o')
@@ -46,7 +47,7 @@ inversaAxe.set_ylim(-1,1)
 inversaData = []
 vectorData  = []
 penData     = []
-slideData  = []
+slideData   = []
 #--------------------------------------
 tData=[]
 fData=[]
@@ -95,11 +96,12 @@ def updateT(n):
         tData      = []
         fourierData.append(prom)
         fData.append(circleFrec)
-        fourierLn.set_data(fData,np.abs(fourierData)**2)
+        fourierLn.set_data(fData,np.real(fourierData))
         prom       = 0
         frecIter+=1
         if frecIter == N:
             aniT.repeat=False
+#            fourierData=np.array([0,0,0.25+0j,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.25-0j,0])
         circleFrec = frecIter*fs/N
     return circleLn,signalImagLn,signalRealLn,promLn,fourierLn
 
