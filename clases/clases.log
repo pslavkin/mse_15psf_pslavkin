@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  26 APR 2020 23:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  28 APR 2020 08:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1469,39 +1469,39 @@ LaTeX Info: Redefining \selectfont on input line 3.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 3.
 
-(./clase2.tex
-<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=14, 1271.75125pt x 427.5975pt>
+(./clase1.tex
+<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=78, 1271.75125pt x 427.5975pt>
 
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
 Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf  used on i
-nput line 13.
+nput line 11.
 (pdftex.def)             Requested size: 149.36287pt x 44.81097pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 13.
+(Font)              scaled to size 17.28pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <17.28> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-13.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 13.
+(Font)              scaled to size 17.28pt on input line 11.
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 13--13
+Overfull \hbox (2.0pt too wide) in paragraph at lines 11--11
 [][]  
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10.95> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-13.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 13.
+(Font)              scaled to size 10.95pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-13.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 13.
-LaTeX Font Info:    Try loading font information for OT1+zavm on input line 13.
+(Font)              scaled to size 10.0pt on input line 11.
+LaTeX Font Info:    Try loading font information for OT1+zavm on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/arev/ot1zavm.fd
 File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
@@ -1529,24 +1529,24 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 8.50006pt on input line 13.
+(Font)              scaled to size 8.50006pt on input line 11.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.95004pt on input line 13.
+(Font)              scaled to size 5.95004pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 4.25003pt on input line 13.
-LaTeX Font Info:    Try loading font information for OMS+zavm on input line 13.
+(Font)              scaled to size 4.25003pt on input line 11.
+LaTeX Font Info:    Try loading font information for OMS+zavm on input line 11.
 
  (/usr/share/texlive/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+iwona on input line 13
+LaTeX Font Info:    Try loading font information for OMX+iwona on input line 11
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )<<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1554,7 +1554,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1563,23 +1563,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 13.
+(Font)              scaled to size 10.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 13.
+(Font)              scaled to size 7.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 13.
+(Font)              scaled to size 5.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 13.
+(Font)              scaled to size 10.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 13.
+(Font)              scaled to size 7.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 13.
+(Font)              scaled to size 5.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <14.4> not availabl
 e
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-13.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 13.
+(Font)              scaled to size 14.4pt on input line 11.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1587,16 +1587,16 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 12.24008pt on input line 13.
+(Font)              scaled to size 12.24008pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 13.
+(Font)              scaled to size 14.4pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 13.
+(Font)              scaled to size 14.4pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <12> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-13.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 13.
+(Font)              scaled to size 12.0pt on input line 11.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1616,38 +1616,55 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 10.20007pt on input line 13.
+(Font)              scaled to size 10.20007pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 6.80005pt on input line 13.
+(Font)              scaled to size 6.80005pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.10004pt on input line 13.
+(Font)              scaled to size 5.10004pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 13.
+(Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 13.
+(Font)              scaled to size 8.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 13.
+(Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 13.
+(Font)              scaled to size 8.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 13.
-<2_clase/leonhard_euler.jpg, id=20, 441.65pt x 575.14874pt>
-File: 2_clase/leonhard_euler.jpg Graphic file (type jpg)
-<use 2_clase/leonhard_euler.jpg>
-Package pdftex.def Info: 2_clase/leonhard_euler.jpg  used on input line 13.
-(pdftex.def)             Requested size: 68.57011pt x 89.29633pt.
-<2_clase/joseph_fourier.jpg, id=21, 105.996pt x 129.6042pt>
-File: 2_clase/joseph_fourier.jpg Graphic file (type jpg)
-<use 2_clase/joseph_fourier.jpg>
-Package pdftex.def Info: 2_clase/joseph_fourier.jpg  used on input line 13.
-(pdftex.def)             Requested size: 68.57011pt x 83.84422pt.
+(Font)              scaled to size 6.0pt on input line 11.
+<1_clase/python_continuo_vs_discreto.png, id=84, 462.528pt x 346.896pt>
+File: 1_clase/python_continuo_vs_discreto.png Graphic file (type png)
+<use 1_clase/python_continuo_vs_discreto.png>
+Package pdftex.def Info: 1_clase/python_continuo_vs_discreto.png  used on input
+ line 11.
+(pdftex.def)             Requested size: 128.0374pt x 96.02922pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 13.
+(Font)              scaled to size 4.0pt on input line 11.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fibeamer/logo/mu/fibeame
-r-mu-fi-english.pdf> <./2_clase/leonhard_euler.jpg> <./2_clase/joseph_fourier.j
-pg>]
+r-mu-fi-english.pdf> <./1_clase/python_continuo_vs_discreto.png>] (./clases.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+) [2
+
+]
+<1_clase/Esquema_MSE.png, id=133, 1823.81375pt x 1239.63126pt>
+File: 1_clase/Esquema_MSE.png Graphic file (type png)
+<use 1_clase/Esquema_MSE.png>
+Package pdftex.def Info: 1_clase/Esquema_MSE.png  used on input line 24.
+(pdftex.def)             Requested size: 274.28569pt x 186.42845pt.
+ [3
+
+ <./1_clase/Esquema_MSE.png>]
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 50.
+
+Overfull \vbox (3.04257pt too high) detected at line 50
+ []
+
+[4
+
+]
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1655,146 +1672,320 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 40.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 40.
-<2_clase/derivadas.png, id=32, 422.7795pt x 359.1819pt>
-File: 2_clase/derivadas.png Graphic file (type png)
-<use 2_clase/derivadas.png>
-Package pdftex.def Info: 2_clase/derivadas.png  used on input line 40.
-(pdftex.def)             Requested size: 137.14023pt x 116.5135pt.
- [2
+(Font)              scaled to size 9.30756pt on input line 78.
+<1_clase/fpga.jpg, id=150, 295.1025pt x 292.09125pt>
+File: 1_clase/fpga.jpg Graphic file (type jpg)
+<use 1_clase/fpga.jpg>
+Package pdftex.def Info: 1_clase/fpga.jpg  used on input line 78.
+(pdftex.def)             Requested size: 85.35826pt x 84.48589pt.
+<1_clase/transistor_amp.jpg, id=151, 701.62125pt x 510.90875pt>
+File: 1_clase/transistor_amp.jpg Graphic file (type jpg)
+<use 1_clase/transistor_amp.jpg>
+Package pdftex.def Info: 1_clase/transistor_amp.jpg  used on input line 78.
+(pdftex.def)             Requested size: 99.58464pt x 72.509pt.
+ [5
 
- <./2_clase/derivadas.png>]
+ <./1_clase/fpga.jpg> <./1_clase/transistor_amp.jpg>] [6
 
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 61.
+] [7
 
-<2_clase/euler_senos_cosenos.png, id=44, 600.2425pt x 604.2575pt>
-File: 2_clase/euler_senos_cosenos.png Graphic file (type png)
-<use 2_clase/euler_senos_cosenos.png>
-Package pdftex.def Info: 2_clase/euler_senos_cosenos.png  used on input line 61
-.
-(pdftex.def)             Requested size: 137.14284pt x 138.05428pt.
-[3
+]
+<1_clase/continuo_vs_discreto.jpg, id=167, 925.4575pt x 184.69pt>
+File: 1_clase/continuo_vs_discreto.jpg Graphic file (type jpg)
+<use 1_clase/continuo_vs_discreto.jpg>
+Package pdftex.def Info: 1_clase/continuo_vs_discreto.jpg  used on input line 1
+27.
+(pdftex.def)             Requested size: 342.85582pt x 68.42159pt.
+ [8
 
- <./2_clase/euler_senos_cosenos.png>]
-<resources/hands_on.png, id=52, 513.92pt x 513.92pt>
-File: resources/hands_on.png Graphic file (type png)
-<use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 74.
-(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-
+ <./1_clase/continuo_vs_discreto.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
-nput line 74.
+nput line 139.
 
 (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
 -TLF.
 )
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 4.25003pt on input line 74.
+(Font)              scaled to size 6.80005pt on input line 139.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(./2_clase/euler1.py)
-<2_clase/euler1.png, id=53, 462.528pt x 346.896pt>
-File: 2_clase/euler1.png Graphic file (type png)
-<use 2_clase/euler1.png>
-Package pdftex.def Info: 2_clase/euler1.png  used on input line 74.
+(./1_clase/sine.py)
+File: 1_clase/python_continuo_vs_discreto.png Graphic file (type png)
+<use 1_clase/python_continuo_vs_discreto.png>
+Package pdftex.def Info: 1_clase/python_continuo_vs_discreto.png  used on input
+ line 139.
 (pdftex.def)             Requested size: 137.14023pt x 102.85745pt.
- [4
+ [9
 
- <./resources/hands_on.png> <./2_clase/euler1.png>]
+]
+<1_clase/periodica.jpg, id=180, 275.52937pt x 109.91063pt>
+File: 1_clase/periodica.jpg Graphic file (type jpg)
+<use 1_clase/periodica.jpg>
+Package pdftex.def Info: 1_clase/periodica.jpg  used on input line 154.
+(pdftex.def)             Requested size: 171.4279pt x 68.38536pt.
+ [10
+
+ <./1_clase/periodica.jpg>]
+<1_clase/sistema.png, id=189, 757.83125pt x 287.0725pt>
+File: 1_clase/sistema.png Graphic file (type png)
+<use 1_clase/sistema.png>
+Package pdftex.def Info: 1_clase/sistema.png  used on input line 164.
+(pdftex.def)             Requested size: 171.4279pt x 64.93457pt.
+ [11
+
+ <./1_clase/sistema.png>]
+<1_clase/superposicion1.png, id=195, 608.2725pt x 99.37125pt>
+File: 1_clase/superposicion1.png Graphic file (type png)
+<use 1_clase/superposicion1.png>
+Package pdftex.def Info: 1_clase/superposicion1.png  used on input line 182.
+(pdftex.def)             Requested size: 137.14023pt x 22.40305pt.
+<1_clase/superposicion2.png, id=196, 706.64pt x 215.80624pt>
+File: 1_clase/superposicion2.png Graphic file (type png)
+<use 1_clase/superposicion2.png>
+Package pdftex.def Info: 1_clase/superposicion2.png  used on input line 182.
+(pdftex.def)             Requested size: 137.14023pt x 41.88281pt.
+<1_clase/superposicion3.png, id=197, 434.62375pt x 87.32625pt>
+File: 1_clase/superposicion3.png Graphic file (type png)
+<use 1_clase/superposicion3.png>
+Package pdftex.def Info: 1_clase/superposicion3.png  used on input line 182.
+(pdftex.def)             Requested size: 137.14023pt x 27.55455pt.
+ [12
+
+ <./1_clase/superposicion1.png> <./1_clase/superposicion2.png> <./1_clase/super
+posicion3.png>]
+<1_clase/invariante_en_tiempo.png, id=206, 753.81625pt x 91.34125pt>
+File: 1_clase/invariante_en_tiempo.png Graphic file (type png)
+<use 1_clase/invariante_en_tiempo.png>
+Package pdftex.def Info: 1_clase/invariante_en_tiempo.png  used on input line 1
+91.
+(pdftex.def)             Requested size: 342.85582pt x 41.5436pt.
+ [13
+
+ <./1_clase/invariante_en_tiempo.png>]
+<1_clase/lti.png, id=215, 454.69875pt x 82.3075pt>
+File: 1_clase/lti.png Graphic file (type png)
+<use 1_clase/lti.png>
+Package pdftex.def Info: 1_clase/lti.png  used on input line 202.
+(pdftex.def)             Requested size: 342.85582pt x 62.06326pt.
+ [14
+
+ <./1_clase/lti.png>] [15
+
+] (./clases.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+) [16
+
+]
+<1_clase/adc_dac.png, id=247, 611.28375pt x 194.7275pt>
+File: 1_clase/adc_dac.png Graphic file (type png)
+<use 1_clase/adc_dac.png>
+Package pdftex.def Info: 1_clase/adc_dac.png  used on input line 217.
+(pdftex.def)             Requested size: 342.85582pt x 109.216pt.
+ [17
+
+ <./1_clase/adc_dac.png>]
+<resources/hands_on.png, id=254, 513.92pt x 513.92pt>
 File: resources/hands_on.png Graphic file (type png)
 <use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 86.
+Package pdftex.def Info: resources/hands_on.png  used on input line 227.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 227.
+
+(./1_clase/teorema_sampleo.py) [18
+
+ <./resources/hands_on.png>]
+<1_clase/teorema_sampleo.png, id=260, 1380.357pt x 698.8509pt>
+File: 1_clase/teorema_sampleo.png Graphic file (type png)
+<use 1_clase/teorema_sampleo.png>
+Package pdftex.def Info: 1_clase/teorema_sampleo.png  used on input line 233.
+(pdftex.def)             Requested size: 342.85582pt x 173.58195pt.
+ [19
+
+ <./1_clase/teorema_sampleo.png>]
+<1_clase/teorema_sampleo2.png, id=268, 1380.357pt x 698.8509pt>
+File: 1_clase/teorema_sampleo2.png Graphic file (type png)
+<use 1_clase/teorema_sampleo2.png>
+Package pdftex.def Info: 1_clase/teorema_sampleo2.png  used on input line 238.
+(pdftex.def)             Requested size: 342.85582pt x 173.58195pt.
+ [20
+
+ <./1_clase/teorema_sampleo2.png>]
+<1_clase/shannon.png, id=275, 678.535pt x 153.57375pt>
+File: 1_clase/shannon.png Graphic file (type png)
+<use 1_clase/shannon.png>
+Package pdftex.def Info: 1_clase/shannon.png  used on input line 253.
+(pdftex.def)             Requested size: 144.00027pt x 32.59122pt.
+<1_clase/sinc_limpia.png, id=276, 377.9721pt x 185.0112pt>
+File: 1_clase/sinc_limpia.png Graphic file (type png)
+<use 1_clase/sinc_limpia.png>
+Package pdftex.def Info: 1_clase/sinc_limpia.png  used on input line 253.
+(pdftex.def)             Requested size: 144.00027pt x 70.48566pt.
+<1_clase/claude_shannon.jpg, id=277, 285.065pt x 401.5pt>
+File: 1_clase/claude_shannon.jpg Graphic file (type jpg)
+<use 1_clase/claude_shannon.jpg>
+Package pdftex.def Info: 1_clase/claude_shannon.jpg  used on input line 253.
+(pdftex.def)             Requested size: 82.28497pt x 115.89288pt.
+ [21
+
+ <./1_clase/shannon.png> <./1_clase/sinc_limpia.png> <./1_clase/claude_shannon.
+jpg>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 261.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 5.95004pt on input line 261.
+
+(./1_clase/teorema_sampleo_interpolado.py) [22
+
+]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 268.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+<1_clase/teorema_sampleo_interpolado.png, id=289, 987.2082pt x 504.4446pt>
+File: 1_clase/teorema_sampleo_interpolado.png Graphic file (type png)
+<use 1_clase/teorema_sampleo_interpolado.png>
+Package pdftex.def Info: 1_clase/teorema_sampleo_interpolado.png  used on input
+ line 268.
+(pdftex.def)             Requested size: 342.85582pt x 175.19585pt.
+ [23
+
+ <./1_clase/teorema_sampleo_interpolado.png>]
+<1_clase/filtro_anti_aliasing.jpg, id=296, 289.08pt x 117.43875pt>
+File: 1_clase/filtro_anti_aliasing.jpg Graphic file (type jpg)
+<use 1_clase/filtro_anti_aliasing.jpg>
+Package pdftex.def Info: 1_clase/filtro_anti_aliasing.jpg  used on input line 2
+76.
+(pdftex.def)             Requested size: 274.28569pt x 111.43355pt.
+ [24
+
+ <./1_clase/filtro_anti_aliasing.jpg>] (./clases.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+[25
+
+]
+<1_clase/noise_examples.png, id=323, 987.2082pt x 504.4446pt>
+File: 1_clase/noise_examples.png Graphic file (type png)
+<use 1_clase/noise_examples.png>
+Package pdftex.def Info: 1_clase/noise_examples.png  used on input line 284.
+(pdftex.def)             Requested size: 342.85582pt x 175.19585pt.
+ [26
+
+ <./1_clase/noise_examples.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 291.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 3.0pt on input line 86.
+(Font)              scaled to size 9.0pt on input line 291.
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 2.55002pt on input line 86.
+(Font)              scaled to size 7.65005pt on input line 291.
+ (./1_clase/noise_model.py) [27
 
-(./2_clase/euler2.py)
-<2_clase/euler2.png, id=62, 987.2082pt x 504.4446pt>
-File: 2_clase/euler2.png Graphic file (type png)
-<use 2_clase/euler2.png>
-Package pdftex.def Info: 2_clase/euler2.png  used on input line 86.
-(pdftex.def)             Requested size: 205.71558pt x 105.11288pt.
- [5
+]
+<1_clase/noise_histogram.png, id=335, 987.2082pt x 504.4446pt>
+File: 1_clase/noise_histogram.png Graphic file (type png)
+<use 1_clase/noise_histogram.png>
+Package pdftex.def Info: 1_clase/noise_histogram.png  used on input line 297.
+(pdftex.def)             Requested size: 342.85582pt x 175.19585pt.
 
- <./2_clase/euler2.png>]
+[28
+
+ <./1_clase/noise_histogram.png>]
 File: resources/hands_on.png Graphic file (type png)
 <use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 98.
+Package pdftex.def Info: resources/hands_on.png  used on input line 305.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
- (./2_clase/euler3.py)
-<2_clase/euler3.png, id=69, 987.2082pt x 504.4446pt>
-File: 2_clase/euler3.png Graphic file (type png)
-<use 2_clase/euler3.png>
-Package pdftex.def Info: 2_clase/euler3.png  used on input line 98.
-(pdftex.def)             Requested size: 205.71558pt x 105.11288pt.
- [6
+ (./1_clase/noise_histogram.py) [29
 
- <./2_clase/euler3.png>]
-File: resources/hands_on.png Graphic file (type png)
-<use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 110.
-(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 2.0pt on input line 110.
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 1.70001pt on input line 110.
- (./2_clase/euler4.py)
-<2_clase/euler4.png, id=76, 987.2082pt x 504.4446pt>
-File: 2_clase/euler4.png Graphic file (type png)
-<use 2_clase/euler4.png>
-Package pdftex.def Info: 2_clase/euler4.png  used on input line 110.
-(pdftex.def)             Requested size: 205.71558pt x 105.11288pt.
- [7
+]
+<1_clase/noise_model.png, id=347, 1015.795pt x 341.275pt>
+File: 1_clase/noise_model.png Graphic file (type png)
+<use 1_clase/noise_model.png>
+Package pdftex.def Info: 1_clase/noise_model.png  used on input line 319.
+(pdftex.def)             Requested size: 171.4279pt x 57.59418pt.
 
- <./2_clase/euler4.png>]
-File: resources/hands_on.png Graphic file (type png)
-<use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 125.
-(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+[30
 
-(./2_clase/euler5.py) (./2_clase/euler5.py)
-<2_clase/euler5.png, id=84, 987.2082pt x 504.4446pt>
-File: 2_clase/euler5.png Graphic file (type png)
-<use 2_clase/euler5.png>
-Package pdftex.def Info: 2_clase/euler5.png  used on input line 125.
-(pdftex.def)             Requested size: 205.71558pt x 105.11288pt.
+ <./1_clase/noise_model.png>]
+<1_clase/noise_funcion_probabilidad.png, id=352, 618.31pt x 626.34pt>
+File: 1_clase/noise_funcion_probabilidad.png Graphic file (type png)
+<use 1_clase/noise_funcion_probabilidad.png>
+Package pdftex.def Info: 1_clase/noise_funcion_probabilidad.png  used on input 
+line 331.
+(pdftex.def)             Requested size: 119.99901pt x 121.55759pt.
+ [31
 
-Overfull \hbox (1.65015pt too wide) detected at line 125
-[][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][]
+ <./1_clase/noise_funcion_probabilidad.png>] [32
+
+]
+Overfull \hbox (18.94939pt too wide) detected at line 375
+[]
  []
 
-[8
 
- <./2_clase/euler5.png>]
-File: resources/hands_on.png Graphic file (type png)
-<use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 140.
-(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
- (./2_clase/euler6.py) (./2_clase/euler6.py)
-<2_clase/euler6.png, id=91, 987.2082pt x 504.4446pt>
-File: 2_clase/euler6.png Graphic file (type png)
-<use 2_clase/euler6.png>
-Package pdftex.def Info: 2_clase/euler6.png  used on input line 140.
-(pdftex.def)             Requested size: 205.71558pt x 105.11288pt.
-
-Overfull \hbox (1.65015pt too wide) detected at line 140
-[][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][]
+Overfull \hbox (18.94937pt too wide) detected at line 375
+[][]$[]$[][][][][][][][] $[]$[][][][][][]
  []
 
-[9
+[33
 
- <./2_clase/euler6.png>] [10
+] [34
+
+] [35
+
+]
+<1_clase/oversampling.png, id=379, 433.62pt x 301.125pt>
+File: 1_clase/oversampling.png Graphic file (type png)
+<use 1_clase/oversampling.png>
+Package pdftex.def Info: 1_clase/oversampling.png  used on input line 427.
+(pdftex.def)             Requested size: 137.14284pt x 95.23624pt.
+ [36
+
+ <./1_clase/oversampling.png>] (./clases.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+) [37
+
+]
+<resources/protoboard.png, id=406, 513.92pt x 513.92pt>
+File: resources/protoboard.png Graphic file (type png)
+<use resources/protoboard.png>
+Package pdftex.def Info: resources/protoboard.png  used on input line 436.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+<1_clase/circuito.png, id=407, 1229.59375pt x 566.115pt>
+File: 1_clase/circuito.png Graphic file (type png)
+<use 1_clase/circuito.png>
+Package pdftex.def Info: 1_clase/circuito.png  used on input line 436.
+(pdftex.def)             Requested size: 274.28569pt x 126.28195pt.
+ [38
+
+ <./resources/protoboard.png> <./1_clase/circuito.png>]
+<1_clase/exam_icon.png, id=414, 225.84375pt x 225.84375pt>
+File: 1_clase/exam_icon.png Graphic file (type png)
+<use 1_clase/exam_icon.png>
+Package pdftex.def Info: 1_clase/exam_icon.png  used on input line 451.
+(pdftex.def)             Requested size: 137.14284pt x 137.15106pt.
+ [39
+
+ <./1_clase/exam_icon.png>]
+File: resources/protoboard.png Graphic file (type png)
+<use resources/protoboard.png>
+Package pdftex.def Info: resources/protoboard.png  used on input line 472.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+[40
 
 ])
 \tf@nav=\write6
@@ -1815,33 +2006,34 @@ LaTeX Info: Redefining \% on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 12.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 12.
 Package rerunfilecheck Info: File `clases.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: E5EB21ED9261C84CC2D86AC6F0C91439;949.
  ) 
 Here is how much of TeX's memory you used:
- 31832 strings out of 492615
- 600114 string characters out of 6131390
- 1523273 words of memory out of 5000000
- 34844 multiletter control sequences out of 15000+600000
- 224102 words of font info for 153 fonts, out of 8000000 for 9000
+ 32258 strings out of 492615
+ 608931 string characters out of 6131390
+ 1033364 words of memory out of 5000000
+ 35159 multiletter control sequences out of 15000+600000
+ 218684 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,82p,823b,2131s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
-}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/te
-xlive/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}{/usr/share/texlive/texmf-dis
-t/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/carlito/crlt_csjzgd.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/ar
-ev/ArevSans-Oblique.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/arev/
-ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/
-Carlito-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Ca
-rlito-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Ca
-rlito.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMo
-no.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-ch
-b7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-c
-hb7y.pfb>
-Output written on clases.pdf (10 pages, 646090 bytes).
+ 72i,16n,82p,823b,2189s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}{/usr/share
+/texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
+dvips/arev/arevoml.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/de
+javumono_t1-type1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/cr
+lt_csjzgd.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-O
+blique.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/arev/ArevSans-Roma
+n.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
+Output written on clases.pdf (40 pages, 1584007 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 500000)
- 40065 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 39771 words of extra memory for PDF output out of 42996 (max. 10000000)
 

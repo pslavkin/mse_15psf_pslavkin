@@ -25,16 +25,27 @@
 %-------------------------------------------------------------------------------
     \begin{frame}{Bibliografia}
       \framesubtitle{Libros, links y otro material}
-      \begin{thebibliography}{9}
+      \begin{thebibliography}{1}
         \bibitem{dsp}
-            Steven W. Smith.
-            \emph{The Scientist and Engineer's Guide to Digital Signal Processing}.
+            Steven W. Smith. \\
+            \emph{The Scientist and Engineer's Guide to Digital Signal Processing}. \\
             Second Edition, 1999.
+        \bibitem{dsp}
+            Richard Lyons. \\
+            \emph {Understanding digital signal processing}. \\
+            Third edition.
         \bibitem{link}
-            \emph{Interactive Mathematics Site Info}.
-            \bibitem{youtube}
-            Grant Sanderson
-            \emph{ https://youtu.be/spUNpyF58BY}
+            \emph{Interactive Mathematics Site Info}. \\
+            \href {https://www.intmath.com/fourier-series/fourier-intro.php}{link}
+        \bibitem{link}
+             Boaz Porat. \\
+            \emph{Digital Processing of Random Signals: Theory and Methods}.
+         \bibitem{youtube}
+            \emph{Grant Sanderson} \\
+            \href{ https://youtu.be/spUNpyF58BY}{link}
+        \bibitem{link}
+             Emmanuel C Ifeachor, Barrie W Jervis \\
+             \emph{ Digital Signal Processing. A practial approach.}
       \end{thebibliography}
     \end{frame}
 %-------------------------------------------------------------------------------
@@ -178,7 +189,7 @@
     \centering{\alert{$y(t)=x(t)*\cos{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
     \vfill
  \end{frame}
-   %-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
  \begin{frame}{Sistemas}{}
     \begin{block}{Lineales invariantes en el tiempo}
        Un sistema es LTI cuando satisface las 2 condiciones anteriores, de linealidad y de invariancia en el tiempo.
@@ -189,7 +200,14 @@
        En este curso, \alert{solo} estudiaremos sistemas lineales invariantes en el tiempo.
     \end{alertblock}
  \end{frame}
-   %-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+ \begin{frame}{Sistemas}{}
+    \begin{block}{Senos y cosenos en LTI}
+       En todo sistema LTI para una entrada senoidal la salida es siempre senoidal.
+    \end{block}
+    \vfill
+ \end{frame}
+%------------------------------------------------------------------------------
  \section{ADC}
  \begin{frame}{ADC}{Bloque generico de procesamiento}
     \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
