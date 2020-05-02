@@ -18,6 +18,7 @@ circle  = lambda c,f,n: c*np.exp(-1j*2*np.pi*f*n*1/fs)
 def update(n):
     circleLn.set_data(np.real(circle(1,circleFrec,n)),
                       np.imag(circle(1,circleFrec,n)))
+
     return circleLn,
 
 ani=FuncAnimation(fig,update,N,interval=1000 ,blit=False,repeat=True)

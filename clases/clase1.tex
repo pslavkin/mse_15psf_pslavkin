@@ -22,31 +22,82 @@
     \center\includegraphics[width=0.8\textwidth]{1_clase/Esquema_MSE}
     \vfill
  \end{frame}
+ \begin{frame}{Plan de vuelo}{Ud. esta aqui}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.7\textwidth]{1_clase/Esquema_MSE2}
+       \column{.5\textwidth}
+       \begin{enumerate}
+          \item{
+                \begin{itemize}
+                      \scriptsize{
+                      \item {Sampleo}
+                      \item {Fourier, Z}
+                      \item {Filtrado basico}
+                      \item {CIAA}
+                      \item {Python}
+                      }
+                \end{itemize}
+             }
+          \item{
+                \begin{itemize}
+                      \scriptsize{
+                      \item {Estadistica}
+                      \item {Canales}
+                      \item {Filtrado complejo}
+                      \item {FPGA?}
+                      \item {Python}
+                      }
+                \end{itemize}
+             }
+          \item{
+                \begin{itemize}
+                      \scriptsize{
+                      \item{Implementacion}
+                      \item{Hi-Speed}
+                      \item{Comunicaciones}
+                      \item{FPGA}
+                      \item{Python}
+                      }
+                \end{itemize}
+             }
+       \end{enumerate}
+    \end{columns}
+ \end{frame}
 %-------------------------------------------------------------------------------
-    \begin{frame}{Bibliografia}
-      \framesubtitle{Libros, links y otro material}
-      \begin{thebibliography}{1}
-        \bibitem{dsp}
-            Steven W. Smith. \\
-            \emph{The Scientist and Engineer's Guide to Digital Signal Processing}. \\
-            Second Edition, 1999.
-        \bibitem{dsp}
-            Richard Lyons. \\
-            \emph {Understanding digital signal processing}. \\
-            Third edition.
-        \bibitem{link}
-            \emph{Interactive Mathematics Site Info}. \\
-            \href {https://www.intmath.com/fourier-series/fourier-intro.php}{link}
-        \bibitem{link}
+ \begin{frame}{Bibliografia}
+    \framesubtitle{Libros, links y otro material}
+    \tiny{
+       \begin{thebibliography}{1}
+             \bibitem{smith}
+             Steven W. Smith. \\
+             \textcolor{green}{\emph{The Scientist and Engineer's Guide to Digital Signal Processing}} \\
+             Second Edition, 1999.
+             \bibitem{thinkdsp}
+             Allen B. Downey \\
+             \textcolor{green}{\emph{Think DSP - Digital Signal Processing in Python}}
+             \bibitem{lyons}
+             Richard Lyons. \\
+             \emph {Understanding digital signal processing}. \\
+             Third edition.
+             \bibitem{porat}
              Boaz Porat. \\
             \emph{Digital Processing of Random Signals: Theory and Methods}.
-         \bibitem{youtube}
-            \emph{Grant Sanderson} \\
-            \href{ https://youtu.be/spUNpyF58BY}{link}
-        \bibitem{link}
+             \emph{Digital Processing of Random Signals: Theory and Methods}.
+             \bibitem{thinkpython}
+             Allen B. Downey \\
+             \emph{ Think Python, 2nd Edition, - How to Think Like a Computer Scientist}
+             \bibitem{digitalsignalprocessing}
              Emmanuel C Ifeachor, Barrie W Jervis \\
              \emph{ Digital Signal Processing. A practial approach.}
-      \end{thebibliography}
+             \bibitem{ntroductiontopython}
+             NW. Taylor, Francis Group, LLC.\\
+             \emph{ Introduction to Python Programming.}
+             \bibitem{digitalsignalprocessing}
+             Matt Harrison\\
+             \emph{ Illustrated guide to python 3}
+       \end{thebibliography}
+   }
     \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{porque digital?}
@@ -177,7 +228,7 @@
           \end{tabular}
        \end{table}
     \end{centering}
-    \centering{\alert{$y(t)=\exp{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
+    \centering{\alert{$y(t)=e^{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
     \vfill
  \end{frame}
    %-------------------------------------------------------------------------------
@@ -186,7 +237,7 @@
        Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
     \end{block}
     \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo} \\
-    \centering{\alert{$y(t)=x(t)*\cos{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
+    \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(t)$}}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -231,9 +282,19 @@
     \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
     \vfill
  \end{frame}
+%-------------------------------------------------------------------------------
  \begin{frame}{Aliasing}{Simulando en Python}
     Que pasa si se suma ruido de alta frecuencia?
     \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Aliasing}{Disco Giratorio}
+    \center{
+       \href{run:./1_clase/disco_aliasing.mp4}{
+          \includegraphics[width=0.8\textwidth]{1_clase/disco_aliasing}
+       }
+    }
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -299,7 +360,7 @@
  \begin{frame}{Ruido de cuantizacion}{Histogramas}
     Histogramas en Python
     \handsonicon
-    \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily }
+    \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
     \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_histogram.py}
     \vfill
  \end{frame}
@@ -432,6 +493,21 @@
     Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
     \protoboardicon
     \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \section{CIAA}
+ \subsection{Generacion de audio con Python}
+ \begin{frame}{Generacion de audio con Python}{simpleaudio lib}
+    \handsonicon
+    Como herramienta para la generacion de audio para capturar con la CIAA se propone el uso de simpleaudio con el siguiente template de codigo como base
+    \begin{columns}[onlytextwidth]
+       \column{.6\textwidth}
+       \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+       \lstinputlisting[language=Python,tabsize=4]{1_clase/audio_gen1.py}
+       \column{.4\textwidth}
+       \includegraphics[width=\textwidth]{1_clase/audio_gen1.png}
+    \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------

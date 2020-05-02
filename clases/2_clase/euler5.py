@@ -7,11 +7,13 @@ fs         = 20
 N          = 20
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
-circleLn,promLn  = plt.plot([],[],'r-',[],[],'bo')
+circleLn,promLn,  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
 circleAxe.set_xlim(-2,2)
 circleAxe.set_ylim(-2,2)
 circleFrec = 0
+circleLn.set_label(circleFrec)
+legendLn   = circleAxe.legend()
 circleData = []
 prom       = 0
 frecIter   = 0
@@ -35,7 +37,7 @@ fourierAxe.set_ylim(0,0.5)
 fourierData=[]
 #--------------------------------------
 inversaAxe         = fig.add_subplot(2,2,4)
-inversaLn,vectorLn = plt.plot([],[],'m-o',[],[],'b-o')
+inversaLn,vectorLn, = plt.plot([],[],'m-o',[],[],'b-o')
 inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
@@ -46,11 +48,14 @@ tData=[]
 fData=[]
 
 def init():
-    return circleln,
+    return circleLn,
+def initF():
+    return inversaLn,
+
 def updateF(n):
     global fourierData,fData,vectorData
     if aniT.repeat==True:
-        return 
+        return inversaLn,
     vectorData=[0]
     for f in range(N):
         vectorData.append(vectorData[-1]+circleInv(np.abs(fourierData[f]),f*fs/N,n))
@@ -59,7 +64,7 @@ def updateF(n):
 
 
 def updateT(n):
-    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData
+    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,legendLn
     circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
     prom=np.average(circleData)
     promLn.set_data(np.real(prom),
@@ -83,9 +88,9 @@ def updateT(n):
             aniT.repeat=False
         circleFrec = frecIter*fs/N
         circleLn.set_label(circleFrec)
-        circleAxe.legend()
-    return circleLn,circleAxe,signalLn,promLn,fourierLn
+        legendLn=circleAxe.legend()
+    return circleLn,signalLn,promLn,fourierLn,legendLn,
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,init,interval=300 ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,initF,interval=300 ,blit=True,repeat=True)
 plt.show()

@@ -16,6 +16,8 @@ circleAxe.grid(True)
 circleAxe.set_xlim(-2,2)
 circleAxe.set_ylim(-2,2)
 circleFrec = 0
+circleLn.set_label(circleFrec)
+circleLg   = circleAxe.legend()
 circleData = []
 prom       = 0
 frecIter   = 0
@@ -57,7 +59,7 @@ fftData=np.fft.fft(signal(signalFrec,time))/N
 def updateF(n):
     global fftData,vectorData,penData,fourierData
     if aniT.repeat==True:
-        return
+        return inversaLn,vectorLn
     vectorData=[0]
     for f in range(N):
         vectorData.append(vectorData[-1]+circleInv(fourierData[f],f*fs/N,n))
@@ -71,7 +73,7 @@ def init():
     return circleLn,
 
 def updateT(nn):
-    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,fftData
+    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,fftData,circleLg
     for n in range(N):
         circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
         prom=np.average(circleData)
@@ -97,9 +99,9 @@ def updateT(nn):
         aniT.repeat=False
     circleFrec = frecIter*fs/N
     circleLn.set_label(circleFrec)
-    circleAxe.legend()
-    return circleLn,circleAxe,signalLn,promLn,fourierLn
+    circleLg=circleAxe.legend()
+    return circleLn,signalLn,promLn,fourierLn,circleLg,
 
-aniT=FuncAnimation(fig,updateT,N,init,interval=100 ,blit=False,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,init,interval=200 ,blit=False,repeat=True)
-plt.show()
+aniT=FuncAnimation(fig,updateT,N,init,interval=100 ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,init,interval=200 ,blit=True,repeat=True)
+iplt.show()

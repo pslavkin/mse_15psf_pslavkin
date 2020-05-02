@@ -1,34 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:acondicionamiento-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -43,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L R R2
+L acondicionamiento-rescue:R R2
 U 1 1 5E9F21B2
 P 6000 3850
 F 0 "R2" H 6150 3800 50  0000 C CNN
@@ -54,10 +26,10 @@ F 3 "" H 6000 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR1
+L power:+3.3V #PWR03
 U 1 1 5E9F21E0
 P 6000 3050
-F 0 "#PWR1" H 6000 2900 50  0001 C CNN
+F 0 "#PWR03" H 6000 2900 50  0001 C CNN
 F 1 "+3.3V" H 6000 3190 50  0000 C CNN
 F 2 "" H 6000 3050 50  0000 C CNN
 F 3 "" H 6000 3050 50  0000 C CNN
@@ -65,10 +37,10 @@ F 3 "" H 6000 3050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR2
+L power:GNDA #PWR04
 U 1 1 5E9F21FA
 P 6000 4250
-F 0 "#PWR2" H 6000 4000 50  0001 C CNN
+F 0 "#PWR04" H 6000 4000 50  0001 C CNN
 F 1 "GNDA" H 6000 4100 50  0000 C CNN
 F 2 "" H 6000 4250 50  0000 C CNN
 F 3 "" H 6000 4250 50  0000 C CNN
@@ -76,12 +48,10 @@ F 3 "" H 6000 4250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 3550 6000 3700
-Wire Wire Line
-	5450 3650 6300 3650
+	6000 3550 6000 3650
 Connection ~ 6000 3650
 $Comp
-L C C2
+L acondicionamiento-rescue:C C2
 U 1 1 5E9F228D
 P 6750 3850
 F 0 "C2" H 6775 3950 50  0000 L CNN
@@ -92,14 +62,14 @@ F 3 "" H 6750 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 3650 7050 3650
+	6600 3650 6750 3650
 Wire Wire Line
 	6750 3650 6750 3700
 $Comp
-L GNDA #PWR3
+L power:GNDA #PWR05
 U 1 1 5E9F22FD
 P 6750 4250
-F 0 "#PWR3" H 6750 4000 50  0001 C CNN
+F 0 "#PWR05" H 6750 4000 50  0001 C CNN
 F 1 "GNDA" H 6750 4100 50  0000 C CNN
 F 2 "" H 6750 4250 50  0000 C CNN
 F 3 "" H 6750 4250 50  0000 C CNN
@@ -116,7 +86,7 @@ Text Notes 4550 3550 0    60   ~ 0
 Text Notes 7150 3850 0    60   ~ 0
 0-3.3Vdc\n
 $Comp
-L R R1
+L acondicionamiento-rescue:R R1
 U 1 1 5E9F2549
 P 6000 3400
 F 0 "R1" H 6150 3350 50  0000 C CNN
@@ -127,7 +97,7 @@ F 3 "" H 6000 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L acondicionamiento-rescue:R R3
 U 1 1 5E9F2580
 P 6450 3650
 F 0 "R3" V 6350 3650 50  0000 C CNN
@@ -142,89 +112,87 @@ Text Notes 4500 3450 0    60   ~ 0
 Text Notes 7150 4000 0    60   ~ 0
 0-5Khz\n
 $Comp
-L C C1
+L acondicionamiento-rescue:C C1
 U 1 1 5E9F278E
-P 5300 3650
-F 0 "C1" V 5450 3600 50  0000 L CNN
-F 1 ">1uF" V 5100 3550 50  0000 L CNN
-F 2 "" H 5338 3500 50  0000 C CNN
-F 3 "" H 5300 3650 50  0000 C CNN
-	1    5300 3650
+P 5650 3650
+F 0 "C1" V 5800 3600 50  0000 L CNN
+F 1 ">1uF" V 5450 3550 50  0000 L CNN
+F 2 "" H 5688 3500 50  0000 C CNN
+F 3 "" H 5650 3650 50  0000 C CNN
+	1    5650 3650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5150 3650 4900 3650
 Text Notes 6150 3250 0    60   ~ 0
 fc=1/(2*pi*R*C)
 Text Label 6000 3650 0    60   ~ 0
 1.65v
 $Comp
-L D D?
+L acondicionamiento-rescue:D D2
 U 1 1 5E9F29FA
-P 5600 3500
-F 0 "D?" H 5600 3600 50  0000 C CNN
-F 1 "D" H 5600 3400 50  0000 C CNN
-F 2 "" H 5600 3500 50  0000 C CNN
-F 3 "" H 5600 3500 50  0000 C CNN
-	1    5600 3500
+P 5300 3500
+F 0 "D2" H 5300 3600 50  0000 C CNN
+F 1 "D" H 5300 3400 50  0000 C CNN
+F 2 "" H 5300 3500 50  0000 C CNN
+F 3 "" H 5300 3500 50  0000 C CNN
+	1    5300 3500
 	0    1    1    0   
 $EndComp
 $Comp
-L D D?
+L acondicionamiento-rescue:D D1
 U 1 1 5E9F2A93
-P 5600 3200
-F 0 "D?" H 5600 3300 50  0000 C CNN
-F 1 "D" H 5600 3100 50  0000 C CNN
-F 2 "" H 5600 3200 50  0000 C CNN
-F 3 "" H 5600 3200 50  0000 C CNN
-	1    5600 3200
+P 5300 3200
+F 0 "D1" H 5300 3300 50  0000 C CNN
+F 1 "D" H 5300 3100 50  0000 C CNN
+F 2 "" H 5300 3200 50  0000 C CNN
+F 3 "" H 5300 3200 50  0000 C CNN
+	1    5300 3200
 	0    1    1    0   
 $EndComp
 $Comp
-L D D?
+L acondicionamiento-rescue:D D3
 U 1 1 5E9F2C2C
-P 5600 3800
-F 0 "D?" H 5600 3900 50  0000 C CNN
-F 1 "D" H 5600 3700 50  0000 C CNN
-F 2 "" H 5600 3800 50  0000 C CNN
-F 3 "" H 5600 3800 50  0000 C CNN
-	1    5600 3800
+P 5300 3800
+F 0 "D3" H 5300 3900 50  0000 C CNN
+F 1 "D" H 5300 3700 50  0000 C CNN
+F 2 "" H 5300 3800 50  0000 C CNN
+F 3 "" H 5300 3800 50  0000 C CNN
+	1    5300 3800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L D D?
+L acondicionamiento-rescue:D D4
 U 1 1 5E9F2C78
-P 5600 4100
-F 0 "D?" H 5600 4200 50  0000 C CNN
-F 1 "D" H 5600 4000 50  0000 C CNN
-F 2 "" H 5600 4100 50  0000 C CNN
-F 3 "" H 5600 4100 50  0000 C CNN
-	1    5600 4100
+P 5300 4100
+F 0 "D4" H 5300 4200 50  0000 C CNN
+F 1 "D" H 5300 4000 50  0000 C CNN
+F 2 "" H 5300 4100 50  0000 C CNN
+F 3 "" H 5300 4100 50  0000 C CNN
+	1    5300 4100
 	0    -1   -1   0   
 $EndComp
-Connection ~ 5600 3650
+Connection ~ 5300 3650
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR01
 U 1 1 5E9F2D56
-P 5600 3050
-F 0 "#PWR?" H 5600 2900 50  0001 C CNN
-F 1 "+3.3V" H 5600 3190 50  0000 C CNN
-F 2 "" H 5600 3050 50  0000 C CNN
-F 3 "" H 5600 3050 50  0000 C CNN
-	1    5600 3050
+P 5300 3050
+F 0 "#PWR01" H 5300 2900 50  0001 C CNN
+F 1 "+3.3V" H 5300 3190 50  0000 C CNN
+F 2 "" H 5300 3050 50  0000 C CNN
+F 3 "" H 5300 3050 50  0000 C CNN
+	1    5300 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6000 3250 6000 3050
 $Comp
-L GNDA #PWR?
+L power:GNDA #PWR02
 U 1 1 5E9F2E0C
-P 5600 4250
-F 0 "#PWR?" H 5600 4000 50  0001 C CNN
-F 1 "GNDA" H 5600 4100 50  0000 C CNN
-F 2 "" H 5600 4250 50  0000 C CNN
-F 3 "" H 5600 4250 50  0000 C CNN
-	1    5600 4250
+P 5300 4250
+F 0 "#PWR02" H 5300 4000 50  0001 C CNN
+F 1 "GNDA" H 5305 4077 50  0000 C CNN
+F 2 "" H 5300 4250 50  0000 C CNN
+F 3 "" H 5300 4250 50  0000 C CNN
+	1    5300 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -255,4 +223,16 @@ Wire Notes Line
 	7700 3050 6950 3050
 Text Notes 7250 3150 0    60   ~ 0
 CIAA
+Wire Wire Line
+	6000 3650 6000 3700
+Wire Wire Line
+	6000 3650 6300 3650
+Wire Wire Line
+	6750 3650 7050 3650
+Wire Wire Line
+	4900 3650 5300 3650
+Wire Wire Line
+	5300 3650 5500 3650
+Wire Wire Line
+	5800 3650 6000 3650
 $EndSCHEMATC

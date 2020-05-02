@@ -1,0 +1,54 @@
+%-------------------------------------------------------------------------------
+\subtitle{Trabajo Practico}
+\begin{frame}[c]
+\maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=45pt]
+      at (current page.south east) {
+        \includegraphics[width=45mm]{1_clase/python_continuo_vs_discreto}
+      };
+  \end{tikzpicture}
+\end{frame}
+%-------------------------------------------------------------------------------
+\AtBeginSection[]{% Print an outline at the beginning of sections
+\begin{frame}
+   \frametitle{Resumen de seccion \thesection}
+   \tiny{\tableofcontents[currentsection]}
+ \end{frame}}
+%-------------------------------------------------------------------------------
+ \section{LTI}
+ \subsection{Sistemas LTI}
+ \begin{frame}{Sistemas LTI}
+ Demuestre si los siguientes sistemas son LTI:\\
+ \begin{align*}
+    y(t) &= x(t)*\cos{(t)} \\
+    y(t) &= \cos(t) \\
+    y(t) &= e^{x(t)} \\
+    y(t) &= \frac{1}{2}x(t)
+ \end{align*}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Generacion de señales con Python}
+    Realizar las funciones necesarias para generar las siguientes señales:
+    \begin{enumerate}
+       \item {Senoidal. (parámetros: fase (radianes))}
+       \item {Cuadrada. (parámetros: ciclo de actividad)}
+       \item {Triangular. (parámetros: punto de simetría)}
+    \end{enumerate}
+    Nota: Los parámetros comunes a todas serán:
+    \begin{itemize}
+       \item {frecuencia de muestreo fs (Hz) }
+       \item {frecuencia fundamental de la onda fo (Hz) }
+       \item {Amplitud normalizada }
+       \item {Cantidad de muestras N. }
+    \end{itemize}
+        Es decir que se podría invocar la señal que genere la senoidal como: \\
+        signal = sin( 1000, 100, 1, 1000, pi/2);
+        Grafique al menos una de cada una de las señales
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Generacion de audio con Python}
+   Generar una LA 440 con python, capturarlo con la CIAA y mostrarlo con pyplot
+ \end{frame}
