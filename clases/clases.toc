@@ -14,6 +14,7 @@
 \beamer@subsectionintoc {3}{4}{oversampling}{38}{0}{3}
 \beamer@sectionintoc {4}{CIAA}{39}{0}{4}
 \beamer@subsectionintoc {4}{1}{Acondicionamiento de se\IeC {\~n}al}{40}{0}{4}
-\beamer@sectionintoc {5}{CIAA}{41}{0}{5}
-\beamer@subsectionintoc {5}{1}{Generacion de audio con Python}{42}{0}{5}
-\beamer@subsectionintoc {5}{2}{Evaluacion}{43}{0}{5}
+\beamer@sectionintoc {5}{CIAA}{42}{0}{5}
+\beamer@subsectionintoc {5}{1}{Generacion de audio con Python}{43}{0}{5}
+\beamer@subsectionintoc {5}{2}{Captura con la CIAA}{44}{0}{5}
+\beamer@subsectionintoc {5}{3}{Evaluacion}{46}{0}{5}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  2 MAY 2020 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  3 MAY 2020 02:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,7 +1470,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 3.
 
 (./clase1.tex
-<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=86, 1271.75125pt x 427.5975pt>
+<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=90, 1271.75125pt x 427.5975pt>
 
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
@@ -1631,7 +1631,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 (Font)              scaled to size 6.0pt on input line 11.
-<1_clase/python_continuo_vs_discreto.png, id=92, 462.528pt x 346.896pt>
+<1_clase/python_continuo_vs_discreto.png, id=96, 462.528pt x 346.896pt>
 File: 1_clase/python_continuo_vs_discreto.png Graphic file (type png)
 <use 1_clase/python_continuo_vs_discreto.png>
 Package pdftex.def Info: 1_clase/python_continuo_vs_discreto.png  used on input
@@ -1648,7 +1648,7 @@ LaTeX Info: Redefining \% on input line 1.
 ) [2
 
 ]
-<1_clase/Esquema_MSE.png, id=145, 1823.81375pt x 1239.63126pt>
+<1_clase/Esquema_MSE.png, id=151, 1823.81375pt x 1239.63126pt>
 File: 1_clase/Esquema_MSE.png Graphic file (type png)
 <use 1_clase/Esquema_MSE.png>
 Package pdftex.def Info: 1_clase/Esquema_MSE.png  used on input line 24.
@@ -1656,7 +1656,7 @@ Package pdftex.def Info: 1_clase/Esquema_MSE.png  used on input line 24.
  [3
 
  <./1_clase/Esquema_MSE.png>]
-<1_clase/Esquema_MSE2.png, id=152, 357.335pt x 504.88625pt>
+<1_clase/Esquema_MSE2.png, id=158, 357.335pt x 504.88625pt>
 File: 1_clase/Esquema_MSE2.png Graphic file (type png)
 <use 1_clase/Esquema_MSE2.png>
 Package pdftex.def Info: 1_clase/Esquema_MSE2.png  used on input line 66.
@@ -1676,12 +1676,12 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
  <./1_clase/Esquema_MSE2.png>] [5
 
 ]
-<1_clase/fpga.jpg, id=171, 295.1025pt x 292.09125pt>
+<1_clase/fpga.jpg, id=177, 295.1025pt x 292.09125pt>
 File: 1_clase/fpga.jpg Graphic file (type jpg)
 <use 1_clase/fpga.jpg>
 Package pdftex.def Info: 1_clase/fpga.jpg  used on input line 129.
 (pdftex.def)             Requested size: 85.35826pt x 84.48589pt.
-<1_clase/transistor_amp.jpg, id=172, 701.62125pt x 510.90875pt>
+<1_clase/transistor_amp.jpg, id=178, 701.62125pt x 510.90875pt>
 File: 1_clase/transistor_amp.jpg Graphic file (type jpg)
 <use 1_clase/transistor_amp.jpg>
 Package pdftex.def Info: 1_clase/transistor_amp.jpg  used on input line 129.
@@ -1693,7 +1693,7 @@ Package pdftex.def Info: 1_clase/transistor_amp.jpg  used on input line 129.
 ] [8
 
 ]
-<1_clase/continuo_vs_discreto.jpg, id=189, 925.4575pt x 184.69pt>
+<1_clase/continuo_vs_discreto.jpg, id=195, 925.4575pt x 184.69pt>
 File: 1_clase/continuo_vs_discreto.jpg Graphic file (type jpg)
 <use 1_clase/continuo_vs_discreto.jpg>
 Package pdftex.def Info: 1_clase/continuo_vs_discreto.jpg  used on input line 1
@@ -1728,7 +1728,7 @@ Package pdftex.def Info: 1_clase/python_continuo_vs_discreto.png  used on input
  [10
 
 ]
-<1_clase/periodica.jpg, id=202, 275.52937pt x 109.91063pt>
+<1_clase/periodica.jpg, id=208, 275.52937pt x 109.91063pt>
 File: 1_clase/periodica.jpg Graphic file (type jpg)
 <use 1_clase/periodica.jpg>
 Package pdftex.def Info: 1_clase/periodica.jpg  used on input line 205.
@@ -1736,7 +1736,7 @@ Package pdftex.def Info: 1_clase/periodica.jpg  used on input line 205.
  [11
 
  <./1_clase/periodica.jpg>]
-<1_clase/sistema.png, id=210, 757.83125pt x 287.0725pt>
+<1_clase/sistema.png, id=216, 757.83125pt x 287.0725pt>
 File: 1_clase/sistema.png Graphic file (type png)
 <use 1_clase/sistema.png>
 Package pdftex.def Info: 1_clase/sistema.png  used on input line 215.
@@ -1744,17 +1744,17 @@ Package pdftex.def Info: 1_clase/sistema.png  used on input line 215.
  [12
 
  <./1_clase/sistema.png>]
-<1_clase/superposicion1.png, id=216, 608.2725pt x 99.37125pt>
+<1_clase/superposicion1.png, id=222, 608.2725pt x 99.37125pt>
 File: 1_clase/superposicion1.png Graphic file (type png)
 <use 1_clase/superposicion1.png>
 Package pdftex.def Info: 1_clase/superposicion1.png  used on input line 233.
 (pdftex.def)             Requested size: 137.14023pt x 22.40305pt.
-<1_clase/superposicion2.png, id=217, 706.64pt x 215.80624pt>
+<1_clase/superposicion2.png, id=223, 706.64pt x 215.80624pt>
 File: 1_clase/superposicion2.png Graphic file (type png)
 <use 1_clase/superposicion2.png>
 Package pdftex.def Info: 1_clase/superposicion2.png  used on input line 233.
 (pdftex.def)             Requested size: 137.14023pt x 41.88281pt.
-<1_clase/superposicion3.png, id=218, 434.62375pt x 87.32625pt>
+<1_clase/superposicion3.png, id=224, 434.62375pt x 87.32625pt>
 File: 1_clase/superposicion3.png Graphic file (type png)
 <use 1_clase/superposicion3.png>
 Package pdftex.def Info: 1_clase/superposicion3.png  used on input line 233.
@@ -1763,7 +1763,7 @@ Package pdftex.def Info: 1_clase/superposicion3.png  used on input line 233.
 
  <./1_clase/superposicion1.png> <./1_clase/superposicion2.png> <./1_clase/super
 posicion3.png>]
-<1_clase/invariante_en_tiempo.png, id=228, 753.81625pt x 91.34125pt>
+<1_clase/invariante_en_tiempo.png, id=234, 753.81625pt x 91.34125pt>
 File: 1_clase/invariante_en_tiempo.png Graphic file (type png)
 <use 1_clase/invariante_en_tiempo.png>
 Package pdftex.def Info: 1_clase/invariante_en_tiempo.png  used on input line 2
@@ -1772,7 +1772,7 @@ Package pdftex.def Info: 1_clase/invariante_en_tiempo.png  used on input line 2
  [14
 
  <./1_clase/invariante_en_tiempo.png>]
-<1_clase/lti.png, id=236, 454.69875pt x 82.3075pt>
+<1_clase/lti.png, id=242, 454.69875pt x 82.3075pt>
 File: 1_clase/lti.png Graphic file (type png)
 <use 1_clase/lti.png>
 Package pdftex.def Info: 1_clase/lti.png  used on input line 253.
@@ -1787,7 +1787,7 @@ LaTeX Info: Redefining \% on input line 1.
 ) [17
 
 ]
-<1_clase/adc_dac.png, id=270, 611.28375pt x 194.7275pt>
+<1_clase/adc_dac.png, id=277, 611.28375pt x 194.7275pt>
 File: 1_clase/adc_dac.png Graphic file (type png)
 <use 1_clase/adc_dac.png>
 Package pdftex.def Info: 1_clase/adc_dac.png  used on input line 268.
@@ -1795,7 +1795,7 @@ Package pdftex.def Info: 1_clase/adc_dac.png  used on input line 268.
  [18
 
  <./1_clase/adc_dac.png>]
-<resources/hands_on.png, id=277, 513.92pt x 513.92pt>
+<resources/hands_on.png, id=284, 513.92pt x 513.92pt>
 File: resources/hands_on.png Graphic file (type png)
 <use resources/hands_on.png>
 Package pdftex.def Info: resources/hands_on.png  used on input line 278.
@@ -1806,7 +1806,7 @@ LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
 (./1_clase/teorema_sampleo.py) [19
 
  <./resources/hands_on.png>]
-<1_clase/teorema_sampleo.png, id=284, 1380.357pt x 698.8509pt>
+<1_clase/teorema_sampleo.png, id=291, 1380.357pt x 698.8509pt>
 File: 1_clase/teorema_sampleo.png Graphic file (type png)
 <use 1_clase/teorema_sampleo.png>
 Package pdftex.def Info: 1_clase/teorema_sampleo.png  used on input line 284.
@@ -1814,7 +1814,7 @@ Package pdftex.def Info: 1_clase/teorema_sampleo.png  used on input line 284.
  [20
 
  <./1_clase/teorema_sampleo.png>]
-<1_clase/teorema_sampleo2.png, id=291, 1380.357pt x 698.8509pt>
+<1_clase/teorema_sampleo2.png, id=298, 1380.357pt x 698.8509pt>
 File: 1_clase/teorema_sampleo2.png Graphic file (type png)
 <use 1_clase/teorema_sampleo2.png>
 Package pdftex.def Info: 1_clase/teorema_sampleo2.png  used on input line 290.
@@ -1822,7 +1822,7 @@ Package pdftex.def Info: 1_clase/teorema_sampleo2.png  used on input line 290.
  [21
 
  <./1_clase/teorema_sampleo2.png>]
-<1_clase/disco_aliasing.png, id=299, 1368.11125pt x 632.3625pt>
+<1_clase/disco_aliasing.png, id=306, 1368.11125pt x 632.3625pt>
 File: 1_clase/disco_aliasing.png Graphic file (type png)
 <use 1_clase/disco_aliasing.png>
 Package pdftex.def Info: 1_clase/disco_aliasing.png  used on input line 299.
@@ -1830,17 +1830,17 @@ Package pdftex.def Info: 1_clase/disco_aliasing.png  used on input line 299.
  [22
 
  <./1_clase/disco_aliasing.png>]
-<1_clase/shannon.png, id=306, 678.535pt x 153.57375pt>
+<1_clase/shannon.png, id=313, 678.535pt x 153.57375pt>
 File: 1_clase/shannon.png Graphic file (type png)
 <use 1_clase/shannon.png>
 Package pdftex.def Info: 1_clase/shannon.png  used on input line 314.
 (pdftex.def)             Requested size: 144.00027pt x 32.59122pt.
-<1_clase/sinc_limpia.png, id=307, 377.9721pt x 185.0112pt>
+<1_clase/sinc_limpia.png, id=314, 377.9721pt x 185.0112pt>
 File: 1_clase/sinc_limpia.png Graphic file (type png)
 <use 1_clase/sinc_limpia.png>
 Package pdftex.def Info: 1_clase/sinc_limpia.png  used on input line 314.
 (pdftex.def)             Requested size: 144.00027pt x 70.48566pt.
-<1_clase/claude_shannon.jpg, id=308, 285.065pt x 401.5pt>
+<1_clase/claude_shannon.jpg, id=315, 285.065pt x 401.5pt>
 File: 1_clase/claude_shannon.jpg Graphic file (type jpg)
 <use 1_clase/claude_shannon.jpg>
 Package pdftex.def Info: 1_clase/claude_shannon.jpg  used on input line 314.
@@ -1862,7 +1862,7 @@ File: resources/hands_on.png Graphic file (type png)
 <use resources/hands_on.png>
 Package pdftex.def Info: resources/hands_on.png  used on input line 329.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-<1_clase/teorema_sampleo_interpolado.png, id=320, 987.2082pt x 504.4446pt>
+<1_clase/teorema_sampleo_interpolado.png, id=327, 987.2082pt x 504.4446pt>
 File: 1_clase/teorema_sampleo_interpolado.png Graphic file (type png)
 <use 1_clase/teorema_sampleo_interpolado.png>
 Package pdftex.def Info: 1_clase/teorema_sampleo_interpolado.png  used on input
@@ -1872,7 +1872,7 @@ Package pdftex.def Info: 1_clase/teorema_sampleo_interpolado.png  used on input
 [25
 
  <./1_clase/teorema_sampleo_interpolado.png>]
-<1_clase/filtro_anti_aliasing.jpg, id=328, 289.08pt x 117.43875pt>
+<1_clase/filtro_anti_aliasing.jpg, id=335, 289.08pt x 117.43875pt>
 File: 1_clase/filtro_anti_aliasing.jpg Graphic file (type jpg)
 <use 1_clase/filtro_anti_aliasing.jpg>
 Package pdftex.def Info: 1_clase/filtro_anti_aliasing.jpg  used on input line 3
@@ -1886,7 +1886,7 @@ LaTeX Info: Redefining \% on input line 1.
 ) [27
 
 ]
-<1_clase/noise_examples.png, id=357, 987.2082pt x 504.4446pt>
+<1_clase/noise_examples.png, id=365, 987.2082pt x 504.4446pt>
 File: 1_clase/noise_examples.png Graphic file (type png)
 <use 1_clase/noise_examples.png>
 Package pdftex.def Info: 1_clase/noise_examples.png  used on input line 345.
@@ -1906,7 +1906,7 @@ LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
 (./1_clase/noise_model.py) [29
 
 ]
-<1_clase/noise_histogram.png, id=368, 987.2082pt x 504.4446pt>
+<1_clase/noise_histogram.png, id=376, 987.2082pt x 504.4446pt>
 File: 1_clase/noise_histogram.png Graphic file (type png)
 <use 1_clase/noise_histogram.png>
 Package pdftex.def Info: 1_clase/noise_histogram.png  used on input line 358.
@@ -1922,7 +1922,7 @@ Package pdftex.def Info: resources/hands_on.png  used on input line 366.
 (./1_clase/noise_histogram.py) [31
 
 ]
-<1_clase/noise_model.png, id=381, 1015.795pt x 341.275pt>
+<1_clase/noise_model.png, id=389, 1015.795pt x 341.275pt>
 File: 1_clase/noise_model.png Graphic file (type png)
 <use 1_clase/noise_model.png>
 Package pdftex.def Info: 1_clase/noise_model.png  used on input line 380.
@@ -1930,7 +1930,7 @@ Package pdftex.def Info: 1_clase/noise_model.png  used on input line 380.
  [32
 
  <./1_clase/noise_model.png>]
-<1_clase/noise_funcion_probabilidad.png, id=386, 618.31pt x 626.34pt>
+<1_clase/noise_funcion_probabilidad.png, id=394, 618.31pt x 626.34pt>
 File: 1_clase/noise_funcion_probabilidad.png Graphic file (type png)
 <use 1_clase/noise_funcion_probabilidad.png>
 Package pdftex.def Info: 1_clase/noise_funcion_probabilidad.png  used on input 
@@ -1957,7 +1957,7 @@ Overfull \hbox (18.94937pt too wide) detected at line 436
 ] [37
 
 ]
-<1_clase/oversampling.png, id=413, 433.62pt x 301.125pt>
+<1_clase/oversampling.png, id=421, 433.62pt x 301.125pt>
 File: 1_clase/oversampling.png Graphic file (type png)
 <use 1_clase/oversampling.png>
 Package pdftex.def Info: 1_clase/oversampling.png  used on input line 488.
@@ -1970,51 +1970,94 @@ LaTeX Info: Redefining \% on input line 1.
 ) [39
 
 ]
-<resources/protoboard.png, id=441, 513.92pt x 513.92pt>
+<resources/protoboard.png, id=450, 513.92pt x 513.92pt>
 File: resources/protoboard.png Graphic file (type png)
 <use resources/protoboard.png>
-Package pdftex.def Info: resources/protoboard.png  used on input line 497.
+Package pdftex.def Info: resources/protoboard.png  used on input line 498.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-<1_clase/circuito.png, id=442, 1216.545pt x 554.07pt>
+<1_clase/circuito.png, id=451, 932.48375pt x 427.5975pt>
 File: 1_clase/circuito.png Graphic file (type png)
 <use 1_clase/circuito.png>
-Package pdftex.def Info: 1_clase/circuito.png  used on input line 497.
-(pdftex.def)             Requested size: 274.28569pt x 124.92245pt.
+Package pdftex.def Info: 1_clase/circuito.png  used on input line 498.
+(pdftex.def)             Requested size: 274.28569pt x 125.77478pt.
  [40
 
- <./resources/protoboard.png> <./1_clase/circuito.png>] (./clases.toc
+ <./resources/protoboard.png> <./1_clase/circuito.png>]
+File: resources/protoboard.png Graphic file (type png)
+<use resources/protoboard.png>
+Package pdftex.def Info: resources/protoboard.png  used on input line 505.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+<1_clase/adc_dac_pins.png, id=459, 611.886pt x 458.9145pt>
+File: 1_clase/adc_dac_pins.png Graphic file (type png)
+<use 1_clase/adc_dac_pins.png>
+Package pdftex.def Info: 1_clase/adc_dac_pins.png  used on input line 505.
+(pdftex.def)             Requested size: 239.99802pt x 179.99829pt.
+ [41
+
+ <./1_clase/adc_dac_pins.png>] (./clases.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-) [41
+) [42
 
 ]
 File: resources/hands_on.png Graphic file (type png)
 <use resources/hands_on.png>
-Package pdftex.def Info: resources/hands_on.png  used on input line 512.
+Package pdftex.def Info: resources/hands_on.png  used on input line 520.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-
-(./1_clase/audio_gen1.py)
-<1_clase/audio_gen1.png, id=471, 462.528pt x 346.896pt>
+ (./1_clase/audio_gen1.py)
+<1_clase/audio_gen1.png, id=488, 462.528pt x 346.896pt>
 File: 1_clase/audio_gen1.png Graphic file (type png)
 <use 1_clase/audio_gen1.png>
-Package pdftex.def Info: 1_clase/audio_gen1.png  used on input line 512.
+Package pdftex.def Info: 1_clase/audio_gen1.png  used on input line 520.
 (pdftex.def)             Requested size: 137.14023pt x 102.85745pt.
- [42
+ [43
 
  <./1_clase/audio_gen1.png>]
-<1_clase/exam_icon.png, id=477, 225.84375pt x 225.84375pt>
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 536.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 5.10004pt on input line 536.
+ (./1_clase/ciaa/psf1/src/psf.c)
+<1_clase/ciaa/psf1/log.png, id=495, 1229.59375pt x 475.7775pt>
+File: 1_clase/ciaa/psf1/log.png Graphic file (type png)
+<use 1_clase/ciaa/psf1/log.png>
+Package pdftex.def Info: 1_clase/ciaa/psf1/log.png  used on input line 536.
+(pdftex.def)             Requested size: 137.14023pt x 53.06166pt.
+ [44
+
+ <./1_clase/ciaa/psf1/log.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 551.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 4.25003pt on input line 551.
+
+(./1_clase/ciaa/psf1/visualize.py) (./1_clase/ciaa/psf1/visualize.py)
+<1_clase/ciaa/psf1/visualize.png, id=500, 987.2082pt x 504.4446pt>
+File: 1_clase/ciaa/psf1/visualize.png Graphic file (type png)
+<use 1_clase/ciaa/psf1/visualize.png>
+Package pdftex.def Info: 1_clase/ciaa/psf1/visualize.png  used on input line 55
+1.
+(pdftex.def)             Requested size: 137.14023pt x 70.07526pt.
+ [45
+
+ <./1_clase/ciaa/psf1/visualize.png>]
+<1_clase/exam_icon.png, id=507, 225.84375pt x 225.84375pt>
 File: 1_clase/exam_icon.png Graphic file (type png)
 <use 1_clase/exam_icon.png>
-Package pdftex.def Info: 1_clase/exam_icon.png  used on input line 527.
+Package pdftex.def Info: 1_clase/exam_icon.png  used on input line 566.
 (pdftex.def)             Requested size: 137.14284pt x 137.15106pt.
- [43
+ [46
 
  <./1_clase/exam_icon.png>]
 File: resources/protoboard.png Graphic file (type png)
 <use resources/protoboard.png>
-Package pdftex.def Info: resources/protoboard.png  used on input line 548.
+Package pdftex.def Info: resources/protoboard.png  used on input line 587.
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
- [44
+ [47
 
 ])
 \tf@nav=\write6
@@ -2028,23 +2071,24 @@ Package pdftex.def Info: resources/protoboard.png  used on input line 548.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
- (./clases.aux
+
+(./clases.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
 Package rerunfilecheck Info: File `clases.out' has not changed.
-(rerunfilecheck)             Checksum: ADADFB091B65FEAB4A098E27AFAE8757;1082.
+(rerunfilecheck)             Checksum: FAF3DA2CC3588830941E4587D06191E8;1161.
  ) 
 Here is how much of TeX's memory you used:
- 32349 strings out of 492615
- 610582 string characters out of 6131390
- 1033960 words of memory out of 5000000
- 35226 multiletter control sequences out of 15000+600000
- 219160 words of font info for 163 fonts, out of 8000000 for 9000
+ 32464 strings out of 492615
+ 612543 string characters out of 6131390
+ 1138319 words of memory out of 5000000
+ 35318 multiletter control sequences out of 15000+600000
+ 220384 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,82p,823b,2248s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,16n,82p,823b,2271s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}{/usr/share
 /texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
@@ -2059,10 +2103,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
-Output written on clases.pdf (44 pages, 2486794 bytes).
+Output written on clases.pdf (47 pages, 2756940 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 500000)
- 39802 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 40849 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -112,23 +112,31 @@
 \headcommand {\beamer@subsectionentry {0}{4}{1}{40}{Acondicionamiento de se\IeC {\~n}al}}
 \headcommand {\slideentry {4}{1}{1}{40/40}{Acondicionamiento de se\IeC {\~n}al}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@sectionpages {39}{40}}
-\headcommand {\beamer@subsectionpages {40}{40}}
-\headcommand {\sectionentry {5}{CIAA}{41}{CIAA}{0}}
-\headcommand {\slideentry {5}{0}{1}{41/41}{}{0}}
+\headcommand {\slideentry {4}{1}{2}{41/41}{Acondicionamiento de se\IeC {\~n}al}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@subsectionpages {41}{41}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{42}{Generacion de audio con Python}}
-\headcommand {\slideentry {5}{1}{1}{42/42}{Generacion de audio con Python}{0}}
+\headcommand {\beamer@sectionpages {39}{41}}
+\headcommand {\beamer@subsectionpages {40}{41}}
+\headcommand {\sectionentry {5}{CIAA}{42}{CIAA}{0}}
+\headcommand {\slideentry {5}{0}{1}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
 \headcommand {\beamer@subsectionpages {42}{42}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{43}{Evaluacion}}
-\headcommand {\slideentry {5}{2}{1}{43/43}{Evaluacion}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{43}{Generacion de audio con Python}}
+\headcommand {\slideentry {5}{1}{1}{43/43}{Generacion de audio con Python}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {5}{2}{2}{44/44}{Evaluacion}{0}}
+\headcommand {\beamer@subsectionpages {43}{43}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{44}{Captura con la CIAA}}
+\headcommand {\slideentry {5}{2}{1}{44/44}{Captura con la CIAA}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {1}{44}}
-\headcommand {\beamer@sectionpages {1}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\gdef \inserttotalframenumber {43}}
+\headcommand {\slideentry {5}{2}{2}{45/45}{Captura con la CIAA}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@subsectionpages {44}{45}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{46}{Evaluacion}}
+\headcommand {\slideentry {5}{3}{1}{46/46}{Evaluacion}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {5}{3}{2}{47/47}{Evaluacion}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {1}{47}}
+\headcommand {\beamer@sectionpages {1}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\gdef \inserttotalframenumber {46}}

@@ -237,7 +237,7 @@
        Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
     \end{block}
     \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo} \\
-    \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(t)$}}
+    \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(x(t))$}}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -490,9 +490,17 @@
  \section{CIAA}
  \subsection{Acondicionamiento de señal}
  \begin{frame}{Sampleo}{Propuesta para acondicionamiento de señal}
-    Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
+    Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ 
+    Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
     \protoboardicon
     \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Sampleo}{Propuesta para acondicionamiento de señal}
+    Pinout de la CIAA para conectar el ADC/DAC
+    \protoboardicon
+    \center\includegraphics[width=0.7\textwidth]{1_clase/adc_dac_pins}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -507,6 +515,37 @@
        \lstinputlisting[language=Python,tabsize=4]{1_clase/audio_gen1.py}
        \column{.4\textwidth}
        \includegraphics[width=\textwidth]{1_clase/audio_gen1.png}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \subsection{Captura con la CIAA}
+ \begin{frame}{Captura de audio con la CIAA}{Ciaa->Uart->picocom->log.bin}
+    \handsonicon
+      Se detalla codigo simple de sampleo y envio por UART
+    \begin{columns}[onlytextwidth]
+       \column{.6\textwidth}
+       \lstset{ basicstyle=\fontsize{ 6}{ 1}\selectfont\ttfamily }
+       \lstinputlisting[language=Python,tabsize=4]{1_clase/ciaa/psf1/src/psf.c}
+       \column{.4\textwidth}
+       \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/log.png}
+       \begin{block}{\tiny{picocom /dev/ttyUSB1 -b 460800 --logfile=log.bin}}
+       \end{block}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
+    \handsonicon
+    Se detalla la lectura de un log y visualizacion en tiempo real de los datos
+       \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily }
+    \begin{columns}[onlytextwidth]
+       \column{.3\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,lastline=25]{1_clase/ciaa/psf1/visualize.py}
+       \column{.3\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,firstline=26]{1_clase/ciaa/psf1/visualize.py}
+       \column{.4\textwidth}
+       \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/visualize.png}
     \end{columns}
     \vfill
  \end{frame}
