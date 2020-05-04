@@ -1,0 +1,100 @@
+%-------------------------------------------------------------------------------
+\subtitle{Introduccion a \\ Python y NumPy}
+\begin{frame}[c]
+\maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=45pt]
+      at (current page.south east) {
+        \includegraphics[width=25mm]{python/python_logo}
+        \includegraphics[width=35mm]{python/numpy_logo}
+      };
+  \end{tikzpicture}
+\end{frame}
+%-------------------------------------------------------------------------------
+ \section{Introduccion}
+ \subsection{Python}
+ \begin{frame}{Introduccion}
+ \begin{itemize}
+    \item{Lenguaje Interpretado}
+    \item{Tipado dinámico: El tipo se define en tiempo de ejecución}
+    \item{Fuertemente tipado: Durante las operaciones se chequea el tipo}
+ \end{itemize}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Indentacion}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.9\textwidth]{python/indentado}
+       \column{.5\textwidth}
+       \lstset{ basicstyle=\fontsize{12}{ 5}\selectfont\ttfamily }
+       \lstinputlisting[language=Python,tabsize=4]{python/indentado.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Numeros}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \begin{itemize}
+          \item{Enteros: Con signo, sin límite}
+          \item{Punto flotante}
+          \item{Complejos}
+          \item{Booleanos}
+       \end{itemize}
+       \column{.5\textwidth}
+       \lstset{ basicstyle=\fontsize{12}{ 5}\selectfont\ttfamily }
+       \lstinputlisting[language=Python,tabsize=4]{python/numeros.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Cadenas}
+    \begin{columns}
+       \column{.5\textwidth}
+       \begin{itemize}
+          \item{Strings: se guardan en codificadas. Ej. UTF\-8}
+          \item{Byte array: sin codificar, raw}
+       \end{itemize}
+       \column{.5\textwidth}
+       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstinputlisting[language=Python,tabsize=4]{python/cadenas.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Listas}
+    \begin{columns}
+       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,lastline=16]{python/listas.py}
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,firstline=17]{python/listas.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{funciones}
+       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstinputlisting[language=python,tabsize=4]{python/funciones.py}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \section{numpy}
+ \begin{frame}{NumPy}{arrays}
+       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstinputlisting[language=python,tabsize=4]{python/arrays.py}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{NumPy}{linspace}
+       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+    \begin{columns}
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,lastline=18]{python/linspace.py}
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4,firstline=19]{python/linspace.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+

@@ -19,9 +19,22 @@
  \section{Señales}
  \subsection{Plan de vuelo}
  \begin{frame}{Plan de vuelo}{Ud. esta aqui}
-    \center\includegraphics[width=0.8\textwidth]{1_clase/Esquema_MSE}
+    \begin{columns}[onlytextwidth]
+       \column{.7\textwidth}
+       \center\includegraphics[width=1.0\textwidth]{1_clase/Esquema_MSE}
+       \column{.3\textwidth}
+       \tiny{
+          Colaboardores
+          \begin{itemize}
+             \item{Gonzalo Lavigna             \\ <gonzalolavigna@gmail.com>}
+             \item{Guillermo Guichal           \\ <guillermo.guichal@gmail.com>}
+             \item{Federico Giordano Zacchigna \\ <federico.zacchigna@gmail.com>}
+          \end{itemize}
+        }
+    \end{columns}
     \vfill
  \end{frame}
+%-------------------------------------------------------------------------------
  \begin{frame}{Plan de vuelo}{Ud. esta aqui}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
@@ -43,8 +56,8 @@
                 \begin{itemize}
                       \scriptsize{
                       \item {Estadistica}
-                      \item {Canales}
-                      \item {Filtrado complejo}
+                      \item {Canales de comunicacion}
+                      \item {Filtrado y ventaneo}
                       \item {FPGA?}
                       \item {Python}
                       }
@@ -99,6 +112,27 @@
        \end{thebibliography}
    }
     \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Evaluacion}{Proyecto final}
+    \protoboardicon
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \begin{itemize}
+          \item Debera incluir algun tipo de procesamiento en hardware. ej. fft, fir, iir
+          \item Puede utilizar el ADC para samplear, DAC para reconstruir y/o canales de comunicacion para adquirir datos previamente digitalizados
+          \item presentacion de 10 minutos.
+          \item debera funcionar!
+       \end{itemize}
+       \column{.5\textwidth}
+       Ejemplos:
+       \begin{itemize}
+          \item Filtrado y/o procesamiento de audio, señales biomedicas, etc.
+          \item Tecnicas de compresion en dominio de la frecuencia
+          \item Aplicaciones con acelerometro, magnetometro, T+H
+       \end{itemize}
+    \end{columns}
+    \vfill
+ \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{porque digital?}
  \begin{frame}{porque digital?}{digital vs analogico}
@@ -194,7 +228,7 @@
        si existe un $T_0>0$, tal que $x(t+T_0)=x(t)$, para todo $t$\\
        $T_0$ es el período de $x(t)$ medido en tiempo, y $f_0=1/T_0$ es la frecuencia fundamental de $x(t)$
     \end{block}
-    \begin{block}{Continua discreta}
+    \begin{block}{Discreta periodica}
        si existe un entero $N_0>0$ tal que $x[n+N_0]=x[n]$ para
        todo $n$ \\
        $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
@@ -240,6 +274,15 @@
     \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(x(t))$}}
     \vfill
  \end{frame}
+ %-------------------------------------------------------------------------------
+ \begin{frame}{Sistemas}{Causalidad}
+    \begin{block}{Sistema causal}
+       Un sistema es causal cuando la salida depende solo de los valores presentes y pasados de la entrada
+    \end{block}
+    \center\includegraphics[width=0.4\textwidth]{1_clase/causalidad} \\
+    \centering{\alert{$y(t)=x(t+1)$}\hspace{1cm}\textcolor{green}{$y(t)=x(t-2)$}}
+    \vfill
+ \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Sistemas}{}
     \begin{block}{Lineales invariantes en el tiempo}
@@ -253,20 +296,22 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Sistemas}{}
-    \begin{block}{Senos y cosenos en LTI}
-       En todo sistema LTI para una entrada senoidal la salida es siempre senoidal.
+    \begin{block}{Linealidad estatica}
+       En todo sistema LTI para una entrada constante (DC) la salida es \textcolor{green}{siempre} la entrada multiplicada por una constante.
+    \end{block}
+    \begin{block}{Fidelidad senoidal}
+       En todo sistema LTI para una entrada senoidal la salida es \textcolor{green}{siempre} senoidal.
     \end{block}
     \vfill
  \end{frame}
 %------------------------------------------------------------------------------
  \section{ADC}
- \begin{frame}{ADC}{Bloque generico de procesamiento}
-    \center\includegraphics[width=1\textwidth]{1_clase/adc_dac}
-    \begin{alertblock} {Porque el filtro antialising?}
+ \begin{frame}{ADC}{Bloque incompleto de procesamiento}
+    \center\includegraphics[width=1\textwidth]{1_clase/adc_dac1}
+    \begin{alertblock} {Que falta?}
     \end{alertblock}
     \vfill
  \end{frame}
-
 %-------------------------------------------------------------------------------
  \subsection{Aliasing}
  \begin{frame}{Aliasing}{Simulando en Python}
@@ -297,11 +342,19 @@
     }
     \vfill
  \end{frame}
+%------------------------------------------------------------------------------
+ \section{ADC}
+ \begin{frame}{ADC}{Bloque generico de procesamiento}
+    \center\includegraphics[width=1\textwidth]{1_clase/adc_dac2}
+    \begin{alertblock} {Agregamos el filtro antialising}
+    \end{alertblock}
+    \vfill
+ \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{Teorema de Shannon}
  \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
     \begin{teorema}
-       La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está limitada en banda y la tasa de muestreo es superior al doble de su ancho de banda
+       La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está \textcolor{green}{limitada en banda} y la tasa de muestreo es \textcolor{green}{superior al doble} de su ancho de banda
     \end{teorema}
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
@@ -317,7 +370,7 @@
     \handsonicon
     Sampleo e interpolado
     \lstset{ basicstyle=\fontsize{ 7}{ 1}\selectfont\ttfamily }
-    \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo_interpolado.py}
+       \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo_interpolado.py}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -525,7 +578,7 @@
       Se detalla codigo simple de sampleo y envio por UART
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
-       \lstset{ basicstyle=\fontsize{ 6}{ 1}\selectfont\ttfamily }
+       \lstset{ basicstyle=\fontsize{ 7}{ 3}\selectfont\ttfamily }
        \lstinputlisting[language=Python,tabsize=4]{1_clase/ciaa/psf1/src/psf.c}
        \column{.4\textwidth}
        \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/log.png}
@@ -546,42 +599,6 @@
        \lstinputlisting[language=Python,tabsize=4,firstline=26]{1_clase/ciaa/psf1/visualize.py}
        \column{.4\textwidth}
        \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/visualize.png}
-    \end{columns}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \subsection{Evaluacion}
- \begin{frame}{Metodo de evaluacion}{}
-    \begin{columns}[onlytextwidth]
-       \column{.5\textwidth}
-       \begin{itemize}
-          \item  3 pts - Examen
-          \item  3 pts - TP Python
-          \item  4 pts - Proyecto final
-       \end{itemize}
-       \column{.5\textwidth}
-       \center\includegraphics[width=0.8\textwidth]{1_clase/exam_icon}
-    \end{columns}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \begin{frame}{Evaluacion}{Proyecto final}
-    \protoboardicon
-    \begin{columns}[onlytextwidth]
-       \column{.5\textwidth}
-       \begin{itemize}
-          \item Debera incluir algun tipo de procesamiento en hardware. ej. fft, fir, iir
-          \item Puede utilizar el ADC para samplear, DAC para reconstruir y/o canales de comunicacion para adquirir datos previamente digitalizados
-          \item presentacion de 10 minutos.
-          \item debera funcionar!
-       \end{itemize}
-       \column{.5\textwidth}
-       Ejemplos:
-       \begin{itemize}
-          \item Filtrado y/o procesamiento de audio, señales biomedicas, etc.
-          \item Tecnicas de compresion en dominio de la frecuencia
-          \item Aplicaciones con acelerometro, magnetometro, T+H
-       \end{itemize}
     \end{columns}
     \vfill
  \end{frame}

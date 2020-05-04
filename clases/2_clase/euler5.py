@@ -9,8 +9,8 @@ N          = 20
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,promLn,  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
-circleAxe.set_xlim(-2,2)
-circleAxe.set_ylim(-2,2)
+circleAxe.set_xlim(-1,1)
+circleAxe.set_ylim(-1,1)
 circleFrec = 0
 circleLn.set_label(circleFrec)
 legendLn   = circleAxe.legend()
@@ -86,9 +86,10 @@ def updateT(n):
         frecIter+=1
         if frecIter == N:
             aniT.repeat=False
-        circleFrec = frecIter*fs/N
-        circleLn.set_label(circleFrec)
-        legendLn=circleAxe.legend()
+        else:
+            circleFrec = frecIter*fs/N
+            circleLn.set_label(circleFrec)
+            legendLn=circleAxe.legend()
     return circleLn,signalLn,promLn,fourierLn,legendLn,
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)

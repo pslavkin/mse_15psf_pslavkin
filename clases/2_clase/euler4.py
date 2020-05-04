@@ -4,14 +4,16 @@ from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
 fs         = 10
-N          = 10
+N          = 100
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,promLn  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
-circleAxe.set_xlim(-2,2)
-circleAxe.set_ylim(-2,2)
+circleAxe.set_xlim(-1,1)
+circleAxe.set_ylim(-1,1)
 circleFrec = 0
+circleLn.set_label(circleFrec)
+circleLg   = circleAxe.legend()
 circleData = []
 prom       = 0
 frecIter   = 0
@@ -37,9 +39,9 @@ tData=[]
 fData=[]
 
 def init():
-    return circleln,
+    return circleLn,
 def update(n):
-    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData
+    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,circleLg
     circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
     prom=np.average(circleData)
     promLn.set_data(np.real(prom),
@@ -61,10 +63,11 @@ def update(n):
         frecIter+=1
         if frecIter == N:
             ani.repeat=False
-        circleFrec = frecIter*fs/N
-        circleLn.set_label(circleFrec)
-        circleAxe.legend()
-    return circleLn,circleAxe,signalLn,promLn,fourierLn
+        else:
+            circleFrec = frecIter*fs/N
+            circleLn.set_label(circleFrec)
+            circleLg=circleAxe.legend()
+    return circleLn,circleLg,signalLn,promLn,fourierLn
 
 ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

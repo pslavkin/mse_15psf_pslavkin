@@ -12,8 +12,10 @@ circleAxe.grid(True)
 circleAxe.set_xlim(-2,2)
 circleAxe.set_ylim(-2,2)
 circleFrec = 3
+circleLn.set_label(0)
+circleLg   = circleAxe.legend()
 circleData = []
-prom= 0
+prom       = 0
 circle     = lambda c,f,n: c*np.exp(-1j*2*np.pi*f*n*1/fs)
 #--------------------------------------
 signalAxe  = fig.add_subplot(2,2,2)
@@ -28,7 +30,7 @@ signal  = lambda f,n: np.cos(2*np.pi*f*n*1/fs)
 tData=[]
 
 def init():
-    return circleln,
+    return circleLn,
 def update(n):
     global circleData,signalData,tData,promData
     circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
@@ -47,8 +49,8 @@ def update(n):
         tData      = []
         prom       = 0
     circleLn.set_label(n)
-    circleAxe.legend()
-    return circleLn,circleAxe,signalLn,promLn
+    circleLg=circleAxe.legend()
+    return circleLn,circleLg,signalLn,promLn
 
 ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

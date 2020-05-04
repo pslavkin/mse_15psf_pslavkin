@@ -4,17 +4,17 @@ from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
 fs         = 10
-N          = 200
+N          = 20
 #--------------------------------------
-conejo=np.load("conejo.npy")[::10]
-N=len(conejo)
+#conejo=np.load("conejo.npy")[::10]
+#N=len(conejo)
 #signal=lambda f,n: conejo[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,promLn  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
-circleAxe.set_xlim(-2,2)
-circleAxe.set_ylim(-2,2)
+circleAxe.set_xlim(-1,1)
+circleAxe.set_ylim(-1,1)
 circleFrec = 0
 circleLn.set_label(circleFrec)
 circleLg   = circleAxe.legend()
@@ -29,7 +29,7 @@ signalLn,  = plt.plot([],[],'b-')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
-signalFrec = 0.1
+signalFrec = 1
 signalData=[]
 signal  = lambda f,n: 0.5*np.sin(2*np.pi*f*n*1/fs)+0.5j*np.sin(2*np.pi*f*2*n*1/fs)
 #--------------------------------------
@@ -93,9 +93,10 @@ def updateT(n):
         frecIter+=1
         if frecIter == N:
             aniT.repeat=False
-        circleFrec = frecIter*fs/N
-        circleLn.set_label(circleFrec)
-        circleLg=circleAxe.legend()
+        else:
+            circleFrec = frecIter*fs/N
+            circleLn.set_label(circleFrec)
+            circleLg=circleAxe.legend()
     return circleLn,signalLn,promLn,fourierLn,circleLg,
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)

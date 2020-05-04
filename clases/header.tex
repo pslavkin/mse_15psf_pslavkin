@@ -21,10 +21,10 @@
 \newcommand{\handsonicon}{
   \begin{tikzpicture}[overlay,remember picture]
      \node[anchor=south east,xshift=-5pt,yshift=0.85\textheight]
-         at (current page.south east) {
+     at (current page.south east) {
            \includegraphics[width=15mm]{resources/hands_on}
-         };
-     \end{tikzpicture}
+     };
+  \end{tikzpicture}
   }
 \newcommand{\protoboardicon}{
   \begin{tikzpicture}[overlay,remember picture]
@@ -37,16 +37,21 @@
 \newtheorem{teorema}{Teorema} %teorema en spanish
 
 %-------------------------------------------------------------------------------
-\newcommand{\insertuniversity}{Maestría en sistemas embebidos MSE2020\\
-Universidad de Buenos Aires}
+\newcommand{\insertuniversity}{Maestría en sistemas embebidos \\
+Universidad de Buenos Aires \\
+MSE 5Co2020 }
+
+\newcommand{\insertauthoremail}{<slavkin.pablo@gmail.com>}
 
 %% These macros specify information about the presentation
 \title{Procesamiento de señales, fundamentos}
 \author{Ing. Pablo Slavkin}
+
 % Declare all possible audience groups
 \SetNewAudience{clase1}
 \SetNewAudience{clase2}
 \SetNewAudience{tp}
+\SetNewAudience{python}
 %-------------------------------------------------------------------------------
 \abovedisplayskip= 0pt
 \belowdisplayskip= 0pt
