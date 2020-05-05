@@ -10,23 +10,23 @@
   \end{tikzpicture}
 \end{frame}
 %-------------------------------------------------------------------------------
-\AtBeginSection[]{% Print an outline at the beginning of sections
-\begin{frame}
-   \frametitle{Resumen de seccion \thesection}
-   \tiny{\tableofcontents[currentsection]}
- \end{frame}}
+%\AtBeginSection[]{% Print an outline at the beginning of sections
+%\begin{frame}
+%   \frametitle{Resumen de seccion \thesection}
+%   \tiny{\tableofcontents[currentsection]}
+% \end{frame}}
 %-------------------------------------------------------------------------------
  \section{Señales}
  \subsection{Plan de vuelo}
- \begin{frame}{Plan de vuelo}{Ud. esta aqui}
+ \begin{frame}{Plan de vuelo}{Ud. Está aquí}
     \begin{columns}[onlytextwidth]
        \column{.7\textwidth}
        \center\includegraphics[width=1.0\textwidth]{1_clase/Esquema_MSE}
        \column{.3\textwidth}
        \tiny{
-          Colaboardores
+          Colaboradores
           \begin{itemize}
-             \item{Gonzalo Lavigna             \\ <gonzalolavigna@gmail.com>}
+             \item{Gonzalo Levigan             \\ <gonzalolavigna@gmail.com>}
              \item{Guillermo Guichal           \\ <guillermo.guichal@gmail.com>}
              \item{Federico Giordano Zacchigna \\ <federico.zacchigna@gmail.com>}
           \end{itemize}
@@ -35,7 +35,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Plan de vuelo}{Ud. esta aqui}
+ \begin{frame}{Plan de vuelo}{Ud. Esta aquí}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \center\includegraphics[width=0.7\textwidth]{1_clase/Esquema_MSE2}
@@ -46,7 +46,7 @@
                       \scriptsize{
                       \item {Sampleo}
                       \item {Fourier, Z}
-                      \item {Filtrado basico}
+                      \item {Filtrado básico}
                       \item {CIAA}
                       \item {Python}
                       }
@@ -55,8 +55,8 @@
           \item{
                 \begin{itemize}
                       \scriptsize{
-                      \item {Estadistica}
-                      \item {Canales de comunicacion}
+                      \item {Estadística}
+                      \item {Canales de comunicación}
                       \item {Filtrado y ventaneo}
                       \item {FPGA?}
                       \item {Python}
@@ -66,7 +66,7 @@
           \item{
                 \begin{itemize}
                       \scriptsize{
-                      \item{Implementacion}
+                      \item{Implementación}
                       \item{Hi-Speed}
                       \item{Comunicaciones}
                       \item{FPGA}
@@ -78,7 +78,7 @@
     \end{columns}
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Bibliografia}
+ \begin{frame}{Bibliografía}
     \framesubtitle{Libros, links y otro material}
     \tiny{
        \begin{thebibliography}{1}
@@ -111,48 +111,63 @@
              \emph{ Illustrated guide to python 3}
        \end{thebibliography}
    }
-    \end{frame}
+\end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Evaluacion}{Proyecto final}
+ \subsection{Evaluacion}
+ \begin{frame}{Metodo de evaluacion}{}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \begin{itemize}
+          \item  3 pts - Examen
+          \item  3 pts - TP Python
+          \item  4 pts - Proyecto final
+       \end{itemize}
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.8\textwidth]{1_clase/exam_icon}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Evaluación}{Proyecto final}
     \protoboardicon
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{itemize}
-          \item Debera incluir algun tipo de procesamiento en hardware. ej. fft, fir, iir
-          \item Puede utilizar el ADC para samplear, DAC para reconstruir y/o canales de comunicacion para adquirir datos previamente digitalizados
-          \item presentacion de 10 minutos.
-          \item debera funcionar!
+          \item Deberá incluir algún tipo de procesamiento en hardware. ej. fft, fir, iir
+          \item Puede utilizar el ADC para samplear, DAC para reconstruir y/o canales de comunicación para adquirir datos previamente digitalizados
+          \item Presentación de 10 minutos.
+          \item Deberá funcionar!
        \end{itemize}
        \column{.5\textwidth}
        Ejemplos:
        \begin{itemize}
-          \item Filtrado y/o procesamiento de audio, señales biomedicas, etc.
-          \item Tecnicas de compresion en dominio de la frecuencia
-          \item Aplicaciones con acelerometro, magnetometro, T+H
+          \item Filtrado y/o procesamiento de audio, señales biomédicas, etc.
+          \item Técnicas de compresión en dominio de la frecuencia
+          \item Aplicaciones con acelerómetro, magnetómetro, T+H
        \end{itemize}
     \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{porque digital?}
- \begin{frame}{porque digital?}{digital vs analogico}
+ \begin{frame}{porque digital?}{digital vs analógico}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{itemize}
           \item{digital}
              \begin{itemize}
-                \item{reproducibilidad}
-                \item{tolerancia de componentes}
-                \item{partidas todas iguales}
-                \item{componentes no envejecen}
-                \item{facil de actualizar}
-                \item{soluciones de un solo chip}
+                \item{Reproducibilidad}
+                \item{Tolerancia de componentes}
+                \item{Partidas todas iguales}
+                \item{Componentes no envejecen}
+                \item{Fácil de actualizar}
+                \item{Soluciones de un solo chip}
              \end{itemize}
-          \item{analogico}
+          \item{analógico}
              \begin{itemize}
-                \item{alto ancho de banda}
-                \item{alta potencia}
-                \item{baja latencia}
+                \item{Alto ancho de banda}
+                \item{Alta potencia}
+                \item{Baja latencia}
              \end{itemize}
        \end{itemize}
        \column{.5\textwidth}
@@ -211,7 +226,7 @@
     \includegraphics[width=\textwidth]{1_clase/continuo_vs_discreto}
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Generacion de señales en Python}{Continuo? vs discreto}
+ \begin{frame}{Generación de señales en Python}{Continuo? vs discreto}
     \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
@@ -219,16 +234,16 @@
        \column{.4\textwidth}
        \includegraphics[width=\textwidth]{1_clase/python_continuo_vs_discreto}
     \end{columns}
-    Podrian pensarse como muestras de una señal de tiempo continuo $x[n] = x (nT)$ donde n es un número entero y \textbf{T} es el período de muestreo.
+    Podrían pensarse como muestras de una señal de tiempo continuo $x[n] = x (nT)$ donde n es un número entero y \textbf{T} es el período de muestreo.
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Señales periodicas}
-    \begin{block}{Continua periodica}
+ \begin{frame}{Señales periódicas}
+    \begin{block}{Continua periódica}
        si existe un $T_0>0$, tal que $x(t+T_0)=x(t)$, para todo $t$\\
        $T_0$ es el período de $x(t)$ medido en tiempo, y $f_0=1/T_0$ es la frecuencia fundamental de $x(t)$
     \end{block}
-    \begin{block}{Discreta periodica}
+    \begin{block}{Discreta periódica}
        si existe un entero $N_0>0$ tal que $x[n+N_0]=x[n]$ para
        todo $n$ \\
        $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
@@ -251,14 +266,14 @@
  \begin{frame}{Sistemas}
     \begin{block}{Linealidad}
        Un sistema es lineal cuando su salida depende linealmente de la entrada.
-       Satisface el principio de superposicion.
+       Satisface el principio de superposición.
     \end{block}
     \begin{centering}
        \begin{table}[h]
           \begin{tabular}{cm{6cm}cm{6cm}}
              escalado      & \includegraphics[width=0.4\textwidth]{1_clase/superposicion1}\\
-             adicion       & \includegraphics[width=0.4\textwidth]{1_clase/superposicion2}\\
-             superposicion & \includegraphics[width=0.4\textwidth]{1_clase/superposicion3}\\
+             adición       & \includegraphics[width=0.4\textwidth]{1_clase/superposicion2}\\
+             superposición & \includegraphics[width=0.4\textwidth]{1_clase/superposicion3}\\
           \end{tabular}
        \end{table}
     \end{centering}
@@ -296,11 +311,11 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Sistemas}{}
-    \begin{block}{Linealidad estatica}
-       En todo sistema LTI para una entrada constante (DC) la salida es \textcolor{green}{siempre} la entrada multiplicada por una constante.
-    \end{block}
     \begin{block}{Fidelidad senoidal}
        En todo sistema LTI para una entrada senoidal la salida es \textcolor{green}{siempre} senoidal.
+    \end{block}
+    \begin{block}{Linealidad estática}
+       En todo sistema LTI para una entrada constante (DC) la salida es \textcolor{green}{siempre} la entrada multiplicada por una constante.
     \end{block}
     \vfill
  \end{frame}
@@ -314,11 +329,12 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{Aliasing}
- \begin{frame}{Aliasing}{Simulando en Python}
-    \handsonicon
-    Diferentes frecuencias de sampleo para capturar una señal de 50hz
-    \lstset{ basicstyle=\fontsize{10}{ 2}\selectfont\ttfamily }
-    \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
+ \begin{frame}{Aliasing}{Disco Giratorio}
+    \center{
+       \href{run:./1_clase/disco_aliasing.mp4}{
+          \includegraphics[width=0.8\textwidth]{1_clase/disco_aliasing}
+       }
+    }
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -329,22 +345,21 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Aliasing}{Simulando en Python}
+    \handsonicon
+    Diferentes frecuencias de sampleo para capturar una señal de 50hz
+    \lstset{ basicstyle=\fontsize{10}{ 2}\selectfont\ttfamily }
+    \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo.py}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Aliasing}{Simulando en Python}
     Que pasa si se suma ruido de alta frecuencia?
     \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
     \vfill
  \end{frame}
-%-------------------------------------------------------------------------------
- \begin{frame}{Aliasing}{Disco Giratorio}
-    \center{
-       \href{run:./1_clase/disco_aliasing.mp4}{
-          \includegraphics[width=0.8\textwidth]{1_clase/disco_aliasing}
-       }
-    }
-    \vfill
- \end{frame}
 %------------------------------------------------------------------------------
  \section{ADC}
- \begin{frame}{ADC}{Bloque generico de procesamiento}
+ \begin{frame}{ADC}{Bloque genérico de procesamiento}
     \center\includegraphics[width=1\textwidth]{1_clase/adc_dac2}
     \begin{alertblock} {Agregamos el filtro antialising}
     \end{alertblock}
@@ -381,36 +396,62 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Sampleo}{Filtro antialias}
+ \begin{frame}{Sampleo}{Filtro Antialias}
     \begin{block}{FAA}
-       Filtro \alert{analogico} pasabajos que elimina o al menos mitiga el efecto de aliasing
+       Filtro \alert{analógico} Pasabajos que elimina o al menos mitiga el efecto de aliasing
     \end{block}
-    \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_aliasing}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_alias1}
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_anti_alias2}
+    \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \section{Quantizacion}
+ \begin{frame}{Sampleo}{Filtro reconstructor}
+    \begin{block}{Filtro reconstructor}
+       Filtro \alert{analógico} Pasabajos que suaviza la salida del DAC eliminando frecuencias mas alla de la Fs/2
+    \end{block}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_reconstructor1}
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.8\textwidth]{1_clase/filtro_reconstructor2}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Sampleo}{Digitado}
+    \begin{block}{Digitado o cuantizado}
+       Proceso de asignar un patron de bits a una muestra
+    \end{block}
+       \center\includegraphics[width=0.5\textwidth]{1_clase/digitado}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \section{Cuantización}
  \subsection{Ejemplos}
- \begin{frame}{Ruido de cuantizacion}{Ejemplo de cuantizacion}
+ \begin{frame}{Ruido de cuantización}{Ejemplo de cuantización}
     Diferentes formas de onda cuantizadas
     \center\includegraphics[width=1\textwidth]{1_clase/noise_examples}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Cuantizacion en python}
+ \begin{frame}{Ruido de cuantización}{Cuantización en python}
     \handsonicon
     \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily }
     \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_model.py}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Histogramas}
+ \begin{frame}{Ruido de cuantización}{Histogramas}
     Histogramas de ruido para cada señal
     \center\includegraphics[width=1\textwidth]{1_clase/noise_histogram}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Histogramas}
+ \begin{frame}{Ruido de cuantización}{Histogramas}
     Histogramas en Python
     \handsonicon
     \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
@@ -418,21 +459,21 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \subsection{Modelo estadistico}
- \begin{frame}{Ruido de cuantizacion}{Modelo estadistico}
+ \subsection{Modelo estadístico}
+ \begin{frame}{Ruido de cuantización}{Modelo estadístico}
     En el caso de que se cumplan las siguientes premisas:
     \begin{itemize}
-       \item La entrada se distancia de los diferentes niveles de cuantizacion con igual probabilidad
-       \item El error de cuantizacion NO esta correlacionado con la entrada
+       \item La entrada se distancia de los diferentes niveles de cuantización con igual probabilidad
+       \item El error de cuantización NO esta correlacionado con la entrada
        \item El cuantizador cuanta con un numero relativamente largo de niveles
-       \item Los niveles de cuantizacion son uniformes
+       \item Los niveles de cuantización son uniformes
     \end{itemize}
-    Se puede considerar la cuantizacion como un ruido aditivo a la señal segun el siguiente esquema:
+    Se puede considerar la cuantización como un ruido aditivo a la señal según el siguiente esquema:
     \center\includegraphics[width=0.5\textwidth]{1_clase/noise_model}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Funcion densidad de probabilidad}
+ \begin{frame}{Ruido de cuantización}{Función densidad de probabilidad}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \center\includegraphics[width=0.7\textwidth]{1_clase/noise_funcion_probabilidad}
@@ -444,7 +485,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Potencia de ruido de cuantizacion}
+ \begin{frame}{Ruido de cuantización}{Potencia de ruido de cuantización}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{align*}
@@ -458,7 +499,7 @@
           P_q &= \frac{1}{lsb} \left(\frac{lsb^3}{24} + \frac{lsb^3}{24}\right) \\
        \end{align*}
     \end{columns}
-    \begin{block}{Potencia de ruido de cuantizacion}
+    \begin{block}{Potencia de ruido de cuantización}
        \begin{equation}
           P_q = \frac{lsb^2}{12}
        \end{equation}
@@ -467,7 +508,7 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{SNR}
- \begin{frame}{Ruido de cuantizacion}{Relacion señal a ruido}
+ \begin{frame}{Ruido de cuantización}{Relación señal a ruido}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{align*}
@@ -488,7 +529,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Relacion señal a ruido}
+ \begin{frame}{Ruido de cuantización}{Relación señal a ruido}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{align*}
@@ -512,8 +553,8 @@
     \end{centering}
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Ruido de cuantizacion}{Densidad espectral de potencia de ruido}
-    Si condideramos la potencia de ruido uniformemente distribuido en todo el espectro desde $-Fs$ hasta $+Fs$, nos queda que:
+ \begin{frame}{Ruido de cuantización}{Densidad espectral de potencia de ruido}
+    Si consideramos la potencia de ruido uniformemente distribuido en todo el espectro desde $-Fs$ hasta $+Fs$, nos queda que:
     \begin{block}{Densidad espectral de potencia de ruido}
        \begin{align*}
           S_{espectral}(f) = \frac{P_q}{Fs}
@@ -540,6 +581,14 @@
     Pero si sobremuestreo a 4x obtengo \textcolor{green}{6dB} extras
  \end{frame}
 %-------------------------------------------------------------------------------
+ \begin{frame}{Dithering}{}
+    \begin{block}{Dithering}
+       Tecnica de agregado de ruido antes del ADC para prevenir que señales con poca variacion sean samoleadas siempre con el mismo valor
+    \end{block}
+       \center\includegraphics[width=0.5\textwidth]{1_clase/dither}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{Acondicionamiento de señal}
  \begin{frame}{Sampleo}{Propuesta para acondicionamiento de señal}
@@ -556,12 +605,12 @@
     \center\includegraphics[width=0.7\textwidth]{1_clase/adc_dac_pins}
     \vfill
  \end{frame}
-%-------------------------------------------------------------------------------
+%%-------------------------------------------------------------------------------
  \section{CIAA}
- \subsection{Generacion de audio con Python}
- \begin{frame}{Generacion de audio con Python}{simpleaudio lib}
+ \subsection{Generación de audio con Python}
+ \begin{frame}{Generación de audio con Python}{simpleaudio lib}
     \handsonicon
-    Como herramienta para la generacion de audio para capturar con la CIAA se propone el uso de simpleaudio con el siguiente template de codigo como base
+    Como herramienta para la generación de audio para capturar con la CIAA se propone el uso de simpleaudio con el siguiente template de código como base
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
        \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
@@ -575,7 +624,7 @@
  \subsection{Captura con la CIAA}
  \begin{frame}{Captura de audio con la CIAA}{Ciaa->Uart->picocom->log.bin}
     \handsonicon
-      Se detalla codigo simple de sampleo y envio por UART
+      Se detalla código simple de sampleo y envío por UART
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
        \lstset{ basicstyle=\fontsize{ 7}{ 3}\selectfont\ttfamily }
@@ -590,7 +639,7 @@
 %-------------------------------------------------------------------------------
  \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
     \handsonicon
-    Se detalla la lectura de un log y visualizacion en tiempo real de los datos
+    Se detalla la lectura de un log y visualización en tiempo real de los datos
        \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily }
     \begin{columns}[onlytextwidth]
        \column{.3\textwidth}
@@ -600,6 +649,49 @@
        \column{.4\textwidth}
        \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/visualize.png}
     \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \section{Números}
+ \begin{frame}{Sistemas de números}{Punto fijo vs punto flotante}
+    \begin{columns}[onlytextwidth]
+       \column{.5\textwidth}
+    Punto fijo:
+       \scriptsize{
+    \begin{itemize}
+       \item{Cantidad de patrones de bits= 65536}
+       \item{Gap entre números constante }
+       \item{Rango dinámico $32767, -32768$}
+       \item{Gap ~10 mil veces mas chico que el numero}
+    \end{itemize}
+ }
+       \column{.5\textwidth}
+    Punto flotante:
+       \scriptsize{
+    \begin{itemize}
+       \item{Cantidad de patrones de bits= 4,294,967,296}
+       \item{Gap entre números variable }
+       \item{Rango dinámico $\pm3.4 e10^{38},  \pm1.2 e10^{-38}$}
+       \item{Gap ~10 millones de veces mas chico que el numero}
+    \end{itemize}
+ }
+    \end{columns}
+       \center\includegraphics[width=0.6\textwidth]{1_clase/fix_vs_float}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}[c]{Sistemas de números}{Sistema Q}
+       Qm.n:
+       \begin{itemize}
+          \item{m: cantidad de bits para la parte entera}
+          \item{n: cantidad de bits para la parte decimal}
+       \end{itemize}
+       Q1.15: \\
+          1\textcolor{green}{000 0000 0000 0000} =  -1 \\
+          0\textcolor{green}{111 1111 1111 1111} = $1/2+1/4+1/8+..+1/2^{15} = 0.99$ \\
+       Q2.14: \\
+          10\textcolor{green}{10 0000 0000 0000} =  -1.5 \\
+          01\textcolor{green}{01 0000 0000 0000} =  1.25
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------------------
-\subtitle{Introduccion a \\ Python y NumPy}
+\subtitle{Introducción a \\ Python y NumPy}
 \begin{frame}[c]
 \maketitle
 \begin{tikzpicture}[overlay,remember picture]
@@ -11,9 +11,9 @@
   \end{tikzpicture}
 \end{frame}
 %-------------------------------------------------------------------------------
- \section{Introduccion}
+ \section{Introducción}
  \subsection{Python}
- \begin{frame}{Introduccion}
+ \begin{frame}{Introducción}
  \begin{itemize}
     \item{Lenguaje Interpretado}
     \item{Tipado dinámico: El tipo se define en tiempo de ejecución}
@@ -22,7 +22,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Indentacion}
+ \begin{frame}{Indentación}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \center\includegraphics[width=0.9\textwidth]{python/indentado}
@@ -33,7 +33,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Numeros}
+ \begin{frame}{Números}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{itemize}
@@ -43,7 +43,7 @@
           \item{Booleanos}
        \end{itemize}
        \column{.5\textwidth}
-       \lstset{ basicstyle=\fontsize{12}{ 5}\selectfont\ttfamily }
+       \lstset{ basicstyle=\fontsize{10}{ 3}\selectfont\ttfamily }
        \lstinputlisting[language=Python,tabsize=4]{python/numeros.py}
     \end{columns}
     \vfill
@@ -53,8 +53,8 @@
     \begin{columns}
        \column{.5\textwidth}
        \begin{itemize}
-          \item{Strings: se guardan en codificadas. Ej. UTF\-8}
-          \item{Byte array: sin codificar, raw}
+          \item{Strings: se guardan codificadas. Ej. UTF\-8 y son inmutables}
+          \item{Byte array: sin codificar, raw, son mutables}
        \end{itemize}
        \column{.5\textwidth}
        \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
@@ -65,7 +65,7 @@
 %-------------------------------------------------------------------------------
  \begin{frame}{Listas}
     \begin{columns}
-       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstset{ basicstyle=\fontsize{10}{2}\selectfont\ttfamily }
        \column{.5\textwidth}
        \lstinputlisting[language=Python,tabsize=4,lastline=16]{python/listas.py}
        \column{.5\textwidth}
@@ -75,19 +75,19 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{funciones}
-       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstset{ basicstyle=\fontsize{16}{5}\selectfont\ttfamily }
        \lstinputlisting[language=python,tabsize=4]{python/funciones.py}
     \vfill
  \end{frame}
-%-------------------------------------------------------------------------------
+
  \section{numpy}
  \begin{frame}{NumPy}{arrays}
-       \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
+       \lstset{ basicstyle=\fontsize{16}{5}\selectfont\ttfamily }
        \lstinputlisting[language=python,tabsize=4]{python/arrays.py}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{NumPy}{linspace}
+ \begin{frame}{NumPy}{linspace, arange}
        \lstset{ basicstyle=\fontsize{ 8}{3}\selectfont\ttfamily }
     \begin{columns}
        \column{.5\textwidth}
@@ -97,4 +97,62 @@
     \end{columns}
     \vfill
  \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{matplotlib}{pyplot}
+       \lstset{ basicstyle=\fontsize{ 6}{2}\selectfont\ttfamily }
+    \begin{columns}
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4]{python/plot.py}
+       \column{.5\textwidth}
+       \center\includegraphics[width=1.0\textwidth]{python/plot}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{FuncAnimation}{Animation}
+       \lstset{ basicstyle=\fontsize{ 7}{2}\selectfont\ttfamily }
+    \begin{columns}
+       \column{.5\textwidth}
+       \lstinputlisting[language=Python,tabsize=4]{python/animation.py}
+       \column{.5\textwidth}
+       \center\includegraphics[width=0.6\textwidth]{python/euler1}
+       \center\includegraphics[width=0.6\textwidth]{python/visualize}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Módulos y paquetes}
+       \lstset{ basicstyle=\fontsize{ 10}{2}\selectfont\ttfamily }
+    \begin{columns}
+       \column{.5\textwidth}
+       Módulos:
+       \lstinputlisting[language=Python,tabsize=4]{python/modulos.py}
+       \column{.5\textwidth}
+       Paquetes:
+       \lstinputlisting[language=Python,tabsize=4]{python/paquetes.py}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Anaconda}
+       \center\includegraphics[width=1\textwidth]{python/anaconda}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Anaconda}{jupyter-notebook}
+       \center\includegraphics[width=1\textwidth]{python/jupyter}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Anaconda}{Spyder}
+       \center\includegraphics[width=1\textwidth]{python/spyder}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Anaconda}{Ipython}
+       \center\includegraphics[width=1\textwidth]{python/ipython}
+    \vfill
+ \end{frame}
+
+
 

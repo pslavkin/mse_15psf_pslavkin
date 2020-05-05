@@ -23,35 +23,26 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Generacion de señales con Python}
-    Realizar las funciones necesarias para generar las siguientes señales:
-    \begin{enumerate}
-       \item {Senoidal. (parámetros: fase (radianes))}
-       \item {Cuadrada. (parámetros: ciclo de actividad)}
-       \item {Triangular. (parámetros: punto de simetría)}
-    \end{enumerate}
-    Nota: Los parámetros comunes a todas serán:
+ \begin{frame}{ADC-DAC}
     \begin{itemize}
-       \item {frecuencia de muestreo fs (Hz) }
-       \item {frecuencia fundamental de la onda fo (Hz) }
-       \item {Amplitud normalizada }
-       \item {Cantidad de muestras N. }
+       \item{Calcule la relación señal a ruido de cuantización de un sistema con ADC de 10 bits}
+       \item{Cuantice el LA-440 con 10, 8, 4 y 2 bits y analice el ruido de cuantización en cada caso}
     \end{itemize}
-        Es decir que se podría invocar la señal que genere la senoidal como: \\
-        signal = sin( 1000, 100, 1, 1000, pi/2);
-        Grafique al menos una de cada una de las señales
-    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Filtro antialias y reconstrucción}
+    \begin{itemize}
+       \item{Calcular el filtro antialias que utilizara para su practica y/o trabajo final y justifique su decision}
+       \item{Si lo tuviera justifique el filtro de reconstrucción}
+    \end{itemize}
  \end{frame}
 %-------------------------------------------------------------------------------
  \section{Fourier}
  \begin{frame}{Transformada discreta de Fourier}
     \begin{enumerate}
-       \item{Grafique una senoidal, una cuadrada y una triangular lado a lado con su respectivo espectro en frecuencias indicando los parametros destacados como Fs, N, B, etc.} 
-       \item{Generar un LA-440 con python, capturarlo con la CIAA y mostrarlo con pyplot}
-       \item{Samplear con 10, 8, 4 y 2 bits y analizar el ruido de cuantizacion en cada caso}
-       \item{Sume al LA-440 un LA-442 y utilizando la tecnica de zero padding para aumentar la resolucion expectral intente discriminar ambas}
-       \item{Compare los resultados con la simulacion en python}
-       \item{Anime el trazado de la inicial de su nombre a partir de la IDFT y explique su funcionamiento}
-       \item{}
+       \item{Grafique una senoidal, una cuadrada y una triangular lado a lado con su respectivo espectro en frecuencias indicando los parámetros destacados como densidad espectral de potencia, Fs, N, B, etc.} 
+       \item{Genere un LA-440 con python u otro instrumento, adquiéralo con la CIAA y grafique con pyplot o equivalente}
+       \item{Sume al LA-440 un tono-442 y utilizando la técnica de zero padding para aumentar la resolución espectral intente discriminar ambas \\ Compare los resultados con una simulación}
+       \item{Anime el trazado de la letra inicial de su nombre a partir de la IDFT de las coordenadas de sus vertices y explique su funcionamiento}
     \end{enumerate}
  \end{frame}
