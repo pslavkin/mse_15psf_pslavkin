@@ -120,4 +120,6 @@
  libs/sapi/sapi_v0.5.2/external_peripherals/imu/mpu9250/inc/sapi_imu_mpu9250.h \
  libs/sapi/sapi_v0.5.2/external_peripherals/imu/mpu60X0/inc/sapi_imu_mpu60X0.h \
  libs/sapi/sapi_v0.5.2/external_peripherals/memory/eeprom/inc/sapi_eeprom24xx1025.h \
- libs/sapi/sapi_v0.5.2/external_peripherals/ultrasonic/hcsr04/inc/sapi_ultrasonic_hcsr04.h
+ libs/sapi/sapi_v0.5.2/external_peripherals/ultrasonic/hcsr04/inc/sapi_ultrasonic_hcsr04.h \
+ libs/cmsis_dsp//inc/arm_math.h libs/cmsis_dsp//inc/arm_const_structs.h \
+ libs/cmsis_dsp//inc/arm_math.h libs/cmsis_dsp//inc/arm_common_tables.h

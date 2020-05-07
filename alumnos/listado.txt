@@ -5,7 +5,7 @@ listado alumnos 2020                                       |1|2|3|4|5|6|7|6|
 3  Leopoldo   Zimperz      leopoldo.a.zimperz@gmail.com    |x| | | | | | | | sistemas pero en electronica
 4  Jhonattan  Camargo      u1802296@unimilitar.edu.co      |x| | | | | | | | mecatronico
 5  Nelson     Fortunatti   nelson.90.05@gmail.com          |x| | | | | | | | ing. electronico ITBA
-6  Alejandro  Permingeat   apermingeat@gmail.com           |x| | | | | | | |
+6  Alejandro  Permingeat   apermingeat@gmail.com           |x| | | | | | | | informatico
 7  Matías     Brignone     mnbrignone@gmail.com            |x| | | | | | | | seniales
 8  Sebastian  Guarino      sebastian.guarino@gmail.com     |x| | | | | | | | electronico
 9  Edgardo    Torrelli     edgar.torre.acad.2019@gmail.com |x| | | | | | | | sistemas

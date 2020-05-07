@@ -1,0 +1,15 @@
+\frametitle{Generación de audio con Python}\framesubtitle {simpleaudio lib}
+    \handsonicon
+    Instalar el modulo simpleaudio para generar sonidos con python
+    \tiny
+       \href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}
+    \normalsize
+
+    Y utilizamos el siguiente código como base:
+    \begin{columns}[onlytextwidth]
+       \column{.6\textwidth}
+       \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen1.py}
+       \column{.4\textwidth}
+       \includegraphics[width=\textwidth]{2_clase/audio_gen1.png}
+    \end{columns}
+   \vfill
