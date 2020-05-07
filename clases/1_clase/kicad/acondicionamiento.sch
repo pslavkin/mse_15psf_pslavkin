@@ -177,9 +177,9 @@ Wire Wire Line
 	6000 4000 6000 4250
 Wire Wire Line
 	6750 4000 6750 4250
-Text Notes 5450 4350 1    60   ~ 0
+Text Notes 5150 4200 1    60   ~ 0
 Proteccion\n
-Text Notes 5050 3350 0    60   ~ 0
+Text Notes 5500 3350 0    60   ~ 0
 Desacple
 Wire Notes Line
 	4200 3050 4200 4200
@@ -235,4 +235,8 @@ F 3 "" H 5300 3050 50  0001 C CNN
 	1    5300 3050
 	1    0    0    -1  
 $EndComp
+Text Notes 5150 3550 1    60   ~ 0
+Proteccion\n
+Text Notes 6550 3950 2    60   ~ 0
+FAA
 $EndSCHEMATC

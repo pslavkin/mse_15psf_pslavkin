@@ -26,17 +26,6 @@ F 3 "" H 6000 3850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR03
-U 1 1 5E9F21E0
-P 6000 3050
-F 0 "#PWR03" H 6000 2900 50  0001 C CNN
-F 1 "+3.3V" H 6000 3190 50  0000 C CNN
-F 2 "" H 6000 3050 50  0000 C CNN
-F 3 "" H 6000 3050 50  0000 C CNN
-	1    6000 3050
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDA #PWR04
 U 1 1 5E9F21FA
 P 6000 4250
@@ -171,17 +160,6 @@ F 3 "" H 5300 4100 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 5300 3650
-$Comp
-L power:+3.3V #PWR01
-U 1 1 5E9F2D56
-P 5300 3050
-F 0 "#PWR01" H 5300 2900 50  0001 C CNN
-F 1 "+3.3V" H 5300 3190 50  0000 C CNN
-F 2 "" H 5300 3050 50  0000 C CNN
-F 3 "" H 5300 3050 50  0000 C CNN
-	1    5300 3050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6000 3250 6000 3050
 $Comp
@@ -199,9 +177,9 @@ Wire Wire Line
 	6000 4000 6000 4250
 Wire Wire Line
 	6750 4000 6750 4250
-Text Notes 5450 4350 1    60   ~ 0
+Text Notes 5050 2800 0    60   ~ 0
 Proteccion\n
-Text Notes 5050 3350 0    60   ~ 0
+Text Notes 5500 3350 0    60   ~ 0
 Desacple
 Wire Notes Line
 	4200 3050 4200 4200
@@ -235,4 +213,26 @@ Wire Wire Line
 	5300 3650 5500 3650
 Wire Wire Line
 	5800 3650 6000 3650
+$Comp
+L power:VDDA #PWR?
+U 1 1 5EADD8C7
+P 6000 3050
+F 0 "#PWR?" H 6000 2900 50  0001 C CNN
+F 1 "VDDA" H 6017 3223 50  0000 C CNN
+F 2 "" H 6000 3050 50  0001 C CNN
+F 3 "" H 6000 3050 50  0001 C CNN
+	1    6000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR?
+U 1 1 5EADD944
+P 5300 3050
+F 0 "#PWR?" H 5300 2900 50  0001 C CNN
+F 1 "VDDA" H 5317 3223 50  0000 C CNN
+F 2 "" H 5300 3050 50  0001 C CNN
+F 3 "" H 5300 3050 50  0001 C CNN
+	1    5300 3050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

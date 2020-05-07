@@ -20,13 +20,13 @@
  \subsection{Plan de vuelo}
  \begin{frame}{Plan de vuelo}{Ud. Está aquí}
     \begin{columns}[onlytextwidth]
-       \column{.7\textwidth}
+       \column{.5\textwidth}
        \center\includegraphics[width=1.0\textwidth]{1_clase/Esquema_MSE}
-       \column{.3\textwidth}
-       \tiny{
+       \column{.5\textwidth}
+       \normalsize{
           Colaboradores
           \begin{itemize}
-             \item{Gonzalo Levigan             \\ <gonzalolavigna@gmail.com>}
+             \item{Gonzalo Lavigna             \\ <gonzalolavigna@gmail.com>}
              \item{Guillermo Guichal           \\ <guillermo.guichal@gmail.com>}
              \item{Federico Giordano Zacchigna \\ <federico.zacchigna@gmail.com>}
           \end{itemize}
@@ -44,33 +44,31 @@
           \item{
                 \begin{itemize}
                       \scriptsize{
-                      \item {Sampleo}
-                      \item {Fourier, Z}
-                      \item {Filtrado básico}
+                      \item {Python, numpy}
                       \item {CIAA}
-                      \item {Python}
+                      \item {Sampleo}
+                      \item {Fourier, DFT}
                       }
                 \end{itemize}
              }
           \item{
                 \begin{itemize}
                       \scriptsize{
-                      \item {Estadística}
-                      \item {Canales de comunicación}
+                      \item {Python, numpy}
+                      \item {CIAA}
+                      \item {VHDL, FPGA}
                       \item {Filtrado y ventaneo}
-                      \item {FPGA?}
-                      \item {Python}
                       }
                 \end{itemize}
              }
           \item{
                 \begin{itemize}
                       \scriptsize{
+                      \item{Python}
+                      \item {VHDL, FPGA}
+                      \item{Comunicaciones}
                       \item{Implementación}
                       \item{Hi-Speed}
-                      \item{Comunicaciones}
-                      \item{FPGA}
-                      \item{Python}
                       }
                 \end{itemize}
              }
@@ -113,6 +111,22 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
+ \begin{frame}{Enuestas}
+    \framesubtitle{Encuesta anónima clase a clase}
+    Propiciamos este espacio para compartir sus sugerencias, criticas constructivas, oportunidades de mejora y cualquier tipo de comentario relacionado a la clase.
+    \begin{block}{Encuesta anónima}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \href{https://forms.gle/1j5dDTQ7qjVfRwYo8}{https://forms.gle/1j5dDTQ7qjVfRwYo8}
+    }
+       \end{block}
+    \begin{block}{Link al material de la material}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \tiny{\href{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}
+    }
+    }
+       \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------
  \subsection{Evaluacion}
  \begin{frame}{Metodo de evaluacion}{}
     \begin{columns}[onlytextwidth]
@@ -133,7 +147,7 @@
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
        \begin{itemize}
-          \item Deberá incluir algún tipo de procesamiento en hardware. ej. fft, fir, iir
+          \item Deberá incluir algún tipo de procesamiento en hardware. ej. DFT, FIR, IIF, etc.
           \item Puede utilizar el ADC para samplear, DAC para reconstruir y/o canales de comunicación para adquirir datos previamente digitalizados
           \item Presentación de 10 minutos.
           \item Deberá funcionar!
@@ -165,6 +179,7 @@
              \end{itemize}
           \item{analógico}
              \begin{itemize}
+                \item{Gran rango dinamico de entrada}
                 \item{Alto ancho de banda}
                 \item{Alta potencia}
                 \item{Baja latencia}
@@ -200,7 +215,6 @@
        \column{.5\textwidth}
        \begin{itemize}
           \item{De tiempo discreto}
-          \item{No deterministas}
           \item{Impares}
           \item{Aperiódicas}
           \item{De potencia}
@@ -610,6 +624,7 @@
  \subsection{Generación de audio con Python}
  \begin{frame}{Generación de audio con Python}{simpleaudio lib}
     \handsonicon
+    \tiny{para instalar pulseaudio: https://simpleaudio.readthedocs.io/en/latest/installation.html}
     Como herramienta para la generación de audio para capturar con la CIAA se propone el uso de simpleaudio con el siguiente template de código como base
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
