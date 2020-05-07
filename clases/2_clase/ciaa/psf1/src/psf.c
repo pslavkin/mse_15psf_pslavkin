@@ -12,13 +12,13 @@ int main ( void ) {
    while(1) {
       cyclesCounterReset();
       uartWriteByteArray ( UART_USB ,(uint8_t* )&adc[sample] ,sizeof(adc[0]) );
-      adc[sample] = ((int16_t )adcRead(CH1)-512)<<6;
-      if ( ++sample==LENGTH ) {
+      adc[sample] = ((int16_t )adcRead(CH1)-512);
+      if ( ++sample==LENGTH ) { //22.7hz para 512
          sample = 0;
          uartWriteByteArray ( UART_USB ,"header" ,6 );
          gpioToggle         ( LEDR                  );
       }
-   }
-   while(cyclesCounterRead()< 204000)
+   while(cyclesCounterRead()< 20400)  //clk 204000000
       ;
+   }
 }

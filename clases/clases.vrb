@@ -1,15 +1,120 @@
 \frametitle{Generación de audio con Python}\framesubtitle {simpleaudio lib}
-    \handsonicon
-    Instalar el modulo simpleaudio para generar sonidos con python
-    \tiny
-       \href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}
-    \normalsize
-
-    Y utilizamos el siguiente código como base:
-    \begin{columns}[onlytextwidth]
-       \column{.6\textwidth}
-       \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen1.py}
-       \column{.4\textwidth}
-       \includegraphics[width=\textwidth]{2_clase/audio_gen1.png}
-    \end{columns}
+%    \handsonicon
+%    Instalar el modulo simpleaudio para generar sonidos con python
+%    \tiny
+%       \href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}
+%    \normalsize
+%
+%    Y utilizamos el siguiente código como base:
+%    \begin{columns}[onlytextwidth]
+%       \column{.6\textwidth}
+%       \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen1.py}
+%       \column{.4\textwidth}
+%       \includegraphics[width=\textwidth]{2_clase/audio_gen1.png}
+%    \end{columns}
    \vfill
+ \end{frame}
+%%-------------------------------------------------------------------------------
+% \subsection{Captura con la CIAA}
+% \begin{frame}{Captura de audio con la CIAA}{CIAA->UART->picocom->log.bin}
+%    \handsonicon
+%    Utilizando picocom
+%    \tiny
+%    \href{https://github.com/npat-efault/picocom}{https://github.com/npat-efault/picocom}
+%    \normalsize
+%    o similar se graba en un archivo la salida de la UART para luego procesar como sigue
+%    \begin{block}{\tiny{picocom /dev/ttyUSB1 -b 460800 --logfile=log.bin}}
+%    \end{block}
+%    \begin{columns}[onlytextwidth]
+%       \column{.55\textwidth}
+%       \lstinputlisting[basicstyle=\fontsize{ 6}{ 2}\selectfont\ttfamily,language=c,tabsize=4]{2_clase/ciaa/psf1/src/psf.c}
+%       \column{.45\textwidth}
+%       \includegraphics[width=1.0\textwidth]{2_clase/log.png}
+%    \end{columns}
+%    \vfill
+% \end{frame}
+%%-------------------------------------------------------------------------------
+% \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
+%    \handsonicon
+%    Lectura de un log y visualización en tiempo real de los datos
+%       \lstset{ basicstyle=\fontsize{ 6}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+%       \begin{columns}[c]
+%          \hspace{2pt}
+%          \begin{column}{.3\textwidth}
+%             \lstinputlisting[lastline=28]{2_clase/ciaa/psf1/visualize.py}
+%          \end{column}
+%          \hspace{2pt}
+%          \vrule
+%          \hspace{2pt}
+%          \begin{column}{.3\textwidth}
+%             \lstinputlisting[firstline=29]{2_clase/ciaa/psf1/visualize.py}
+%          \end{column}
+%          \hspace{2pt}
+%          \vrule
+%          \hspace{2pt}
+%          \begin{column}{.4\textwidth}
+%             \includegraphics[width=\textwidth]{2_clase/ciaa/psf1/visualize.png}
+%          \end{column}
+%          \hspace{2pt}
+%       \end{columns}
+%       \vfill
+%    \end{frame}
+%%-------------------------------------------------------------------------------
+% \section{Números}
+% \begin{frame}{Sistemas de números}{Punto fijo vs punto flotante}
+%    \begin{columns}[onlytextwidth]
+%       \column{.5\textwidth}
+%    Punto fijo:
+%       \scriptsize{
+%    \begin{itemize}
+%       \item{Cantidad de patrones de bits= 65536}
+%       \item{Gap entre números constante }
+%       \item{Rango dinámico $32767, -32768$}
+%       \item{Gap ~10 mil veces mas chico que el numero}
+%    \end{itemize}
+% }
+%       \column{.5\textwidth}
+%    Punto flotante:
+%       \scriptsize{
+%    \begin{itemize}
+%       \item{Cantidad de patrones de bits= 4,294,967,296}
+%       \item{Gap entre números variable }
+%       \item{Rango dinámico $\pm3.4 e10^{38},  \pm1.2 e10^{-38}$}
+%       \item{Gap ~10 millones de veces mas chico que el numero}
+%    \end{itemize}
+% }
+%    \end{columns}
+%       \center\includegraphics[width=8cm]{2_clase/fix_vs_float}
+%    \vfill
+% \end{frame}
+%%-------------------------------------------------------------------------------
+% \begin{frame}[t]{Sistemas de números}{Sistema Q}
+%       Qm.n:
+%       \begin{itemize}
+%          \item{m: cantidad de bits para la parte entera}
+%          \item{n: cantidad de bits para la parte decimal}
+%       \end{itemize}
+%       Q1.15: \\
+%          1\textcolor{green}{000 0000 0000 0000} =  -1 \\
+%          0\textcolor{green}{111 1111 1111 1111} = $1/2+1/4+1/8+..+1/2^{15} = 0.99$ \\
+%       Q2.14: \\
+%          10\textcolor{green}{10 0000 0000 0000} =  -1.5 \\
+%          01\textcolor{green}{01 0000 0000 0000} =  1.25
+%    \vfill
+% \end{frame}
+%%-------------------------------------------------------------------------------
+% \begin{frame}[t]{Sistemas de números}{Sistema Q}
+%       Qm.n:
+%       \begin{itemize}
+%          \item{m: cantidad de bits para la parte entera}
+%          \item{n: cantidad de bits para la parte decimal}
+%       \end{itemize}
+%       Q1.15: \\
+%          1\textcolor{green}{000 0000 0000 0000} =  -1 \\
+%          0\textcolor{green}{111 1111 1111 1111} = $1/2+1/4+1/8+..+1/2^{15} = 0.99$ \\
+%       Q2.14: \\
+%          10\textcolor{green}{10 0000 0000 0000} =  -1.5 \\
+%          01\textcolor{green}{01 0000 0000 0000} =  1.25
+%    \vfill
+% \end{frame}
+%%-------------------------------------------------------------------------------

@@ -1,7 +1,9 @@
-\babel@toc {spanish}{}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
 \beamer@sectionintoc {1}{CIAA}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Acondicionamiento de se\IeC {\~n}al}{2}{0}{1}
-\beamer@sectionintoc {2}{CIAA}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{Generaci\IeC {\'o}n de audio con Python}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{Captura con la CIAA}{6}{0}{2}
-\beamer@sectionintoc {3}{N\IeC {\'u}meros}{8}{0}{3}
+\beamer@sectionintoc {2}{CIAA}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Generaci\IeC {\'o}n de audio con Python}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Captura con la CIAA}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}{9}{0}{2}
+\beamer@sectionintoc {3}{N\IeC {\'u}meros}{10}{0}{3}

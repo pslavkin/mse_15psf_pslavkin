@@ -31,31 +31,28 @@
     \center\includegraphics[width=7cm]{2_clase/adc_dac_pins}
     \vfill
  \end{frame}
-%%-------------------------------------------------------------------------------
- \begin{frame}{Sampleo}{Calculo del filtro antialias}
-   %TODO
-    \vfill
- \end{frame}
-%%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{Generación de audio con Python}
- \begin{frame}[fragile]{Generación de audio con Python}{simpleaudio lib}
+ \begin{frame}[t]{Generación de audio con Python}{simpleaudio lib}
     \handsonicon
     Instalar el modulo simpleaudio para generar sonidos con python
     \tiny
        \href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}
     \normalsize
-
     Y utilizamos el siguiente código como base:
-    \begin{columns}[onlytextwidth]
-       \column{.6\textwidth}
-       \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen1.py}
-       \column{.4\textwidth}
-       \includegraphics[width=\textwidth]{2_clase/audio_gen1.png}
+    \begin{columns}[t]
+       \begin{column}{0.5\textwidth}
+       \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen.py}
+    \end{column}
+       \begin{column}{0.5\textwidth}
+       \center\includegraphics[width=0.4\textwidth]{2_clase/audio_gen1.png}
+       \center\includegraphics[width=0.4\textwidth]{2_clase/audio_gen2.png}
+    \end{column}
     \end{columns}
    \vfill
  \end{frame}
-%%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
  \subsection{Captura con la CIAA}
  \begin{frame}{Captura de audio con la CIAA}{CIAA->UART->picocom->log.bin}
     \handsonicon
@@ -75,6 +72,44 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
+ \begin{frame}[t]{Ancho de banda}{}
+    \handsonicon
+    \begin{columns}[onlytextwidth]
+       \column{.55\textwidth}
+       \begin{align*}
+          USB<>UART_{max bps} &= 460800 bps \\
+          Eficacia                 &= \frac{10b}{8b} = 0.8\\
+          bits_{muestra}           &= 16 \\
+          Tasa_{efectiva}          &= \frac{460800_{bps}*0.8}{16} = 23040
+       \end{align*}
+          \begin{block}{Maxima señal muestreable y reconstruible}
+             \center{11520hz}
+          \end{block}
+       \column{.45\textwidth}
+       \center\includegraphics[width=0.6\textwidth]{2_clase/osci1}
+       \center\includegraphics[width=0.6\textwidth]{2_clase/osci2}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Sampleo}{Calculo del filtro antialias 1er orden R-C}
+    \begin{columns}[onlytextwidth]
+       \column{.55\textwidth}
+       \begin{align*}
+          B         &= 10k bps \\
+          f_{corte} &= \frac{1}{2*\pi*R*C} \\
+          R         &= 1k\Omega \\
+          C         &= \frac{1}{f_{corte}*R*2*\pi} \approx 15nF
+       \end{align*}
+          \begin{block}{Maxima señal muestreable y reconstruible}
+             \center{11520hz}
+          \end{block}
+       \column{.45\textwidth}
+       \includegraphics[width=0.9\textwidth]{2_clase/low_pass}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
  \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
     \handsonicon
     Lectura de un log y visualización en tiempo real de los datos
@@ -82,13 +117,13 @@
        \begin{columns}[c]
           \hspace{2pt}
           \begin{column}{.3\textwidth}
-             \lstinputlisting[lastline=28]{2_clase/ciaa/psf1/visualize.py}
+             \lstinputlisting[lastline=25]{2_clase/ciaa/psf1/visualize.py}
           \end{column}
           \hspace{2pt}
           \vrule
           \hspace{2pt}
           \begin{column}{.3\textwidth}
-             \lstinputlisting[firstline=29]{2_clase/ciaa/psf1/visualize.py}
+             \lstinputlisting[firstline=26]{2_clase/ciaa/psf1/visualize.py}
           \end{column}
           \hspace{2pt}
           \vrule
@@ -100,6 +135,37 @@
        \end{columns}
        \vfill
     \end{frame}
+%-------------------------------------------------------------------------------
+ \subsection{Generación de señales con el DAC}
+ \begin{frame}[t]{Generación de audio con el DAC de la CIAA}{ARM CMSIS-DSP lib \tiny
+    \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
+    }
+    \protoboardicon
+    Con arm\_sin\_f32 se genera un tono y se convierte a analogico con el DAC
+    \normalsize
+       \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+       \begin{columns}[t]
+          \hspace{2pt}
+          \begin{column}{.3\textwidth}
+             \lstinputlisting[lastline=18]{2_clase/ciaa/psf2/src/psf.c}
+          \end{column}
+          \hspace{2pt}
+          \vrule
+          \hspace{2pt}
+          \begin{column}{.3\textwidth}
+             \lstinputlisting[firstline=19]{2_clase/ciaa/psf2/src/psf.c}
+          \end{column}
+          \hspace{2pt}
+          \vrule
+          \hspace{2pt}
+          \begin{column}{.4\textwidth}
+       \center\includegraphics[width=0.5\textwidth]{2_clase/ciaa_audio_gen1.png}
+       \center\includegraphics[width=0.5\textwidth]{2_clase/ciaa_audio_gen2.png}
+          \end{column}
+          \hspace{2pt}
+       \end{columns}
+   \vfill
+ \end{frame}
 %-------------------------------------------------------------------------------
  \section{Números}
  \begin{frame}{Sistemas de números}{Punto fijo vs punto flotante}

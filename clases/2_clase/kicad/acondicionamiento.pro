@@ -1,4 +1,4 @@
-update=Sat 02 May 2020 01:06:20 AM -03
+update=Thu 07 May 2020 07:54:02 PM -03
 version=1
 last_client=kicad
 [pcbnew]
@@ -38,3 +38,5 @@ LabSize=60
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=acondicionamiento-cache
