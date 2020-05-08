@@ -14,6 +14,7 @@ adcAxe.grid ( True )
 adcAxe.set_ylim ( -512 ,512 )
 adcAxe.set_xlim ( 0 ,length/fs )
 
+
 def findHeader(f):
     index = 0
     sync  = False

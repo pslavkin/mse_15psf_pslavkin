@@ -38,7 +38,7 @@
  \begin{frame}{Plan de vuelo}{Ud. Esta aquí}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
-       \center\includegraphics[width=0.7\textwidth]{1_clase/Esquema_MSE2}
+       \center\includegraphics[width=4cm]{1_clase/Esquema_MSE2}
        \column{.5\textwidth}
        \begin{enumerate}
           \item{
@@ -263,7 +263,7 @@
        $N_0$ es el período fundamental de $x[n]$ medido en espacio entre muestras
        y  $F_0=\Delta t/N_0$ es la frecuencia fundamental de $x[n]$
     \end{block}
-    \center\includegraphics[width=0.5\textwidth]{1_clase/periodica}
+    \center\includegraphics[width=0.3\textwidth]{1_clase/periodica}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -273,8 +273,8 @@
        Un sistema es cualquier conjunto físico de componentes que actúan en una señal, tomando una o más señales de entrada, y produciendo una o más señales de salida.
     \end{block}
     En ingeniería, a menudo la entrada y la salida son señales eléctricas.\\
-    \centering{\includegraphics[width=0.5\textwidth]{1_clase/sistema}}
     \vfill
+    \centering{\includegraphics[width=0.5\textwidth]{1_clase/sistema}}
  \end{frame}
    %-------------------------------------------------------------------------------
  \begin{frame}{Sistemas}
@@ -282,16 +282,20 @@
        Un sistema es lineal cuando su salida depende linealmente de la entrada.
        Satisface el principio de superposición.
     \end{block}
-    \begin{centering}
-       \begin{table}[h]
-          \begin{tabular}{cm{6cm}cm{6cm}}
-             escalado      & \includegraphics[width=0.4\textwidth]{1_clase/superposicion1}\\
-             adición       & \includegraphics[width=0.4\textwidth]{1_clase/superposicion2}\\
-             superposición & \includegraphics[width=0.4\textwidth]{1_clase/superposicion3}\\
-          \end{tabular}
-       \end{table}
-    \end{centering}
-    \centering{\alert{$y(t)=e^{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
+    \begin{columns}[onlytextwidth]
+       \column{.7\textwidth}
+       \begin{centering}
+          \begin{table}[h]
+             \begin{tabular}{cm{6cm}cm{6cm}}
+                escalado      & \includegraphics[width=6cm]{1_clase/superposicion1}\\
+                adición       & \includegraphics[width=6cm]{1_clase/superposicion2}\\
+                superposición & \includegraphics[width=6cm]{1_clase/superposicion3}\\
+             \end{tabular}
+          \end{table}
+       \end{centering}
+       \column{.3\textwidth}
+       \centering{\alert{$y(t)=e^{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
+    \end{columns}
     \vfill
  \end{frame}
    %-------------------------------------------------------------------------------
@@ -299,17 +303,25 @@
     \begin{block}{Invariantes en el tiempo}
        Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
     \end{block}
-    \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo} \\
-    \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(x(t))$}}
+    \begin{columns}[onlytextwidth]
+       \column{.7\textwidth}
+       \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo} \\
+       \column{.3\textwidth}
+       \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(x(t))$}}
+    \end{columns}
     \vfill
  \end{frame}
  %-------------------------------------------------------------------------------
- \begin{frame}{Sistemas}{Causalidad}
+ \begin{frame}[c]{Sistemas}{Causalidad}
     \begin{block}{Sistema causal}
        Un sistema es causal cuando la salida depende solo de los valores presentes y pasados de la entrada
     \end{block}
-    \center\includegraphics[width=0.4\textwidth]{1_clase/causalidad} \\
-    \centering{\alert{$y(t)=x(t+1)$}\hspace{1cm}\textcolor{green}{$y(t)=x(t-2)$}}
+    \begin{columns}[c]
+       \column{.7\textwidth}
+       \center\includegraphics[width=0.4\textwidth]{1_clase/causalidad} \\
+       \column{.3\textwidth}
+       \centering{\alert{$y(t)=x(t+1)$}\hspace{1cm}\textcolor{green}{$y(t)=x(t-2)$}}
+    \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -317,7 +329,7 @@
     \begin{block}{Lineales invariantes en el tiempo}
        Un sistema es LTI cuando satisface las 2 condiciones anteriores, de linealidad y de invariancia en el tiempo.
     \end{block}
-    \center\includegraphics[width=1\textwidth]{1_clase/lti}
+    \center\includegraphics[width=0.8\textwidth]{1_clase/lti}
     \vfill
     \begin{alertblock}{*** LTI ***}
        En este curso, \alert{solo} estudiaremos sistemas lineales invariantes en el tiempo.
@@ -354,7 +366,7 @@
 %-------------------------------------------------------------------------------
  \begin{frame}{Aliasing}{Simulando en Python}
     Diferentes frecuencias de sampleo para capturar una señal de 50hz
-    \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo}
+    \center\includegraphics[width=0.7\textwidth]{1_clase/teorema_sampleo}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -368,7 +380,7 @@
 %-------------------------------------------------------------------------------
  \begin{frame}{Aliasing}{Simulando en Python}
     Que pasa si se suma ruido de alta frecuencia?
-    \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo2}
+    \center\includegraphics[width=0.7\textwidth]{1_clase/teorema_sampleo2}
     \vfill
  \end{frame}
 %------------------------------------------------------------------------------
@@ -381,32 +393,44 @@
  \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{Teorema de Shannon}
- \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+ \begin{frame}[c]{Teorema de sampleo}{Teorema de Shannon}
     \begin{teorema}
        La reconstrucción exacta de una señal periódica continua en banda base a partir de sus muestras, es matemáticamente posible si la señal está \textcolor{green}{limitada en banda} y la tasa de muestreo es \textcolor{green}{superior al doble} de su ancho de banda
     \end{teorema}
     \begin{columns}[onlytextwidth]
        \column{.6\textwidth}
-       \center\includegraphics[width=0.7\textwidth]{1_clase/shannon} \\
-       \center\includegraphics[width=0.7\textwidth]{1_clase/sinc_limpia}
+       \center\includegraphics[width=0.5\textwidth]{1_clase/shannon} \\
+       \center\includegraphics[width=0.5\textwidth]{1_clase/sinc_limpia}
        \column{.4\textwidth}
-       \center\includegraphics[width=0.6\textwidth]{1_clase/claude_shannon}
+       \center\includegraphics[width=0.5\textwidth]{1_clase/claude_shannon}
     \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+ \begin{frame}[c]{Teorema de sampleo}{Teorema de Shannon}
     \handsonicon
     Sampleo e interpolado
-    \lstset{ basicstyle=\fontsize{ 7}{ 1}\selectfont\ttfamily }
-       \lstinputlisting[language=Python,tabsize=4]{1_clase/teorema_sampleo_interpolado.py}
+    \lstset{ basicstyle=\fontsize{ 9}{ 4}\selectfont\ttfamily,language=Python,tabsize=4 }
+       \begin{columns}[c]
+          \hspace{2pt}
+          \begin{column}{.5\textwidth}
+             \lstinputlisting[lastline=15]{1_clase/teorema_sampleo_interpolado.py}
+          \end{column}
+          \hspace{2pt}
+          \vrule
+          \hspace{2pt}
+          \begin{column}{.5\textwidth}
+             \lstinputlisting[firstline=16]{1_clase/teorema_sampleo_interpolado.py}
+          \end{column}
+          \hspace{2pt}
+       \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Teorema de sampleo}{Teorema de Shannon}
+ \begin{frame}[t]{Teorema de sampleo}{Teorema de Shannon}
     \handsonicon
     Sampleo e interpolado
-    \center\includegraphics[width=1.0\textwidth]{1_clase/teorema_sampleo_interpolado}
+    \center\includegraphics[width=0.7\textwidth]{1_clase/teorema_sampleo_interpolado}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -448,27 +472,27 @@
  \subsection{Ejemplos}
  \begin{frame}{Ruido de cuantización}{Ejemplo de cuantización}
     Diferentes formas de onda cuantizadas
-    \center\includegraphics[width=1\textwidth]{1_clase/noise_examples}
+    \center\includegraphics[width=0.7\textwidth]{1_clase/noise_examples}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Ruido de cuantización}{Cuantización en python}
     \handsonicon
-    \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily }
+    \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
     \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_model.py}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Ruido de cuantización}{Histogramas}
     Histogramas de ruido para cada señal
-    \center\includegraphics[width=1\textwidth]{1_clase/noise_histogram}
+    \center\includegraphics[width=0.7\textwidth]{1_clase/noise_histogram}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Ruido de cuantización}{Histogramas}
     Histogramas en Python
     \handsonicon
-    \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
+    \lstset{ basicstyle=\fontsize{ 8}{ 1}\selectfont\ttfamily }
     \lstinputlisting[language=Python,tabsize=4]{1_clase/noise_histogram.py}
     \vfill
  \end{frame}
@@ -514,10 +538,11 @@
        \end{align*}
     \end{columns}
     \begin{block}{Potencia de ruido de cuantización}
-       \begin{equation}
+       \begin{equation*}
           P_q = \frac{lsb^2}{12}
-       \end{equation}
+       \end{equation*}
     \end{block}
+    \vspace{1cm}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
@@ -556,15 +581,21 @@
           SNR&=10\log_{10}\left(\frac{3}{2}\right)-10\log_{10}\left(2^{2N}\right)
        \end{align*}
     \end{columns}
-    \begin{block}{SNR}
-       \begin{equation}
-          SNR = 1.76 + 6.02 * N
-       \end{equation}
-    \end{block}
-    \begin{centering}
-       \resizebox{0.2\textwidth}{!}{$SNR_{N=10} \approx 60dB$} \\
-       \resizebox{0.2\textwidth}{!}{$SNR_{N=11} \approx 66dB$} \\
-    \end{centering}
+   \hrule
+    \begin{columns}[c]
+       \column{.5\textwidth}
+       \begin{block}{SNR}
+          \begin{equation*}
+             SNR = 1.76 + 6.02 * N
+          \end{equation*}
+       \end{block}
+       \column{.5\textwidth}
+    \begin{center}
+       {$SNR_{N=10} \approx 60dB$} \\
+       {$SNR_{N=11} \approx 66dB$}
+    \end{center}
+    \end{columns}
+    \vspace{3cm}
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Ruido de cuantización}{Densidad espectral de potencia de ruido}
@@ -599,115 +630,6 @@
     \begin{block}{Dithering}
        Tecnica de agregado de ruido antes del ADC para prevenir que señales con poca variacion sean samoleadas siempre con el mismo valor
     \end{block}
-       \center\includegraphics[width=0.5\textwidth]{1_clase/dither}
+       \center\includegraphics[width=0.4\textwidth]{1_clase/dither}
     \vfill
  \end{frame}
-%-------------------------------------------------------------------------------
- \section{CIAA}
- \subsection{Acondicionamiento de señal}
- \begin{frame}{Sampleo}{Propuesta para acondicionamiento de señal}
-    Acondicionar la señal de salida del dispositivo de sonido (en PC ronda $\pm1V$) al rango del ADC del hardware. En el caso de la CIAA sera de 0-3.3V. \\ 
-    Se propone el siguiente circuito, que minimiza los componentes sacrificando calidad y agrega en filtro anti alias de 1er orden.
-    \protoboardicon
-    \center\includegraphics[width=0.8\textwidth]{1_clase/circuito}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \begin{frame}{Sampleo}{Propuesta para acondicionamiento de señal}
-    Pinout de la CIAA para conectar el ADC/DAC
-    \protoboardicon
-    \center\includegraphics[width=0.7\textwidth]{1_clase/adc_dac_pins}
-    \vfill
- \end{frame}
-%%-------------------------------------------------------------------------------
- \section{CIAA}
- \subsection{Generación de audio con Python}
- \begin{frame}{Generación de audio con Python}{simpleaudio lib}
-    \handsonicon
-    \tiny{para instalar pulseaudio: https://simpleaudio.readthedocs.io/en/latest/installation.html}
-    Como herramienta para la generación de audio para capturar con la CIAA se propone el uso de simpleaudio con el siguiente template de código como base
-    \begin{columns}[onlytextwidth]
-       \column{.6\textwidth}
-       \lstset{ basicstyle=\fontsize{ 8}{ 2}\selectfont\ttfamily }
-       \lstinputlisting[language=Python,tabsize=4]{1_clase/audio_gen1.py}
-       \column{.4\textwidth}
-       \includegraphics[width=4cm]{1_clase/audio_gen1.png}\\
-       \includegraphics[width=4cm]{1_clase/audio_gen2.png}
-    \end{columns}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \subsection{Captura con la CIAA}
- \begin{frame}{Captura de audio con la CIAA}{Ciaa->Uart->picocom->log.bin}
-    \handsonicon
-      Se detalla código simple de sampleo y envío por UART
-    \begin{columns}[onlytextwidth]
-       \column{.6\textwidth}
-       \lstset{ basicstyle=\fontsize{ 7}{ 3}\selectfont\ttfamily }
-       \lstinputlisting[language=Python,tabsize=4]{1_clase/ciaa/psf1/src/psf.c}
-       \column{.4\textwidth}
-       \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/log.png}
-       \begin{block}{\tiny{picocom /dev/ttyUSB1 -b 460800 --logfile=log.bin}}
-       \end{block}
-    \end{columns}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
-    \handsonicon
-    Se detalla la lectura de un log y visualización en tiempo real de los datos
-       \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily }
-    \begin{columns}[onlytextwidth]
-       \column{.3\textwidth}
-       \lstinputlisting[language=Python,tabsize=4,lastline=25]{1_clase/ciaa/psf1/visualize.py}
-       \column{.3\textwidth}
-       \lstinputlisting[language=Python,tabsize=4,firstline=26]{1_clase/ciaa/psf1/visualize.py}
-       \column{.4\textwidth}
-       \includegraphics[width=\textwidth]{1_clase/ciaa/psf1/visualize.png}
-    \end{columns}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \section{Números}
- \begin{frame}{Sistemas de números}{Punto fijo vs punto flotante}
-    \begin{columns}[onlytextwidth]
-       \column{.5\textwidth}
-    Punto fijo:
-       \scriptsize{
-    \begin{itemize}
-       \item{Cantidad de patrones de bits= 65536}
-       \item{Gap entre números constante }
-       \item{Rango dinámico $32767, -32768$}
-       \item{Gap ~10 mil veces mas chico que el numero}
-    \end{itemize}
- }
-       \column{.5\textwidth}
-    Punto flotante:
-       \scriptsize{
-    \begin{itemize}
-       \item{Cantidad de patrones de bits= 4,294,967,296}
-       \item{Gap entre números variable }
-       \item{Rango dinámico $\pm3.4 e10^{38},  \pm1.2 e10^{-38}$}
-       \item{Gap ~10 millones de veces mas chico que el numero}
-    \end{itemize}
- }
-    \end{columns}
-       \center\includegraphics[width=0.6\textwidth]{1_clase/fix_vs_float}
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------
- \begin{frame}[c]{Sistemas de números}{Sistema Q}
-       Qm.n:
-       \begin{itemize}
-          \item{m: cantidad de bits para la parte entera}
-          \item{n: cantidad de bits para la parte decimal}
-       \end{itemize}
-       Q1.15: \\
-          1\textcolor{green}{000 0000 0000 0000} =  -1 \\
-          0\textcolor{green}{111 1111 1111 1111} = $1/2+1/4+1/8+..+1/2^{15} = 0.99$ \\
-       Q2.14: \\
-          10\textcolor{green}{10 0000 0000 0000} =  -1.5 \\
-          01\textcolor{green}{01 0000 0000 0000} =  1.25
-    \vfill
- \end{frame}
-%-------------------------------------------------------------------------------

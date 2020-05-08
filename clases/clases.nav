@@ -1,21 +1,23 @@
-\beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{CIAA}{2}{CIAA}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Acondicionamiento de se\IeC {\~n}al}}\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\sectionentry {1}{CIAA}{2}{CIAA}{0}}
+\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Acondicionamiento de se\IeC {\~n}al}}
 \headcommand {\slideentry {1}{1}{1}{2/2}{Acondicionamiento de se\IeC {\~n}al}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\slideentry {1}{1}{2}{3/3}{Acondicionamiento de se\IeC {\~n}al}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\sectionentry {2}{CIAA}{4}{CIAA}{0}}
 \headcommand {\beamer@sectionpages {2}{3}}
 \headcommand {\beamer@subsectionpages {2}{3}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Generaci\IeC {\'o}n de audio con Python}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\sectionentry {2}{CIAA}{4}{CIAA}{0}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Generaci\IeC {\'o}n de audio con Python}}
 \headcommand {\slideentry {2}{1}{1}{4/4}{Generaci\IeC {\'o}n de audio con Python}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Captura con la CIAA}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Captura con la CIAA}}
 \headcommand {\slideentry {2}{2}{1}{5/5}{Captura con la CIAA}{0}}
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\slideentry {2}{2}{2}{6/6}{Captura con la CIAA}{0}}
@@ -24,20 +26,28 @@
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\slideentry {2}{2}{4}{8/8}{Captura con la CIAA}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{9}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}}\headcommand {\beamer@subsectionpages {5}{8}}
-\headcommand {\slideentry {2}{3}{1}{9/9}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}{0}}
+\headcommand {\beamer@sectionpages {4}{8}}
+\headcommand {\beamer@subsectionpages {5}{8}}
+\headcommand {\sectionentry {3}{CIAA}{9}{CIAA}{0}}
+\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{9}{Acondicionamiento de se\IeC {\~n}al}}
+\headcommand {\slideentry {3}{1}{1}{9/9}{Acondicionamiento de se\IeC {\~n}al}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\sectionentry {3}{N\IeC {\'u}meros}{10}{N\IeC {\'u}meros}{0}}
-\headcommand {\beamer@sectionpages {4}{9}}
 \headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\slideentry {3}{0}{2}{10/10}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{10}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}}
+\headcommand {\slideentry {3}{2}{1}{10/10}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {3}{0}{3}{11/11}{}{0}}
+\headcommand {\beamer@sectionpages {9}{10}}
+\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\sectionentry {4}{N\IeC {\'u}meros}{11}{N\IeC {\'u}meros}{0}}
+\headcommand {\slideentry {4}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {3}{0}{4}{12/12}{}{0}}
+\headcommand {\slideentry {4}{0}{2}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@partpages {1}{12}}
-\headcommand {\beamer@subsectionpages {1}{12}}
-\headcommand {\beamer@sectionpages {1}{12}}
-\headcommand {\beamer@documentpages {12}}
-\headcommand {\def \inserttotalframenumber {11}}
+\headcommand {\slideentry {4}{0}{3}{13/13}{}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@partpages {1}{13}}
+\headcommand {\beamer@subsectionpages {1}{13}}
+\headcommand {\beamer@sectionpages {1}{13}}
+\headcommand {\beamer@documentpages {13}}
+\headcommand {\gdef \inserttotalframenumber {12}}

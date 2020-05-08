@@ -5,7 +5,7 @@
 \begin{tikzpicture}[overlay,remember picture]
     \node[anchor=south east,xshift=-30pt,yshift=45pt]
       at (current page.south east) {
-         \includegraphics[width=6cm]{2_clase/log.png}
+         \includegraphics[width=7cm]{2_clase/log.png}
       };
   \end{tikzpicture}
 \end{frame}
@@ -46,8 +46,8 @@
        \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen.py}
     \end{column}
        \begin{column}{0.5\textwidth}
-       \center\includegraphics[width=0.4\textwidth]{2_clase/audio_gen1.png}
-       \center\includegraphics[width=0.4\textwidth]{2_clase/audio_gen2.png}
+       \center\includegraphics[width=6cm,height=2.4cm]{2_clase/audio_gen1.png}
+       \center\includegraphics[width=6cm,height=2.4cm]{2_clase/audio_gen2.png}
     \end{column}
     \end{columns}
    \vfill
@@ -86,15 +86,15 @@
              \center{11520hz}
           \end{block}
        \column{.45\textwidth}
-       \center\includegraphics[width=0.6\textwidth]{2_clase/osci1}
-       \center\includegraphics[width=0.6\textwidth]{2_clase/osci2}
+       \center\includegraphics[width=6cm,height=2.8cm]{2_clase/osci1}
+       \center\includegraphics[width=6cm,height=2.8cm]{2_clase/osci2}
     \end{columns}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Sampleo}{Calculo del filtro antialias 1er orden R-C}
     \begin{columns}[onlytextwidth]
-       \column{.55\textwidth}
+       \column{.50\textwidth}
        \begin{align*}
           B         &= 10k bps \\
           f_{corte} &= \frac{1}{2*\pi*R*C} \\
@@ -105,7 +105,7 @@
              \center{11520hz}
           \end{block}
        \column{.45\textwidth}
-       \includegraphics[width=0.9\textwidth]{2_clase/low_pass}
+       \includegraphics[width=0.8\textwidth]{2_clase/low_pass}
     \end{columns}
     \vfill
  \end{frame}
@@ -129,12 +129,21 @@
           \vrule
           \hspace{2pt}
           \begin{column}{.4\textwidth}
-             \includegraphics[width=\textwidth]{2_clase/ciaa/psf1/visualize.png}
+             \includegraphics[width=6cm,height=4.8cm]{2_clase/ciaa/psf1/visualize.png}
           \end{column}
           \hspace{2pt}
        \end{columns}
        \vfill
     \end{frame}
+%-------------------------------------------------------------------------------
+ \section{CIAA}
+ \subsection{Acondicionamiento de señal}
+ \begin{frame}[t]{Recontruccion}{Acondicionamiento de señal}
+    Se realiza un loop del DAC al ADC permitiendo sumar a la señal de entrada ya existente
+    \protoboardicon
+    \center\includegraphics[width=9cm]{2_clase/circuito_dac}
+    \vfill
+ \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{Generación de señales con el DAC}
  \begin{frame}[t]{Generación de audio con el DAC de la CIAA}{ARM CMSIS-DSP lib \tiny
@@ -143,24 +152,26 @@
     \protoboardicon
     Con arm\_sin\_f32 se genera un tono y se convierte a analogico con el DAC
     \normalsize
-       \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+       \lstset{ basicstyle=\fontsize{ 7}{ 5}\selectfont\ttfamily,language=c,tabsize=4}
        \begin{columns}[t]
           \hspace{2pt}
-          \begin{column}{.3\textwidth}
+          \begin{column}[c]{.2\textwidth}
              \lstinputlisting[lastline=18]{2_clase/ciaa/psf2/src/psf.c}
           \end{column}
           \hspace{2pt}
           \vrule
           \hspace{2pt}
-          \begin{column}{.3\textwidth}
+          \begin{column}[c]{.4\textwidth}
              \lstinputlisting[firstline=19]{2_clase/ciaa/psf2/src/psf.c}
           \end{column}
           \hspace{2pt}
           \vrule
           \hspace{2pt}
-          \begin{column}{.4\textwidth}
-       \center\includegraphics[width=0.5\textwidth]{2_clase/ciaa_audio_gen1.png}
-       \center\includegraphics[width=0.5\textwidth]{2_clase/ciaa_audio_gen2.png}
+          \begin{column}[c]{.4\textwidth}
+             \begin{center}
+                \includegraphics[width=6cm,height=2.8cm]{2_clase/ciaa_audio_gen1.png} \\
+                \includegraphics[width=6cm,height=2.8cm]{2_clase/ciaa_audio_gen2.png}
+             \end{center}
           \end{column}
           \hspace{2pt}
        \end{columns}
