@@ -15,6 +15,22 @@
 %   \tiny{\tableofcontents[currentsection]}
 % \end{frame}}
 %-------------------------------------------------------------------------------
+ \begin{frame}{Enuestas}
+    \framesubtitle{Encuesta anónima clase a clase}
+    Propiciamos este espacio para compartir sus sugerencias, criticas constructivas, oportunidades de mejora y cualquier tipo de comentario relacionado a la clase.
+    \begin{block}{Encuesta anónima}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \href{https://forms.gle/1j5dDTQ7qjVfRwYo8}{https://forms.gle/1j5dDTQ7qjVfRwYo8}
+    }
+       \end{block}
+    \begin{block}{Link al material de la material}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \tiny{\href{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}
+    }
+    }
+       \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{Acondicionamiento de señal}
  \begin{frame}[t]{Sampleo}{Acondicionamiento de señal}
@@ -82,7 +98,7 @@
           bits_{muestra}           &= 16 \\
           Tasa_{efectiva}          &= \frac{460800_{bps}*0.8}{16} = 23040
        \end{align*}
-          \begin{block}{Maxima señal muestreable y reconstruible}
+          \begin{block}{Máxima señal muestreable y reconstruible}
              \center{11520hz}
           \end{block}
        \column{.45\textwidth}
@@ -101,7 +117,7 @@
           R         &= 1k\Omega \\
           C         &= \frac{1}{f_{corte}*R*2*\pi} \approx 15nF
        \end{align*}
-          \begin{block}{Maxima señal muestreable y reconstruible}
+          \begin{block}{Máxima señal muestreable y reconstruible}
              \center{11520hz}
           \end{block}
        \column{.45\textwidth}
@@ -110,7 +126,7 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Captura de audio con la CIAA}{Uart->Python}
+ \begin{frame}{Captura de audio con la CIAA}{UART->Python}
     \handsonicon
     Lectura de un log y visualización en tiempo real de los datos
        \lstset{ basicstyle=\fontsize{ 6}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
@@ -138,19 +154,21 @@
 %-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{Acondicionamiento de señal}
- \begin{frame}[t]{Recontruccion}{Acondicionamiento de señal}
+ \begin{frame}[t]{Reconstrucción}{Acondicionamiento de señal}
     Se realiza un loop del DAC al ADC permitiendo sumar a la señal de entrada ya existente
     \protoboardicon
     \center\includegraphics[width=9cm]{2_clase/circuito_dac}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
+ \section{Generación de señales con el DAC}
+%-------------------------------------------------------------------------------
  \subsection{Generación de señales con el DAC}
  \begin{frame}[t]{Generación de audio con el DAC de la CIAA}{ARM CMSIS-DSP lib \tiny
-    \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
+    \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.HTML}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
     }
     \protoboardicon
-    Con arm\_sin\_f32 se genera un tono y se convierte a analogico con el DAC
+    Con arm\_sin\_f32 se genera un tono y se convierte a analógico con el DAC
     \normalsize
        \lstset{ basicstyle=\fontsize{ 7}{ 5}\selectfont\ttfamily,language=c,tabsize=4}
        \begin{columns}[t]
@@ -178,7 +196,14 @@
    \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \section{Números}
+ \subsection{CMSIS}
+ \begin{frame}[t]{Documentación}{ARM CMSIS-DSP lib \tiny
+    \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
+    }
+    \center\includegraphics[width=0.5\textwidth]{2_clase/cmsis_page}
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \section{Números formato Q}
  \begin{frame}{Sistemas de números}{Punto fijo vs punto flotante}
     \begin{columns}[onlytextwidth]
        \column{.5\textwidth}
@@ -221,18 +246,44 @@
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}[t]{Sistemas de números}{Sistema Q}
-       Qm.n:
-       \begin{itemize}
-          \item{m: cantidad de bits para la parte entera}
-          \item{n: cantidad de bits para la parte decimal}
-       \end{itemize}
-       Q1.15: \\
-          1\textcolor{green}{000 0000 0000 0000} =  -1 \\
-          0\textcolor{green}{111 1111 1111 1111} = $1/2+1/4+1/8+..+1/2^{15} = 0.99$ \\
-       Q2.14: \\
-          10\textcolor{green}{10 0000 0000 0000} =  -1.5 \\
-          01\textcolor{green}{01 0000 0000 0000} =  1.25
+ \begin{frame}[t]{Sistemas de números}{Float32 IEEE 754}
+       \center\includegraphics[width=0.65\textwidth]{2_clase/float32_example}
     \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
+ \begin{frame}[t]{Calculo de propiedades temporales}{ARM CMSIS-DSP lib}
+    \protoboardicon
+    \footnotesize{Calculamos max, min y rms con la CIAA}
+       \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+       \begin{columns}[t]
+          \begin{column}[t]{.5\textwidth}
+             \lstinputlisting{2_clase/ciaa/psf3/src/psf.c}
+          \end{column}
+          \begin{column}[t]{.5\textwidth}
+                \tiny{10 bits}\\
+                   \includegraphics[width=5cm]{2_clase/max_min_rms_10b.png}\\
+                \tiny{4 bits}\\
+                   \includegraphics[width=5cm]{2_clase/max_min_rms_4b.png} \\
+          \end{column}
+       \end{columns}
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}[t]{Cálculo de propiedades temporales}{ARM CMSIS-DSP lib}
+    \handsonicon
+    \footnotesize{Visualizamos max, min y rms con Python}
+       \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
+       \begin{columns}[t]
+          \hspace{2pt}
+          \begin{column}[t]{.4\textwidth}
+             \lstinputlisting[lastline=27]{2_clase/ciaa/psf3/visualize.py}
+          \end{column}
+          \hspace{5pt}
+          \vrule
+          \hspace{5pt}
+          \begin{column}[t]{.6\textwidth}
+             \lstinputlisting[firstline=28]{2_clase/ciaa/psf3/visualize.py}
+          \end{column}
+       \end{columns}
+ \end{frame}
+%-------------------------------------------------------------------------------
+
