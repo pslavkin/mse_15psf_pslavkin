@@ -1,12 +1,8 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{CIAA}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Acondicionamiento de se\IeC {\~n}al}{3}{0}{1}
-\beamer@sectionintoc {2}{CIAA}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{Generaci\IeC {\'o}n de audio con Python}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{Captura con la CIAA}{6}{0}{2}
-\beamer@sectionintoc {3}{CIAA}{10}{0}{3}
-\beamer@subsectionintoc {3}{1}{Acondicionamiento de se\IeC {\~n}al}{10}{0}{3}
-\beamer@sectionintoc {4}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}{11}{0}{4}
-\beamer@subsectionintoc {4}{1}{Generaci\IeC {\'o}n de se\IeC {\~n}ales con el DAC}{11}{0}{4}
-\beamer@subsectionintoc {4}{2}{CMSIS}{12}{0}{4}
-\beamer@sectionintoc {5}{N\IeC {\'u}meros formato Q}{13}{0}{5}
+\beamer@sectionintoc {1}{LTI}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Sistemas LTI}{2}{0}{1}
+\beamer@sectionintoc {2}{Ruido de cuantizaci\IeC {\'o}n}{3}{0}{2}
+\beamer@sectionintoc {3}{FAA}{4}{0}{3}
+\beamer@sectionintoc {4}{Python - Numpy}{5}{0}{4}
+\beamer@sectionintoc {5}{CIAA}{6}{0}{5}
+\beamer@sectionintoc {6}{CMSIS}{7}{0}{6}
