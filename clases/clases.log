@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  10 MAY 2020 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  11 MAY 2020 02:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1469,39 +1469,39 @@ LaTeX Info: Redefining \selectfont on input line 3.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 3.
 
-(./tp1.tex
-<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=42, 1271.75125pt x 427.5975pt>
+(./clase3.tex
+<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=22, 1271.75125pt x 427.5975pt>
 
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
 Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf  used on i
-nput line 11.
+nput line 12.
 (pdftex.def)             Requested size: 149.36287pt x 44.81097pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 17.28pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <17.28> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 17.28pt on input line 12.
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 11--11
+Overfull \hbox (2.0pt too wide) in paragraph at lines 12--12
 [][]  
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10.95> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 11.
+(Font)              scaled to size 10.95pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
-LaTeX Font Info:    Try loading font information for OT1+zavm on input line 11.
+(Font)              scaled to size 10.0pt on input line 12.
+LaTeX Font Info:    Try loading font information for OT1+zavm on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/arev/ot1zavm.fd
 File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
@@ -1529,24 +1529,24 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 8.50006pt on input line 11.
+(Font)              scaled to size 8.50006pt on input line 12.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.95004pt on input line 11.
+(Font)              scaled to size 5.95004pt on input line 12.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 4.25003pt on input line 11.
-LaTeX Font Info:    Try loading font information for OMS+zavm on input line 11.
+(Font)              scaled to size 4.25003pt on input line 12.
+LaTeX Font Info:    Try loading font information for OMS+zavm on input line 12.
 
  (/usr/share/texlive/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+iwona on input line 11
+LaTeX Font Info:    Try loading font information for OMX+iwona on input line 12
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )<<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1554,7 +1554,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1563,23 +1563,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 11.
+(Font)              scaled to size 7.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 11.
+(Font)              scaled to size 5.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 11.
+(Font)              scaled to size 7.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 11.
+(Font)              scaled to size 5.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <14.4> not availabl
 e
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 12.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1587,21 +1587,21 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 12.24008pt on input line 11.
+(Font)              scaled to size 12.24008pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <12> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <8> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 12.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1621,33 +1621,38 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 10.20007pt on input line 11.
+(Font)              scaled to size 10.20007pt on input line 12.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 6.80005pt on input line 11.
+(Font)              scaled to size 6.80005pt on input line 12.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.10004pt on input line 11.
+(Font)              scaled to size 5.10004pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 11.
-<1_clase/python_continuo_vs_discreto.png, id=48, 462.528pt x 346.896pt>
-File: 1_clase/python_continuo_vs_discreto.png Graphic file (type png)
-<use 1_clase/python_continuo_vs_discreto.png>
-Package pdftex.def Info: 1_clase/python_continuo_vs_discreto.png  used on input
- line 11.
-(pdftex.def)             Requested size: 156.49014pt x 117.3661pt.
+(Font)              scaled to size 6.0pt on input line 12.
+<3_clase/leonhard_euler.jpg, id=28, 441.65pt x 575.14874pt>
+File: 3_clase/leonhard_euler.jpg Graphic file (type jpg)
+<use 3_clase/leonhard_euler.jpg>
+Package pdftex.def Info: 3_clase/leonhard_euler.jpg  used on input line 12.
+(pdftex.def)             Requested size: 86.77957pt x 113.00922pt.
+<3_clase/joseph_fourier.jpg, id=29, 105.996pt x 129.6042pt>
+File: 3_clase/joseph_fourier.jpg Graphic file (type jpg)
+<use 3_clase/joseph_fourier.jpg>
+Package pdftex.def Info: 3_clase/joseph_fourier.jpg  used on input line 12.
+(pdftex.def)             Requested size: 86.77957pt x 106.11pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 11.
+(Font)              scaled to size 4.0pt on input line 12.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fibeamer/logo/mu/fibeame
-r-mu-fi-english.pdf> <./1_clase/python_continuo_vs_discreto.png>]
+r-mu-fi-english.pdf> <./3_clase/leonhard_euler.jpg> <./3_clase/joseph_fourier.j
+pg>]
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1655,21 +1660,158 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 24.
+(Font)              scaled to size 9.30756pt on input line 39.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 24.
+(Font)              scaled to size 10.95pt on input line 39.
+<3_clase/derivadas.png, id=40, 422.7795pt x 359.1819pt>
+File: 3_clase/derivadas.png Graphic file (type png)
+<use 3_clase/derivadas.png>
+Package pdftex.def Info: 3_clase/derivadas.png  used on input line 39.
+(pdftex.def)             Requested size: 173.55916pt x 147.45187pt.
  [2
 
-] [3
+ <./3_clase/derivadas.png>]
 
-] [4
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 60.
 
-] [5
+<3_clase/euler_senos_cosenos.png, id=52, 600.2425pt x 604.2575pt>
+File: 3_clase/euler_senos_cosenos.png Graphic file (type png)
+<use 3_clase/euler_senos_cosenos.png>
+Package pdftex.def Info: 3_clase/euler_senos_cosenos.png  used on input line 60
+.
+(pdftex.def)             Requested size: 173.56247pt x 174.72307pt.
+[3
 
-] [6
+ <./3_clase/euler_senos_cosenos.png>]
+<resources/hands_on.png, id=60, 513.92pt x 513.92pt>
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 72.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
 
-]
-[7
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
+nput line 72.
+
+(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
+File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
+-TLF.
+)
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 4.25003pt on input line 72.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `DejaVuSansMono-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(./3_clase/euler1.py)
+<3_clase/euler1.png, id=61, 462.528pt x 346.896pt>
+File: 3_clase/euler1.png Graphic file (type png)
+<use 3_clase/euler1.png>
+Package pdftex.def Info: 3_clase/euler1.png  used on input line 72.
+(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+ [4
+
+ <./resources/hands_on.png> <./3_clase/euler1.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 84.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 3.0pt on input line 84.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 2.55002pt on input line 84.
+
+(./3_clase/euler2.py)
+<3_clase/euler2.png, id=70, 987.2082pt x 504.4446pt>
+File: 3_clase/euler2.png Graphic file (type png)
+<use 3_clase/euler2.png>
+Package pdftex.def Info: 3_clase/euler2.png  used on input line 84.
+(pdftex.def)             Requested size: 260.34537pt x 133.03061pt.
+ [5
+
+ <./3_clase/euler2.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 96.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+ (./3_clase/euler3.py)
+<3_clase/euler3.png, id=77, 987.2082pt x 504.4446pt>
+File: 3_clase/euler3.png Graphic file (type png)
+<use 3_clase/euler3.png>
+Package pdftex.def Info: 3_clase/euler3.png  used on input line 96.
+(pdftex.def)             Requested size: 260.34537pt x 133.03061pt.
+ [6
+
+ <./3_clase/euler3.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 108.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 2.0pt on input line 108.
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 1.70001pt on input line 108.
+ (./3_clase/euler4.py)
+<3_clase/euler4.png, id=84, 987.2082pt x 504.4446pt>
+File: 3_clase/euler4.png Graphic file (type png)
+<use 3_clase/euler4.png>
+Package pdftex.def Info: 3_clase/euler4.png  used on input line 108.
+(pdftex.def)             Requested size: 260.34537pt x 133.03061pt.
+ [7
+
+ <./3_clase/euler4.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 122.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+
+(./3_clase/euler5.py) (./3_clase/euler5.py)
+<3_clase/euler5.png, id=92, 987.2082pt x 504.4446pt>
+File: 3_clase/euler5.png Graphic file (type png)
+<use 3_clase/euler5.png>
+Package pdftex.def Info: 3_clase/euler5.png  used on input line 122.
+(pdftex.def)             Requested size: 260.34537pt x 133.03061pt.
+
+Overfull \hbox (1.65013pt too wide) detected at line 122
+[][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][]
+ []
+
+[8
+
+ <./3_clase/euler5.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 136.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+ (./3_clase/euler6.py) (./3_clase/euler6.py)
+<3_clase/euler6.png, id=99, 987.2082pt x 504.4446pt>
+File: 3_clase/euler6.png Graphic file (type png)
+<use 3_clase/euler6.png>
+Package pdftex.def Info: 3_clase/euler6.png  used on input line 136.
+(pdftex.def)             Requested size: 260.34537pt x 133.03061pt.
+
+Overfull \hbox (1.65013pt too wide) detected at line 136
+[][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][]
+ []
+
+[9
+
+ <./3_clase/euler6.png>]
+File: resources/hands_on.png Graphic file (type png)
+<use resources/hands_on.png>
+Package pdftex.def Info: resources/hands_on.png  used on input line 144.
+(pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
+<3_clase/real_dft_idft.png, id=106, 1220.56pt x 565.11125pt>
+File: 3_clase/real_dft_idft.png Graphic file (type png)
+<use 3_clase/real_dft_idft.png>
+Package pdftex.def Info: 3_clase/real_dft_idft.png  used on input line 144.
+(pdftex.def)             Requested size: 347.12495pt x 160.71346pt.
+ [10
+
+ <./3_clase/real_dft_idft.png>] [11
 
 ])
 \tf@nav=\write6
@@ -1681,37 +1823,43 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 \tf@snm=\write8
 \openout8 = `clases.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
- (./clases.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
+
+(./clases.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
 Package rerunfilecheck Info: File `clases.out' has not changed.
-(rerunfilecheck)             Checksum: 4173EAF559528D070751843D3D88F479;339.
+(rerunfilecheck)             Checksum: 694B9C7FDED2E476F8F336ADA086D880;98.
  ) 
 Here is how much of TeX's memory you used:
- 31213 strings out of 492615
- 592546 string characters out of 6131390
- 714951 words of memory out of 5000000
- 34294 multiletter control sequences out of 15000+600000
- 209691 words of font info for 129 fonts, out of 8000000 for 9000
+ 31881 strings out of 492615
+ 601016 string characters out of 6131390
+ 1546732 words of memory out of 5000000
+ 34878 multiletter control sequences out of 15000+600000
+ 232911 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,70p,823b,1366s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/t
-exlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</usr/share/texlive/texmf-dist/fonts
-/type1/public/arev/ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/typoland/carlito/Carlito-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-typoland/carlito/Carlito-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-typoland/carlito/Carlito.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-mathdesign/mdbch/md-chb7t.pfb>
-Output written on clases.pdf (7 pages, 138522 bytes).
+ 72i,16n,82p,823b,2131s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
+}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}{/usr/share/te
+xlive/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}{/usr/share/texlive/texmf-dis
+t/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/carlito/crlt_csjzgd.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/ar
+ev/ArevSans-Oblique.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/arev/
+ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/
+Carlito-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Ca
+rlito-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/typoland/carlito/Ca
+rlito.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMo
+no.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-ch
+b7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-c
+hb7y.pfb>
+Output written on clases.pdf (11 pages, 684245 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 31879 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 40598 words of extra memory for PDF output out of 42996 (max. 10000000)
 
