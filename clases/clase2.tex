@@ -13,7 +13,7 @@
 %\begin{frame}
 %   \frametitle{Resumen de seccion \thesection}
 %   \tiny{\tableofcontents[currentsection]}
-% \end{frame}}
+%\end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Enuestas}
     \framesubtitle{Encuesta anónima clase a clase}
@@ -50,13 +50,11 @@
 %-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{Generación de audio con Python}
- \begin{frame}[t]{Generación de audio con Python}{simpleaudio lib}
+    
+ \begin{frame}[t]{Generación de audio con Python}{\tiny{\href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}}}
     \handsonicon
-    Instalar el modulo simpleaudio para generar sonidos con python
-    \tiny
-       \href{https://simpleaudio.readthedocs.io/en/latest/installation.html}{https://simpleaudio.readthedocs.io/en/latest/installation.html}
     \normalsize
-    Y utilizamos el siguiente código como base:
+    Instalar el módulo simpleaudio \tiny{(ver apéndice \ref{appendix:simpleaudio})} \normalsize para generar sonidos con python y utilizamos el siguiente código como base:
     \begin{columns}[t]
        \begin{column}{0.5\textwidth}
        \lstinputlisting[basicstyle=\fontsize{8}{2}\selectfont\ttfamily ,language=Python,tabsize=4]{2_clase/audio_gen.py}
@@ -286,4 +284,20 @@
        \end{columns}
  \end{frame}
 %-------------------------------------------------------------------------------
-
+\appendix
+\section{Appendix}
+\label{appendix:simpleaudio}
+\begin{frame}[c]{Apéndice}{Instrucciones para usar simpleaudio}
+   \begin{center}
+      \includegraphics[       width=0.3\textwidth]{2_clase/simpleaudio_install}
+      \includegraphics[page=1,width=0.3\textwidth]{2_clase/simpleaudio_tutorial}
+      \includegraphics[page=2,width=0.3\textwidth]{2_clase/simpleaudio_tutorial}
+   \end{center}
+\end{frame}
+\begin{frame}[c]{Apéndice}{Instrucciones para usar simpleaudio}
+   \begin{center}
+      \includegraphics[page=3,width=0.3\textwidth]{2_clase/simpleaudio_tutorial}
+      \includegraphics[page=4,width=0.3\textwidth]{2_clase/simpleaudio_tutorial}
+      \includegraphics[page=5,width=0.3\textwidth]{2_clase/simpleaudio_tutorial}
+   \end{center}
+\end{frame}
