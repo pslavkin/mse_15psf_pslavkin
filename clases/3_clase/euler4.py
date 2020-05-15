@@ -31,7 +31,7 @@ def signal(f,n):
     return np.sin(2*np.pi*f*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
-promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
+promRLn,promILn,promMagLn,promPhaseLn  = plt.plot([],[],'b-o',[],[],'r-o',[],[],'k-o',[],[],'y-')
 promAxe.grid(True)
 promAxe.set_xlim(-fs/2,fs/2)
 promAxe.set_ylim(-1,1)
@@ -54,6 +54,8 @@ def update(n):
     promData[frecIter]=mass
     promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
     promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+#    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
+#    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
 
     if n==N-1:
         circleData = []
@@ -64,7 +66,8 @@ def update(n):
             ani.repeat=False
         else:
             frecIter+=1
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,
+    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,promMagLn,promPhaseLn,
 
-ani=FuncAnimation(fig,update,N,init,interval=100 ,blit=True,repeat=True)
+
+ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

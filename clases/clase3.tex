@@ -164,22 +164,75 @@
  \end{frame}
 
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ DFT Spectral leakage}
+ \begin{frame}{DFT}{ Densidad de potencia espectral }
+    \handsonicon
+    \begin{columns}[c]
+       \begin{column}{.2\textwidth}
+          \begin{align*}
+             P_{sin}&=\frac{A^2}{2}\\
+             P_{sin}&=\frac{2.5^2}{2}\\
+             P_{sin}&=3.125W\\
+             P&=1.56+1.56\\
+             P&=3.125W
+          \end{align*}
+       \end{column}
+       \begin{column}{.8\textwidth}
+          \centering\includegraphics[width=0.55\textwidth]{3_clase/densidad_potencia}
+       \end{column}
+    \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{DFT}{Fuga espectral (Spectral leakage)}
    \handsonicon
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          10Hz
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo1}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo2}
       \end{column}
       \begin{column}{.5\textwidth}
          10.4hz
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo2}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo1}
       \end{column}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ DFT acelerada}
+\begin{frame}{DFT}{Resolucion espectral}
+   \handsonicon
+   \begin{columns}[t]
+      \begin{column}{.5\textwidth}
+         f1=2 \hspace{0.1cm}  f2=3 \hspace{0.1cm} fs = 30 \hspace{0.1cm} N  = 50\\
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/resolucion1}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         f1=2 \hspace{0.1cm}  f2=3 \hspace{0.1cm} fs = 50 \hspace{0.1cm} N  = 50\\
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/resolucion2}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[c]{DFT}{DFT Zero padding}
+   \handsonicon
+   \begin{columns}[t]
+      \begin{column}[t]{.2\textwidth}
+         \begin{align*}
+            f1 &= 2\\
+            f2 &= 3\\
+            fs &= 10\\
+            N  &= 50\\
+            Z  &= 950
+         \end{align*}
+      \end{column}
+      \begin{column}[t]{.8\textwidth}
+         \center\includegraphics[width=0.55\textwidth]{3_clase/zero_padding}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT}{Acelerada}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 3}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -204,7 +257,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Como reconstruyo la señal en el tiempo}
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -222,7 +275,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Como reconstruyo la señal en el tiempo}
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -241,13 +294,13 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Sintesis, Transformada inversa discreta de Fourier}{IDFT}
+ \begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
     \center\includegraphics[width=0.9\textwidth]{3_clase/idft_eq}
     \vfill
  \end{frame}
 
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Señales complejas como entrada?}
+\begin{frame}{IDFT}{Señales complejas como entrada?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -265,7 +318,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Señales complejas como entrada?}
+\begin{frame}{IDFT}{Señales complejas como entrada?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -284,7 +337,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Un conejo como entrada?}
+\begin{frame}{IDFT}{Un conejo como entrada?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -302,7 +355,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{un conejo como entrada?}
+\begin{frame}{IDFT}{Un conejo como entrada?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
@@ -321,7 +374,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Delta
@@ -335,7 +388,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
    \begin{columns}[c]
       \begin{column}{.33\textwidth}
          Sin
@@ -353,7 +406,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Triangular
@@ -388,7 +441,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[c]{RDFT}{Analisis en la CIAA}
+\begin{frame}[c]{RDFT}{Análisis en la CIAA}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]
@@ -405,7 +458,7 @@
    \end{columns}
    \vfill
 \end{frame}
-\begin{frame}[c]{RDFT}{Analisis en la CIAA}
+\begin{frame}[c]{RDFT}{Análisis en la CIAA}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]
@@ -419,7 +472,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Bibliografia}
+\begin{frame}{Bibliografía}
    \framesubtitle{Libros, links y otro material}
    \begin{thebibliography}{9}
          \bibitem{cmsisdsp}
@@ -431,7 +484,7 @@
          Second Edition, 1999.
          \bibitem{link}
          \emph{Interactive Mathematics Site Info}.
-         \bibitem{grantsanderson}
+         \bibitem{grants Anderson}
          \emph{Grant Sanderson} \\
          \href{ https://youtu.be/spUNpyF58BY}{link}
         \bibitem{interactivemath}

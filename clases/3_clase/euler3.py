@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
-fs         = 20
-N          = 20
+fs         = 200
+N          = 200
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn  = plt.plot([],[],'r-',[],[],'bo')
@@ -51,5 +51,5 @@ def update(n):
     circleLg=circleAxe.legend()
     return circleLn,circleLg,signalLn,massLn
 
-ani=FuncAnimation(fig,update,N,init,interval=100 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
 plt.show()

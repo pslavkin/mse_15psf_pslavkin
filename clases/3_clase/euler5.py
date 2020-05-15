@@ -29,12 +29,15 @@ signalFrec = 2
 signalData=[]
 def signal(f,n):
     return np.sin(2*np.pi*f*n*1/fs)
+#    if n<50: 
+#        return 0.5*np.sin(2*np.pi*f*n*1/fs)+0.5*np.sin(2*np.pi*f*1.5*n*1/fs)
+#    return 0
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
-promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
+promRLn,promILn,promMagLn,promPhaseLn  = plt.plot([],[],'b-o',[],[],'r-o',[],[],'k-',[],[],'y-')
 promAxe.grid(True)
 promAxe.set_xlim(-fs/2,fs/2)
-promAxe.set_ylim(-0.4,0.4)
+promAxe.set_ylim(-1,1)
 promData=np.zeros(N,dtype=complex)
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)
@@ -55,8 +58,10 @@ def update(nn):
     circleLn.set_data(np.real(circleData),
                       np.imag(circleData))
     signalLn.set_data(tData[:n+1],signalData)
-    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
-    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+#    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
+#    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
+#    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
     circleLn.set_label(circleFrec[frecIter])
     circleLg=circleAxe.legend()
 
@@ -64,7 +69,8 @@ def update(nn):
         ani.repeat=False
     else:
         frecIter+=1
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,
+    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,promMagLn,promPhaseLn,
+
 
 ani=FuncAnimation(fig,update,N,init,interval=100 ,blit=True,repeat=True)
 plt.show()
