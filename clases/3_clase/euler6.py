@@ -45,7 +45,6 @@ inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
 inversaData = []
-vectorData  = []
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)
 
@@ -53,13 +52,13 @@ def init():
     return circleLn,circleLg,signalLn,massLn,promRLn,promILn,inversaLn
 
 def updateF(n):
-    global promData,fData,vectorData,frecIter
+    global promData,fData,inversaData,frecIter
     if aniT.repeat==True:
         return inversaLn,
-    vectorData=[0]
+    inversaData=[0]
     for f in range(N):
-        vectorData.append(vectorData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
-    inversaLn.set_data(np.imag(vectorData),np.real(vectorData))
+        inversaData.append(inversaData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
+    inversaLn.set_data(np.imag(inversaData),np.real(inversaData))
     frecIter+=1
     if frecIter==N:
         frecIter=0
