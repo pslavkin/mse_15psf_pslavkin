@@ -1,0 +1,67 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+fs=20
+N=40
+
+fig=plt.figure(1)
+circleAxe=fig.add_subplot(2,2,1)
+circleLn,massLn=plt.plot([],[],'r-',[],[],'bo')
+circleAxe.grid(True)
+circleAxe.set_xlim(-1,1)
+circleAxe.set_ylim(-1,1)
+circleLn.set_label(0)
+circleLg=circleAxe.legend()
+circleData=[]
+circleFrec=[-fs/2]
+massData=0
+
+signalAxe=fig.add_subplot(2,2,2)
+signalLn,=plt.plot([],[],'b-')
+signalAxe.grid(True)
+signalAxe.set_xlim(0,N/fs)
+signalAxe.set_ylim(-1,1)
+signalData=[]
+signalFrec=4
+tData=[]
+
+promAxe=fig.add_subplot(2,2,3)
+promLn,=plt.plot([],[],'g-o')
+promAxe.grid(True)
+promAxe.set_xlim(-fs/2,fs/2)
+promAxe.set_ylim(-1,1)
+promData=[0]
+
+def signal(f,n,c):
+  return c*np.cos(2*np.pi*f*n/fs)
+
+def circle(f,n,c):
+  return c*np.exp(-2j*np.pi*f*n*1/fs)
+
+def update(n):
+  global circleData,tData,signalData,massData,promData
+  circleData.append(circle(circleFrec[-1],n,1)*signal(signalFrec,n,1))
+  massData=np.average(circleData)
+  massLn.set_data(np.real(massData),np.imag(massData))
+  circleLn.set_data(np.real(circleData),np.imag(circleData)) 
+  tData.append(n/fs)  
+  signalData.append(signal(signalFrec,n,1))
+  signalLn.set_data(tData,signalData)
+  circleLn.set_label(n)
+  circleLg=circleAxe.legend()
+  promData[-1]=massData
+  promLn.set_data(circleFrec,promData)
+  if n==N-1:
+    promData.append(0)
+    circleFrec.append(circleFrec[-1]+fs/N)
+    if circleFrec[-1] == fs/2:
+     	ani.repeat=False 
+    circleData=[]
+    massData=[]
+    signalData=[]
+    tData=[]
+  return circleLn,signalLn,circleLg,massLn,promLn
+  
+ani=FuncAnimation(fig,update,N,init_func=None,interval=100,blit=True,repeat=True)
+plt.show()

@@ -7,91 +7,64 @@ fs         = 20
 N          = 20
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
-circleLn,promLn,  = plt.plot([],[],'r-',[],[],'bo')
+circleLn,massLn  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
 circleAxe.set_xlim(-1,1)
 circleAxe.set_ylim(-1,1)
-circleFrec = 0
-circleLn.set_label(circleFrec)
-legendLn   = circleAxe.legend()
+circleFrec = np.arange(-fs/2,fs/2,fs/N)
+circleLn.set_label(circleFrec[0])
+circleLg   = circleAxe.legend()
 circleData = []
-prom       = 0
+mass       = 0
 frecIter   = 0
-circle     = lambda c,f,n: c*np.exp(-1j*2*np.pi*f*n*1/fs)
-circleInv  = lambda c,f,n: c*np.exp(1j*2*np.pi*f*n*1/fs)
+def circle(f,n):
+    return np.exp(-1j*2*np.pi*f*n*1/fs)
 #--------------------------------------
 signalAxe  = fig.add_subplot(2,2,2)
-signalLn,  = plt.plot([],[],'b-')
+signalLn,  = plt.plot([],[],'b-o')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
 signalFrec = 2
 signalData=[]
-signal  = lambda f,n: np.sin(2*np.pi*f*n*1/fs)#+0.5*np.cos(2*np.pi*f*2*n*1/fs)
+def signal(f,n):
+    return np.sin(2*np.pi*f*n*1/fs)
 #--------------------------------------
-fourierAxe  = fig.add_subplot(2,2,3)
-fourierLn,  = plt.plot([],[],'g-o')
-fourierAxe.grid(True)
-fourierAxe.set_xlim(0,fs)
-fourierAxe.set_ylim(0,0.5)
-fourierData=[]
+promAxe  = fig.add_subplot(2,2,3)
+promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
+promAxe.grid(True)
+promAxe.set_xlim(-fs/2,fs/2)
+promAxe.set_ylim(-1,1)
+promData=np.zeros(N,dtype=complex)
 #--------------------------------------
-inversaAxe         = fig.add_subplot(2,2,4)
-inversaLn,vectorLn, = plt.plot([],[],'m-o',[],[],'b-o')
-inversaAxe.grid(True)
-inversaAxe.set_xlim(-1,1)
-inversaAxe.set_ylim(-1,1)
-inversaData = []
-vectorData  = []
-#--------------------------------------
-tData=[]
-fData=[]
+tData=np.arange(0,N/fs,1/fs)
 
 def init():
-    return circleLn,
-def initF():
-    return inversaLn,
-
-def updateF(n):
-    global fourierData,fData,vectorData
-    if aniT.repeat==True:
-        return inversaLn,
-    vectorData=[0]
-    for f in range(N):
-        vectorData.append(vectorData[-1]+circleInv(np.abs(fourierData[f]),f*fs/N,n))
-    inversaLn.set_data(np.real(vectorData),np.imag(vectorData))
-    return inversaLn,
-
-
-def updateT(n):
-    global circleData,signalData,tData,promData,frecIter,circleFrec,fourierData,fData,legendLn
-    circleData.append(circle(1,circleFrec,n)*signal(signalFrec,n))
-    prom=np.average(circleData)
-    promLn.set_data(np.real(prom),
-                    np.imag(prom))
+    return circleLn,circleLg,signalLn,massLn,promRLn,promILn
+def update(nn):
+    global circleData,signalData,promData,frecIter,circleFrec,circleLg
+    circleData = []
+    signalData = []
+    for n in range(N):
+        circleData.append(circle(circleFrec[frecIter],n)*signal(signalFrec,n))
+        mass=np.average(circleData)
+        signalData.append(signal(signalFrec,n))
+        promData[frecIter]=mass
+    massLn.set_data(np.real(mass),
+                    np.imag(mass))
     circleLn.set_data(np.real(circleData),
                       np.imag(circleData))
-    signalData.append(signal(signalFrec,n))
-    tData.append(n/fs)
-    signalLn.set_data(tData,signalData)
+    signalLn.set_data(tData[:n+1],signalData)
+    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
+    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+    circleLn.set_label(circleFrec[frecIter])
+    circleLg=circleAxe.legend()
 
-    if n==N-1:
-        circleData = []
-        signalData = []
-        tData      = []
-        fourierData.append(prom)
-        fData.append(circleFrec)
-        fourierLn.set_data(fData,np.abs(fourierData)**2)
-        prom       = 0
+    if frecIter == N-1:
+        ani.repeat=False
+    else:
         frecIter+=1
-        if frecIter == N:
-            aniT.repeat=False
-        else:
-            circleFrec = frecIter*fs/N
-            circleLn.set_label(circleFrec)
-            legendLn=circleAxe.legend()
-    return circleLn,signalLn,promLn,fourierLn,legendLn,
+    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,
 
-aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,initF,interval=300 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N,init,interval=100 ,blit=True,repeat=True)
 plt.show()

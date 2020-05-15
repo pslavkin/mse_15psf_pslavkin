@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-=======
-\babel@toc {spanish}{}
-\beamer@sectionintoc {1}{CIAA}{10}{0}{1}
-\beamer@subsectionintoc {1}{1}{CMSIS-DSP}{10}{0}{1}
->>>>>>> 2eb220493ac3535706ed56ff19c5629565716896
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Tipos de transformada}{11}{0}{1}
+\beamer@subsectionintoc {1}{1}{Tipos de transformada}{11}{0}{1}
+\beamer@sectionintoc {2}{CIAA}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{CMSIS-DSP}{12}{0}{2}

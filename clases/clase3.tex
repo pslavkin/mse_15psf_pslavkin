@@ -26,7 +26,7 @@
          \item $f'(t) = cos(t)$
       \end{itemize}
       \column{.4\textwidth}
-      \includegraphics[width=1.0\textwidth]{3_clase/derivadas}
+      \includegraphics[width=0.8\textwidth]{3_clase/derivadas}
       %codigos en 3_clase/derivadas.py
    \end{columns}
    \begin{block}{La derivada es igual a la funcion}
@@ -59,11 +59,11 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ animado }
+\begin{frame}[t]{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ animado }
    \handsonicon
    \begin{columns}[onlytextwidth]
       \column{.6\textwidth}
-      \lstset{ basicstyle=\fontsize{ 5}{ 3}\selectfont\ttfamily }
+      \lstset{ basicstyle=\fontsize{ 7}{ 1}\selectfont\ttfamily }
       \lstinputlisting[language=Python,tabsize=4]{3_clase/euler1.py}
       \column{.4\textwidth}
       \centering\includegraphics[width=1.0\textwidth]{3_clase/euler1}
@@ -73,71 +73,152 @@
 %-------------------------------------------------------------------------------
 \begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ y $\sin(t)$ animados independientemente}
    \handsonicon
-   \begin{columns}[onlytextwidth]
-      \column{.4\textwidth}
-      \lstset{ basicstyle=\fontsize{ 3}{ 0}\selectfont\ttfamily }
-      \lstinputlisting[language=Python,tabsize=4]{3_clase/euler2.py}
-      \column{.6\textwidth}
-      \centering\includegraphics[width=1.0\textwidth]{3_clase/euler2}
-   \end{columns}
+       \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+       \begin{columns}[c]
+          \hspace{2pt}
+          \begin{column}{.3\textwidth}
+             \lstinputlisting[lastline=27]{3_clase/euler2.py}
+          \end{column}
+          \hspace{2pt}
+          \vrule
+          \hspace{2pt}
+          \begin{column}{.3\textwidth}
+             \lstinputlisting[firstline=27]{3_clase/euler2.py}
+          \end{column}
+          \hspace{2pt}
+          \vrule
+          \hspace{2pt}
+          \begin{column}{.4\textwidth}
+             \centering\includegraphics[width=1.0\textwidth]{3_clase/euler2}
+          \end{column}
+          \hspace{2pt}
+       \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas }
    \handsonicon
-   \begin{columns}[onlytextwidth]
-      \column{.4\textwidth}
-      \lstset{ basicstyle=\fontsize{ 3}{ 0}\selectfont\ttfamily }
-      \lstinputlisting[language=Python,tabsize=4]{3_clase/euler3.py}
-      \column{.6\textwidth}
-      \centering\includegraphics[width=1.0\textwidth]{3_clase/euler3}
+   \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=29]{3_clase/euler2.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=29]{3_clase/euler3.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler3}
+      \end{column}
+      \hspace{2pt}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f}
    \handsonicon
-   \begin{columns}[onlytextwidth]
-      \column{.4\textwidth}
-      \lstset{ basicstyle=\fontsize{ 2}{ 0}\selectfont\ttfamily }
-      \lstinputlisting[language=Python,tabsize=4]{3_clase/euler4.py}
-      \column{.6\textwidth}
-      \centering\includegraphics[width=1.0\textwidth]{3_clase/euler4}
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=40]{3_clase/euler4.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=40]{3_clase/euler4.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler4}
+      \end{column}
+      \hspace{2pt}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ del centro de masas de vuelta a $\sin(t)$}
    \handsonicon
-   \begin{columns}[onlytextwidth]
-      \lstset{ basicstyle=\fontsize{ 2}{ 1}\selectfont\ttfamily }
-      \column{.2\textwidth}
-      \lstinputlisting[language=Python,tabsize=4,lastline=45]{3_clase/euler5.py}
-      \column{.2\textwidth}
-      \lstinputlisting[language=Python,tabsize=4,firstline=46]{3_clase/euler5.py}
-      \column{.6\textwidth}
-      \centering\includegraphics[width=1.0\textwidth]{3_clase/euler5}
+   \lstset{ basicstyle=\fontsize{ 3}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=49]{3_clase/euler5.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=49]{3_clase/euler5.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler5}
+      \end{column}
+      \hspace{2pt}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{$e^{j2\pi ft}$}{Señales complejas, conejo}
    \handsonicon
-   \begin{columns}[onlytextwidth]
-      \lstset{ basicstyle=\fontsize{ 2}{ 1}\selectfont\ttfamily }
-      \column{.2\textwidth}
-      \lstinputlisting[language=Python,tabsize=4,lastline=50]{3_clase/euler6.py}
-      \column{.2\textwidth}
-      \lstinputlisting[language=Python,tabsize=4,firstline=51]{3_clase/euler6.py}
-      \column{.6\textwidth}
-      \centering\includegraphics[width=1.0\textwidth]{3_clase/euler6}
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler6.py}
+      \end{column}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Señales complejas, conejo}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler6}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+ \section{Tipos de transformada}
+ \subsection{Tipos de transformada}
+ \begin{frame}{Diferentes transformadas segun el tipo de señal}{}
+    \handsonicon
+    \center\includegraphics[width=0.6\textwidth]{3_clase/fourier_types}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
  \section{CIAA}
  \subsection{CMSIS-DSP}
- \begin{frame}{}{Ejemplo de real DFT}
+ \begin{frame}{}{DFT para señales reales RDFT}
     \handsonicon
     \center\includegraphics[width=0.8\textwidth]{3_clase/real_dft_idft}
     \vfill

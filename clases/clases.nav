@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-\headcommand {\beamer@partpages {1}{0}}
-\headcommand {\beamer@subsectionpages {1}{0}}
-\headcommand {\beamer@sectionpages {1}{0}}
-\headcommand {\beamer@documentpages {0}}
-\headcommand {\def \inserttotalframenumber {0}}
-=======
+\beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
@@ -23,18 +17,24 @@
 \headcommand {\beamer@framepages {8}{8}}
 \headcommand {\slideentry {0}{0}{9}{9/9}{}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@sectionpages {1}{9}}
-\headcommand {\beamer@subsectionpages {1}{9}}
-\headcommand {\sectionentry {1}{CIAA}{10}{CIAA}{0}}
-\headcommand {\beamer@subsectionpages {10}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{10}{CMSIS-DSP}}
-\headcommand {\slideentry {1}{1}{1}{10/10}{CMSIS-DSP}{0}}
+\headcommand {\slideentry {0}{0}{10}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {1}{1}{2}{11/11}{CMSIS-DSP}{0}}
+\headcommand {\sectionentry {1}{Tipos de transformada}{11}{Tipos de transformada}{0}}
+\headcommand {\beamer@sectionpages {1}{10}}
+\headcommand {\beamer@subsectionpages {1}{10}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{11}{Tipos de transformada}}\headcommand {\beamer@subsectionpages {11}{10}}
+\headcommand {\slideentry {1}{1}{1}{11/11}{Tipos de transformada}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@partpages {1}{11}}
-\headcommand {\beamer@subsectionpages {1}{11}}
-\headcommand {\beamer@sectionpages {1}{11}}
-\headcommand {\beamer@documentpages {11}}
-\headcommand {\gdef \inserttotalframenumber {10}}
->>>>>>> 2eb220493ac3535706ed56ff19c5629565716896
+\headcommand {\sectionentry {2}{CIAA}{12}{CIAA}{0}}
+\headcommand {\beamer@sectionpages {11}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{CMSIS-DSP}}\headcommand {\beamer@subsectionpages {12}{11}}
+\headcommand {\slideentry {2}{1}{1}{12/12}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{1}{2}{13/13}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@partpages {1}{13}}
+\headcommand {\beamer@subsectionpages {1}{13}}
+\headcommand {\beamer@sectionpages {1}{13}}
+\headcommand {\beamer@documentpages {13}}
+\headcommand {\def \inserttotalframenumber {12}}
