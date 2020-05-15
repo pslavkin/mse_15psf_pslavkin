@@ -19,22 +19,44 @@
 \headcommand {\beamer@framepages {9}{9}}
 \headcommand {\slideentry {0}{0}{10}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\sectionentry {1}{Tipos de transformada}{11}{Tipos de transformada}{0}}
-\headcommand {\beamer@sectionpages {1}{10}}
-\headcommand {\beamer@subsectionpages {1}{10}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{11}{Tipos de transformada}}\headcommand {\beamer@subsectionpages {11}{10}}
-\headcommand {\slideentry {1}{1}{1}{11/11}{Tipos de transformada}{0}}
+\headcommand {\slideentry {0}{0}{11}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\sectionentry {2}{CIAA}{12}{CIAA}{0}}
-\headcommand {\beamer@sectionpages {11}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{CMSIS-DSP}}\headcommand {\beamer@subsectionpages {12}{11}}
-\headcommand {\slideentry {2}{1}{1}{12/12}{CMSIS-DSP}{0}}
+\headcommand {\slideentry {0}{0}{12}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{1}{2}{13/13}{CMSIS-DSP}{0}}
+\headcommand {\slideentry {0}{0}{13}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@partpages {1}{13}}
-\headcommand {\beamer@subsectionpages {1}{13}}
-\headcommand {\beamer@sectionpages {1}{13}}
-\headcommand {\beamer@documentpages {13}}
-\headcommand {\def \inserttotalframenumber {12}}
+\headcommand {\slideentry {0}{0}{14}{14/14}{}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {0}{0}{15}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {0}{0}{16}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {0}{0}{17}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {0}{0}{18}{18/18}{}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {0}{0}{19}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {0}{0}{20}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {0}{0}{21}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\sectionentry {1}{CIAA}{22}{CIAA}{0}}
+\headcommand {\beamer@sectionpages {1}{21}}
+\headcommand {\beamer@subsectionpages {1}{21}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{22}{CMSIS-DSP}}\headcommand {\beamer@subsectionpages {22}{21}}
+\headcommand {\slideentry {1}{1}{1}{22/22}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {1}{1}{2}{23/23}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {1}{1}{3}{24/24}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {1}{1}{4}{25/25}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {1}{1}{5}{26/26}{CMSIS-DSP}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@partpages {1}{26}}
+\headcommand {\beamer@subsectionpages {1}{26}}
+\headcommand {\beamer@sectionpages {1}{26}}
+\headcommand {\beamer@documentpages {26}}
+\headcommand {\def \inserttotalframenumber {25}}

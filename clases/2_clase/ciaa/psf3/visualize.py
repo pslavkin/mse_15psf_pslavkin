@@ -26,6 +26,7 @@ def findHeader(f):
             index+=1
             if index>=len(header):
                 sync=True
+                print(sync)
         else:
             index=0
             print(sync)

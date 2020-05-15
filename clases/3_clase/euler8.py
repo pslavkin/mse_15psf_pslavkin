@@ -6,6 +6,11 @@ fig        = plt.figure()
 fs         = 100
 N          = 100
 #--------------------------------------
+conejo=np.load("conejo.npy")[::1]
+N=len(conejo)
+def signal(f,n):
+    return conejo[n]
+#--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn,  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
@@ -29,8 +34,8 @@ signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
 signalFrec = 2
 signalData=[]
-def signal(f,n):
-    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*n*1/fs)
+#def signal(f,n):
+#    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')

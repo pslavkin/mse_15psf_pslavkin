@@ -21,19 +21,20 @@ int main ( void ) {
    adcConfig          ( ADC_ENABLE               );
    cyclesCounterInit  ( EDU_CIAA_NXP_CLOCK_SPEED );
    while(1) {
-      cyclesCounterReset();                                                                              // inicializa el conteo de ciclos de reloj
-      uartWriteByteArray ( UART_USB ,(uint8_t* )&adc[sample]    ,sizeof(adc[0]) );                       // envia el sample ANTERIOR
-      uartWriteByteArray ( UART_USB ,(uint8_t* )&fftOut[sample] ,sizeof(fftOut[0]));                     // envia la fft del sample ANTERIO
-      adc[sample]   =(((int16_t )adcRead(CH1)-512)>>(10-BITS))<<(6+10-BITS);                             // PISA el sample que se acaba de mandar con una nueva muestra
-      fftIn[sample] = adc[sample];                                                                       // copia del adc porque la fft corrompe el arreglo de entrada
-      if ( ++sample==fftLength ) {                                                                       // si es el ultimo
-         sample = 0                                                                                    ; // arranca de nuevo
+      cyclesCounterReset();                                                          // inicializa el conteo de ciclos de reloj
+      uartWriteByteArray ( UART_USB ,(uint8_t* )&adc[sample]    ,sizeof(adc[0]) );   // envia el sample ANTERIOR
+      uartWriteByteArray ( UART_USB ,(uint8_t* )&fftOut[sample] ,sizeof(fftOut[0])); // envia la fft del sample ANTERIO
+      //TODO hay que mandar fftLength/2 "+1" y solo estoy mandando fftLength/2. revisar
+      adc[sample]   =(((int16_t )adcRead(CH1)-512)>>(10-BITS))<<(6+10-BITS);         // PISA el sample que se acaba de mandar con una nueva muestra
+      fftIn[sample] = adc[sample];                                                   // copia del adc porque la fft corrompe el arreglo de entrada
+      if ( ++sample==fftLength ) {                                                   // si es el ultimo
+         sample = 0;                                                                 // arranca de nuevo
          uartWriteByteArray ( UART_USB ,(uint8_t* )&maxValue ,2);
          uartWriteByteArray ( UART_USB ,(uint8_t* )&maxIndex ,2);
-         uartWriteByteArray ( UART_USB ,"header" ,6 );                                                   // manda el header que casualmente se llama "header" con lo que arranca una nueva trama
-         uartWriteByteArray ( UART_USB ,(uint8_t* )&fftLength ,sizeof(fftLength));                       // manda el largo de la fft que es variable
-         arm_rfft_init_q15 ( &S ,fftLength ,0 ,1 );                                                      // inicializa una estructira que usa la funcion fft para procesar los datos. Notar el /2 para el largo
-         arm_rfft_q15      ( &S ,fftIn     ,fftOut    );                                                 // por fin.. ejecuta la rfft REAL fft
+         uartWriteByteArray ( UART_USB ,"header" ,6 );                               // manda el header que casualmente se llama "header" con lo que arranca una nueva trama
+         uartWriteByteArray ( UART_USB ,(uint8_t* )&fftLength ,sizeof(fftLength));   // manda el largo de la fft que es variable
+         arm_rfft_init_q15 ( &S ,fftLength ,0 ,1 );                                  // inicializa una estructira que usa la funcion fft para procesar los datos. Notar el /2 para el largo
+         arm_rfft_q15      ( &S ,fftIn     ,fftOut    );                             // por fin.. ejecuta la rfft REAL fft
          arm_cmplx_mag_squared_q15 ( fftOut ,fftMag ,fftLength/2+1 );
          arm_max_q15 ( fftMag ,fftLength/2+1 ,&maxValue ,&maxIndex );
          gpioToggle( LEDR);
@@ -45,7 +46,7 @@ int main ( void ) {
                ;
          }
       }
-      while(cyclesCounterRead()< 204000) //clk de 204000000 => 10k samples x seg.
+      while(cyclesCounterRead()< 20400) //clk de 204000000 => 10k samples x seg.
          ;
    }
 }

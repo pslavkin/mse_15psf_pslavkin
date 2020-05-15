@@ -34,7 +34,7 @@ promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
 promAxe.grid(True)
 promAxe.set_xlim(-fs/2,fs/2)
-promAxe.set_ylim(-1,1)
+promAxe.set_ylim(-0.4,0.4)
 promData=np.zeros(N,dtype=complex)
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)

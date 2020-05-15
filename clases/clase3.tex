@@ -121,7 +121,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f}
+\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f, DFT?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -146,7 +146,40 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ del centro de masas de vuelta a $\sin(t)$}
+ \begin{frame}{Transformada de Fourier}{Diferentes tipos segun la señal}
+   \begin{columns}[c]
+      \begin{column}{.45\textwidth}
+    \includegraphics[width=0.9\textwidth]{3_clase/fourier_types}
+      \end{column}
+      \begin{column}{.55\textwidth}
+    \includegraphics[width=1.0\textwidth]{3_clase/fourier_table}
+      \end{column}
+   \end{columns}
+    \vfill
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Analisi, Transformada discreta de Fourier}{DFT}
+    \center\includegraphics[width=0.9\textwidth]{3_clase/dft_eq}
+    \vfill
+ \end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ DFT Spectral leakage}
+   \handsonicon
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         10Hz
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo1}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         10.4hz
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/desparramo2}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{$e^{j2\pi ft}$ DFT acelerada}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 3}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -171,7 +204,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Señales complejas, conejo}
+\begin{frame}{$e^{j2\pi ft}$}{Como reconstruyo la señal en el tiempo}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -189,7 +222,7 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{$e^{j2\pi ft}$}{Señales complejas, conejo}
+\begin{frame}{$e^{j2\pi ft}$}{Como reconstruyo la señal en el tiempo}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
@@ -208,21 +241,183 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
- \section{Tipos de transformada}
- \subsection{Tipos de transformada}
- \begin{frame}{Diferentes transformadas segun el tipo de señal}{}
-    \handsonicon
-    \center\includegraphics[width=0.6\textwidth]{3_clase/fourier_types}
+ \begin{frame}{Sintesis, Transformada inversa discreta de Fourier}{IDFT}
+    \center\includegraphics[width=0.9\textwidth]{3_clase/idft_eq}
     \vfill
  \end{frame}
+
 %-------------------------------------------------------------------------------
- \section{CIAA}
- \subsection{CMSIS-DSP}
- \begin{frame}{}{DFT para señales reales RDFT}
-    \handsonicon
-    \center\includegraphics[width=0.8\textwidth]{3_clase/real_dft_idft}
-    \vfill
- \end{frame}
+\begin{frame}{$e^{j2\pi ft}$}{Señales complejas como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler7.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler7.py}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Señales complejas como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler7.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler7}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Un conejo como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler8.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler8.py}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{un conejo como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler8.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler8}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_delta}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_cuadrada}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.33\textwidth}
+         Sin
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_seno}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_delta}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_cuadrada}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{$e^{j2\pi ft}$}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Triangular
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_triangular}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Congujado
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_conjugado}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{CIAA}
+\subsection{CMSIS-DSP}
+\begin{frame}{DFT para señales reales RDFT}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Sin
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_reales_sin}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Cos
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_reales_cos}
+      \end{column}
+   \end{columns}
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT para señales reales RDFT}
+   \protoboardicon
+   \center\includegraphics[width=0.8\textwidth]{3_clase/real_dft_idft}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[c]{RDFT}{Analisis en la CIAA}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=30]{3_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=31,lastline=52]{3_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+\begin{frame}[c]{RDFT}{Analisis en la CIAA}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         \includegraphics[width=1.0\textwidth]{3_clase/dft_ciaa1}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         \includegraphics[width=1.0\textwidth]{3_clase/dft_ciaa2}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Bibliografia}
    \framesubtitle{Libros, links y otro material}

@@ -70,15 +70,15 @@ def readFile(f):
         else:
             im   = readInt4File(f )*1j/2**15
             ciaaFft.append (real+im)
-    #maxIndex = readInt4File(f)
+    maxValue = readInt4File(f)/2**15
+    maxIndex = readInt4File(f)/2**15
     #maxValue = (np.abs(ciaaFft[maxIndex])**2)
-    ciaaFft=ciaaFft[::-1]+ciaaFft
     return maxIndex,maxValue,adc,ciaaFft,fftLength
 
 def initAnimation():
     ax1.set_xlim ( 0,fftLength)
-    ax2.set_xlim ( 0,fftLength)
-    ax3.set_xlim ( 0,fftLength)
+    ax2.set_xlim ( 0,10000/2)
+    ax3.set_xlim ( 0,10000/2)
     ax1.set_ylim ( -1                    ,1 )
     ax2.set_ylim ( 0 , np.max(dft))
     ax3.set_ylim ( 0 , np.max(np.abs(ciaaFft)**2))
@@ -90,10 +90,11 @@ def update(t):
     maxIndex,maxValue,adc,ciaaFft,fftLength=readFile(logFile)
     time    = [i for i in range(fftLength)]
     dft=(np.abs(np.fft.fft(adc))/len(adc))**2
+    frec=np.linspace(0,10000/2,fftLength//2)
 
     ln1.set_data(time,adc)
-    ln2.set_data(time,dft)
-    ln3.set_data(time[:len(time)//1],np.abs(ciaaFft)**2)
+    ln2.set_data(frec,dft[:fftLength//2])
+    ln3.set_data(frec,np.abs(ciaaFft)**2)
     ln4.set_data(maxIndex,maxValue)
     return ln1,ln2,ln3,ln4
 

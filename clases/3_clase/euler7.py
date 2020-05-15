@@ -23,7 +23,7 @@ def circleInv(f,n,c):
     return c*np.exp(-1j*2*np.pi*f*n*1/fs)
 #--------------------------------------
 signalAxe  = fig.add_subplot(2,2,2)
-signalLn,  = plt.plot([],[],'b-')
+signalRLn,signalILn  = plt.plot([],[],'b-',[],[],'r-')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
@@ -40,7 +40,7 @@ promAxe.set_ylim(-1,1)
 promData=np.zeros(N,dtype=complex)
 #--------------------------------------
 inversaAxe         = fig.add_subplot(2,2,4)
-inversaLn,penRLn,penILn = plt.plot([],[],'m-o',[],[],'b-',[],[],'r-')
+inversaLn,penLn,penRLn,penILn = plt.plot([],[],'m-o',[],[],'k-',[],[],'b-',[],[],'r-')
 inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
@@ -49,7 +49,7 @@ inversaData,penData= [],[]
 tData=np.arange(0,N/fs,1/fs)
 
 def init():
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,inversaLn,penILn,penRLn,
+    return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,inversaLn,penILn,penRLn,
 
 def updateF(n):
     global promData,fData,vectorData,frecIter,penData
@@ -60,14 +60,15 @@ def updateF(n):
         vectorData.append(vectorData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
     inversaLn.set_data(np.imag(vectorData),np.real(vectorData))
     penData.insert(0,vectorData[-1])
-    penData=penData[0:N//2]
-    t=np.linspace(0,1,len(penData))
-    penRLn.set_data(t,np.real(penData))
-    penILn.set_data(np.imag(penData),t)
+    traceData=penData[0:N//2]
+    t=np.linspace(0,1,len(traceData))
+    penRLn.set_data(t,np.real(traceData))
+    penILn.set_data(np.imag(traceData),t)
+    penLn.set_data(np.imag(penData),np.real(penData))
     frecIter+=1
     if frecIter==N:
         frecIter=0
-    return inversaLn,penILn,penRLn,
+    return inversaLn,penLn,penILn,penRLn,
 
 def updateT(nn):
     global circleData,signalData,promData,frecIter,circleFrec,circleLg
@@ -83,7 +84,8 @@ def updateT(nn):
                     np.imag(mass))
     circleLn.set_data(np.real(circleData),
                       np.imag(circleData))
-    signalLn.set_data(tData[:n+1],signalData)
+    signalRLn.set_data(tData[:n+1],np.real(signalData))
+    signalILn.set_data(tData[:n+1],np.imag(signalData))
     promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
     promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
     circleLn.set_label(circleFrec[frecIter])
@@ -93,7 +95,7 @@ def updateT(nn):
         aniT.repeat=False
     else:
         frecIter+=1
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,
+    return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
 aniF=FuncAnimation(fig,updateF,N,init,interval=30 ,blit=True,repeat=True)
