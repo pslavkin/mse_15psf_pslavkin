@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
-fs         = 20
-N          = 20
+fs         = 50
+N          = 50
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn  = plt.plot([],[],'r-',[],[],'bo')
@@ -25,10 +25,10 @@ signalLn,  = plt.plot([],[],'b-o')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
-signalFrec = 2
+signalFrec = 1.5
 signalData=[]
 def signal(f,n):
-    return np.sin(2*np.pi*f*n*1/fs)
+    return np.cos(2*np.pi*f*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,promMagLn,promPhaseLn  = plt.plot([],[],'b-o',[],[],'r-o',[],[],'k-o',[],[],'y-')
@@ -52,10 +52,10 @@ def update(n):
     signalData.append(signal(signalFrec,n))
     signalLn.set_data(tData[:n+1],signalData)
     promData[frecIter]=mass
-    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
-    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
-#    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
-#    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
+#    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
+#    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
+    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
 
     if n==N-1:
         circleData = []

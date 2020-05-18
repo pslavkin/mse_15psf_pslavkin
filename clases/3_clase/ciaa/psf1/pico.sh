@@ -1,1 +1,2 @@
-picocom  /dev/ttyUSB1 -b 460800 --log log.bin > /dev/null
+picocom  /dev/ttyUSB1 -b 460800 --log log.bin 
+#> /dev/null
