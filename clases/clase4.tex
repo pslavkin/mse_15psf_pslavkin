@@ -1,0 +1,279 @@
+\subtitle{Clase 4 - Euler | Fourier - IDFT}
+
+\begin{frame}[c]
+\maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=45pt]
+      at (current page.south east) {
+        \includegraphics[width=0.2\textwidth]{3_clase/leonhard_euler}
+        \includegraphics[width=0.2\textwidth]{3_clase/joseph_fourier}
+      };
+  \end{tikzpicture}
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler6.py}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler6}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
+    \center\includegraphics[width=0.9\textwidth]{3_clase/idft_eq}
+    \vfill
+ \end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{IDFT}{Señales complejas como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler7.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler7.py}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{IDFT}{Señales complejas como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler7.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler7}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{IDFT}{Un conejo como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{3_clase/euler8.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler8.py}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{IDFT}{Un conejo como entrada?}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=66]{3_clase/euler8.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler8}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_delta}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_cuadrada}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.33\textwidth}
+         Sin
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_seno}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_delta}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_cuadrada}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Triangular
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_triangular}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Conjugado
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_conjugado}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\section{Respuesta al impulso}
+\begin{frame}{Funcion delta}{Respuesta al impulso}
+   \begin{columns}[c]
+      \begin{column}{1\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{4_clase/respuesta_impulso}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Convolucion}{Descomposicion Delta}
+   \begin{columns}[c]
+      \begin{column}{1\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Funcion delta}{Respuesta al impulso}
+   \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
+   \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{Convolucion}
+\begin{frame}{Convolucion}{Respuesta al impulso}
+   \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=25]{4_clase/conv1.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=26]{4_clase/conv1.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.38\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{Filtrado}
+\begin{frame}{Filtrado}{Pasa bajos}
+   \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=28]{4_clase/conv2.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=29]{4_clase/conv2.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.38\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Filtrado}{diferenciador}
+         \centering\includegraphics[width=0.5\textwidth]{4_clase/diferenciador}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Bibliografía}
+   \framesubtitle{Libros, links y otro material}
+   \begin{thebibliography}{9}
+         \bibitem{cmsisdsp}
+         \emph{ARM CMSIS DSP}. \\
+         \href {https://arm-software.github.io/CMSIS_5/DSP/html/index.html}{link}
+         \bibitem{dsp}
+         Steven W. Smith.
+         \emph{The Scientist and Engineer's Guide to Digital Signal Processing}.
+         Second Edition, 1999.
+         \bibitem{link}
+         \emph{Interactive Mathematics Site Info}.
+         \bibitem{grants Anderson}
+         \emph{Grant Sanderson} \\
+         \href{ https://youtu.be/spUNpyF58BY}{link}
+        \bibitem{interactivemath}
+            \emph{Interactive Mathematics Site Info}. \\
+            \href {https://www.intmath.com/fourier-series/fourier-intro.php}{link}
+   \end{thebibliography}
+\end{frame}
+%-------------------------------------------------------------------------------
+
