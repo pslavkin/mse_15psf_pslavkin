@@ -1,10 +1,30 @@
 import numpy as np
+import scipy.signal as sci
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
 fs         = 100
 N          = 100
+#-----------CUADRADA----------------------
+def signal(f,n):
+    return 0.5*sci.square(f*(n/fs)*(2*np.pi),0.5)
+#-----------TRIANGULAR----------------------
+#def signal(f,n):
+#    return sci.sawtooth(f*(n/fs)*(2*np.pi),0.5)
+#-----------DELTA----------------------
+#delta=np.zeros(100)
+#delta[49]=1
+#N=len(delta)
+#def signal(f,n):
+#    return delta[n]
+#-----------CONJUGADO----------------------
+#conjugado=np.zeros(100,dtype=complex)
+#N=len(conjugado)
+#conjugado[2]=0.5j*N
+#conjugado[100-2]=-0.5j*N
+#def signal(f,n):
+#    return conjugado[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn,  = plt.plot([],[],'r-',[],[],'bo')
@@ -23,49 +43,64 @@ def circleInv(f,n,c):
     return c*np.exp(-1j*2*np.pi*f*n*1/fs)
 #--------------------------------------
 signalAxe  = fig.add_subplot(2,2,2)
-signalLn,  = plt.plot([],[],'b-')
+signalRLn,signalILn  = plt.plot([],[],'b-',[],[],'r-')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
+
+signalAxe.set_ylim(-1,1)
 signalAxe.set_ylim(-1,1)
 signalFrec = 2
 signalData=[]
-def signal(f,n):
-    return np.sin(2*np.pi*f*n*1/fs)
+#def signal(f,n):
+#    return np.sin(2*np.pi*f*n*1/fs)#+0.4*np.sin(2*np.pi*f*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
-promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
+promRLn,promILn,promAbsLn,  = plt.plot([],[],'b-o',[],[],'r-o',[],[],'y-')
 promAxe.grid(True)
 promAxe.set_xlim(-fs/2,fs/2)
 promAxe.set_ylim(-1,1)
 promData=np.zeros(N,dtype=complex)
 #--------------------------------------
 inversaAxe         = fig.add_subplot(2,2,4)
-inversaLn, = plt.plot([],[],'m-o')
+inversaLn,penLn,penRLn,penILn = plt.plot([],[],'m-o',[],[],'k-',[],[],'b-',[],[],'r-')
 inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
-inversaData = []
+inversaData,penData= [],[]
+harmonics=1
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)
 
 def init():
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,inversaLn
+    return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,inversaLn,penILn,penRLn,
 
 def updateF(n):
-    global promData,fData,inversaData,frecIter
+    global promData,fData,frecIter,penData,aniF,harmonics
     if aniT.repeat==True:
         return inversaLn,
     inversaData=[0]
-    for f in range(N):
+    harmonicRange=range(N//2-harmonics,N//2+1+harmonics,1)
+    for f in harmonicRange:
         inversaData.append(inversaData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
     inversaLn.set_data(np.imag(inversaData),np.real(inversaData))
+    penData.insert(0,inversaData[-1])
+    penData=penData[0:N]
+    t=np.linspace(0,1,len(penData))
+    penRLn.set_data(t,np.real(penData))
+    penILn.set_data(np.imag(penData),t)
+    penLn.set_data(np.imag(penData),np.real(penData))
+    promHarmomicLn = promAxe.fill_between([circleFrec[harmonicRange[0]],circleFrec[harmonicRange[-1]]],1,-1,facecolor="green",alpha=0.1)
     frecIter+=1
     if frecIter==N:
         frecIter=0
-    return inversaLn,
+        harmonics+=1
+        if harmonics>=N//2:
+            harmonics=1
+    return inversaLn,penLn,penILn,penRLn,signalRLn,signalILn,promRLn,promILn,promHarmomicLn
+
 
 def updateT(nn):
-    global circleData,signalData,promData,frecIter,circleFrec,circleLg
+    global circleData,signalData,promData,frecIter,circleFrec,circleLg,aniF
 
     circleData = []
     signalData = []
@@ -78,18 +113,21 @@ def updateT(nn):
                     np.imag(mass))
     circleLn.set_data(np.real(circleData),
                       np.imag(circleData))
-    signalLn.set_data(tData[:n+1],signalData)
+    signalRLn.set_data(tData[:n+1],np.real(signalData))
+    signalILn.set_data(tData[:n+1],np.imag(signalData))
     promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
     promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+    promAbsLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1]))
     circleLn.set_label(circleFrec[frecIter])
     circleLg=circleAxe.legend()
 
     if frecIter == N-1:
+        frecIter=0
         aniT.repeat=False
     else:
         frecIter+=1
-    return circleLn,circleLg,signalLn,massLn,promRLn,promILn,
+    return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,promAbsLn
 
-aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,init,interval=30 ,blit=True,repeat=True)
+aniT=FuncAnimation(fig,updateT,N,init,interval=10 ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,init,interval=20 ,blit=True,repeat=True)
 plt.show()

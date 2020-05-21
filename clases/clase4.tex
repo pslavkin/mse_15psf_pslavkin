@@ -5,52 +5,107 @@
 \begin{tikzpicture}[overlay,remember picture]
     \node[anchor=south east,xshift=-30pt,yshift=45pt]
       at (current page.south east) {
-        \includegraphics[width=0.2\textwidth]{3_clase/leonhard_euler}
-        \includegraphics[width=0.2\textwidth]{3_clase/joseph_fourier}
+        \includegraphics[width=0.2\textwidth]{4_clase/leonhard_euler}
+        \includegraphics[width=0.2\textwidth]{4_clase/joseph_fourier}
       };
   \end{tikzpicture}
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+\begin{frame}{repaso DFT}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f, DFT?}
    \handsonicon
    \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{3_clase/euler6.py}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=40]{3_clase/euler4.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler6.py}
-      \end{column}
-   \end{columns}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
-   \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=66]{3_clase/euler6.py}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=40]{3_clase/euler4.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler6}
+         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler4}
       \end{column}
       \hspace{2pt}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{retomar DFT con el concepto de centro de masas}
+         \item{lanzar euler4.py de la clase3 con dft en modo rectangular}
+         \item{destacar DFT parecido entre la señal y el circulo y viceversa}
+         \item{Por lo tanto lo que tenemos son relojitos girando}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Repaso DFT}{Analisis, Transformada discreta de Fourier}
+    \center\includegraphics[width=0.9\textwidth]{3_clase/dft_eq}
+    \vfill
+ \end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=33]{4_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler6.py}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar euler6 y explicar que pasa con sin y cos}
+         \item{comentar lo de hermitica cuando la salida es real y dft complejo conjugado}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \lstinputlisting[firstline=66]{4_clase/euler6.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{4_clase/euler6}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \note{
+      \begin{itemize}
+         \item{de nuevo la formula la calculamos a mano y arrivamos a lo que viene en la filmina siguiente}
+      \end{itemize}
+   }
+   \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
  \begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
-    \center\includegraphics[width=0.9\textwidth]{3_clase/idft_eq}
+    \center\includegraphics[width=0.9\textwidth]{4_clase/idft_eq}
     \vfill
+   \note{
+      \begin{itemize}
+         \item{comentar tambien lo del 1/N, 1/$\sqrt[2]{N}$}
+      \end{itemize}
+   }
  \end{frame}
 
 %-------------------------------------------------------------------------------
@@ -60,16 +115,23 @@
    \begin{columns}[c]
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{3_clase/euler7.py}
+         \lstinputlisting[lastline=33]{4_clase/euler7.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler7.py}
+         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler7.py}
       \end{column}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar euler7}
+         \item{hacer algunas pruebas con diferentes valores.}
+         \item{destacar que esto es la DFT compleja de lado a lado}
+      \end{itemize}
+   }
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{IDFT}{Señales complejas como entrada?}
@@ -78,15 +140,76 @@
    \begin{columns}[c]
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=66]{3_clase/euler7.py}
+         \lstinputlisting[firstline=66]{4_clase/euler7.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler7}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler7}
       \end{column}
       \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler_delta}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler_cuadrada}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar euler9}
+         \item{jugar un poco con la cuadrada y ver como se va formando con los diferentes armonicos}
+         \item{explicar la idea de compresion, mp3, etc cortando ancho de banda}
+         \item{destacar lo de los armonicos 1f, 3f, 5f para la cuadrada }
+         \item{probar la delata y mostrar como tiene todas las frecuencias}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         Triangular
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler_triangular}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         Conjugado
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler_conjugado}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{jugar con el conjugado y mostar como sale la senoide}
+         \item{hablar del tema de dualidad}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \begin{columns}[c]
+      \begin{column}{.33\textwidth}
+         Sin
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/equivalencias_seno}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Delta
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/equivalencias_delta}
+      \end{column}
+      \begin{column}{.33\textwidth}
+         Cuadrada
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/equivalencias_cuadrada}
+      \end{column}
    \end{columns}
    \vfill
 \end{frame}
@@ -97,13 +220,13 @@
    \begin{columns}[c]
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{3_clase/euler8.py}
+         \lstinputlisting[lastline=33]{4_clase/euler8.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{3_clase/euler8.py}
+         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler8.py}
       \end{column}
    \end{columns}
    \vfill
@@ -115,65 +238,41 @@
    \begin{columns}[c]
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=66]{3_clase/euler8.py}
+         \lstinputlisting[firstline=66]{4_clase/euler8.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler8}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler8}
       \end{column}
       \hspace{2pt}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{volver a mostara la idea de compresion limitando la idft en ancho de banda}
+      \end{itemize}
+   }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+\begin{frame}{FFT-IFFT}{Transformadas usando FFT en Python}
+   \handsonicon
+   \lstset{ basicstyle=\fontsize{ 5}{ 0}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
-      \begin{column}{.5\textwidth}
-         Delta
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_delta}
+      \hspace{2pt}
+      \begin{column}{.55\textwidth}
+         \lstinputlisting[lastline=33]{4_clase/fft1.py}
       \end{column}
-      \begin{column}{.5\textwidth}
-         Cuadrada
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_cuadrada}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.45\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{4_clase/fft1}
       \end{column}
    \end{columns}
    \vfill
 \end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
-   \begin{columns}[c]
-      \begin{column}{.33\textwidth}
-         Sin
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_seno}
-      \end{column}
-      \begin{column}{.33\textwidth}
-         Delta
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_delta}
-      \end{column}
-      \begin{column}{.33\textwidth}
-         Cuadrada
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/equivalencias_cuadrada}
-      \end{column}
-   \end{columns}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}{DFT<>IDFT}{Transformadas relevantes}
-   \begin{columns}[c]
-      \begin{column}{.5\textwidth}
-         Triangular
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_triangular}
-      \end{column}
-      \begin{column}{.5\textwidth}
-         Conjugado
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler_conjugado}
-      \end{column}
-   \end{columns}
-   \vfill
-\end{frame}
-
 %-------------------------------------------------------------------------------
 \section{Respuesta al impulso}
 \begin{frame}{Funcion delta}{Respuesta al impulso}

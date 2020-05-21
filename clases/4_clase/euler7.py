@@ -6,11 +6,6 @@ fig        = plt.figure()
 fs         = 100
 N          = 100
 #--------------------------------------
-conejo=np.load("conejo.npy")[::1]
-N=len(conejo)
-def signal(f,n):
-    return conejo[n]
-#--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn,  = plt.plot([],[],'r-',[],[],'bo')
 circleAxe.grid(True)
@@ -25,7 +20,7 @@ frecIter   = 0
 def circle(f,n):
     return np.exp(-1j*2*np.pi*f*n*1/fs)
 def circleInv(f,n,c):
-    return c*np.exp(-1j*2*np.pi*f*n*1/fs)
+    return c*np.exp(1j*2*np.pi*f*n*1/fs)
 #--------------------------------------
 signalAxe  = fig.add_subplot(2,2,2)
 signalRLn,signalILn  = plt.plot([],[],'b-',[],[],'r-')
@@ -34,8 +29,8 @@ signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
 signalFrec = 2
 signalData=[]
-#def signal(f,n):
-#    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*n*1/fs)
+def signal(f,n):
+    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
@@ -49,7 +44,7 @@ inversaLn,penLn,penRLn,penILn = plt.plot([],[],'m-o',[],[],'k-',[],[],'b-',[],[]
 inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
-inversaData,penData= [],[]
+penData= []
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)
 
@@ -57,18 +52,18 @@ def init():
     return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,inversaLn,penILn,penRLn,
 
 def updateF(n):
-    global promData,fData,vectorData,frecIter,penData
+    global promData,fData,frecIter,penData
     if aniT.repeat==True:
         return inversaLn,
-    vectorData=[0]
+    inversaData=[0]
     for f in range(N):
-        vectorData.append(vectorData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
-    inversaLn.set_data(np.imag(vectorData),np.real(vectorData))
-    penData.insert(0,vectorData[-1])
-    traceData=penData[0:N//2]
-    t=np.linspace(0,1,len(traceData))
-    penRLn.set_data(t,np.real(traceData))
-    penILn.set_data(np.imag(traceData),t)
+        inversaData.append(inversaData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
+    inversaLn.set_data(np.imag(inversaData),np.real(inversaData))
+    penData.insert(0,inversaData[-1])
+    penData=penData[0:N]
+    t=np.linspace(0,1,len(penData))
+    penRLn.set_data(t,np.real(penData))
+    penILn.set_data(np.imag(penData),t)
     penLn.set_data(np.imag(penData),np.real(penData))
     frecIter+=1
     if frecIter==N:
@@ -97,6 +92,7 @@ def updateT(nn):
     circleLg=circleAxe.legend()
 
     if frecIter == N-1:
+        frecIter=0
         aniT.repeat=False
     else:
         frecIter+=1

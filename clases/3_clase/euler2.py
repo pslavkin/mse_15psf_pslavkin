@@ -47,5 +47,5 @@ def update(n):
     circleLg=circleAxe.legend()
     return circleLn,circleLg,signalLn,
 
-ani=FuncAnimation(fig,update,N,init,interval=100 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N,init,interval=500 ,blit=True,repeat=True)
 plt.show()

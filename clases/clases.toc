@@ -1,5 +1,5 @@
 \beamer@endinputifotherversion {3.33pt}
 \select@language {spanish}
-\beamer@sectionintoc {1}{Respuesta al impulso}{12}{0}{1}
-\beamer@sectionintoc {2}{Convolucion}{15}{0}{2}
-\beamer@sectionintoc {3}{Filtrado}{16}{0}{3}
+\beamer@sectionintoc {1}{Respuesta al impulso}{15}{0}{1}
+\beamer@sectionintoc {2}{Convolucion}{18}{0}{2}
+\beamer@sectionintoc {3}{Filtrado}{19}{0}{3}

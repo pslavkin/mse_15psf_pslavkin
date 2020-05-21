@@ -52,10 +52,10 @@ def update(n):
     signalData.append(signal(signalFrec,n))
     signalLn.set_data(tData[:n+1],signalData)
     promData[frecIter]=mass
-#    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
-#    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
-    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
-    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
+    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
+    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+#    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
+#    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
 
     if n==N-1:
         circleData = []
