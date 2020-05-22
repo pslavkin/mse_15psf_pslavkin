@@ -8,6 +8,7 @@ fs  = 100
 N   = 400
 fir,=np.load("low_pass.npy").astype(float)
 M=len(fir)
+print(fir)
 #fir,=np.load("diferenciador.npy").astype(float)
 #M=len(fir)
 #--------------------------------------
