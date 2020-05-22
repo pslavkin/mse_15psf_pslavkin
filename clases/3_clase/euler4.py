@@ -1,10 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 50
 N          = 50
+#-----------CONJUGADO----------------------
+#conjugado=np.zeros(100,dtype=complex)
+#conjugado+=0.2
+#N=len(conjugado)
+#conjugado[6]=0.5*N
+#conjugado[100-6]=0.5*N
+#def signal(f,n):
+#    return conjugado[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn  = plt.plot([],[],'r-',[],[],'bo')
@@ -25,7 +34,7 @@ signalLn,  = plt.plot([],[],'b-o')
 signalAxe.grid(True)
 signalAxe.set_xlim(0,N/fs)
 signalAxe.set_ylim(-1,1)
-signalFrec = 1.5
+signalFrec = 2
 signalData=[]
 def signal(f,n):
     return np.cos(2*np.pi*f*n*1/fs)
@@ -56,12 +65,11 @@ def update(n):
     promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
 #    promMagLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1])**2)
 #    promPhaseLn.set_data(circleFrec[:frecIter+1],np.angle(promData[:frecIter+1])/np.pi)
-
+    circleLn.set_label(circleFrec[frecIter])
+    circleLg=circleAxe.legend()
     if n==N-1:
         circleData = []
         signalData = []
-        circleLn.set_label(circleFrec[frecIter])
-        circleLg=circleAxe.legend()
         if frecIter == N-1:
             ani.repeat=False
         else:
@@ -70,4 +78,6 @@ def update(n):
 
 
 ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,ani)
 plt.show()

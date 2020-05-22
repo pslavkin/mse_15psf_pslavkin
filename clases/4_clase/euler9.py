@@ -2,13 +2,14 @@ import numpy as np
 import scipy.signal as sci
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 100
 N          = 100
 #-----------CUADRADA----------------------
-def signal(f,n):
-    return 0.5*sci.square(f*(n/fs)*(2*np.pi),0.5)
+#def signal(f,n):
+#    return 0.5*sci.square(f*(n/fs)*(2*np.pi),0.5)
 #-----------TRIANGULAR----------------------
 #def signal(f,n):
 #    return sci.sawtooth(f*(n/fs)*(2*np.pi),0.5)
@@ -19,12 +20,12 @@ def signal(f,n):
 #def signal(f,n):
 #    return delta[n]
 #-----------CONJUGADO----------------------
-#conjugado=np.zeros(100,dtype=complex)
-#N=len(conjugado)
-#conjugado[2]=0.5j*N
-#conjugado[100-2]=-0.5j*N
-#def signal(f,n):
-#    return conjugado[n]
+conjugado=np.zeros(100,dtype=complex)
+N=len(conjugado)
+conjugado[2]=0.5j*N
+conjugado[100-2]=-0.5j*N
+def signal(f,n):
+    return conjugado[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn,  = plt.plot([],[],'r-',[],[],'bo')
@@ -130,4 +131,6 @@ def updateT(nn):
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10 ,blit=True,repeat=True)
 aniF=FuncAnimation(fig,updateF,N,init,interval=20 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,aniT,aniF)
 plt.show()

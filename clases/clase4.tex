@@ -69,6 +69,8 @@
    \note{
       \begin{itemize}
          \item{lanzar euler6 y explicar que pasa con sin y cos}
+         \item{explicar el concepto de relojes}
+         \item{explicar el concepto de frecuencia negativa}
          \item{comentar lo de hermitica cuando la salida es real y dft complejo conjugado}
       \end{itemize}
    }
@@ -190,6 +192,7 @@
    \vfill
    \note{
       \begin{itemize}
+         \item{lanzar el euler4 con los conjugados y ver la dualidad}
          \item{jugar con el conjugado y mostar como sale la senoide}
          \item{hablar del tema de dualidad}
       \end{itemize}
@@ -251,6 +254,7 @@
    \vfill
    \note{
       \begin{itemize}
+         \item{lanzar euler8.py y hablar de que todo se puede transformar}
          \item{volver a mostara la idea de compresion limitando la idft en ancho de banda}
       \end{itemize}
    }
@@ -272,25 +276,120 @@
       \end{column}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar fft1}
+         \item{verificar los mismos resultados que la maquina animada}
+      \end{itemize}
+   }
 \end{frame}
 %-------------------------------------------------------------------------------
 \section{Respuesta al impulso}
-\begin{frame}{Funcion delta}{Respuesta al impulso}
+\begin{frame}{Función delta}{Respuesta al impulso}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/respuesta_impulso}
       \end{column}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{comentar que cada sistema tiene una única h(n)}
+         \item{golpe de Homero en la panza}
+         \item{si algo cambia en el sistema, h(n) cambia si o si}
+         \item{recordar propiedad de shift y linealidad en las 2 filminas siguientes}
+      \end{itemize}
+   }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Convolucion}{Descomposicion Delta}
+\begin{frame}{Todo esta en la respuesta al impulso}
+    \center{
+       \href{run:./4_clase/video_homero_panza.mp}{
+          \includegraphics[width=0.8\textwidth]{4_clase/homero_panza}
+       }
+    }
+    \vfill
+   \note{
+      \begin{itemize}
+         \item{todo esta en la h(n)}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso Sistemas}
+   \begin{block}{Linealidad}
+      Un sistema es lineal cuando su salida depende linealmente de la entrada.
+      Satisface el principio de superposición.
+   \end{block}
+   \begin{columns}[onlytextwidth]
+      \column{.7\textwidth}
+      \begin{centering}
+         \begin{table}[h]
+            \begin{tabular}{cm{6cm}cm{6cm}}
+               escalado      & \includegraphics[width=6cm]{1_clase/superposicion1}\\
+               adición       & \includegraphics[width=6cm]{1_clase/superposicion2}\\
+               superposición & \includegraphics[width=6cm]{1_clase/superposicion3}\\
+            \end{tabular}
+         \end{table}
+      \end{centering}
+      \column{.3\textwidth}
+      \centering{\alert{$y(t)=e^{x(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\frac{1}{2}x(t)$}}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{recordar las propiedades fundamentales de LTI}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso - Sistemas}{Invariantes en el tiempo}
+   \begin{block}{Invariantes en el tiempo}
+      Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
+   \end{block}
+   \begin{columns}[onlytextwidth]
+      \column{.7\textwidth}
+      \center\includegraphics[width=1\textwidth]{1_clase/invariante_en_tiempo} \\
+      \column{.3\textwidth}
+      \centering{\alert{$y(t)=x(t)*\cos{(t)}$}\hspace{1cm}\textcolor{green}{$y(t)=\cos(x(t))$}}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{recordar las propiedades fundamentales de LTI}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Convolución}{Señal vs h(n)}
+   \begin{columns}[c]
+      \begin{column}{1\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{4_clase/signal_vs_h}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{analizar senial y h}
+         \item{vamos a hacer las cuentas a mano..}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Convolución}{Descomposición felta}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
       \end{column}
    \end{columns}
    \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar conv3}
+         \item{sumo delta a delta y voy acumulando..}
+         \item{la salida es N+M-1}
+      \end{itemize}
+   }
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Funcion delta}{Respuesta al impulso}
@@ -299,8 +398,8 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\section{Convolucion}
-\begin{frame}{Convolucion}{Respuesta al impulso}
+\section{Convolución}
+\begin{frame}{Convolución}{Respuesta al impulso}
    \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
@@ -351,6 +450,42 @@
 %-------------------------------------------------------------------------------
 \begin{frame}{Filtrado}{diferenciador}
          \centering\includegraphics[width=0.5\textwidth]{4_clase/diferenciador}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[c]{Convolución}{Análisis en la CIAA}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[lastline=30]{4_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \lstinputlisting[firstline=31,lastline=52]{4_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[c]{Convolución}{Análisis en la CIAA}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{4_clase/convolucion_ciaa_pasabanda1}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{4_clase/convolucion_ciaa_pasabanda2}
+      \end{column}
+   \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------

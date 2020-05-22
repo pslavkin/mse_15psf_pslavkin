@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 200
@@ -52,4 +53,6 @@ def update(n):
     return circleLn,circleLg,signalLn,massLn
 
 ani=FuncAnimation(fig,update,N,init,interval=10 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,ani)
 plt.show()

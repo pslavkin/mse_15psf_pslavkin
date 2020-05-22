@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 100
@@ -68,7 +69,7 @@ def updateF(n):
     frecIter+=1
     if frecIter==N:
         frecIter=0
-    return inversaLn,penLn,penILn,penRLn,
+    return inversaLn,penLn,penILn,penRLn,circleLn,signalLn,promRLn,promILn,
 
 def updateT(nn):
     global circleData,signalData,promData,frecIter,circleFrec,circleLg
@@ -99,4 +100,6 @@ def updateT(nn):
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
 aniF=FuncAnimation(fig,updateF,N,init,interval=20 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,aniT,aniF)
 plt.show()

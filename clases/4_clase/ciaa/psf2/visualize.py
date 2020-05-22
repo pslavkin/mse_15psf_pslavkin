@@ -39,7 +39,7 @@ def fileForward(f):
     f.seek(0, os.SEEK_END)
     size = f.tell()
     packetLoss=(size-oldPos)//packetLegth
-    #print(packetLoss)
+    print(packetLoss)
     f.seek(oldPos+packetLoss*packetLegth, os.SEEK_SET)
 
 def findHeader(f):
@@ -80,7 +80,7 @@ def readFile(f):
             ciaaDft.append (real+im)
     maxValue = readInt4File(f)/2**13
     maxIndex = readInt4File(f)
-    print(maxIndex)
+    #print(maxIndex)
     #maxValue = (np.abs(ciaaDft[maxIndex])**2)
     return maxIndex,maxValue,adc,ciaaDft,fftLength
 
@@ -97,7 +97,6 @@ def update(t):
     maxIndex,maxValue,adc,ciaaDft,fftLength=readFile(logFile)
     time = np.arange(0,fftLength,1)
     frec = np.linspace(0,fs//2,fftLength//2)
-    print(len(frec))
     dft  = (np.abs(np.fft.fft(adc))/len(adc))**2
 
     adcLn.set_data(time,adc)

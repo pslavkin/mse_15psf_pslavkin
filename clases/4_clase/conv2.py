@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig = plt.figure()
 fs  = 100
 N   = 400
-fir,=np.load("low_pass.npy").astype(float)
+fir,=np.load("4_clase/low_pass.npy").astype(float)
 M=len(fir)
-print(fir)
 #fir,=np.load("diferenciador.npy").astype(float)
 #M=len(fir)
 #--------------------------------------
@@ -56,4 +56,5 @@ def update(i):
 
 ani=FuncAnimation(fig,update,M+N-1,init,interval=10 ,blit=True,repeat=True)
 plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,ani)
 plt.show()

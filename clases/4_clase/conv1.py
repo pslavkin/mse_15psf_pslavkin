@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig = plt.figure()
 fs  = 20
@@ -49,4 +50,6 @@ def update(i):
     return hLn,xLn,xHighLn,yLn,
 
 ani=FuncAnimation(fig,update,M+N-1,init,interval=1000 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,ani)
 plt.show()

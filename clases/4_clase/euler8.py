@@ -1,12 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 100
 #N          = 100
 #--------------------------------------
-conejo=np.load("conejo.npy")[::10]
+conejo=np.load("4_clase/conejo.npy")[::1]
 N=len(conejo)
 def signal(f,n):
     return conejo[n]
@@ -41,7 +42,7 @@ promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
 promAxe.grid(True)
 promAxe.set_xlim(-fs/2,fs/2)
-promAxe.set_ylim(-1,1)
+promAxe.set_ylim(-0.1,0.5)
 promData=np.zeros(N,dtype=complex)
 #--------------------------------------
 inversaAxe         = fig.add_subplot(2,2,4)
@@ -112,4 +113,6 @@ def updateT(nn):
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
 aniF=FuncAnimation(fig,updateF,N,init,interval=30 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,aniT,aniF)
 plt.show()

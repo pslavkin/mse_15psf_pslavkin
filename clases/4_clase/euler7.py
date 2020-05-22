@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
 fs         = 100
@@ -30,7 +31,7 @@ signalAxe.set_ylim(-1,1)
 signalFrec = 2
 signalData=[]
 def signal(f,n):
-    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*n*1/fs)
+    return np.sin(2*np.pi*f*n*1/fs)+0.4j*np.sin(2*np.pi*f*1.5*n*1/fs)
 #--------------------------------------
 promAxe  = fig.add_subplot(2,2,3)
 promRLn,promILn,  = plt.plot([],[],'g-o',[],[],'y-o')
@@ -68,7 +69,7 @@ def updateF(n):
     frecIter+=1
     if frecIter==N:
         frecIter=0
-    return inversaLn,penLn,penILn,penRLn,
+    return inversaLn,penLn,penILn,penRLn,circleLn,signalRLn,signalILn,promRLn,promILn,
 
 def updateT(nn):
     global circleData,signalData,promData,frecIter,circleFrec,circleLg
@@ -99,5 +100,7 @@ def updateT(nn):
     return circleLn,circleLg,signalRLn,signalILn,massLn,promRLn,promILn,
 
 aniT=FuncAnimation(fig,updateT,N,init,interval=10  ,blit=True,repeat=True)
-aniF=FuncAnimation(fig,updateF,N,init,interval=30 ,blit=True,repeat=True)
+aniF=FuncAnimation(fig,updateF,N,init,interval=500 ,blit=True,repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
+b=buttonOnFigure(fig,aniT,aniF)
 plt.show()
