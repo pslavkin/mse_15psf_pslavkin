@@ -22,8 +22,8 @@ N          = 100
 #-----------CONJUGADO----------------------
 conjugado=np.zeros(100,dtype=complex)
 N=len(conjugado)
-conjugado[2]=0.5j*N
-conjugado[100-2]=-0.5j*N
+conjugado[8]=0.5*N
+conjugado[100-8]=0.5*N
 def signal(f,n):
     return conjugado[n]
 #--------------------------------------

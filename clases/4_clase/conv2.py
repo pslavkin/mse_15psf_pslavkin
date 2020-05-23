@@ -1,20 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+import scipy.signal as sc
 from matplotlib.animation import FuncAnimation
 from buttons import buttonOnFigure
 #--------------------------------------
 fig = plt.figure()
 fs  = 100
 N   = 400
-fir,=np.load("4_clase/low_pass.npy").astype(float)
-M=len(fir)
-#fir,=np.load("diferenciador.npy").astype(float)
+#fir,=np.load("4_clase/low_pass.npy").astype(float)
 #M=len(fir)
+
+
+
+
+fir,=np.load("4_clase/diferenciador.npy").astype(float)
+M=len(fir)
 #--------------------------------------
 def x(f,n):
-    return np.sin(2*np.pi*2*n*1/fs)+\
-           np.sin(2*np.pi*5*n*1/fs)
+    return 1*sc.sawtooth(2*np.pi*n/fs,0.5)
+    #return np.sin(2*np.pi*2*n*1/fs)+\
+    #       np.sin(2*np.pi*5*n*1/fs)
 
 xFrec = 3
 tData=np.arange(-(M-1),N+(M-1),1)
@@ -55,6 +61,6 @@ def update(i):
     return hLn,xLn,xHighLn,yLn,
 
 ani=FuncAnimation(fig,update,M+N-1,init,interval=10 ,blit=True,repeat=True)
-plt.get_current_fig_manager().window.showMaximized()
+#plt.get_current_fig_manager().window.showMaximized()
 b=buttonOnFigure(fig,ani)
 plt.show()

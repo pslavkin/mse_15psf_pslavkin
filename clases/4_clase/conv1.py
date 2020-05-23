@@ -50,6 +50,6 @@ def update(i):
     return hLn,xLn,xHighLn,yLn,
 
 ani=FuncAnimation(fig,update,M+N-1,init,interval=1000 ,blit=True,repeat=True)
-plt.get_current_fig_manager().window.showMaximized()
+#plt.get_current_fig_manager().window.showMaximized()
 b=buttonOnFigure(fig,ani)
 plt.show()

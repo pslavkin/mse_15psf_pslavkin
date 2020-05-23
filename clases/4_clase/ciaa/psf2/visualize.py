@@ -11,16 +11,16 @@ fftLength           = 32
 fig                 = plt.figure ( )
 adcAxe            = fig.add_subplot ( 2,1,1 )
 adcAxe.grid ( True )
-adcLn,              = plt.plot ( [],[],'r-' )
+adcLn,              = plt.plot ( [0],[0],'r-' )
 adcAxe.set_ylim     ( -1 ,1         )
 
 dftAxe              = fig.add_subplot ( 2,2,3 )
 dftAxe.grid ( True )
-dftLn,              = plt.step ( [],[],'b-o' )
+dftLn,              = plt.step ( [0],[0],'b-o' )
 dftAxe.set_xlim     ( 0  ,fs//2   )
 
 ciaaDftAxe          = fig.add_subplot ( 2,2,4 )
-ciaaDftLn,ciaaMaxLn = plt.step ( [],[],'g-o',0,0,'bo' )
+ciaaDftLn,ciaaMaxLn = plt.step ( [0],[0],'g-o',0,0,'bo' )
 ciaaDftAxe.grid ( True )
 ciaaDftAxe.set_xlim ( 0  ,fs//2   )
 
@@ -93,7 +93,7 @@ def init():
     return adcLn,dftLn,ciaaDftLn,ciaaMaxLn
 
 def update(t):
-    global logFile,fftLength,dft,ciaaDft
+    global logFile,fftLength,dft,ciaaDft,fs
     maxIndex,maxValue,adc,ciaaDft,fftLength=readFile(logFile)
     time = np.arange(0,fftLength,1)
     frec = np.linspace(0,fs//2,fftLength//2)
