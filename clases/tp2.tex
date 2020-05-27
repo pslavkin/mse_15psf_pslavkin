@@ -5,7 +5,7 @@
 \begin{tikzpicture}[overlay,remember picture]
     \node[anchor=south east,xshift=-40pt,yshift=25pt]
       at (current page.south east) {
-        \includegraphics[width=55mm]{3_clase/euler6}
+        \includegraphics[width=55mm]{4_clase/euler6}
       };
   \end{tikzpicture}
 \end{frame}
@@ -13,8 +13,90 @@
  \section{Fourier}
  \begin{frame}{Transformada discreta de Fourier}
     \begin{enumerate}
-       \item{Grafique una senoidal, una cuadrada y una triangular lado a lado con su respectivo espectro en frecuencias indicando los parámetros destacados como densidad espectral de potencia, Fs, N, B, etc.}
-       \item{Genere un LA-440 mas tono-442 y utilizando la técnica de zero padding para aumentar la resolución espectral intente discriminar ambas}
-       \item{Anime el trazado de la letra inicial de su nombre a partir de la IDFT de las coordenadas de sus vertices y explique su funcionamiento}
+       \item{Grafique las siguientes señales lado a lado con su respectivo espectro en frecuencias:}
+    \begin{itemize}
+       \item{senoidal}
+       \item{cuadrada}
+       \item{triangular}
+       \item{delta en t=0}
+    \end{itemize}
+ Indicando en cada caso los parámetros destacados como:
+    \begin{itemize}
+       \item{frecuencia}
+       \item{amplitud}
+       \item{densidad espectral de potencia}
+       \item{Fs}
+       \item{N}
+       \item{B}
+    \end{itemize}
     \end{enumerate}
  \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Transformada discreta de Fourier}
+    \begin{enumerate}
+       \item{Dada la siguiente secuencia de números con N=100 y Fs=200, indique:}
+    \begin{itemize}
+       \item{Resolución espectral}
+       \item{Obtenga el contenido espectral}
+       \item{Que técnica conoce para mejorar la resolución en frecuencia?}
+       \item{Aplique la técnica, grafique y comente los resultados}
+    \end{itemize}
+
+   \lstset{ basicstyle=\fontsize{ 6}{ 0}\selectfont\ttfamily,language=Python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \lstinputlisting{tp2/zero_padding.txt}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{tp2/zero_padding}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+    \end{enumerate}
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Anti transformada discreta de Fourier}
+  Dado el siguiente espectro extraído del archivo fft\_hjs.npy, indique:
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+    \begin{itemize}
+       \item{Que cree que representa esta señal?  \footnotesize{tip: grafique en 2d la idft}}
+       \item{Hasta que punto podría limitar el ancho de banda y que se siga interpretando su significado}
+       \item{Grafique para mostrar los resultados}
+    \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{tp2/homer}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+ \end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Convolución}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+    Dado el segmento de audio en el archivo chapu\_noise.npy con fs=8000 y sumergido en ruido de alta frecuencia resuelva:
+    \begin{itemize}
+       \item{Diseñe un filtro que mitigue el efecto del ruido}
+       \item{Grafique el espectro antes y después del filtro}
+       \item{Reproduzca el segmento antes y después del filtrado}
+       \item{Comente los resultados obtenidos}
+    \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \begin{column}{.4\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{tp2/chapu}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+ \end{frame}
+
+
