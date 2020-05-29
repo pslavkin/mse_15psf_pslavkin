@@ -1,4 +1,5 @@
-\subtitle{Clase 4 - Euler | Fourier - IDFT}
+\subtitle{Clase 4 - Euler | Fourier - IDFT \\
+Convolucion}
 
 \begin{frame}[c]
 \maketitle
@@ -285,6 +286,20 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \section{Respuesta al impulso}
+\begin{frame}{Cambio de tema?}{}
+   \begin{enumerate}
+      \item{Funcion delta}
+      \item{Respuesta al impulso}
+      \item{Convolucion}
+   \end{enumerate}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{Corte porque freno con DFT y pasamos a tiempo para hablar de estos temas}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
 \begin{frame}{Función delta}{Respuesta al impulso}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
@@ -392,27 +407,19 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Funcion delta}{Respuesta al impulso}
-   \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
-   \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
 \section{Convolución}
-%TODO hacer que la respyesta al impulso sea la misma que se uso en la demostracion anteriro
-%para que quede consistente.. !
 \begin{frame}{Convolución}{Respuesta al impulso}
    \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
       \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=25]{4_clase/conv1.py}
+         \lstinputlisting[lastline=29]{4_clase/conv1.py}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=26]{4_clase/conv1.py}
+         \lstinputlisting[firstline=30]{4_clase/conv1.py}
       \end{column}
       \hspace{2pt}
       \vrule
@@ -422,6 +429,18 @@
       \end{column}
       \hspace{2pt}
    \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar conv1}
+         \item{hacer las cuentas a mano}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Funcion delta}{Respuesta al impulso}
+   \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
+   \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------

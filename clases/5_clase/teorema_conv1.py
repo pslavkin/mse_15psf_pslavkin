@@ -7,25 +7,13 @@ from buttons import buttonOnFigure
 fig        = plt.figure()
 fs         = 100
 N          = 100
-#-----------CUADRADA----------------------
-#def signal(f,n):
-#    return 0.5*sci.square(f*(n/fs)*(2*np.pi),0.5)
-#-----------TRIANGULAR----------------------
-#def signal(f,n):
-#    return sci.sawtooth(f*(n/fs)*(2*np.pi),0.5)
 #-----------DELTA----------------------
 delta=np.zeros(100)
-delta[49]=100
+delta[10] =10
+delta[9]  =0
 N=len(delta)
 def signal(f,n):
     return delta[n]
-#-----------CONJUGADO----------------------
-#conjugado=np.zeros(100,dtype=complex)
-#N=len(conjugado)
-#conjugado[8]=0.5*N
-#conjugado[100-8]=0.5*N
-#def signal(f,n):
-#    return conjugado[n]
 #--------------------------------------
 circleAxe  = fig.add_subplot(2,2,1)
 circleLn,massLn,  = plt.plot([],[],'r-',[],[],'bo')
@@ -68,7 +56,7 @@ inversaAxe.grid(True)
 inversaAxe.set_xlim(-1,1)
 inversaAxe.set_ylim(-1,1)
 inversaData,penData= [],[]
-harmonics=1
+harmonics=N//2
 #--------------------------------------
 tData=np.arange(0,N/fs,1/fs)
 
@@ -80,7 +68,7 @@ def updateF(n):
     if aniT.repeat==True:
         return inversaLn,
     inversaData=[0]
-    harmonicRange=range(N//2-harmonics,N//2+1+harmonics,1)
+    harmonicRange=range(N//2-harmonics,N//2+harmonics,1)
     for f in harmonicRange:
         inversaData.append(inversaData[-1]+circleInv(circleFrec[f],frecIter,promData[f]))
     inversaLn.set_data(np.imag(inversaData),np.real(inversaData))
@@ -94,9 +82,9 @@ def updateF(n):
     frecIter+=1
     if frecIter==N:
         frecIter=0
-        harmonics+=1
-        if harmonics>=N//2:
-            harmonics=1
+        #harmonics+=1
+        #if harmonics>=N//2:
+        #    harmonics=1
     return inversaLn,penLn,penILn,penRLn,signalRLn,signalILn,promRLn,promILn,promHarmomicLn
 
 
@@ -116,8 +104,9 @@ def updateT(nn):
                       np.imag(circleData))
     signalRLn.set_data(tData[:n+1],np.real(signalData))
     signalILn.set_data(tData[:n+1],np.imag(signalData))
-#    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
-#    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+    promRLn.set_data(circleFrec[:frecIter+1],np.real(promData[:frecIter+1]))
+    promILn.set_data(circleFrec[:frecIter+1],np.imag(promData[:frecIter+1]))
+   # promILn.set_data(np.real(promData[frecIter]),np.imag(promData[frecIter]))
     promAbsLn.set_data(circleFrec[:frecIter+1],np.abs(promData[:frecIter+1]))
     circleLn.set_label(circleFrec[frecIter])
     circleLg=circleAxe.legend()

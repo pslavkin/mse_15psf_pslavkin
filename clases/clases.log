@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.4)  27 MAY 2020 03:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.4)  29 MAY 2020 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1549,6 +1549,9 @@ Package: pgfpages 2011/01/05 ver 0.02
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-pdfdoc.def
 File: se-pdfdoc.def 2011/12/02 v1.10 stringenc: PDFDocEncoding
 ))
+\pgfpages@box@1=\box85
+\pgfpages@box@2=\box86
+
 (./clases.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
@@ -1625,7 +1628,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count193
 \scratchdimen=\dimen229
-\scratchbox=\box85
+\scratchbox=\box87
 \nofMPsegments=\count194
 \nofMParguments=\count195
 \everyMPshowfont=\toks55
@@ -1650,7 +1653,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box86
+\AtBeginShipoutBox=\box88
 Package hyperref Info: Link coloring ON on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1782,8 +1785,8 @@ LaTeX Info: Redefining \selectfont on input line 8.
  (./clases.nav)
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 8.
- (./tp2.tex
-<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=18, 1271.75125pt x 427.5975pt>
+ (./clase5.tex
+<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=22, 1271.75125pt x 427.5975pt>
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
 Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf used on in
@@ -1949,38 +1952,24 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
 (Font)              scaled to size 6.0pt on input line 11.
 
-<4_clase/euler6.png, id=24, 462.528pt x 346.896pt>
-File: 4_clase/euler6.png Graphic file (type png)
- <use 4_clase/euler6.png>
-Package pdftex.def Info: 4_clase/euler6.png used on input line 11.
-(pdftex.def)             Requested size: 156.49014pt x 117.3661pt.
+<5_clase/dft_apps.png, id=28, 1460.45625pt x 819.06pt>
+File: 5_clase/dft_apps.png Graphic file (type png)
+
+<use 5_clase/dft_apps.png>
+Package pdftex.def Info: 5_clase/dft_apps.png used on input line 11.
+(pdftex.def)             Requested size: 173.55916pt x 97.33311pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 4.0pt on input line 11.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 11.
 
-[1
+<4_clase/descomposicion_delta.png, id=32, 1380.357pt x 698.8509pt>
+File: 4_clase/descomposicion_delta.png Graphic file (type png)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fibeamer/logo/mu/fibeame
-r-mu-fi-english.pdf> <./4_clase/euler6.png>] [2
-
-]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
-nput line 59.
-
-(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
-File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
--TLF.
-)
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 5.10004pt on input line 59.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `DejaVuSansMono-TLF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-(./tp2/zero_padding.txt)
+<use 4_clase/descomposicion_delta.png>
+Package pdftex.def Info: 4_clase/descomposicion_delta.png used on input line 29
+.
+(pdftex.def)             Requested size: 347.12495pt x 175.736pt.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1988,37 +1977,189 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 59.
+(Font)              scaled to size 9.30756pt on input line 29.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 59.
- <tp2/zero_padding.png, id=42, 462.528pt x 346.896pt>
-File: tp2/zero_padding.png Graphic file (type png)
+(Font)              scaled to size 10.95pt on input line 29.
+ [2
 
-<use tp2/zero_padding.png>
-Package pdftex.def Info: tp2/zero_padding.png used on input line 59.
-(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): desti
+nation with the same identifier (name{Navigation1}) has been already used, dupl
+icate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.29 \end{frame}
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{page.1}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.29 \end{frame}
+                
+
+ <./fibeamer/logo/mu/fibeamer-mu-fi-english.pdf> <./5_clase/dft_apps.png>]
+LaTeX Font Info:    Try loading font information for TS1+Carlito-LF on input li
+ne 29.
+ (/usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Carlito-LF.fd
+File: TS1Carlito-LF.fd 2014/08/20 (autoinst) Font definitions for TS1/Carlito-L
+F.
+)
+LaTeX Font Info:    Font shape `TS1/Carlito-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 29.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `Carlito-LF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (92.18788pt too wide) in paragraph at lines 29--29
+[]$[]$[]  
+ []
+
+File: 4_clase/descomposicion_delta.png Graphic file (type png)
+<use 4_clase/descomposicion_delta.png>
+Package pdftex.def Info: 4_clase/descomposicion_delta.png used on input line 45
+.
+(pdftex.def)             Requested size: 347.12495pt x 175.736pt.
  [3
 
- <./tp2/zero_padding.png>]
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 79.
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation2})
+ has been already used, duplicate ignored
 
-<tp2/homer.png, id=50, 462.528pt x 346.896pt>
-File: tp2/homer.png Graphic file (type png)
- <use tp2/homer.png>
-Package pdftex.def Info: tp2/homer.png used on input line 79.
-(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.45 \end{frame}
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{page.2}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.45 \end{frame}
+                
+
+ <./4_clase/descomposicion_delta.png>]
+Overfull \hbox (92.18788pt too wide) in paragraph at lines 45--45
+[]$[]$[]  
+ []
+
+<4_clase/entrada_conv_h.png, id=52, 1186.4325pt x 518.93875pt>
+File: 4_clase/entrada_conv_h.png Graphic file (type png)
+
+<use 4_clase/entrada_conv_h.png>
+Package pdftex.def Info: 4_clase/entrada_conv_h.png used on input line 51.
+(pdftex.def)             Requested size: 260.34537pt x 113.87389pt.
+
+<4_clase/convolucion_eq.png, id=53, 916.42375pt x 198.7425pt>
+File: 4_clase/convolucion_eq.png Graphic file (type png)
+
+<use 4_clase/convolucion_eq.png>
+Package pdftex.def Info: 4_clase/convolucion_eq.png used on input line 51.
+(pdftex.def)             Requested size: 260.34537pt x 56.46024pt.
  [4
 
- <./tp2/homer.png>] <tp2/chapu.png, id=58, 462.528pt x 346.896pt>
-File: tp2/chapu.png Graphic file (type png)
- <use tp2/chapu.png>
-Package pdftex.def Info: tp2/chapu.png used on input line 100.
-(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation3})
+ has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.51 \end{frame}
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{page.3}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.51 \end{frame}
+                
+
+]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
+nput line 82.
+
+(/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
+File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
+-TLF.
+)
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 4.25003pt on input line 82.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `DejaVuSansMono-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(./4_clase/conv1.py) (./4_clase/conv1.py)
+<4_clase/conv1.png, id=60, 462.528pt x 346.896pt>
+File: 4_clase/conv1.png Graphic file (type png)
+ <use 4_clase/conv1.png>
+Package pdftex.def Info: 4_clase/conv1.png used on input line 82.
+(pdftex.def)             Requested size: 164.88583pt x 123.66502pt.
 
 [5
 
- <./tp2/chapu.png>])
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
+ has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.82 \end{frame}
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{page.4}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.82 \end{frame}
+                
+
+ <./4_clase/entrada_conv_h.png> <./4_clase/convolucion_eq.png>]
+Overfull \hbox (92.18788pt too wide) in paragraph at lines 82--82
+[]$[]$[]  
+ []
+
+<5_clase/conv_vs_dft1.png, id=69, 462.528pt x 346.896pt>
+File: 5_clase/conv_vs_dft1.png Graphic file (type png)
+
+<use 5_clase/conv_vs_dft1.png>
+Package pdftex.def Info: 5_clase/conv_vs_dft1.png used on input line 105.
+(pdftex.def)             Requested size: 208.27708pt x 156.20761pt.
+ [6
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation5})
+ has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.105 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.5}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.105 \end{frame}
+                 
+
+ <./4_clase/conv1.png>]
+Overfull \hbox (92.18788pt too wide) in paragraph at lines 105--105
+[]$[]$[]  
+ []
+
+[7
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation6})
+ has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.124 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.6}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.124 \end{frame}
+                 
+
+ <./5_clase/conv_vs_dft1.png>])
 \tf@nav=\write6
 \openout6 = `clases.nav'.
 
@@ -2028,36 +2169,54 @@ Package pdftex.def Info: tp2/chapu.png used on input line 100.
 \tf@snm=\write8
 \openout8 = `clases.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+ [8
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation7})
+ has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.44 \end{document}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{page.7}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.44 \end{document}
+                   
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
  (./clases.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `clases.out' has not changed.
-(rerunfilecheck)             Checksum: 0C927748D7275FA5BB1DEED024B19C82;42.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+(rerunfilecheck)             Checksum: D44C8392BD9F5025CCCA340D28982645;129.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 32129 strings out of 493105
- 602403 string characters out of 6137073
- 941049 words of memory out of 5000000
- 34715 multiletter control sequences out of 15000+600000
- 216788 words of font info for 128 fonts, out of 8000000 for 9000
+ 32305 strings out of 493105
+ 605619 string characters out of 6137073
+ 1317635 words of memory out of 5000000
+ 34862 multiletter control sequences out of 15000+600000
+ 218960 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,79p,977b,2140s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,16n,79p,977b,2230s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
-}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</usr/s
-hare/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
-Output written on clases.pdf (5 pages, 262376 bytes).
+}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_llspvt.enc}{/usr/s
+hare/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</usr/share/tex
+live/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb>
+Output written on clases.pdf (7 pages, 391349 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 34406 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 39032 words of extra memory for PDF output out of 42996 (max. 10000000)
 

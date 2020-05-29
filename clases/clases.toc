@@ -1,3 +1,4 @@
 \beamer@endinputifotherversion {3.33pt}
 \select@language {spanish}
-\beamer@sectionintoc {1}{Fourier}{2}{0}{1}
+\beamer@sectionintoc {1}{Repaso Convoluci\IeC {\'o}n}{5}{0}{1}
+\beamer@sectionintoc {2}{Convolicion vs Multiplicacion}{6}{0}{2}
