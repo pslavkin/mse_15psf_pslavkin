@@ -12,94 +12,334 @@
 
 
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Convolución}{Descomposición delta}
-   \begin{columns}[c]
-      \begin{column}{1\textwidth}
-         \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
-      \end{column}
-   \end{columns}
+\begin{frame}{Repaso Convolución}{Multiplicacion?!}
+   Algoritmo de Multiplicacion de 2do grado
+   \begin{align*}
+      1\hspace{1cm} 2\\
+      3\hspace{1cm} 4 \\
+      \cline{1-2}
+      4 \hspace{1cm} 8 \\
+      3 \hspace{1cm} 6 \hspace{1cm}0 \\
+      \cline{1-2}
+      3 \hspace{1cm} 10 \hspace{1cm} 8\\
+   \end{align*}
    \vfill
    \note{
       \begin{itemize}
-         \item{lanzar conv3}
-         \item{sumo delta a delta y voy acumulando..}
-         \item{la salida es N+M-1}
+         \item{no hay que lanzar nada}
+         \item{explicar 3 manera de multiplicar un numero}
+         \item{darle forma de respuesta al impulso y senial}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Descomposición delta}
    \begin{columns}[c]
-      \begin{column}{1\textwidth}
-         \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
+      \begin{column}{0.4\textwidth}
+      \tiny
+      SUma deltas desplazadas
+            \begin{align*}
+               \textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2} \hspace{1cm}0\\
+               \textcolor{green}{3} \hspace{1cm}                 0  \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 6 \hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm}\textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2}\\
+               0\hspace{1cm}\textcolor{green}{4} \hspace{1cm}                 0\\
+               \cline{1-2}
+               3\hspace{1cm} 6 \hspace{1cm}0\\
+               0\hspace{1cm} 4 \hspace{1cm}8\\
+               \cline{1-2}
+               3 \hspace{1cm}10 \hspace{1cm} 8\\
+            \end{align*}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{0.6\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_as_multiply1}
       \end{column}
    \end{columns}
    \vfill
    \note{
       \begin{itemize}
-         \item{lanzar conv3}
-         \item{sumo delta a delta y voy acumulando..}
-         \item{la salida es N+M-1}
+      \item{lanzar conv\_as\_multiply1}
+         \item{muestro la misma cuenta con señales}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Funcion delta}{Respuesta al impulso}
-   \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
-   \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
-\section{Repaso Convolución}
-\begin{frame}{Convolución}{Respuesta al impulso}
-   \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
+\begin{frame}{Repaso Convolución}{Convolucion formal}
    \begin{columns}[c]
-      \hspace{5pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=27]{4_clase/conv1.py}
+      \begin{column}{0.4\textwidth}
+      \tiny
+      \tiny
+      Convolucion
+            \begin{align*}
+                                2 \hspace{1cm} \textcolor{green}{1}\hspace{1cm}0 \hspace{1cm}0\\
+               \textcolor{cyan}{0}\hspace{1cm} \textcolor{cyan} {3}\hspace{1cm}4 \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 0\hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm}                  2 \hspace{1cm}\textcolor{green}{1} \hspace{1cm}0\\
+               0\hspace{1cm} \textcolor{cyan}{3}\hspace{1cm}\textcolor{cyan} {4} \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 10\hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm} 0\hspace{1cm}                 2 \hspace{1cm}\textcolor{green}{1}\\
+               0\hspace{1cm} 3\hspace{1cm}\textcolor{cyan}{4}\hspace{1cm}\textcolor{cyan} {0}\\
+               \cline{1-2}
+               3 \hspace{1cm} 10 \hspace{1cm} 8\\
+            \end{align*}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=28]{4_clase/conv1.py}
+      \begin{column}{0.6\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_as_multiply2}
       \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.38\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv1}
-      \end{column}
-      \hspace{2pt}
    \end{columns}
    \vfill
    \note{
       \begin{itemize}
-         \item{lanzar conv1}
-         \item{hacer las cuentas a mano}
+      \item{lanzar conv\_as\_multiply2}
+         \item{muestro la misma cuenta con señales}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\section{Convolicion vs Multiplicacion}
-\begin{frame}{Convolución vs Multiplicacion}{Tiempo vs Frecuencia}
-   \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
-   \begin{columns}[c]
+\begin{frame}{Repaso Convolución}{Multiplicacion?!}
+   \begin{columns}[t]
       \hspace{5pt}
-      \begin{column}{.4\textwidth}
+   \begin{column}{.3\textwidth}
+      \tiny
+      Algoritmo de Multiplicacion
+          \begin{align*}
+               1\hspace{1cm} 2\\
+               3\hspace{1cm} 4 \\
+               \cline{1-2}
+               4 \hspace{1cm} 8 \\
+               3 \hspace{1cm} 6 \hspace{1cm}0 \\
+               \cline{1-2}
+               3 \hspace{1cm} 10 \hspace{1cm} 8\\
+            \end{align*}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
-      \begin{column}{.6\textwidth}
-         \centering\includegraphics[width=0.8\textwidth]{5_clase/conv_vs_dft1}
+      \begin{column}{.3\textwidth}
+      \tiny
+      SUma deltas desplazadas
+            \begin{align*}
+               \textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2} \hspace{1cm}0\\
+               \textcolor{green}{3} \hspace{1cm}                 0  \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 6 \hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm}\textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2}\\
+               0\hspace{1cm}\textcolor{green}{4} \hspace{1cm}                 0\\
+               \cline{1-2}
+               3\hspace{1cm} 6 \hspace{1cm}0\\
+               0\hspace{1cm} 4 \hspace{1cm}8\\
+               \cline{1-2}
+               3 \hspace{1cm}10 \hspace{1cm} 8\\
+            \end{align*}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+      \tiny
+      Convolucion
+            \begin{align*}
+                                2 \hspace{1cm} \textcolor{green}{1}\hspace{1cm}0 \hspace{1cm}0\\
+               \textcolor{cyan}{0}\hspace{1cm} \textcolor{cyan} {3}\hspace{1cm}4 \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 0\hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm}                  2 \hspace{1cm}\textcolor{green}{1} \hspace{1cm}0\\
+               0\hspace{1cm} \textcolor{cyan}{3}\hspace{1cm}\textcolor{cyan} {4} \hspace{1cm}0\\
+               \cline{1-2}
+               3\hspace{1cm} 10\hspace{1cm}0\\[0.4cm]
+               0\hspace{1cm} 0\hspace{1cm}                 2 \hspace{1cm}\textcolor{green}{1}\\
+               0\hspace{1cm} 3\hspace{1cm}\textcolor{cyan}{4}\hspace{1cm}\textcolor{cyan} {0}\\
+               \cline{1-2}
+               3 \hspace{1cm} 10 \hspace{1cm} 8\\
+            \end{align*}
       \end{column}
       \hspace{2pt}
    \end{columns}
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar el teorema de la convolucion a mano}
+         \item{no hay que lanzar nada}
+         \item{explicar 3 manera de multiplicar un numero}
+         \item{darle forma de respuesta al impulso y senial}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso Convolucion}{Propiedades}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{.2\textwidth}
+         \begin{itemize}
+            \item{Conmutativa}
+            \item{Distributiva}
+            \item{Asociativa}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.8\textwidth}
+         \centering\includegraphics[width=0.7\textwidth]{4_clase/entrada_conv_h}\\
+         \centering\includegraphics[width=0.7\textwidth]{4_clase/convolucion_eq}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso Multiplicacion}{Propiedad conmutativa}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{5_clase/multi_conmutativa}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_conmutativa}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso Multiplicacion}{Propiedad asociativa}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{5_clase/multi_asociativa}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_asociativa}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Repaso Multiplicacion}{Propiedad distributiva}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.8\textwidth]{5_clase/multi_distributiva}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{0.5\textwidth}
+         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_distributiva}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{Convolucion vs Multiplicacion}
+\begin{frame}[t]{Convolución vs Multiplicacion}{Teorema de la convolucion}
+   \center\includegraphics[width=0.72\textwidth]{5_clase/dft_apps}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar la conclusion y el teorema de la convolucion}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Multiplicacion con DFT}{Tiempo vs Frecuencia}
+   \centering\includegraphics[width=0.8\textwidth]{5_clase/conv_vs_dft1}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar multiplicacion usando DFT}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Convolución vs Multiplicacion}{Teorema de la convolucion}
+   \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv1}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar la conclusion y el teorema de la convolucion}
+         \item{explicar que dado h r y(t) podemos dividir en frec y obtener x()}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Convolución vs Multiplicacion}{Convolucion circular}
+   \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv2}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar el efecto de la convolucion circular}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Pasabajos}
+   \center\includegraphics[width=0.8\textwidth]{5_clase/filtrado1}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolucino en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Pasaaltos}
+   \center\includegraphics[width=0.8\textwidth]{5_clase/filtrado2}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolucino en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Definicion}
+   \center\includegraphics[width=0.6\textwidth]{5_clase/pyfda3}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar las zonas de los filtros, tipos de filtro}
+         \item{relacion de compromiso entre ripple y bandas, etc}
+      \end{itemize}
+   }
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Pyfda \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
+   \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda1}
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolucino en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Pyfda \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
+   \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda2}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolucino en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
       \end{itemize}
    }
 \end{frame}

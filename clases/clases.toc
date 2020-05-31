@@ -1,4 +1,2 @@
-\beamer@endinputifotherversion {3.33pt}
-\select@language {spanish}
-\beamer@sectionintoc {1}{Repaso Convoluci\IeC {\'o}n}{5}{0}{1}
-\beamer@sectionintoc {2}{Convolicion vs Multiplicacion}{6}{0}{2}
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Convolucion vs Multiplicacion}{10}{0}{1}

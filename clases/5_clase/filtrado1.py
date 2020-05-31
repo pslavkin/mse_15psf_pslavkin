@@ -6,14 +6,13 @@ from matplotlib.animation import FuncAnimation
 from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
-fs         = 2
-N          = 2
-signalFrec = 50
+fs         = 20
+N          = 80
+signalFrec = .4
 #firData,=np.load("5_clase/hi_pass_short.npy").astype(float)
-#firData,=np.load("4_clase/low_pass.npy").astype(float)
-#firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
-firData    = np.zeros(2)
-firData[:] = [1,2]
+firData,=np.load("4_clase/low_pass.npy").astype(float)
+#firData,=np.load("5_clase/hi_pass.npy").astype(float)
+firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
 M          = len(firData)
 
 firExtendedData=np.concatenate((firData,np.zeros(N-1)))
@@ -21,16 +20,13 @@ impar=((N+M-1)%2)
 #--------------------------------------
 def x(f,n):
 #    return 1*sc.sawtooth(2*np.pi*2*n,0.5)
-    s=np.zeros(N)
-    s[:]=[3,4]
-    return s[n]
-#    return np.sin(2*np.pi*f*n)+np.sin(2*np.pi*f*2*n)
+    return np.sin(2*np.pi*f*n)+np.sin(2*np.pi*5*n)
 
 tData=np.linspace(0,(N+M-1)/fs,N+M-1,endpoint=False)
 fData=np.concatenate((np.linspace(-fs/2,0,(N+M-1)//2,endpoint=False),\
        np.linspace(0,fs/2,(N+M-1)//2+impar,endpoint=False)))
 xData=np.zeros(N+M-1)
-xData[:N]+=x(signalFrec,np.arange(0,N,1))#tData[:N])
+xData[:N]+=x(signalFrec,tData[:N])
 #--------------------------------------
 signalAxe  = fig.add_subplot(3,3,1)
 signalLn,  = plt.plot(tData,xData,'b-o',label="signal")
@@ -45,7 +41,7 @@ firLn,  = plt.plot([],[],'b-o',label="fir")
 firAxe.legend()
 firAxe.grid(True)
 firAxe.set_xlim(0,(N+M-2)/fs)
-firAxe.set_ylim(np.min(firData)-0.2,np.max(firData)+0.2)
+firAxe.set_ylim(np.min(firData),np.max(firData))
 
 convAxe         = fig.add_subplot(3,3,7)
 convolveData    = np.convolve(xData[0:N],firData)
@@ -70,7 +66,7 @@ hLn,  = plt.plot([],[],'g-o',label="h")
 hAxe.legend()
 hAxe.grid(True)
 hAxe.set_xlim(0,(N+M-2)/fs)
-hAxe.set_ylim(np.min(convolveData)-0.1,np.max(convolveData)+0.1)
+hAxe.set_ylim(-0.1,0.1)
 
 yAxe  = fig.add_subplot(3,3,8)
 yLn,  = plt.plot([],[],'b-o',label="y")
@@ -78,7 +74,8 @@ yifftLn, = plt.plot([],[],'r-o',label="ifft")
 yAxe.legend()
 yAxe.grid(True)
 yAxe.set_xlim(0,(N+M-2)/fs)
-yAxe.set_ylim(0,15)
+yAxe.set_ylim(np.min(convolveData)-0.1,np.max(convolveData)+0.1)
+#yAxe.set_ylim(0,15)
 yData=np.zeros(N+M-1)
 #--------------------------------------
 XAxe  = fig.add_subplot(3,3,3)
@@ -148,7 +145,7 @@ def update(i):
 
     return yLn,xHighLn,hLn,XLn,HLn,YLn,yifftLn,YfftLn,firLn,realtimeConvLn,convZoneLn,xZoneLn
 
-ani=FuncAnimation(fig,update,N+M-1,init,interval=1000 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N+M-1,init,interval=10 ,blit=True,repeat=True)
 plt.get_current_fig_manager().window.showMaximized()
 b=buttonOnFigure(fig,ani)
 plt.show()

@@ -8,7 +8,7 @@ from buttons import buttonOnFigure
 fig = plt.figure()
 fs  = 6
 N   = 6
-fir,=np.load("4_clase/low_pass_short.npy").astype(float)
+fir,=np.load("4_clase/hi_pass_short.npy").astype(float)
 fir=np.insert(fir,0,fir[-1]) #ojo que pydfa me guarda 1 dato menos...
 #fir=(fir[:]/max(fir))
 M=len(fir)
