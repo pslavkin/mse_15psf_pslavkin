@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  30 MAY 2020 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  31 MAY 2020 00:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2113,7 +2113,7 @@ Overfull \hbox (119.50279pt too wide) in paragraph at lines 323--323
 <5_clase/pyfda1.png, id=162, 1371.1225pt x 770.88pt>
 File: 5_clase/pyfda1.png Graphic file (type png)
 <use 5_clase/pyfda1.png>
-Package pdftex.def Info: 5_clase/pyfda1.png  used on input line 334.
+Package pdftex.def Info: 5_clase/pyfda1.png  used on input line 333.
 (pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
 [17
 
@@ -2122,24 +2122,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation16}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.334 \end{frame}
+l.333 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.16}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.334 \end{frame}
+l.333 \end{frame}
                  
 
  <./5_clase/pyfda3.jpg>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 334--334
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 333--333
 []$[]$[] 
  []
 
 <5_clase/pyfda2.png, id=172, 1371.1225pt x 770.88pt>
 File: 5_clase/pyfda2.png Graphic file (type png)
 <use 5_clase/pyfda2.png>
-Package pdftex.def Info: 5_clase/pyfda2.png  used on input line 345.
+Package pdftex.def Info: 5_clase/pyfda2.png  used on input line 344.
 (pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
 [18
 
@@ -2148,20 +2148,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation17}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.345 \end{frame}
+l.344 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.17}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.345 \end{frame}
+l.344 \end{frame}
                  
 
  <./5_clase/pyfda1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 345--345
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 344--344
 []$[]$[] 
  []
 
+<5_clase/overlap_add1.png, id=184, 987.2082pt x 504.4446pt>
+File: 5_clase/overlap_add1.png Graphic file (type png)
+<use 5_clase/overlap_add1.png>
+Package pdftex.def Info: 5_clase/overlap_add1.png  used on input line 354.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
 [19
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation18}
@@ -2169,16 +2174,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation18}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.364 \end{frame}
+l.354 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.18}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.354 \end{frame}
+                 
+
+ <./5_clase/pyfda2.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 354--354
+[]$[]$[] 
+ []
+
+<5_clase/overlap_add2.png, id=194, 987.2082pt x 504.4446pt>
+File: 5_clase/overlap_add2.png Graphic file (type png)
+<use 5_clase/overlap_add2.png>
+Package pdftex.def Info: 5_clase/overlap_add2.png  used on input line 364.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+[20
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation19}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.364 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.19}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
 l.364 \end{frame}
                  
 
- <./5_clase/pyfda2.png>])
+ <./5_clase/overlap_add1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 364--364
+[]$[]$[] 
+ []
+
+[21
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation20}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.383 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.20}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.383 \end{frame}
+                 
+
+ <./5_clase/overlap_add2.png>])
 \tf@nav=\write6
 \openout6 = `clases.nav'.
 
@@ -2188,16 +2240,16 @@ l.364 \end{frame}
 \tf@snm=\write8
 \openout8 = `clases.snm'.
 
- [20
+ [22
 
-pdfTeX warning (ext4): destination with the same identifier (name{Navigation19}
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation21}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
 l.44 \end{document}
                    pdfTeX warning (ext4): destination with the same identifier 
-(name{page.19}) has been already used, duplicate ignored
+(name{page.21}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
@@ -2217,10 +2269,10 @@ Package rerunfilecheck Info: File `clases.out' has not changed.
 (rerunfilecheck)             Checksum: 2E06BA24AF1D1F56043DE59B05F5662D;70.
  ) 
 Here is how much of TeX's memory you used:
- 32253 strings out of 492615
- 612454 string characters out of 6131390
- 767273 words of memory out of 5000000
- 35252 multiletter control sequences out of 15000+600000
+ 32275 strings out of 492615
+ 612878 string characters out of 6131390
+ 767271 words of memory out of 5000000
+ 35268 multiletter control sequences out of 15000+600000
  218861 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,16n,70p,823b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2230,10 +2282,10 @@ xlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
-Output written on clases.pdf (19 pages, 1115162 bytes).
+Output written on clases.pdf (21 pages, 1325109 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 38577 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 38587 words of extra memory for PDF output out of 42996 (max. 10000000)
 

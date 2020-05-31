@@ -636,6 +636,12 @@ INPUT ./5_clase/pyfda1.png
 INPUT 5_clase/pyfda2.png
 INPUT ./5_clase/pyfda2.png
 INPUT ./5_clase/pyfda2.png
+INPUT 5_clase/overlap_add1.png
+INPUT ./5_clase/overlap_add1.png
+INPUT ./5_clase/overlap_add1.png
+INPUT 5_clase/overlap_add2.png
+INPUT ./5_clase/overlap_add2.png
+INPUT ./5_clase/overlap_add2.png
 OUTPUT clases.nav
 OUTPUT clases.toc
 OUTPUT clases.snm
