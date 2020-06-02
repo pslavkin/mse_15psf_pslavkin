@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  31 MAY 2020 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  2 JUN 2020 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1529,33 +1529,33 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
 Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf  used on i
-nput line 11.
+nput line 18.
 (pdftex.def)             Requested size: 149.36287pt x 44.81097pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 17.28pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <17.28> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 17.28pt on input line 18.
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 11--11
+Overfull \hbox (2.0pt too wide) in paragraph at lines 18--18
 [][]  
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10.95> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 11.
+(Font)              scaled to size 10.95pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
-LaTeX Font Info:    Try loading font information for OT1+zavm on input line 11.
+(Font)              scaled to size 10.0pt on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+zavm on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/arev/ot1zavm.fd
 File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
@@ -1583,24 +1583,24 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 8.50006pt on input line 11.
+(Font)              scaled to size 8.50006pt on input line 18.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.95004pt on input line 11.
+(Font)              scaled to size 5.95004pt on input line 18.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 4.25003pt on input line 11.
-LaTeX Font Info:    Try loading font information for OMS+zavm on input line 11.
+(Font)              scaled to size 4.25003pt on input line 18.
+LaTeX Font Info:    Try loading font information for OMS+zavm on input line 18.
 
  (/usr/share/texlive/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+iwona on input line 11
+LaTeX Font Info:    Try loading font information for OMX+iwona on input line 18
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )<<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1608,7 +1608,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1617,23 +1617,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 11.
+(Font)              scaled to size 7.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 11.
+(Font)              scaled to size 5.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 11.
+(Font)              scaled to size 7.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 11.
+(Font)              scaled to size 5.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <14.4> not availabl
 e
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 18.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1641,21 +1641,21 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 12.24008pt on input line 11.
+(Font)              scaled to size 12.24008pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <12> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <8> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-11.
+18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 18.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1675,41 +1675,58 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 10.20007pt on input line 11.
+(Font)              scaled to size 10.20007pt on input line 18.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 6.80005pt on input line 11.
+(Font)              scaled to size 6.80005pt on input line 18.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.10004pt on input line 11.
+(Font)              scaled to size 5.10004pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 11.
+(Font)              scaled to size 6.0pt on input line 18.
 <5_clase/dft_apps.png, id=24, 1460.45625pt x 819.06pt>
 File: 5_clase/dft_apps.png Graphic file (type png)
 <use 5_clase/dft_apps.png>
-Package pdftex.def Info: 5_clase/dft_apps.png  used on input line 11.
+Package pdftex.def Info: 5_clase/dft_apps.png  used on input line 18.
 (pdftex.def)             Requested size: 173.55916pt x 97.33311pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 11.
+(Font)              scaled to size 4.0pt on input line 18.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 11.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `OT1/zavm/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `OT1/zavm/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 34.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 34.
- [2
+(Font)              scaled to size 9.0pt on input line 18.
+LaTeX Font Info:    Try loading font information for TS1+Carlito-LF on input li
+ne 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Carlito-LF.fd
+File: TS1Carlito-LF.fd 2014/08/20 (autoinst) Font definitions for TS1/Carlito-L
+F.
+)
+LaTeX Font Info:    Font shape `TS1/Carlito-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 18.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Carlito-LF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 18--18
+[]$[]$[] 
+ []
+
+<1_clase/click.png, id=28, 217.81375pt x 232.87pt>
+File: 1_clase/click.png Graphic file (type png)
+<use 1_clase/click.png>
+Package pdftex.def Info: 1_clase/click.png  used on input line 34.
+(pdftex.def)             Requested size: 43.3931pt x 46.39195pt.
+File: 1_clase/click.png Graphic file (type png)
+<use 1_clase/click.png>
+Package pdftex.def Info: 1_clase/click.png  used on input line 34.
+(pdftex.def)             Requested size: 43.3931pt x 46.39195pt.
+[2
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): desti
 nation with the same identifier (name{Navigation1}) has been already used, dupl
@@ -1727,54 +1744,41 @@ l.34 \end{frame}
                 
 
  <./fibeamer/logo/mu/fibeamer-mu-fi-english.pdf> <./5_clase/dft_apps.png>]
-LaTeX Font Info:    Try loading font information for TS1+Carlito-LF on input li
-ne 34.
- (/usr/share/texlive/texmf-dist/tex/latex/carlito/TS1Carlito-LF.fd
-File: TS1Carlito-LF.fd 2014/08/20 (autoinst) Font definitions for TS1/Carlito-L
-F.
-)
-LaTeX Font Info:    Font shape `TS1/Carlito-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 34.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `Carlito-LF' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 34--34
-[]$[]$[] 
- []
-
-<5_clase/conv_as_multiply1.png, id=38, 462.528pt x 346.896pt>
-File: 5_clase/conv_as_multiply1.png Graphic file (type png)
-<use 5_clase/conv_as_multiply1.png>
-Package pdftex.def Info: 5_clase/conv_as_multiply1.png  used on input line 69.
-(pdftex.def)             Requested size: 234.30923pt x 175.73422pt.
-[3
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 9.30756pt on input line 55.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 55.
+ [3
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation2})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.69 \end{frame}
+l.55 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{page.2}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.69 \end{frame}
+l.55 \end{frame}
                 
 
-]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 69--69
+ <./1_clase/click.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 55--55
 []$[]$[] 
  []
 
-<5_clase/conv_as_multiply2.png, id=47, 462.528pt x 346.896pt>
-File: 5_clase/conv_as_multiply2.png Graphic file (type png)
-<use 5_clase/conv_as_multiply2.png>
-Package pdftex.def Info: 5_clase/conv_as_multiply2.png  used on input line 106.
-
+<5_clase/conv_as_multiply1.png, id=52, 462.528pt x 346.896pt>
+File: 5_clase/conv_as_multiply1.png Graphic file (type png)
+<use 5_clase/conv_as_multiply1.png>
+Package pdftex.def Info: 5_clase/conv_as_multiply1.png  used on input line 90.
 (pdftex.def)             Requested size: 234.30923pt x 175.73422pt.
 [4
 
@@ -1783,20 +1787,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation3})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.106 \end{frame}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{page.3}) has been already used, duplicate ignored
+l.90 \end{frame}
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{page.3}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.106 \end{frame}
-                 
+l.90 \end{frame}
+                
 
- <./5_clase/conv_as_multiply1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 106--106
+]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 90--90
 []$[]$[] 
  []
 
+<5_clase/conv_as_multiply2.png, id=59, 462.528pt x 346.896pt>
+File: 5_clase/conv_as_multiply2.png Graphic file (type png)
+<use 5_clase/conv_as_multiply2.png>
+Package pdftex.def Info: 5_clase/conv_as_multiply2.png  used on input line 127.
+
+(pdftex.def)             Requested size: 234.30923pt x 175.73422pt.
 [5
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
@@ -1804,30 +1814,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.175 \end{frame}
+l.127 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.4}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.175 \end{frame}
+l.127 \end{frame}
                  
 
- <./5_clase/conv_as_multiply2.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 175--175
+ <./5_clase/conv_as_multiply1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 127--127
 []$[]$[] 
  []
 
-<4_clase/entrada_conv_h.png, id=62, 1186.4325pt x 518.93875pt>
-File: 4_clase/entrada_conv_h.png Graphic file (type png)
-<use 4_clase/entrada_conv_h.png>
-Package pdftex.def Info: 4_clase/entrada_conv_h.png  used on input line 197.
-(pdftex.def)             Requested size: 242.9864pt x 106.28018pt.
-<4_clase/convolucion_eq.png, id=63, 916.42375pt x 198.7425pt>
-File: 4_clase/convolucion_eq.png Graphic file (type png)
-<use 4_clase/convolucion_eq.png>
-Package pdftex.def Info: 4_clase/convolucion_eq.png  used on input line 197.
-(pdftex.def)             Requested size: 242.9864pt x 52.6938pt.
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 144.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 144.
+
 [6
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation5})
@@ -1835,54 +1841,54 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation5})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.197 \end{frame}
+l.144 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.5}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.197 \end{frame}
+l.144 \end{frame}
                  
 
-]
-<5_clase/multi_conmutativa.jpg, id=70, 349.305pt x 325.215pt>
-File: 5_clase/multi_conmutativa.jpg Graphic file (type jpg)
-<use 5_clase/multi_conmutativa.jpg>
-Package pdftex.def Info: 5_clase/multi_conmutativa.jpg  used on input line 214.
+ <./5_clase/conv_as_multiply2.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 144--144
+[]$[]$[] 
+ []
 
-(pdftex.def)             Requested size: 173.56247pt x 161.59477pt.
-<5_clase/conv_conmutativa.png, id=71, 627.34375pt x 345.29pt>
-File: 5_clase/conv_conmutativa.png Graphic file (type png)
-<use 5_clase/conv_conmutativa.png>
-Package pdftex.def Info: 5_clase/conv_conmutativa.png  used on input line 214.
-(pdftex.def)             Requested size: 195.2557pt x 107.47081pt.
- [7
+[7
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation6})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.214 \end{frame}
+l.220 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.6}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.214 \end{frame}
+l.220 \end{frame}
                  
 
- <./4_clase/entrada_conv_h.png> <./4_clase/convolucion_eq.png>]
-<5_clase/multi_asociativa.jpg, id=79, 364.36125pt x 393.47pt>
-File: 5_clase/multi_asociativa.jpg Graphic file (type jpg)
-<use 5_clase/multi_asociativa.jpg>
-Package pdftex.def Info: 5_clase/multi_asociativa.jpg  used on input line 231.
-(pdftex.def)             Requested size: 173.56247pt x 187.42853pt.
-<5_clase/conv_asociativa.png, id=80, 736.7525pt x 603.25375pt>
-File: 5_clase/conv_asociativa.png Graphic file (type png)
-<use 5_clase/conv_asociativa.png>
-Package pdftex.def Info: 5_clase/conv_asociativa.png  used on input line 231.
-(pdftex.def)             Requested size: 195.2557pt x 159.87068pt.
+]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 220--220
+[]$[]$[] 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+<4_clase/conv1.png, id=83, 462.528pt x 346.896pt>
+File: 4_clase/conv1.png Graphic file (type png)
+<use 4_clase/conv1.png>
+Package pdftex.def Info: 4_clase/conv1.png  used on input line 244.
+(pdftex.def)             Requested size: 216.95227pt x 162.71295pt.
+<4_clase/conv2.png, id=84, 462.528pt x 346.896pt>
+File: 4_clase/conv2.png Graphic file (type png)
+<use 4_clase/conv2.png>
+Package pdftex.def Info: 4_clase/conv2.png  used on input line 244.
+(pdftex.def)             Requested size: 216.95227pt x 162.71295pt.
  [8
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation7})
@@ -1890,49 +1896,58 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation7})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.231 \end{frame}
+l.244 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.7}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.231 \end{frame}
+l.244 \end{frame}
                  
 
- <./5_clase/multi_conmutativa.jpg> <./5_clase/conv_conmutativa.png>]
-<5_clase/multi_distributiva.jpg, id=88, 361.35pt x 344.28625pt>
-File: 5_clase/multi_distributiva.jpg Graphic file (type jpg)
-<use 5_clase/multi_distributiva.jpg>
-Package pdftex.def Info: 5_clase/multi_distributiva.jpg  used on input line 248
-.
-(pdftex.def)             Requested size: 173.56247pt x 165.36583pt.
-<5_clase/conv_distributiva.png, id=89, 642.4pt x 454.69875pt>
-File: 5_clase/conv_distributiva.png Graphic file (type png)
-<use 5_clase/conv_distributiva.png>
-Package pdftex.def Info: 5_clase/conv_distributiva.png  used on input line 248.
+]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 244--244
+[]$[]$[] 
+ []
 
-(pdftex.def)             Requested size: 195.2557pt x 138.20071pt.
- [9
+<4_clase/entrada_conv_h.png, id=92, 1186.4325pt x 518.93875pt>
+File: 4_clase/entrada_conv_h.png Graphic file (type png)
+<use 4_clase/entrada_conv_h.png>
+Package pdftex.def Info: 4_clase/entrada_conv_h.png  used on input line 266.
+(pdftex.def)             Requested size: 242.9864pt x 106.28018pt.
+<4_clase/convolucion_eq.png, id=93, 916.42375pt x 198.7425pt>
+File: 4_clase/convolucion_eq.png Graphic file (type png)
+<use 4_clase/convolucion_eq.png>
+Package pdftex.def Info: 4_clase/convolucion_eq.png  used on input line 266.
+(pdftex.def)             Requested size: 242.9864pt x 52.6938pt.
+[9
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation8})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.248 \end{frame}
+l.266 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.8}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.248 \end{frame}
+l.266 \end{frame}
                  
 
- <./5_clase/multi_asociativa.jpg> <./5_clase/conv_asociativa.png>]
-File: 5_clase/dft_apps.png Graphic file (type png)
-<use 5_clase/dft_apps.png>
-Package pdftex.def Info: 5_clase/dft_apps.png  used on input line 259.
-(pdftex.def)             Requested size: 312.41179pt x 175.20712pt.
+ <./4_clase/conv1.png> <./4_clase/conv2.png>]
+<5_clase/multi_conmutativa.jpg, id=102, 349.305pt x 325.215pt>
+File: 5_clase/multi_conmutativa.jpg Graphic file (type jpg)
+<use 5_clase/multi_conmutativa.jpg>
+Package pdftex.def Info: 5_clase/multi_conmutativa.jpg  used on input line 283.
+
+(pdftex.def)             Requested size: 173.56247pt x 161.59477pt.
+<5_clase/conv_conmutativa.png, id=103, 627.34375pt x 345.29pt>
+File: 5_clase/conv_conmutativa.png Graphic file (type png)
+<use 5_clase/conv_conmutativa.png>
+Package pdftex.def Info: 5_clase/conv_conmutativa.png  used on input line 283.
+(pdftex.def)             Requested size: 195.2557pt x 107.47081pt.
  [10
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation9})
@@ -1940,102 +1955,101 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation9})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.259 \end{frame}
+l.283 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.9}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.259 \end{frame}
+l.283 \end{frame}
                  
 
- <./5_clase/multi_distributiva.jpg> <./5_clase/conv_distributiva.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 259--259
-[]$[]$[] 
- []
-
-<5_clase/conv_vs_dft1.png, id=104, 987.2082pt x 504.4446pt>
-File: 5_clase/conv_vs_dft1.png Graphic file (type png)
-<use 5_clase/conv_vs_dft1.png>
-Package pdftex.def Info: 5_clase/conv_vs_dft1.png  used on input line 269.
-(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
-[11
+ <./4_clase/entrada_conv_h.png> <./4_clase/convolucion_eq.png>]
+<5_clase/multi_asociativa.jpg, id=111, 364.36125pt x 393.47pt>
+File: 5_clase/multi_asociativa.jpg Graphic file (type jpg)
+<use 5_clase/multi_asociativa.jpg>
+Package pdftex.def Info: 5_clase/multi_asociativa.jpg  used on input line 300.
+(pdftex.def)             Requested size: 173.56247pt x 187.42853pt.
+<5_clase/conv_asociativa.png, id=112, 736.7525pt x 603.25375pt>
+File: 5_clase/conv_asociativa.png Graphic file (type png)
+<use 5_clase/conv_asociativa.png>
+Package pdftex.def Info: 5_clase/conv_asociativa.png  used on input line 300.
+(pdftex.def)             Requested size: 195.2557pt x 159.87068pt.
+ [11
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation10}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.269 \end{frame}
+l.300 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.10}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.269 \end{frame}
+l.300 \end{frame}
                  
 
-]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 269--269
-[]$[]$[] 
- []
+ <./5_clase/multi_conmutativa.jpg> <./5_clase/conv_conmutativa.png>]
+<5_clase/multi_distributiva.jpg, id=119, 361.35pt x 344.28625pt>
+File: 5_clase/multi_distributiva.jpg Graphic file (type jpg)
+<use 5_clase/multi_distributiva.jpg>
+Package pdftex.def Info: 5_clase/multi_distributiva.jpg  used on input line 317
+.
+(pdftex.def)             Requested size: 173.56247pt x 165.36583pt.
+<5_clase/conv_distributiva.png, id=120, 642.4pt x 454.69875pt>
+File: 5_clase/conv_distributiva.png Graphic file (type png)
+<use 5_clase/conv_distributiva.png>
+Package pdftex.def Info: 5_clase/conv_distributiva.png  used on input line 317.
 
-<5_clase/teorema_conv1.png, id=113, 709.65125pt x 715.67375pt>
-File: 5_clase/teorema_conv1.png Graphic file (type png)
-<use 5_clase/teorema_conv1.png>
-Package pdftex.def Info: 5_clase/teorema_conv1.png  used on input line 280.
-(pdftex.def)             Requested size: 173.55916pt x 175.03036pt.
-[12
+(pdftex.def)             Requested size: 195.2557pt x 138.20071pt.
+ [12
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation11}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.280 \end{frame}
+l.317 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.11}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.280 \end{frame}
+l.317 \end{frame}
                  
 
- <./5_clase/conv_vs_dft1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 280--280
-[]$[]$[] 
- []
-
-<5_clase/teorema_conv2.png, id=123, 696.6025pt x 720.6925pt>
-File: 5_clase/teorema_conv2.png Graphic file (type png)
-<use 5_clase/teorema_conv2.png>
-Package pdftex.def Info: 5_clase/teorema_conv2.png  used on input line 290.
-(pdftex.def)             Requested size: 173.55916pt x 179.55685pt.
-[13
+ <./5_clase/multi_asociativa.jpg> <./5_clase/conv_asociativa.png>]
+File: 5_clase/dft_apps.png Graphic file (type png)
+<use 5_clase/dft_apps.png>
+Package pdftex.def Info: 5_clase/dft_apps.png  used on input line 328.
+(pdftex.def)             Requested size: 312.41179pt x 175.20712pt.
+ [13
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation12}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.290 \end{frame}
+l.328 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.12}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.290 \end{frame}
+l.328 \end{frame}
                  
 
- <./5_clase/teorema_conv1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 290--290
+ <./5_clase/multi_distributiva.jpg> <./5_clase/conv_distributiva.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 328--328
 []$[]$[] 
  []
 
-<5_clase/filtrado1.png, id=132, 987.2082pt x 504.4446pt>
-File: 5_clase/filtrado1.png Graphic file (type png)
-<use 5_clase/filtrado1.png>
-Package pdftex.def Info: 5_clase/filtrado1.png  used on input line 301.
+<5_clase/conv_vs_dft1.png, id=135, 987.2082pt x 504.4446pt>
+File: 5_clase/conv_vs_dft1.png Graphic file (type png)
+<use 5_clase/conv_vs_dft1.png>
+Package pdftex.def Info: 5_clase/conv_vs_dft1.png  used on input line 340.
 (pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
 [14
 
@@ -2044,25 +2058,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation13}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.301 \end{frame}
+l.340 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.13}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.301 \end{frame}
+l.340 \end{frame}
                  
 
- <./5_clase/teorema_conv2.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 301--301
+]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 340--340
 []$[]$[] 
  []
 
-<5_clase/filtrado2.png, id=142, 987.2082pt x 504.4446pt>
-File: 5_clase/filtrado2.png Graphic file (type png)
-<use 5_clase/filtrado2.png>
-Package pdftex.def Info: 5_clase/filtrado2.png  used on input line 312.
-(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+<5_clase/teorema_conv1.png, id=145, 709.65125pt x 715.67375pt>
+File: 5_clase/teorema_conv1.png Graphic file (type png)
+<use 5_clase/teorema_conv1.png>
+Package pdftex.def Info: 5_clase/teorema_conv1.png  used on input line 351.
+(pdftex.def)             Requested size: 173.55916pt x 175.03036pt.
 [15
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation14}
@@ -2070,25 +2084,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation14}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.312 \end{frame}
+l.351 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.14}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.312 \end{frame}
+l.351 \end{frame}
                  
 
- <./5_clase/filtrado1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 312--312
+ <./5_clase/conv_vs_dft1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 351--351
 []$[]$[] 
  []
 
-<5_clase/pyfda3.jpg, id=152, 303.65546pt x 202.23454pt>
-File: 5_clase/pyfda3.jpg Graphic file (type jpg)
-<use 5_clase/pyfda3.jpg>
-Package pdftex.def Info: 5_clase/pyfda3.jpg  used on input line 323.
-(pdftex.def)             Requested size: 260.34537pt x 173.40605pt.
+<5_clase/teorema_conv2.png, id=155, 696.6025pt x 720.6925pt>
+File: 5_clase/teorema_conv2.png Graphic file (type png)
+<use 5_clase/teorema_conv2.png>
+Package pdftex.def Info: 5_clase/teorema_conv2.png  used on input line 361.
+(pdftex.def)             Requested size: 173.55916pt x 179.55685pt.
 [16
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation15}
@@ -2096,25 +2110,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation15}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.323 \end{frame}
+l.361 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.15}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.323 \end{frame}
+l.361 \end{frame}
                  
 
- <./5_clase/filtrado2.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 323--323
+ <./5_clase/teorema_conv1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 361--361
 []$[]$[] 
  []
 
-<5_clase/pyfda1.png, id=162, 1371.1225pt x 770.88pt>
-File: 5_clase/pyfda1.png Graphic file (type png)
-<use 5_clase/pyfda1.png>
-Package pdftex.def Info: 5_clase/pyfda1.png  used on input line 333.
-(pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
+<5_clase/filtrado1.png, id=164, 987.2082pt x 504.4446pt>
+File: 5_clase/filtrado1.png Graphic file (type png)
+<use 5_clase/filtrado1.png>
+Package pdftex.def Info: 5_clase/filtrado1.png  used on input line 372.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
 [17
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation16}
@@ -2122,25 +2136,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation16}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.333 \end{frame}
+l.372 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.16}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.333 \end{frame}
+l.372 \end{frame}
                  
 
- <./5_clase/pyfda3.jpg>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 333--333
+ <./5_clase/teorema_conv2.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 372--372
 []$[]$[] 
  []
 
-<5_clase/pyfda2.png, id=172, 1371.1225pt x 770.88pt>
-File: 5_clase/pyfda2.png Graphic file (type png)
-<use 5_clase/pyfda2.png>
-Package pdftex.def Info: 5_clase/pyfda2.png  used on input line 344.
-(pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
+<5_clase/filtrado2.png, id=173, 987.2082pt x 504.4446pt>
+File: 5_clase/filtrado2.png Graphic file (type png)
+<use 5_clase/filtrado2.png>
+Package pdftex.def Info: 5_clase/filtrado2.png  used on input line 383.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
 [18
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation17}
@@ -2148,25 +2162,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation17}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.344 \end{frame}
+l.383 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.17}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.344 \end{frame}
+l.383 \end{frame}
                  
 
- <./5_clase/pyfda1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 344--344
+ <./5_clase/filtrado1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 383--383
 []$[]$[] 
  []
 
-<5_clase/overlap_add1.png, id=184, 987.2082pt x 504.4446pt>
-File: 5_clase/overlap_add1.png Graphic file (type png)
-<use 5_clase/overlap_add1.png>
-Package pdftex.def Info: 5_clase/overlap_add1.png  used on input line 354.
-(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+<5_clase/pyfda3.jpg, id=184, 303.65546pt x 202.23454pt>
+File: 5_clase/pyfda3.jpg Graphic file (type jpg)
+<use 5_clase/pyfda3.jpg>
+Package pdftex.def Info: 5_clase/pyfda3.jpg  used on input line 394.
+(pdftex.def)             Requested size: 260.34537pt x 173.40605pt.
 [19
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation18}
@@ -2174,25 +2188,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation18}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.354 \end{frame}
+l.394 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.18}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.354 \end{frame}
+l.394 \end{frame}
                  
 
- <./5_clase/pyfda2.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 354--354
+ <./5_clase/filtrado2.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 394--394
 []$[]$[] 
  []
 
-<5_clase/overlap_add2.png, id=194, 987.2082pt x 504.4446pt>
-File: 5_clase/overlap_add2.png Graphic file (type png)
-<use 5_clase/overlap_add2.png>
-Package pdftex.def Info: 5_clase/overlap_add2.png  used on input line 364.
-(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+<5_clase/pyfda1.png, id=194, 1371.1225pt x 770.88pt>
+File: 5_clase/pyfda1.png Graphic file (type png)
+<use 5_clase/pyfda1.png>
+Package pdftex.def Info: 5_clase/pyfda1.png  used on input line 404.
+(pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
 [20
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation19}
@@ -2200,20 +2214,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation19}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.364 \end{frame}
+l.404 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.19}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.364 \end{frame}
+l.404 \end{frame}
                  
 
- <./5_clase/overlap_add1.png>]
-Overfull \hbox (119.50279pt too wide) in paragraph at lines 364--364
+ <./5_clase/pyfda3.jpg>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 404--404
 []$[]$[] 
  []
 
+<5_clase/pyfda2.png, id=205, 1371.1225pt x 770.88pt>
+File: 5_clase/pyfda2.png Graphic file (type png)
+<use 5_clase/pyfda2.png>
+Package pdftex.def Info: 5_clase/pyfda2.png  used on input line 415.
+(pdftex.def)             Requested size: 325.4284pt x 182.95651pt.
 [21
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation20}
@@ -2221,13 +2240,86 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation20}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.383 \end{frame}
+l.415 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.20}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.383 \end{frame}
+l.415 \end{frame}
+                 
+
+ <./5_clase/pyfda1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 415--415
+[]$[]$[] 
+ []
+
+<5_clase/overlap_add1.png, id=216, 987.2082pt x 504.4446pt>
+File: 5_clase/overlap_add1.png Graphic file (type png)
+<use 5_clase/overlap_add1.png>
+Package pdftex.def Info: 5_clase/overlap_add1.png  used on input line 425.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+[22
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation21}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.425 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.21}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.425 \end{frame}
+                 
+
+ <./5_clase/pyfda2.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 425--425
+[]$[]$[] 
+ []
+
+<5_clase/overlap_add2.png, id=226, 987.2082pt x 504.4446pt>
+File: 5_clase/overlap_add2.png Graphic file (type png)
+<use 5_clase/overlap_add2.png>
+Package pdftex.def Info: 5_clase/overlap_add2.png  used on input line 435.
+(pdftex.def)             Requested size: 347.12495pt x 177.37415pt.
+[23
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation22}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.435 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.22}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.435 \end{frame}
+                 
+
+ <./5_clase/overlap_add1.png>]
+Overfull \hbox (119.50279pt too wide) in paragraph at lines 435--435
+[]$[]$[] 
+ []
+
+[24
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation23}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.454 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.23}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.454 \end{frame}
                  
 
  <./5_clase/overlap_add2.png>])
@@ -2240,16 +2332,16 @@ l.383 \end{frame}
 \tf@snm=\write8
 \openout8 = `clases.snm'.
 
- [22
+ [25
 
-pdfTeX warning (ext4): destination with the same identifier (name{Navigation21}
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation24}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
 l.44 \end{document}
                    pdfTeX warning (ext4): destination with the same identifier 
-(name{page.21}) has been already used, duplicate ignored
+(name{page.24}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
@@ -2269,23 +2361,28 @@ Package rerunfilecheck Info: File `clases.out' has not changed.
 (rerunfilecheck)             Checksum: 2E06BA24AF1D1F56043DE59B05F5662D;70.
  ) 
 Here is how much of TeX's memory you used:
- 32275 strings out of 492615
- 612878 string characters out of 6131390
- 767271 words of memory out of 5000000
- 35268 multiletter control sequences out of 15000+600000
- 218861 words of font info for 135 fonts, out of 8000000 for 9000
+ 32355 strings out of 492615
+ 614306 string characters out of 6131390
+ 957129 words of memory out of 5000000
+ 35321 multiletter control sequences out of 15000+600000
+ 221798 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,70p,823b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_llspvt.enc}{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</usr/share/te
-xlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
-Output written on clases.pdf (21 pages, 1325109 bytes).
+ 72i,16n,79p,823b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/share/t
+exlive/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}{/usr/share/texlive/texmf-dist/fon
+ts/enc/dvips/carlito/crlt_llspvt.enc}</usr/share/texlive/texmf-dist/fonts/type1
+/public/arev/ArevSans-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/typo
+land/carlito/Carlito-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/typola
+nd/carlito/Carlito-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/typola
+nd/carlito/Carlito.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona
+/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/
+md-chb7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch
+/md-chb7y.pfb>
+Output written on clases.pdf (24 pages, 1399933 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 38587 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 304 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 40650 words of extra memory for PDF output out of 42996 (max. 10000000)
 

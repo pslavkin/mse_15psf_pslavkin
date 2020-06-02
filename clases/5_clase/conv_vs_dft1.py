@@ -148,7 +148,7 @@ def update(i):
 
     return yLn,xHighLn,hLn,XLn,HLn,YLn,yifftLn,YfftLn,firLn,realtimeConvLn,convZoneLn,xZoneLn
 
-ani=FuncAnimation(fig,update,N+M-1,init,interval=1000 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N+M-1,init,interval=2000 ,blit=True,repeat=True)
 plt.get_current_fig_manager().window.showMaximized()
 b=buttonOnFigure(fig,ani)
 plt.show()

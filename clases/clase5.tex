@@ -8,9 +8,30 @@
         \includegraphics[width=0.4\textwidth]{5_clase/dft_apps}
       };
   \end{tikzpicture}
+   \note{
+      \begin{itemize}
+         \item{arrancar comentando el repaso de convolucion con otro enfoque}
+         \item{Recordar el tema de la encuesta}
+         \item{Dejar espacio al final de la clase para ver numeros Q}
+      \end{itemize}
+   }
 \end{frame}
-
-
+%-------------------------------------------------------------------------------
+ \begin{frame}{Enuestas}
+    \framesubtitle{Encuesta anónima clase a clase}
+    Propiciamos este espacio para compartir sus sugerencias, criticas constructivas, oportunidades de mejora y cualquier tipo de comentario relacionado a la clase.
+    \begin{block}{Encuesta anónima}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \href{https://forms.gle/1j5dDTQ7qjVfRwYo8}{https://forms.gle/1j5dDTQ7qjVfRwYo8}
+    }
+       \end{block}
+    \begin{block}{Link al material de la material}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \tiny{\href{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}
+    }
+    }
+       \end{block}
+\end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Multiplicacion?!}
    Algoritmo de Multiplicacion de 2do grado
@@ -105,6 +126,23 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
+\begin{frame}{Repaso Convolución}{Convolucion como producto de polinomios}
+   \begin{align*}
+   \large
+      \left( 1 x10^1 + 2 x10^0 \right) * \left( 3 x10^1 + 4 x10^0 \right) &=  \\
+      \left( 3 x10^2 + 4 x10^1 + 6 x10^1 + 8 x10^0\right) &=  \\
+      \left( 3 x10^2 + 10 x10^1 + 8 x10^0\right) &=  \\
+      \left( 300 + 100 + 8\right) &= 408
+   \end{align*}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{comentar que tambien se puede ver como multiplicacion de polinomios}
+         \item{en el caso de la convolucion, no se trata de 10\^x sino que queda expresado en ese orden cada termino}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Multiplicacion?!}
    \begin{columns}[t]
       \hspace{5pt}
@@ -119,6 +157,13 @@
                3 \hspace{1cm} 6 \hspace{1cm}0 \\
                \cline{1-2}
                3 \hspace{1cm} 10 \hspace{1cm} 8\\
+            \end{align*}
+      Multiplicacion de polinomios
+            \begin{align*}
+               \left( 1 x10^1 + 2 x10^0 \right) * \left( 3 x10^1 + 4 x10^0 \right) &=  \\
+               \left( 3 x10^2 + 4 x10^1 + 6 x10^1 + 8 x10^0\right) &=  \\
+               \left( 3 x10^2 + 10 x10^1 + 8 x10^0\right) &=  \\
+               \left( 300 + 100 + 8\right) &= 408
             \end{align*}
       \end{column}
       \hspace{2pt}
@@ -170,6 +215,30 @@
          \item{no hay que lanzar nada}
          \item{explicar 3 manera de multiplicar un numero}
          \item{darle forma de respuesta al impulso y senial}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Convolucion en tiempo}{filtrado}
+   \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \begin{column}{.5\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv1}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{lanzar conv1 y luego conv2}
+         \item{comentar lo que ya sabemos hacer con la convolucion en tiempo}
+         \item{prepara la idea para F}
       \end{itemize}
    }
 \end{frame}
@@ -263,7 +332,9 @@
    \vfill
    \note{
       \begin{itemize}
+         \item{lanzar conv\_vs\_dft1}
          \item{explicar multiplicacion usando DFT}
+         \item{hacer notar que hay que estirar las cosas para que la salida tenga N+M-1}
       \end{itemize}
    }
 \end{frame}
