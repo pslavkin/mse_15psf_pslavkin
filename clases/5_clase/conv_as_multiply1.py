@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.signal as sc
-import matplotlib
 from matplotlib.animation import FuncAnimation
 from buttons import buttonOnFigure
 #--------------------------------------
