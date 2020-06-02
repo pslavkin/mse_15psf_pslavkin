@@ -70,6 +70,12 @@
              \begin{block}{\tiny{tip: Grafique los casos superponiendo la misma señal pero sampleada 10 veces mas}}
              \end{block}
     \end{enumerate}
+
+
+
+
+    \note{
+   }
  \end{frame}
 %-------------------------------------------------------------------------------
  \section{CIAA}
@@ -100,4 +106,46 @@
              \item{204000000}
           \end{itemize}
     \end{enumerate}
+   \note{
+      respuestas:
+      conversion a float desde la pagina: https://www.binaryconvert.com
+      conversion a Q desde la pagina: https://www.rfwireless-world.com/calculators/floating-vs-fixed-point-converter.html
+      \begin{itemize}
+            0.5
+        \item{float: 0x3F000000 = 00111111 00000000 00000000 00000000}
+        \item{Q1.15: 0x40 00}
+        \item{Q2.14: 0x20 00}
+      \end{itemize}
+      \begin{itemize}
+            -0.5
+        \item{float: 0xBF000000 = 10111111 00000000 00000000 00000000}
+        \item{Q1.15: 0xC0 00}
+        \item{Q2.14: 0xE0 00}
+      \end{itemize}
+      \begin{itemize}
+            -1.25
+        \item{float: 0xBFA00000 = 10111111 10100000 00000000 00000001}
+        \item{Q1.15: no se puede}
+        \item{Q2.14: 0xB0 00}
+      \end{itemize}
+      \begin{itemize}
+           0.001
+        \item{float: 0x3A83126F = 00111010 10000011 00010010 01101111}
+        \item{Q1.15: 0x00 21}
+        \item{Q2.14: 0x00 10}
+      \end{itemize}
+      \begin{itemize}
+           -2.001
+        \item{float: 0xC0001062 = 11000000 00000000 00010000 01100010}
+        \item{Q1.15: no se puede}
+        \item{Q2.14: no se puede}
+      \end{itemize}
+      \begin{itemize}
+             204000000
+        \item{float: 0x4D428CB0 = 01001101 01000010 10001100 10110000}
+        \item{Q1.15: no se puede}
+        \item{Q2.14: no se puede}
+      \end{itemize}
+
+   }
  \end{frame}
