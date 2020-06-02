@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 \babel@toc {spanish}{}
 \beamer@sectionintoc {1}{Convolucion vs Multiplicacion}{13}{0}{1}
+=======
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Convoluci\IeC {\'o}n vs Multiplicaci\IeC {\'o}n}{10}{0}{1}
+\beamer@sectionintoc {2}{CIAA}{22}{0}{2}
+>>>>>>> 331ee3e8f82fd39a9201a0dfafc6ed25b07b3dc7

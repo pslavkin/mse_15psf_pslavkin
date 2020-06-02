@@ -316,18 +316,21 @@
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
-\section{Convolucion vs Multiplicacion}
-\begin{frame}[t]{Convolución vs Multiplicacion}{Teorema de la convolucion}
-   \center\includegraphics[width=0.72\textwidth]{5_clase/dft_apps}
+\section{Convolución vs Multiplicación}
+\begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
+   \center\includegraphics[width=0.8\textwidth]{5_clase/dft_apps}\\
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar la conclusion y el teorema de la convolucion}
+         \item{explicar que cuando la entrada en t es la delta estamos simulando barrido en f, porque la delta tiene todas las f}
+         \item{luego en F la entrada son círculos rotando multiplicados por círculos rotando, amplitud se escala y fase(exponente) se suman, se corre la fase}
+         \item{no hacemos la demostración del teorema, sino que lo probamos prácticamente}
+         \item{explicar la conclusion y el teorema de la convolución}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Multiplicacion con DFT}{Tiempo vs Frecuencia}
+\begin{frame}{Multiplicación con DFT}{Tiempo vs Frecuencia}
    \centering\includegraphics[width=0.8\textwidth]{5_clase/conv_vs_dft1}
    \vfill
    \note{
@@ -335,27 +338,38 @@
          \item{lanzar conv\_vs\_dft1}
          \item{explicar multiplicacion usando DFT}
          \item{hacer notar que hay que estirar las cosas para que la salida tenga N+M-1}
+         \item{explicar multiplicación usando DFT}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolución vs Multiplicacion}{Teorema de la convolucion}
+\begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
    \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv1}
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar la conclusion y el teorema de la convolucion}
+         \item{explicar la conclusion y el teorema de la convolución}
          \item{explicar que dado h r y(t) podemos dividir en frec y obtener x()}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolución vs Multiplicacion}{Convolucion circular}
+\begin{frame}[t]{Convolución vs Multiplicación}{Convolución circular}
    \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv2}
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar el efecto de la convolucion circular}
+         \item{explicar el efecto de la convolución circular}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
+   \center\includegraphics[width=0.8\textwidth]{5_clase/teorema_conv_eq}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar el tema de la DTFT y la transformada circular}
       \end{itemize}
    }
 \end{frame}
@@ -365,8 +379,8 @@
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar ahora el uso de la convolucino en el filtrado}
-         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+         \item{explicar ahora el uso de la convolution en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolution en tiempo}
       \end{itemize}
    }
 \end{frame}
@@ -376,29 +390,29 @@
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar ahora el uso de la convolucino en el filtrado}
-         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+         \item{explicar ahora el uso de la convolution en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolution en tiempo}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Filtrado}{Definicion}
+\begin{frame}[t]{Filtrado}{Definición}
    \center\includegraphics[width=0.6\textwidth]{5_clase/pyfda3}
    \vfill
    \note{
       \begin{itemize}
          \item{explicar las zonas de los filtros, tipos de filtro}
-         \item{relacion de compromiso entre ripple y bandas, etc}
+         \item{relación de compromiso entre ripple y bandas, etc}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Filtrado}{Pyfda \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
+\begin{frame}[t]{Filtrado}{PyFDA \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
    \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda1}
    \note{
       \begin{itemize}
-         \item{explicar ahora el uso de la convolucino en el filtrado}
-         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+         \item{explicar ahora el uso de la convolution en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolution en tiempo}
       \end{itemize}
    }
 \end{frame}
@@ -408,13 +422,13 @@
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar ahora el uso de la convolucino en el filtrado}
+         \item{explicar ahora el uso de la convolution en el filtrado}
          \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolucion}{Superponer y sumar}
+\begin{frame}[t]{Convolución}{Superponer y sumar}
    \center\includegraphics[width=0.8\textwidth]{5_clase/overlap_add1}
    \vfill
    \note{
@@ -424,12 +438,115 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolucion con FFT}{Superponer y sumar}
+\begin{frame}[t]{Convolución con FFT}{Superponer y sumar}
    \center\includegraphics[width=0.8\textwidth]{5_clase/overlap_add2}
    \vfill
    \note{
       \begin{itemize}
          \item{explicar el detalle de overlap para sumar}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{CIAA}
+\begin{frame}[t]{Filtrado con CIAA}{Conversor PyFDA a fir.h para C}
+   \handsonicon
+   Código en Python para convertir los coeficientes del fir extendidos en Q1.15 en C
+   \lstset{ basicstyle=\fontsize{ 4.5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=27]{5_clase/fir_to_c.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=28]{5_clase/fir_to_c.py}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \includegraphics[width=0.8\textwidth]{5_clase/fir_to_c.png}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado con CIAA}{Con padding y convolución}
+   \protoboardicon
+   Convolución en tiempo con padding en CIAA para filtrado
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=32]{5_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=34]{5_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \includegraphics[width=0.8\textwidth]{5_clase/ciaa/psf1/conv1.png}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado con CIAA}{Con padding y FFT}
+   \protoboardicon
+   Convolución en tiempo con padding en CIAA para filtrado
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=35]{5_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=36]{5_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+         \includegraphics[width=0.9\textwidth]{5_clase/ciaa/psf2/conv1.png}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
       \end{itemize}
    }
 \end{frame}
@@ -444,12 +561,9 @@
          Steven W. Smith.
          \emph{The Scientist and Engineer's Guide to Digital Signal Processing}.
          Second Edition, 1999.
-         \bibitem{grants Anderson}
-         \emph{Grant Sanderson} \\
-         \href{ https://youtu.be/spUNpyF58BY}{ https://youtu.be/spUNpyF58BY}
-         \bibitem{interactivemath}
-         \emph{Interactive Mathematics Site Info}. \\
-         \href {https://www.intmath.com/fourier-series/fourier-intro.php}{https://www.intmath.com/fourier-series/fourier-intro.php}
+         \bibitem{Teorema de la convolucion}
+         \emph{Wikipedia}. \\
+         \href {https://en.wikipedia.org/wiki/Convolution\_theorem}{https://en.wikipedia.org/wiki/Convolution\_theorem}
    \end{thebibliography}
 \end{frame}
 %-------------------------------------------------------------------------------
