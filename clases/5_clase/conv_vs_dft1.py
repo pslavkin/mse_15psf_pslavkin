@@ -5,31 +5,33 @@ from matplotlib.animation import FuncAnimation
 from buttons import buttonOnFigure
 #--------------------------------------
 fig        = plt.figure()
-fs         = 2
-N          = 2
-signalFrec = 50
+fs         = 200
+N          = 200
+signalFrec = 20
 #firData,=np.load("5_clase/hi_pass_short.npy").astype(float)
 #firData,=np.load("4_clase/low_pass.npy").astype(float)
-#firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
-firData    = np.zeros(2)
-firData[:] = [1,2]
+firData,=np.load("5_clase/hi_pass.npy").astype(float)
+firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
+#firData    = np.zeros(2)
+#firData[:] = [1,2]
 M          = len(firData)
 
 firExtendedData=np.concatenate((firData,np.zeros(N-1)))
 impar=((N+M-1)%2)
 #--------------------------------------
 def x(f,n):
-#    return 1*sc.sawtooth(2*np.pi*2*n,0.5)
-    s=np.zeros(N)
-    s[:]=[3,4]
-    return s[n]
-#    return np.sin(2*np.pi*f*n)+np.sin(2*np.pi*f*2*n)
+ #   return 1*sc.sawtooth(2*np.pi*2*n,0.5)
+#    s=np.zeros(N)
+#    s[:]=[3,4]
+#    return s[n]
+    return np.sin(2*np.pi*f*n)+np.sin(2*np.pi*f*2*n)
 
 tData=np.linspace(0,(N+M-1)/fs,N+M-1,endpoint=False)
 fData=np.concatenate((np.linspace(-fs/2,0,(N+M-1)//2,endpoint=False),\
        np.linspace(0,fs/2,(N+M-1)//2+impar,endpoint=False)))
 xData=np.zeros(N+M-1)
-xData[:N]+=x(signalFrec,np.arange(0,N,1))#tData[:N])
+#xData[:N]+=x(signalFrec,np.arange(0,N,1))#tData[:N])
+xData[:N]+=x(signalFrec,tData[:N])
 #--------------------------------------
 signalAxe  = fig.add_subplot(3,3,1)
 signalLn,  = plt.plot(tData,xData,'b-o',label="signal")
@@ -77,7 +79,7 @@ yifftLn, = plt.plot([],[],'r-o',label="ifft")
 yAxe.legend()
 yAxe.grid(True)
 yAxe.set_xlim(0,(N+M-2)/fs)
-yAxe.set_ylim(0,15)
+yAxe.set_ylim(-2,2)
 yData=np.zeros(N+M-1)
 #--------------------------------------
 XAxe  = fig.add_subplot(3,3,3)
@@ -147,7 +149,7 @@ def update(i):
 
     return yLn,xHighLn,hLn,XLn,HLn,YLn,yifftLn,YfftLn,firLn,realtimeConvLn,convZoneLn,xZoneLn
 
-ani=FuncAnimation(fig,update,N+M-1,init,interval=2000 ,blit=True,repeat=True)
+ani=FuncAnimation(fig,update,N+M-1,init,interval=200 ,blit=True,repeat=True)
 plt.get_current_fig_manager().window.showMaximized()
 b=buttonOnFigure(fig,ani)
 plt.show()

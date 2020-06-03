@@ -11,6 +11,8 @@ xFrec = 1
 
 hData,=np.load("4_clase/hi_pass_short.npy").astype(float)
 hData=np.insert(hData,0,hData[-1]) #ojo que pydfa me guarda 1 dato menos...
+hData[2]=1
+
 M=len(hData)
 #--------------------------------------
 def x(f,n):
