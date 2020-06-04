@@ -1,3 +1,10 @@
+link a la ficha de la materia
+https://drive.google.com/drive/u/1/folders/1MXgBLfxebU1ZPLc7-lM0x0hq4MJHs2HJ
+
+link a las encuestas
+https://docs.google.com/spreadsheets/d/1-xpLReuUjAvJLZtk2AWLYdllxwBicXhsYdDJs9EsLrs/edit#gid=1147914341&range=127:127
+
+
 listado alumnos 2020                                       |1|2|3|4|5|6|7|6|                       |1 |2 | TP final
 ----------------------------------------------------------------------------
 1  Jacobo     Salvador     jacosalvador@gmail.com          |x|x|x|x|x| | | | docente               |. |  | correlacionar 2 seniales con CIAA  

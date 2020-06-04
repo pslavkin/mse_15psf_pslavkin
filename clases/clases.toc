@@ -1,3 +1,4 @@
-\babel@toc {spanish}{}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
 \beamer@sectionintoc {1}{Convoluci\IeC {\'o}n vs Multiplicaci\IeC {\'o}n}{14}{0}{1}
 \beamer@sectionintoc {2}{CIAA}{26}{0}{2}

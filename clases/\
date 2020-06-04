@@ -40,7 +40,7 @@
        \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Convolución \small{\textcolor{{video 55:37}}}{Multiplicacion?!}
+\begin{frame}{Repaso Convolución \small{video 55:37}}{Multiplicacion?!}
    Algoritmo de Multiplicacion de 2do grado
    \begin{columns}[c]
       \begin{column}{0.4\textwidth}
@@ -76,7 +76,7 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Convolución \small{\textcolor{blue}{video 56:57}}}{Descomposición delta}
+\begin{frame}{Repaso Convolución}{Descomposición delta}
    \begin{columns}[c]
       \begin{column}{0.4\textwidth}
       \tiny
