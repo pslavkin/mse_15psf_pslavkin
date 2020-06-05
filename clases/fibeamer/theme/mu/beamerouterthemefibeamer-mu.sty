@@ -69,7 +69,7 @@
   % The footer padding
   \newlength\fibeamer@lengths@footerpad
   \setlength\fibeamer@lengths@footerpad{%
-    \fibeamer@lengths@baseunit}
+    0.1\fibeamer@lengths@baseunit}
   % The side margins
   \newlength\fibeamer@lengths@margin
   \setlength\fibeamer@lengths@margin{%
@@ -108,7 +108,9 @@
       \insertframetitle\par%
     \usebeamercolor[fg]{framesubtitle}%
     \usebeamerfont{framesubtitle}%
-      \insertframesubtitle}
+      \insertframesubtitle
+      \vskip-1em %para que no quede el texto de la filmina tan distanciado del subtitulo
+   }
   \defbeamertemplate*{footline}{fibeamer}{%
     \ifnum\c@framenumber=0\else%
       \begin{tikzpicture}[overlay]

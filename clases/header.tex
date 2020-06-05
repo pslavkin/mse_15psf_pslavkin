@@ -67,19 +67,47 @@
 \setbeamertemplate{note page}[infolines]
 %-------------------------------------------------------------------------------
 \newcommand{\asignature}{ PDF MSE2020 }
+\newcommand{\pythonicon}{
+   \begin{tikzpicture}[overlay,remember picture]
+      \node[anchor=south east,xshift=-78pt,yshift=0.90\textheight]
+      at (current page.south east) {
+         \includegraphics[width=7mm]{resources/python_icon}
+      };
+   \end{tikzpicture}
+}
+\newcommand{\pythonpic}[4]{
+   \begin{center}
+      \tiny{#1}\\
+      \href{#2}{\includegraphics[width=#3\textwidth]{#4}}
+   \end{center}
+}
+
+\newcommand{\videoicon}[1]{
+   \begin{tikzpicture}[overlay,remember picture]
+      \node[anchor=south east,xshift=-45pt,yshift=0.89\textheight]
+      at (current page.south east) {
+         \href{https://drive.google.com/file/d/1L23UbjTB2uUvOeMPF_yV5QS6gWkCxPnN/view?t=#1}
+         {\includegraphics[width=10mm]{resources/video_icon}}
+      };
+      \node[anchor=south east,xshift=-47pt,yshift=0.86\textheight]
+      at (current page.south east) {
+         \tiny{#1}
+      };
+   \end{tikzpicture}
+}
 \newcommand{\handsonicon}{
   \begin{tikzpicture}[overlay,remember picture]
      \node[anchor=south east,xshift=-5pt,yshift=0.85\textheight]
      at (current page.south east) {
-           \includegraphics[width=15mm]{resources/hands_on}
+           \includegraphics[width=12mm]{resources/hands_on}
      };
   \end{tikzpicture}
   }
 \newcommand{\protoboardicon}{
   \begin{tikzpicture}[overlay,remember picture]
-     \node[anchor=south east,xshift=-5pt,yshift=0.81\textheight]
+     \node[anchor=south east,xshift=-5pt,yshift=0.85\textheight]
          at (current page.south east) {
-           \includegraphics[width=15mm]{resources/protoboard}
+           \includegraphics[width=12mm]{resources/protoboard}
          };
      \end{tikzpicture}
   }
@@ -102,6 +130,7 @@ MSE 5Co2020 }
 \SetNewAudience{clase3}
 \SetNewAudience{clase4}
 \SetNewAudience{clase5}
+\SetNewAudience{clase6}
 \SetNewAudience{tp1}
 \SetNewAudience{tp2}
 \SetNewAudience{python}

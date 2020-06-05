@@ -1,0 +1,337 @@
+\subtitle{Clase 6 - Filtrado con DFT}
+
+\begin{frame}[c]
+\maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=45pt]
+      at (current page.south east) {
+        \includegraphics[width=0.4\textwidth]{6_clase/overlap_add1}
+      };
+  \end{tikzpicture}
+     \note{
+        \begin{itemize}
+           \item{comentar lo de los cambios en los archivos del drive}
+           \item{comentar lo del espacio para que suban los trabajos los alumnos}
+        \end{itemize}
+     }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Definición}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Plantilla de diseño de un filtro}
+            \item{En el ejemplo se aprecia un pasabajos pero se destacan las zonzas de interés y los niveles de la banda de paso y de rechazo}
+            \item{Cuanto mas exigente se la plantilla del filtro, mas puntos tendrá nuestra h(n) y mas lenta y compleja su convolución}
+            \item{El objetivo es llegar a un compromiso entre los requisitos y la performance }
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=1.0\textwidth]{5_clase/pyfda3}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar las zonas de los filtros, tipos de filtro}
+         \item{relación de compromiso entre ripple y bandas, etc}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{PyFDA \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Uso de PyFDA como herramienta para diseño de filtros}
+            \item{Inicialmente solo nos concentramos en la H(f) para visualizar de manera practica las zonas de paso y de rechazo}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=1.00\textwidth]{5_clase/pyfda1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolution en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolution en tiempo}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado}{Pyfda \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Uso de PyFDA como herramienta para diseño de filtros}
+            \item{Inicialmente solo nos concentramos en la H(f) para visualizar de manera practica las zonas de paso y de rechazo}
+            \item{Notar la variedad de opciones disponibles y la respuesta en fase en esta imagen}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=1.00\textwidth]{5_clase/pyfda2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar ahora el uso de la convolution en el filtrado}
+         \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Convolución}{Superponer y sumar en t}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \tiny
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Ejemplo de como particionar la x(n) en tramos y filtrar usando convolucion en tiempo }
+            \item{Se convoliciona x(n) con h(n) ambas con zero padding hata que cada una tenga N+M-1 puntos}
+            \item{Notar el efecto del inicio del filtrado en cada tramo como se corrige con el siguiente}
+            \item{Esto es equivalente a tomar la x(n) completa y convolucionar con la h(n)}
+            \item{Si x(n) es una señal muy larga o en tiempo real, convolucionar de una sola vez se vuelve impracticable}
+            \item{Con este metodo podemos mostrar cada cierto tiempo como va evolucionando la salida}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+      \pythonpic{6\_clase/overlap\_add1.py}
+         {https://drive.google.com/open?id=1xZT8fWAvQEmlsDpi0A-WIrAzRsSm2X4u}
+         {1.0}
+         {6_clase/overlap_add1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar el detalle de overlap para sumar}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Convolución con FFT}{Superponer y sumar en f}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Ejemplo de como particionar la x(n) en tramos y filtrar usando IFFT(fft(x-padd)*fft(h-padd))}
+            \item{Se hace zero padding a x(n) y  h(n) hasta que ambas tengan N+M-1 datos}
+            \item{Se denera elegir N de modo tal que N+M-1 sea potencia de 2 para que la eficiencia del algoritmo FFT sea maxima}
+            \item{Se calcula DFT(x)=X y DFT(h)=H}
+            \item{Se calcular  Y=X multiplicado H}
+            \item{Se antitransforma Y y se obtiene y(n)}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+      \pythonpic{6\_clase/overlap\_add2.py}
+         {https://drive.google.com/open?id=17wJBX7EVMFLRX1J8rUFCT6qLZQ29M9UF}
+         {1.0}
+         {6_clase/overlap_add2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar el detalle de overlap para sumar}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Promedio en magnitud de FFT}{Superponer y promediar en f}
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Ejemplo de como particionar la x(n) en tramos luego calcular fft(x) y promediar}
+            \item{Se hace un promedio de la lagnitud de los espectros de cada segmento}
+            \item{Se logra promediar el ruido y destacar las componentes con informacion incluso sumergidas en ruido}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+      \pythonpic{6\_clase/overlap\_average.py}
+         {https://drive.google.com/open?id=1DHg7owe-AppZx0_7SB_eyI6QvWMHtCIV}
+         {1.0}
+         {6_clase/overlap_average}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{explicar como se saca la senial dentro del ruido}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{CIAA}
+\begin{frame}[t]{Filtrado con CIAA}{Conversor PyFDA a fir.h para C}
+   \handsonicon
+   \videoicon{0h00m00s}
+   \begin{columns}[t]
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Código en Python para convertir los coeficientes del fir extendidos en Q1.15 en C}
+            \item{Util para pasar de PyFda a los codigos de C}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+      \pythonpic{6\_clase/fir\_to\_c.py}
+         {https://drive.google.com/open?id=1aQp6UMQGfGUqixawvTdX19Ukrp1NHOx5}
+         {0.8}
+         {6_clase/fir_to_c}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado con CIAA}{Convolución en tiempo con padding}
+   \videoicon{0h00m00s}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{5pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=32]{6_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=34]{6_clase/ciaa/psf1/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+      \pythonpic{6\_clase/ciaa/psf1/src/conv1.c}
+         {https://drive.google.com/open?id=1lHlxr3KEaLmgdWRp1LQ9AgpAOJdbaZQN}
+         {1.0}
+         {6_clase/ciaa/psf1/conv1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Filtrado con CIAA}{Multiplicacion en frecuencia con padding}
+   \videoicon{0h00m00s}
+   \protoboardicon
+   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}[c]
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[lastline=35]{6_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.3\textwidth}
+         \lstinputlisting[firstline=36]{6_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.4\textwidth}
+      \pythonpic{6\_clase/ciaa/psf2/src/conv1.c}
+         {https://drive.google.com/open?id=1xDsfLidIBCHnY4XC34iDUsbcfQqT0awR}
+         {1.0}
+         {6_clase/ciaa/psf2/conv1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{mostrar como pasar de pyfda a C}
+         \item{lanzar psf1}
+         \item{probar distintos filtros y ver resultado }
+         \item{hacer notar el efecto del padding}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+ \begin{frame}{Enuestas}
+    \framesubtitle{Encuesta anónima clase a clase}
+    Propiciamos este espacio para compartir sus sugerencias, criticas constructivas, oportunidades de mejora y cualquier tipo de comentario relacionado a la clase.
+    \begin{block}{Encuesta anónima}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \href{https://forms.gle/1j5dDTQ7qjVfRwYo8}{https://forms.gle/1j5dDTQ7qjVfRwYo8}
+    }
+       \end{block}
+    \begin{block}{Link al material de la material}{
+       \includegraphics[width=0.1\textwidth]{1_clase/click}
+       \tiny{\href{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}{https://drive.google.com/drive/u/1/folders/1TlR2cgDPchL\_4v7DxdpS7pZHtjKq38CK}
+    }
+    }
+       \end{block}
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Bibliografía}
+   \framesubtitle{Libros, links y otro material}
+   \begin{thebibliography}{9}
+         \bibitem{cmsisdsp}
+         \emph{ARM CMSIS DSP}. \\
+         \href {https://arm-software.github.io/CMSIS_5/DSP/html/index.html}{https://arm-software.github.io/CMSIS\_5/DSP/html/index.html}
+         \bibitem{dsp}
+         Steven W. Smith.
+         \emph{The Scientist and Engineer's Guide to Digital Signal Processing}.
+         Second Edition, 1999.
+         \bibitem{Teorema de la convolucion}
+         \emph{Wikipedia}. \\
+         \href {https://en.wikipedia.org/wiki/Convolution\_theorem}{https://en.wikipedia.org/wiki/Convolution\_theorem}
+   \end{thebibliography}
+\end{frame}

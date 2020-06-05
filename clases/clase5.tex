@@ -21,7 +21,7 @@
  \begin{frame}{SAPI}
     \framesubtitle{Se aceptan pull request para la SAPI}
  \LARGE 
-   SAPI DSP
+ \centering{SAPI DSP}
 \end{frame}
 %%-------------------------------------------------------------------------------
  \begin{frame}{Enuestas}
@@ -40,7 +40,8 @@
        \end{block}
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Convolución \small{\textcolor{{video 55:37}}}{Multiplicacion?!}
+\begin{frame}{Repaso Convolución }{Multiplicacion?!}
+   \videoicon{55m50s}
    Algoritmo de Multiplicacion de 2do grado
    \begin{columns}[c]
       \begin{column}{0.4\textwidth}
@@ -76,56 +77,56 @@
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{Repaso Convolución \small{\textcolor{blue}{video 56:57}}}{Descomposición delta}
+\begin{frame}{Repaso Convolución }{Descomposición delta}
+   \videoicon{56m57s}
    \begin{columns}[c]
       \begin{column}{0.4\textwidth}
-      \tiny
-      SUma deltas desplazadas
-      \begin{itemize}
-         \item{Considerar escalar y desplazar h(n) para hacer la convolucion}
-         \item{Notar que requiere de 2 movimientos para obtener el resultado}
-         \item{Entran 2 vectores de 2 elementos y sale 1 de 3}
-      \end{itemize}
-            \begin{align*}
-               \textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2} \hspace{1cm}0\\
-               \textcolor{green}{3} \hspace{1cm}                 0  \hspace{1cm}0\\
-               \cline{1-2}
-               3\hspace{1cm} 6 \hspace{1cm}0\\[0.4cm]
-               0\hspace{1cm}\textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2}\\
-               0\hspace{1cm}\textcolor{green}{4} \hspace{1cm}                 0\\
-               \cline{1-2}
-               3\hspace{1cm} 6 \hspace{1cm}0\\
-               0\hspace{1cm} 4 \hspace{1cm}8\\
-               \cline{1-2}
-               3 \hspace{1cm}10 \hspace{1cm} 8\\
-            \end{align*}
+         \tiny
+         SUma deltas desplazadas
+         \begin{itemize}
+            \item{Considerar escalar y desplazar h(n) para hacer la convolucion}
+            \item{2 movimientos para obtener el resultado}
+            \item{Entran 2 vectores de 2 elementos y sale 1 de 3}
+         \end{itemize}
+         \begin{align*}
+            \textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2} \hspace{1cm}0\\
+            \textcolor{green}{3} \hspace{1cm}                 0  \hspace{1cm}0\\
+            \cline{1-2}
+            3\hspace{1cm} 6 \hspace{1cm}0\\[0.4cm]
+            0\hspace{1cm}\textcolor{cyan} {1} \hspace{1cm}\textcolor{cyan}{2}\\
+            0\hspace{1cm}\textcolor{green}{4} \hspace{1cm}                 0\\
+            \cline{1-2}
+            3\hspace{1cm} 6 \hspace{1cm}0\\
+            0\hspace{1cm} 4 \hspace{1cm}8\\
+            \cline{1-2}
+            3 \hspace{1cm}10 \hspace{1cm} 8\\
+         \end{align*}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{0.6\textwidth}
-         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_as_multiply1}
+      \pythonpic{5\_clase/conv\_as\_multiply1.py}
+         {https://drive.google.com/open?id=1lDBXrOKVYTdkmrzaXJroY8VZDN0ZGJFm}
+         {0.7}
+         {5_clase/conv_as_multiply1}
       \end{column}
    \end{columns}
    \vfill
    \note{
       \begin{itemize}
-      \item{lanzar conv\_as\_multiply1}
+         \item{lanzar conv\_as\_multiply1}
          \item{muestro la misma cuenta con señales}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Convolucion formal}
-   \begin{columns}[c]
+   \videoicon{1h3m12s}
+   \begin{columns}[t]
       \begin{column}{0.4\textwidth}
       \tiny
-      Convolucion
-      \begin{itemize}
-         \item{Invierto h(n) desplazo, multiplico y sumo}
-         \item{Notar que requiere de 3 movimientos para obtener el resultado}
-         \item{Entran 2 vectores de 2 elementos y sale 1 de 3}
-      \end{itemize}
+      \centering{Convolucion}
             \begin{align*}
                                 2 \hspace{1cm} \textcolor{green}{1}\hspace{1cm}0 \hspace{1cm}0\\
                \textcolor{cyan}{0}\hspace{1cm} \textcolor{cyan} {3}\hspace{1cm}4 \hspace{1cm}0\\
@@ -145,7 +146,16 @@
       \vrule
       \hspace{2pt}
       \begin{column}{0.6\textwidth}
-         \centering\includegraphics[width=0.9\textwidth]{5_clase/conv_as_multiply2}
+      \tiny
+      \begin{itemize}
+         \item{Invierto h(n) desplazo, multiplico y sumo}
+         \item{3 movimientos para obtener el resultado}
+         \item{Entran 2 vectores de 2 elementos y sale 1 de 3}
+      \end{itemize}
+      \pythonpic{5\_clase/conv\_as\_multiply2.py}
+         {https://drive.google.com/open?id=1ir0AEgJr9dMKKGQ9xMInM3QkxmOsMxaN}
+         {0.55}
+         {5_clase/conv_as_multiply2}
       \end{column}
    \end{columns}
    \vfill
@@ -158,6 +168,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Convolucion como producto de polinomios}
+   \videoicon{1h10m50s}
    \begin{itemize}
       \item{Considerar cada elemento de h(n) y x(n) como coeficientes de un polinomio}
       \item{Multiplicar los 2 polinomios respetando exponentes}
@@ -179,6 +190,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolución}{Multiplicacion?!}
+   \videoicon{1h20m49s}
    \begin{columns}[t]
       \hspace{5pt}
    \begin{column}{.3\textwidth}
@@ -254,16 +266,23 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Convolucion en tiempo}{filtrado}
+   \videoicon{1h21m19s}
    \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv1}
+         \pythonpic{4\_clase/conv1.py}
+         {https://drive.google.com/open?id=1Bi0Lz0GcDI8teTLNse-S4px0tQTr1sVx}
+         {0.9}
+         {4_clase/conv1}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv2}
+      \pythonpic{4\_clase/conv2.py}
+                {https://drive.google.com/open?id=1SYwy_vsVlnUdArNaxykd93BW14uWSV39}
+                {0.9}
+                {4_clase/conv2}
       \end{column}
       \hspace{2pt}
    \end{columns}
@@ -278,6 +297,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Convolucion}{Propiedades}
+   \videoicon{1h37m55s}
    \begin{columns}[c]
       \hspace{5pt}
       \begin{column}{.2\textwidth}
@@ -300,6 +320,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Multiplicacion}{Propiedad conmutativa}
+   \videoicon{1h39m58s}
    \begin{columns}[c]
       \hspace{5pt}
       \begin{column}{0.5\textwidth}
@@ -317,6 +338,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Multiplicacion}{Propiedad asociativa}
+   \videoicon{1h40m49s}
    \begin{columns}[c]
       \hspace{5pt}
       \begin{column}{0.5\textwidth}
@@ -334,6 +356,7 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Multiplicacion}{Propiedad distributiva}
+   \videoicon{1h42m40s}
    \begin{columns}[c]
       \hspace{5pt}
       \begin{column}{0.5\textwidth}
@@ -352,7 +375,8 @@
 %-------------------------------------------------------------------------------
 \section{Convolución vs Multiplicación}
 \begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/dft_apps}\\
+   \videoicon{2h07m18s}
+   \center\includegraphics[width=0.7\textwidth]{5_clase/dft_apps}\\
    \vfill
    \note{
       \begin{itemize}
@@ -365,12 +389,39 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Multiplicación con DFT}{Tiempo vs Frecuencia}
-   \centering\includegraphics[width=0.8\textwidth]{5_clase/conv_vs_dft1}
+   \videoicon{2h18m24s}
+   \begin{columns}[c]
+      \begin{column}{.4\textwidth}
+         \tiny
+         \begin{itemize}
+            \item{Ejemplo de calcular 1 2 conv 3 4 utilizando:}
+               \begin{itemize}
+                     \tiny
+                  \item{Convolución x desplazamiento de h(n)}
+                  \item{Convolución invirtiendo h(n)}
+                  \item{Convolución usando iFFT(fft(h)*fft(x))}
+               \end{itemize}
+            \item{Notar que todos los resultados son iguales}
+            \item{Notar que siempre la salida con N+M-1 datos}
+            \item{En este ej. 2+2-1=3}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \pythonpic{5\_clase/conv\_vs\_dft1.py}
+         {https://drive.google.com/open?id=1RpE_63Srvsdfrnsab7lH_73yaFsILF_o}
+         {1.0}
+         {5_clase/conv_vs_dft1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
          \item{lanzar conv\_vs\_dft1}
-         \item{explicar multiplicacion usando DFT}
+         \item{explicar multiplicación usando DFT}
          \item{hacer notar que hay que estirar las cosas para que la salida tenga N+M-1}
          \item{explicar multiplicación usando DFT}
       \end{itemize}
@@ -378,7 +429,22 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
-   \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv1}
+   \videoicon{2h32m53s}
+   \begin{columns}[t]
+      \begin{column}{.5\textwidth}
+         \begin{itemize}
+            \item{Imagen en donde se destaca el camino de la ifft para calcular la convolución}
+            \item{Notar la representación en parte real e imaginaria}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \center\includegraphics[width=0.7\textwidth]{5_clase/teorema_conv1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
@@ -389,17 +455,49 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Convolución vs Multiplicación}{Convolución circular}
-   \center\includegraphics[width=0.4\textwidth]{5_clase/teorema_conv2}
+   \videoicon{2h45m10s}
+   \begin{columns}[t]
+      \begin{column}{.5\textwidth}
+         \begin{itemize}
+            \item{Efecto de la convolución circular}
+            \item{De la definición de la DFT se supone que x(n) es periódica}
+            \item{Dado que en la practica cortamos en algún pinto x(n) para procesar, cuando involucionamos con otra señal debemos agregar ceros para evitar el efecto de solapamiento en la salida y asegurarnos que la salida tenga cuando menos N+M-1 valores}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+         \center\includegraphics[width=0.6\textwidth]{5_clase/teorema_conv2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
-         \item{explicar el efecto de la convolución circular}
+         \item{explicar el Efecto de la convolución circular}
       \end{itemize}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Convolución vs Multiplicación}{Teorema de la convolución}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/teorema_conv_eq}
+   \videoicon{2h50m00s}
+   \begin{columns}[t]
+      \begin{column}{.5\textwidth}
+         \begin{itemize}
+            \item{Ecuación para obtener la salida de un sistema usando DFT}
+            \item{El resultado es el mismo que convolucionar en el tiempo}
+            \item{A partir de unos 64 puntos para h(n) la velocidad de calculo de la DFT es superior a la convolución en el tiempo}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.5\textwidth}
+            \center\includegraphics[width=0.8\textwidth]{5_clase/teorema_conv_eq}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
@@ -409,7 +507,25 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Filtrado}{Pasabajos}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/filtrado1}
+   \videoicon{2h54m45s}
+   \begin{columns}[t]
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Ejemplo de como tomar tramos de x, rellenar con ceros, tomar h, rellenar con ceros y luego convulocionar}
+            \item{Al mismo tiempo, se calcula FFT(x-padd) FFT(h-padd), se multiplican entre si y luego se hace la IFFT para obtener el mismo resultado que la convolución}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \pythonpic{5\_clase/filtrado1.py}
+         {https://drive.google.com/open?id=1V7WoFU8KfxnUAZnNDfRTsE12xJ7oq3cA}
+         {1.0}
+         {5_clase/filtrado1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
@@ -420,7 +536,25 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Filtrado}{Pasaaltos}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/filtrado2}
+   \videoicon{3h04m50s}
+   \begin{columns}[t]
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Ejemplo de como tomar tramos de x, rellenar con ceros, tomar h, rellenar con ceros y luego convulocionar}
+            \item{Al mismo tiempo, se calcula FFT(x-padd) FFT(h-padd), se multiplican entre si y luego se hace la IFFT para obtener el mismo resultado que la convolucion}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \pythonpic{5\_clase/filtrado2}
+         {https://drive.google.com/open?id=1V7WoFU8KfxnUAZnNDfRTsE12xJ7oq3cA}
+         {1.0}
+         {5_clase/filtrado2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
@@ -431,7 +565,25 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Filtrado}{Definición}
-   \center\includegraphics[width=0.6\textwidth]{5_clase/pyfda3}
+   \videoicon{3h09m58s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Plantilla de diseño de un filtro}
+            \item{En el ejemplo se aprecia un pasabajos pero se destacan las zonzas de interés y los niveles de la banda de paso y de rechazo}
+            \item{Cuanto mas exigente se la plantilla del filtro, mas puntos tendrá nuestra h(n) y mas lenta y compleja su convolución}
+            \item{El objetivo es llegar a un compromiso entre los requisitos y la performance }
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=0.8\textwidth]{5_clase/pyfda3}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
@@ -442,7 +594,24 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Filtrado}{PyFDA \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
-   \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda1}
+   \videoicon{3h14m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Uso de PyFDA como herramienta para diseño de filtros}
+            \item{Inicialmente solo nos concentramos en la H(f) para visualizar de manera practica las zonas de paso y de rechazo}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=0.80\textwidth]{5_clase/pyfda1}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
    \note{
       \begin{itemize}
          \item{explicar ahora el uso de la convolution en el filtrado}
@@ -452,135 +621,29 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[t]{Filtrado}{Pyfda \href{/opt/anaconda3/bin/pyfdax}{/opt/anaconda3/bin/pyfdax}}
-   \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda2}
+   \videoicon{3h14m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Uso de PyFDA como herramienta para diseño de filtros}
+            \item{Inicialmente solo nos concentramos en la H(f) para visualizar de manera practica las zonas de paso y de rechazo}
+            \item{Notar la variedad de opciones disponibles y la respuesta en fase en esta imagen}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=0.75\textwidth]{5_clase/pyfda2}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
    \vfill
    \note{
       \begin{itemize}
          \item{explicar ahora el uso de la convolution en el filtrado}
          \item{a partir de 64 puntos de fir conviene FFT, por menos conviene convolucino en tiempo}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolución}{Superponer y sumar}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/overlap_add1}
-   \vfill
-   \note{
-      \begin{itemize}
-         \item{explicar el detalle de overlap para sumar}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}[t]{Convolución con FFT}{Superponer y sumar}
-   \center\includegraphics[width=0.8\textwidth]{5_clase/overlap_add2}
-   \vfill
-   \note{
-      \begin{itemize}
-         \item{explicar el detalle de overlap para sumar}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\section{CIAA}
-\begin{frame}[t]{Filtrado con CIAA}{Conversor PyFDA a fir.h para C}
-   \handsonicon
-   Código en Python para convertir los coeficientes del fir extendidos en Q1.15 en C
-   \lstset{ basicstyle=\fontsize{ 4.5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=27]{5_clase/fir_to_c.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=28]{5_clase/fir_to_c.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.4\textwidth}
-         \includegraphics[width=0.8\textwidth]{5_clase/fir_to_c.png}
-      \end{column}
-      \hspace{2pt}
-   \end{columns}
-   \vfill
-   \note{
-      \begin{itemize}
-         \item{mostrar como pasar de pyfda a C}
-         \item{lanzar psf1}
-         \item{probar distintos filtros y ver resultado }
-         \item{hacer notar el efecto del padding}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}[t]{Filtrado con CIAA}{Con padding y convolución}
-   \protoboardicon
-   Convolución en tiempo con padding en CIAA para filtrado
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
-   \begin{columns}[c]
-      \hspace{5pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=32]{5_clase/ciaa/psf1/src/psf.c}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=34]{5_clase/ciaa/psf1/src/psf.c}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.4\textwidth}
-         \includegraphics[width=0.8\textwidth]{5_clase/ciaa/psf1/conv1.png}
-      \end{column}
-      \hspace{2pt}
-   \end{columns}
-   \vfill
-   \note{
-      \begin{itemize}
-         \item{mostrar como pasar de pyfda a C}
-         \item{lanzar psf1}
-         \item{probar distintos filtros y ver resultado }
-         \item{hacer notar el efecto del padding}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}[t]{Filtrado con CIAA}{Con padding y FFT}
-   \protoboardicon
-   Convolución en tiempo con padding en CIAA para filtrado
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=35]{5_clase/ciaa/psf2/src/psf.c}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=36]{5_clase/ciaa/psf2/src/psf.c}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.4\textwidth}
-         \includegraphics[width=0.9\textwidth]{5_clase/ciaa/psf2/conv1.png}
-      \end{column}
-      \hspace{2pt}
-   \end{columns}
-   \vfill
-   \note{
-      \begin{itemize}
-         \item{mostrar como pasar de pyfda a C}
-         \item{lanzar psf1}
-         \item{probar distintos filtros y ver resultado }
-         \item{hacer notar el efecto del padding}
       \end{itemize}
    }
 \end{frame}
@@ -598,7 +661,10 @@
          \bibitem{Teorema de la convolucion}
          \emph{Wikipedia}. \\
          \href {https://en.wikipedia.org/wiki/Convolution\_theorem}{https://en.wikipedia.org/wiki/Convolution\_theorem}
-   \end{thebibliography}
+         \bibitem{PyFDA Doc}
+         \emph{PyFDA doc}. \\
+         \href {https://buildmedia.readthedocs.org/media/pdf/pyfda/latest/pyfda.pdf}{https://buildmedia.readthedocs.org/media/pdf/pyfda/latest/pyfda.pdf}
+ \end{thebibliography}
 \end{frame}
 %-------------------------------------------------------------------------------
 

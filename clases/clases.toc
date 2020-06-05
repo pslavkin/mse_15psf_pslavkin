@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.33pt}
-\select@language {spanish}
-\beamer@sectionintoc {1}{Convoluci\IeC {\'o}n vs Multiplicaci\IeC {\'o}n}{14}{0}{1}
-\beamer@sectionintoc {2}{CIAA}{26}{0}{2}
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{Python}{7}{0}{1}
+\beamer@sectionintoc {2}{numpy}{13}{0}{2}

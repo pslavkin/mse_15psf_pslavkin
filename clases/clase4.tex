@@ -1,6 +1,5 @@
 \subtitle{Clase 4 - Euler | Fourier - IDFT \\
 Convolucion}
-
 \begin{frame}[c]
 \maketitle
 \begin{tikzpicture}[overlay,remember picture]
@@ -13,24 +12,27 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{repaso DFT}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f, DFT?}
+   \videoicon{04m50s}
    \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \footnotesize
    \begin{columns}[c]
       \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[lastline=40]{3_clase/euler4.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.3\textwidth}
-         \lstinputlisting[firstline=40]{3_clase/euler4.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
       \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{3_clase/euler4}
+         \begin{itemize}
+            \item{Correr el cofigo y notar como el promedio del circulo que gira multiplicado por la señal para diferentes frecuencias nos da la DFT}
+            \item{Las frecuencias van de -Fs/2 inclusive a Fs/2 NO inclusive}
+            \item{Para una señal de N puntos separados 1/fs segundos se obtienen N puntos en la DFT separados fs/N hz}
+            \item{El modulo de cada bin de la DFT al cuadrado es la potencia de la señal en esa frecuencia}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \pythonpic{3\_clase/euler4.py}
+         {https://drive.google.com/open?id=1RzddFg9YlSVSb1WGYhcaEzMU2MqXYk2p}
+         {0.9}
+         {3_clase/euler4}
       \end{column}
       \hspace{2pt}
    \end{columns}
@@ -45,87 +47,97 @@ Convolucion}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Repaso DFT}{Analisis, Transformada discreta de Fourier}
-    \center\includegraphics[width=0.9\textwidth]{3_clase/dft_eq}
-    \vfill
- \end{frame}
-
+\begin{frame}{Repaso DFT}{Analisis, Transformada discreta de Fourier}
+   \videoicon{07m48s}
+   \begin{itemize}
+      \item{Definicion formal de la DFT}
+      \item{Notar que hay un faltor de escala que puede ser 1/N, $1/\sqrt{N}$ o 1 dependiendo de cada implementacion}
+      \item{Tambien podria optarse por cambiar el signo del exponente, lo importante es mantener luego la dualidad entre el factor de escala y el signo con la IDFT}
+   \end{itemize}
+   \center\includegraphics[width=1.0\textwidth]{3_clase/dft_eq}
+   \vfill
+\end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
+   \videoicon{10m45s}
    \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \footnotesize
    \begin{columns}[c]
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{4_clase/euler6.py}
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{La IDFT toma como entrada un vector de N numeros complejos}
+            \item{Se le llama sintesis a la reconstruccion de la señal en el tiempo}
+            \item{DFT es completamente dual con la IDFT}
+            \item{Se puede convertir una señal de t a f y f a t usando DFT e IDFT sin perder informacion}
+         \end{itemize}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler6.py}
+      \begin{column}{.6\textwidth}
+         \pythonpic{4\_clase/euler6.py}
+         {https://drive.google.com/open?id=1bSF5PvXLA_V17erQx0xE0rOrpLLjlktx}
+         {0.9}
+         {4_clase/euler6}
       \end{column}
+      \hspace{2pt}
    \end{columns}
-   \vfill
    \note{
       \begin{itemize}
          \item{lanzar euler6 y explicar que pasa con sin y cos}
          \item{explicar el concepto de relojes}
          \item{explicar el concepto de frecuencia negativa}
          \item{comentar lo de hermitica cuando la salida es real y dft complejo conjugado}
-      \end{itemize}
-   }
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
-   \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.4\textwidth}
-         \lstinputlisting[firstline=66]{4_clase/euler6.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.6\textwidth}
-         \centering\includegraphics[width=0.9\textwidth]{4_clase/euler6}
-      \end{column}
-      \hspace{2pt}
-   \end{columns}
-   \note{
-      \begin{itemize}
          \item{de nuevo la formula la calculamos a mano y arrivamos a lo que viene en la filmina siguiente}
       \end{itemize}
    }
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
- \begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
-    \center\includegraphics[width=0.9\textwidth]{4_clase/idft_eq}
-    \vfill
+\begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
+   \videoicon{23m42s}
+   \begin{itemize}
+      \item{La IDFT es la suma de todos los bines en f evalueados en cada n}
+      \item{La IDFT toma N numeros complejos y devuelve N numeros complejos}
+      \item{Si el espectro es hermitico, la salida de la IDFT son N numeros reales}
+      \item{El espectro es hermitico si los valores X(f) para f positivos son complejos conjugados de los valores de X(f) para f negativos}
+      \item{Notar que para la DFT el exponente es negativo y para la IDFT es positivo}
+   \end{itemize}
+   \center\includegraphics[width=0.9\textwidth]{4_clase/idft_eq}
+   \vfill
    \note{
       \begin{itemize}
          \item{comentar tambien lo del 1/N, 1/$\sqrt[2]{N}$}
       \end{itemize}
    }
  \end{frame}
-
 %-------------------------------------------------------------------------------
 \begin{frame}{IDFT}{Señales complejas como entrada?}
+   \videoicon{48m40s}
    \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
+   \footnotesize
    \begin{columns}[c]
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{4_clase/euler7.py}
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{La DFT puede recibir datos complejos}
+            \item{La interpretacion en el tiempo de los datos complejos es arbitraria}
+            \item{EL campo real podria ser audio y el imaginario temperatura por ej.}
+            \item{La salida de la DFT que recibe N datos complejos, tambien devuelve N datos complejos}
+            \item{Podria analizar 2 señales en un mismo calculo}
+         \end{itemize}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler7.py}
+      \begin{column}{.6\textwidth}
+         \pythonpic{4\_clase/euler7.py}
+         {https://drive.google.com/open?id=1yWHckVDOa2_3th_UE0Gsv2kFNzr96R50}
+         {0.9}
+         {4_clase/euler7}
       \end{column}
+      \hspace{2pt}
    \end{columns}
    \vfill
    \note{
@@ -137,26 +149,8 @@ Convolucion}
    }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}{IDFT}{Señales complejas como entrada?}
-   \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=66]{4_clase/euler7.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler7}
-      \end{column}
-      \hspace{2pt}
-   \end{columns}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \videoicon{56m48s}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Delta
@@ -180,6 +174,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \videoicon{1h08m10s}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Triangular
@@ -201,6 +196,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
+   \videoicon{1h22m55s}
    \begin{columns}[c]
       \begin{column}{.33\textwidth}
          Sin
@@ -219,36 +215,23 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{IDFT}{Un conejo como entrada?}
+   \videoicon{1h16m40s}
    \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[lastline=33]{4_clase/euler8.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=33,lastline=66]{4_clase/euler8.py}
-      \end{column}
-   \end{columns}
-   \vfill
-\end{frame}
-%-------------------------------------------------------------------------------
-\begin{frame}{IDFT}{Un conejo como entrada?}
-   \handsonicon
-   \lstset{ basicstyle=\fontsize{ 4}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
-   \begin{columns}[c]
-      \hspace{2pt}
-      \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=66]{4_clase/euler8.py}
-      \end{column}
-      \hspace{2pt}
-      \vrule
       \hspace{2pt}
       \begin{column}{.4\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/euler8}
+         \begin{itemize}
+            \item{Ejemplo en donde la entrada a la DFT es compleja y representa los puntos de una figura en 2 dimensiones}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \pythonpic{4\_clase/euler8.py}
+         {https://drive.google.com/open?id=1WaWuAapTNRhArLByWmb_k3GjKNy6cUbN}
+         {0.9}
+         {4_clase/euler8}
       \end{column}
       \hspace{2pt}
    \end{columns}
@@ -262,7 +245,9 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{FFT-IFFT}{Transformadas usando FFT en Python}
+   \videoicon{1h26m00s}
    \handsonicon
+   Ejemplo de codigo de como calcular la FFT e IFFT usando la biblioteca numpy
    \lstset{ basicstyle=\fontsize{ 5}{ 0}\selectfont\ttfamily,language=Python,tabsize=4}
    \begin{columns}[c]
       \hspace{2pt}
@@ -287,10 +272,11 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Respuesta al impulso}
 \begin{frame}{Cambio de tema?}{}
+   \videoicon{1h50m40s}
    \begin{enumerate}
-      \item{Funcion delta}
+      \item{Función delta}
       \item{Respuesta al impulso}
-      \item{Convolucion}
+      \item{Convolución}
    \end{enumerate}
    \vfill
    \note{
@@ -301,6 +287,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Función delta}{Respuesta al impulso}
+   \videoicon{1h50m50s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/respuesta_impulso}
@@ -318,6 +305,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Todo esta en la respuesta al impulso}
+   \videoicon{1h53m50s}
     \center{
        \href{run:./4_clase/video_homero_panza.mp4}{
           \includegraphics[width=0.8\textwidth]{4_clase/homero_panza}
@@ -332,6 +320,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Sistemas}
+   \videoicon{1h54m58s}
    \begin{block}{Linealidad}
       Un sistema es lineal cuando su salida depende linealmente de la entrada.
       Satisface el principio de superposición.
@@ -359,6 +348,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso - Sistemas}{Invariantes en el tiempo}
+   \videoicon{1h57m52s}
    \begin{block}{Invariantes en el tiempo}
       Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
    \end{block}
@@ -377,6 +367,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Convolución}{Señal vs h(n)}
+   \videoicon{1h58m57s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/signal_vs_h}
@@ -392,6 +383,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Convolución}{Descomposición delta}
+   \videoicon{2h00m00s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
@@ -409,6 +401,7 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Convolución}
 \begin{frame}{Convolución}{Respuesta al impulso}
+   \videoicon{2h18m00s}
    \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
@@ -425,7 +418,10 @@ Convolucion}
       \vrule
       \hspace{2pt}
       \begin{column}{.38\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv1}
+         \pythonpic{4\_clase/conv1.py}
+         {https://drive.google.com/open?id=1Bi0Lz0GcDI8teTLNse-S4px0tQTr1sVx}
+         {0.9}
+         {4_clase/conv1}
       \end{column}
       \hspace{2pt}
    \end{columns}
@@ -439,6 +435,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Funcion delta}{Respuesta al impulso}
+   \videoicon{2h16m40s}
    \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
    \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
    \vfill
@@ -446,6 +443,7 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Filtrado}
 \begin{frame}{Filtrado}{Pasa bajos}
+   \videoicon{2h23m00s}
    \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
@@ -462,7 +460,10 @@ Convolucion}
       \vrule
       \hspace{2pt}
       \begin{column}{.38\textwidth}
-         \centering\includegraphics[width=1.0\textwidth]{4_clase/conv2}
+         \pythonpic{4\_clase/conv2.py}
+         {https://drive.google.com/open?id=1SYwy_vsVlnUdArNaxykd93BW14uWSV39}
+         {0.9}
+         {4_clase/conv2}
       \end{column}
       \hspace{2pt}
    \end{columns}
@@ -470,11 +471,13 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Filtrado}{diferenciador}
+   \videoicon{2h37m50s}
          \centering\includegraphics[width=0.5\textwidth]{4_clase/diferenciador}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[c]{Convolución}{Análisis en la CIAA}
+   \videoicon{2h41m20s}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]
@@ -486,25 +489,32 @@ Convolucion}
       \vrule
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \lstinputlisting[firstline=31,lastline=52]{4_clase/ciaa/psf1/src/psf.c}
+         \lstinputlisting[firstline=31,lastline=50]{4_clase/ciaa/psf2/src/psf.c}
       \end{column}
    \end{columns}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[c]{Convolución}{Análisis en la CIAA}
+   \videoicon{2h21m11s}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \centering\includegraphics[width=0.9\textwidth]{4_clase/convolucion_ciaa_pasabanda1}
+         \pythonpic{4\_clase/ciaa/psf2/src/psf.c}
+         {https://drive.google.com/open?id=1X-i509HnvhYhnTP-5sq4p42WcBr8PMdU}
+         {0.9}
+         {4_clase/convolucion_ciaa_pasabanda1}
       \end{column}
       \hspace{2pt}
       \vrule
       \hspace{2pt}
       \begin{column}{.5\textwidth}
-         \centering\includegraphics[width=0.9\textwidth]{4_clase/convolucion_ciaa_pasabanda2}
+         \pythonpic{4\_clase/ciaa/psf2/src/psf.c}
+         {https://drive.google.com/open?id=1X-i509HnvhYhnTP-5sq4p42WcBr8PMdU}
+         {0.9}
+         {4_clase/convolucion_ciaa_pasabanda2}
       \end{column}
    \end{columns}
    \vfill
