@@ -7,20 +7,26 @@ from   scipy.io.wavfile import write
 
 fs=10000
 
-fftLength           = 32
-convLength             = 0
+fftLength  = 32
+convLength = 32
 fig                 = plt.figure ( )
-adcAxe            = fig.add_subplot ( 2,1,1 )
+adcAxe            = fig.add_subplot ( 3,1,1 )
 adcAxe.grid ( True )
 adcLn,              = plt.plot ( [0],[0],'r-' )
 adcAxe.set_ylim     ( -1 ,1         )
 
-dftAxe              = fig.add_subplot ( 2,2,3 )
+hAxe            = fig.add_subplot ( 3,1,2 )
+hAxe.grid ( True )
+hLn,              = plt.plot ( [],[],'b-' )
+hAxe.set_ylim     ( -0.02 ,0.2         )
+#hAxe.set_xlim     ( 0 ,100         )
+
+dftAxe              = fig.add_subplot ( 3,2,5 )
 dftAxe.grid ( True )
 dftLn,              = plt.step ( [0],[0],'b-o' )
 dftAxe.set_xlim     ( 0  ,fs//2   )
 
-ciaaDftAxe          = fig.add_subplot ( 2,2,4 )
+ciaaDftAxe          = fig.add_subplot ( 3,2,6 )
 ciaaDftLn,ciaaMaxLn = plt.step ( [0],[0],'g-o',0,0,'bo' )
 ciaaDftAxe.grid ( True )
 ciaaDftAxe.set_xlim ( 0  ,fs//2   )
@@ -35,7 +41,7 @@ def initFiles():
     logFile.seek(0, os.SEEK_END)
 
 def fileForward(f):
-    packetLegth=len(b'header')+2+2+4*convLength+2+2
+    packetLegth=len(b'header')+2+2+6*convLength+2+2
     oldPos = f.tell()
     f.seek(0, os.SEEK_END)
     size = f.tell()
@@ -71,10 +77,13 @@ def readFile(f):
     findHeader(f)
     fftLength  = readInt4File(f)
     convLength = readInt4File(f)
-    ciaaDft = []
-    adc     = []
+    ciaaDft    = []
+    adc        = []
+    h          = []
     for chunk in range(convLength):
         adc.append ( readInt4File(f )/(2**15))
+    for chunk in range(convLength):
+        h.append ( readInt4File(f )/(2**15))
     for chunk in range(convLength):
         if(chunk%2==0):
             real = readInt4File(f )/2**15
@@ -86,31 +95,34 @@ def readFile(f):
     print(convLength)
     #q6rint(maxIndex)
     #maxValue = (np.abs(ciaaDft[maxIndex])**2)
-    return maxIndex,maxValue,adc,ciaaDft,fftLength,convLength
+    return maxIndex,maxValue,adc,h,ciaaDft,fftLength,convLength
 
 def init():
     global fftLength,convLength,dft,ciaaDft
     adcAxe.set_xlim     ( 0  ,convLength)
+    hAxe.set_xlim     ( 0  ,convLength)
     dftAxe.set_ylim     ( 0  ,np.max(dft            )+0.001)
     ciaaDftAxe.set_ylim ( 0  ,np.max(np.abs(ciaaDft )**2)+0.001)
     plt.draw()
-    return adcLn,dftLn,ciaaDftLn,ciaaMaxLn
+    return adcLn,dftLn,ciaaDftLn,ciaaMaxLn,hLn
 
 def update(t):
     global logFile,fftLength,convLength,dft,ciaaDft,fs
-    maxIndex,maxValue,adc,ciaaDft,fftLength,convLength=readFile(logFile)
+    maxIndex,maxValue,adc,h,ciaaDft,fftLength,convLength=readFile(logFile)
     time = np.arange(0,convLength,1)
     frec = np.linspace(0,fs//2,convLength//2)
     dft  = (np.abs(np.fft.fft(adc))/len(adc))**2
+
+    hLn.set_data(time,h)
 
     adcLn.set_data(time,adc)
     dftLn.set_data(frec,dft[:convLength//2])
     ciaaDftLn.set_data(frec,np.abs(ciaaDft)**2)
     ciaaMaxLn.set_data(frec[maxIndex],maxValue)
-    return adcLn,dftLn,ciaaDftLn,ciaaMaxLn
+    return adcLn,dftLn,ciaaDftLn,ciaaMaxLn,hLn
 
 
 initFiles()
-ani=FuncAnimation(fig, update, 100, init, blit=True, interval=20, repeat=True)
+ani=FuncAnimation(fig, update, 10, init, blit=True, interval=20, repeat=True)
 plt.show()
 

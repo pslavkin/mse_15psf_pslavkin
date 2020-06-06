@@ -43,11 +43,12 @@ int main ( void ) {
       }
       for(sample=fftLength;sample<convLength;sample++)
          adc[sample]=0;
-      sendStr   ( "header"   ,6 );
-      sendBlock ( &fftLength ,1 );
+      sendStr   ( "header"   ,6    );
+      sendBlock ( &fftLength ,1    );
       sendBlock ( &convLength   ,1 );
+      sendBlock ( adc ,convLength  );
+      sendBlock ( h ,convLength    );
       arm_conv_fast_q15 ( adc,fftLength,h,convLength-fftLength+1,x );
-      sendBlock         ( x ,convLength        );
       arm_rfft_init_q15 ( &S ,convLength ,0 ,1 );
       arm_rfft_q15      ( &S ,x     ,fftOut    );
       arm_cmplx_mag_squared_q15 ( fftOut ,fftMag ,convLength/2+1               );

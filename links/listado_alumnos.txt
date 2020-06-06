@@ -1,18 +1,5 @@
-link al drive
-https://drive.google.com/drive/u/2/folders/1TlR2cgDPchL_4v7DxdpS7pZHtjKq38CK
-
-link a los videos
-https://drive.google.com/drive/u/1/folders/1MXgBLfxebU1ZPLc7-lM0x0hq4MJHs2HJ
-
-link a la ficha de la materia
-https://docs.google.com/spreadsheets/d/1lR3Qz98NkqsqjGB6eAlFgV0xKCbCulwfpLkAks1Fn-A/edit#gid=111208565
-
-link a las encuestas
-https://docs.google.com/spreadsheets/d/1-xpLReuUjAvJLZtk2AWLYdllxwBicXhsYdDJs9EsLrs/edit#gid=1147914341&range=127:127
-
-
 listado alumnos 2020                                       |1|2|3|4|5|6|7|6|                       |1 |2 | TP final
-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1  Jacobo     Salvador     jacosalvador@gmail.com          |x|x|x|x|x| | | | docente               |. |  | correlacionar 2 seniales con CIAA  
 2  Pablo      Zizzutti     pablozizzutti@gmail.com         |x|x|x|x|x| | | | automatizacion        |. |  | analizador de espetro con M7 de STM a Python o en LCD
 3  Leopoldo   Zimperz      leopoldo.a.zimperz@gmail.com    |x|x|x|x|x| | | | sistemas pero en elec |. |  | analizador de espectro con la CIAA 

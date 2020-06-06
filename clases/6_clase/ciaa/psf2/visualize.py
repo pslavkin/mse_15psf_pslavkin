@@ -20,7 +20,7 @@ adcAxe.set_ylim     ( -1 ,1         )
 hAxe            = fig.add_subplot ( 3,1,2 )
 hAxe.grid ( True )
 hLn,              = plt.plot ( [0],[0],'b-' )
-hAxe.set_ylim     ( -1 ,1         )
+hAxe.set_ylim     ( -0.02 ,0.2         )
 
 dftAxe              = fig.add_subplot ( 3,2,5 )
 dftAxe.grid ( True )

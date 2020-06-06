@@ -5,8 +5,9 @@ import scipy.signal as sc
 fig        = plt.figure()
 fs         = 10000
 N          = 1024
-firData,=np.load("6_clase/low_pass_1k.npy").astype(float)
-firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
+firData,=np.load("6_clase/l.npy").astype(float)
+
+#firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
 M          = len(firData)
 
 firExtendedData=np.concatenate((firData,np.zeros(N-1)))
@@ -43,11 +44,11 @@ def convertToC(h,H,fileName):
     for i in h:
         cFile.write("{},\n".format(i))
     cFile.write("};\n")
-#    cFile.write("q15_t H[]={\n")
-#    for i in H:
-#        cFile.write("{},{},\n".format(np.real(i).astype(np.int16),np.imag(i).astype(np.int16)))
-#    cFile.write("};\n")
+    cFile.write("q15_t H[]={\n")
+    for i in H:
+        cFile.write("{},{},\n".format(np.real(i).astype(np.int16),np.imag(i).astype(np.int16)))
+    cFile.write("};\n")
 
-convertToC(firExtendedData,HData,"5_clase/ciaa/psf2/src/fir.h")
+convertToC(firExtendedData,HData,"6_clase/ciaa/psf2/fir.h")
 plt.get_current_fig_manager().window.showMaximized()
 plt.show()

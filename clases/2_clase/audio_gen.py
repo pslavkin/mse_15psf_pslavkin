@@ -4,7 +4,7 @@ import simpleaudio as sa
 import matplotlib.pyplot as plt
 
 f   = 400
-fs  = 44100
+fs  = 8000
 sec = 5
 B   = 600
 t   = np.arange ( 0,sec,1/fs )

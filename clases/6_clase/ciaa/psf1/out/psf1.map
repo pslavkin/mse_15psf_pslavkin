@@ -16889,7 +16889,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x000000001a000000    0x14fdc
+.text           0x000000001a000000    0x14fe8
  FILL mask 0xff
                 0x000000001a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -16902,19 +16902,19 @@ END GROUP
                 0x000000001a000114                . = ALIGN (0x4)
                 0x000000001a000114                __section_table_start = .
                 0x000000001a000114                __data_section_table = .
-                0x000000001a000114        0x4 LONG 0x1a014fe8 LOADADDR (.data)
+                0x000000001a000114        0x4 LONG 0x1a014ff4 LOADADDR (.data)
                 0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000001a00011c        0x4 LONG 0x1240 SIZEOF (.data)
-                0x000000001a000120        0x4 LONG 0x1a014fe8 LOADADDR (.data_RAM2)
+                0x000000001a000120        0x4 LONG 0x1a014ff4 LOADADDR (.data_RAM2)
                 0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000000001a00012c        0x4 LONG 0x1a014fe8 LOADADDR (.data_RAM3)
+                0x000000001a00012c        0x4 LONG 0x1a014ff4 LOADADDR (.data_RAM3)
                 0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x000000001a000138        0x4 LONG 0x1a014fe8 LOADADDR (.data_RAM4)
+                0x000000001a000138        0x4 LONG 0x1a014ff4 LOADADDR (.data_RAM4)
                 0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x000000001a000144        0x4 LONG 0x1a014fe8 LOADADDR (.data_RAM5)
+                0x000000001a000144        0x4 LONG 0x1a014ff4 LOADADDR (.data_RAM5)
                 0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x000000001a000150                __data_section_table_end = .
@@ -17013,455 +17013,455 @@ END GROUP
  .text.sendBlock
                 0x000000001a000322        0xe ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
                 0x000000001a000322                sendBlock
- .text.main     0x000000001a000330      0x174 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+ .text.main     0x000000001a000330      0x180 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
                 0x000000001a000330                main
  .text.initialise_monitor_handles
-                0x000000001a0004a4        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a0004a4                initialise_monitor_handles
- *fill*         0x000000001a0004a6        0x2 ff
+                0x000000001a0004b0        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a0004b0                initialise_monitor_handles
+ *fill*         0x000000001a0004b2        0x2 ff
  .text.Reset_Handler
-                0x000000001a0004a8       0x88 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a0004a8                Reset_Handler
- .text._fini    0x000000001a000530        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a000530                _fini
- .text._init    0x000000001a000532        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a000532                _init
+                0x000000001a0004b4       0x88 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a0004b4                Reset_Handler
+ .text._fini    0x000000001a00053c        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a00053c                _fini
+ .text._init    0x000000001a00053e        0x2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a00053e                _init
  .text.Board_LED_Init
-                0x000000001a000534       0x44 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000540       0x44 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_TEC_Init
-                0x000000001a000578       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000584       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_GPIO_Init
-                0x000000001a0005b8       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0005c4       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_ADC_Init
-                0x000000001a0005f8       0x30 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000604       0x30 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_SPI_Init
-                0x000000001a000628       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000634       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_I2C_Init
-                0x000000001a000660       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a00066c       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_Debug_Init
-                0x000000001a000684       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a000684                Board_Debug_Init
+                0x000000001a000690       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000690                Board_Debug_Init
  .text.Board_Init
-                0x000000001a0006a8       0x30 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a0006a8                Board_Init
+                0x000000001a0006b4       0x30 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0006b4                Board_Init
  .text.__stdio_init
-                0x000000001a0006d8        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a0006d8                __stdio_init
+                0x000000001a0006e4        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0006e4                __stdio_init
  .text.Board_SetupMuxing
-                0x000000001a0006e0       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a0006e0                Board_SetupMuxing
+                0x000000001a0006ec       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a0006ec                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x000000001a000718       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a000718                Board_SetupClocking
+                0x000000001a000724       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a000724                Board_SetupClocking
  .text.Board_SystemInit
-                0x000000001a000784        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a000784                Board_SystemInit
+                0x000000001a000790        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a000790                Board_SystemInit
  .text.Chip_UART_GetIndex
-                0x000000001a000790       0x2c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a00079c       0x2c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .text.Chip_UART_Init
-                0x000000001a0007bc       0x54 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a0007bc                Chip_UART_Init
+                0x000000001a0007c8       0x54 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a0007c8                Chip_UART_Init
  .text.Chip_UART_SetBaud
-                0x000000001a000810       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a000810                Chip_UART_SetBaud
+                0x000000001a00081c       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a00081c                Chip_UART_SetBaud
  .text.Chip_UART_SetBaudFDR
-                0x000000001a000850       0xe8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a000850                Chip_UART_SetBaudFDR
+                0x000000001a00085c       0xe8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a00085c                Chip_UART_SetBaudFDR
  .text.Chip_ADC_GetClockIndex
-                0x000000001a000938       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000944       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.getClkDiv
-                0x000000001a00094c       0x32 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000958       0x32 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.setStartMode
-                0x000000001a00097e        0xe ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a00097e                setStartMode
+                0x000000001a00098a        0xe ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a00098a                setStartMode
  .text.readAdcVal
-                0x000000001a00098c       0x18 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a00098c                readAdcVal
+                0x000000001a000998       0x18 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000998                readAdcVal
  .text.Chip_ADC_Init
-                0x000000001a0009a4       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a0009a4                Chip_ADC_Init
+                0x000000001a0009b0       0x40 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a0009b0                Chip_ADC_Init
  .text.Chip_ADC_DeInit
-                0x000000001a0009e4       0x16 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a0009e4                Chip_ADC_DeInit
+                0x000000001a0009f0       0x16 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a0009f0                Chip_ADC_DeInit
  .text.Chip_ADC_ReadValue
-                0x000000001a0009fa        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a0009fa                Chip_ADC_ReadValue
+                0x000000001a000a06        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000a06                Chip_ADC_ReadValue
  .text.Chip_ADC_ReadStatus
-                0x000000001a000a02       0x36 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000a02                Chip_ADC_ReadStatus
+                0x000000001a000a0e       0x36 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000a0e                Chip_ADC_ReadStatus
  .text.Chip_ADC_Int_SetChannelCmd
-                0x000000001a000a38       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000a38                Chip_ADC_Int_SetChannelCmd
+                0x000000001a000a44       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000a44                Chip_ADC_Int_SetChannelCmd
  .text.Chip_ADC_SetStartMode
-                0x000000001a000a58       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000a58                Chip_ADC_SetStartMode
+                0x000000001a000a64       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000a64                Chip_ADC_SetStartMode
  .text.Chip_ADC_SetSampleRate
-                0x000000001a000a78       0x32 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000a78                Chip_ADC_SetSampleRate
+                0x000000001a000a84       0x32 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000a84                Chip_ADC_SetSampleRate
  .text.Chip_ADC_SetResolution
-                0x000000001a000aaa        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000aaa                Chip_ADC_SetResolution
+                0x000000001a000ab6        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000ab6                Chip_ADC_SetResolution
  .text.Chip_ADC_EnableChannel
-                0x000000001a000ab6       0x28 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000ab6                Chip_ADC_EnableChannel
+                0x000000001a000ac2       0x28 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000ac2                Chip_ADC_EnableChannel
  .text.Chip_ADC_SetBurstCmd
-                0x000000001a000ade       0x22 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a000ade                Chip_ADC_SetBurstCmd
+                0x000000001a000aea       0x22 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a000aea                Chip_ADC_SetBurstCmd
  .text.pll_calc_divs
-                0x000000001a000b00       0xa4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000b0c       0xa4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.pll_get_frac
-                0x000000001a000ba4      0x10c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000bb0      0x10c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_FindBaseClock
-                0x000000001a000cb0       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000cbc       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_EnableCrystal
-                0x000000001a000cfc       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000cfc                Chip_Clock_EnableCrystal
+                0x000000001a000d08       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d08                Chip_Clock_EnableCrystal
  .text.Chip_Clock_GetDividerSource
-                0x000000001a000d48       0x1c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d48                Chip_Clock_GetDividerSource
+                0x000000001a000d54       0x1c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d54                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x000000001a000d64       0x1c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d64                Chip_Clock_GetDividerDivisor
+                0x000000001a000d70       0x1c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d70                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x000000001a000d80       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d80                Chip_Clock_GetClockInputHz
+                0x000000001a000d8c       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d8c                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_CalcMainPLLValue
-                0x000000001a000e38       0x80 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000e38                Chip_Clock_CalcMainPLLValue
+                0x000000001a000e44       0x80 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000e44                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x000000001a000eb8       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000eb8                Chip_Clock_GetMainPLLHz
+                0x000000001a000ec4       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000ec4                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDivRate
-                0x000000001a000f24       0x22 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- *fill*         0x000000001a000f46        0x2 ff
+                0x000000001a000f30       0x22 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ *fill*         0x000000001a000f52        0x2 ff
  .text.Chip_Clock_SetBaseClock
-                0x000000001a000f48       0x58 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000f48                Chip_Clock_SetBaseClock
+                0x000000001a000f54       0x58 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000f54                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x000000001a000fa0       0x26 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000fa0                Chip_Clock_GetBaseClock
+                0x000000001a000fac       0x26 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000fac                Chip_Clock_GetBaseClock
  .text.Chip_Clock_GetBaseClocktHz
-                0x000000001a000fc6        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000fc6                Chip_Clock_GetBaseClocktHz
- *fill*         0x000000001a000fd2        0x2 ff
+                0x000000001a000fd2        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000fd2                Chip_Clock_GetBaseClocktHz
+ *fill*         0x000000001a000fde        0x2 ff
  .text.Chip_Clock_EnableOpts
-                0x000000001a000fd4       0x3c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000fd4                Chip_Clock_EnableOpts
+                0x000000001a000fe0       0x3c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000fe0                Chip_Clock_EnableOpts
  .text.Chip_Clock_Enable
-                0x000000001a001010       0x34 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a001010                Chip_Clock_Enable
+                0x000000001a00101c       0x34 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a00101c                Chip_Clock_Enable
  .text.Chip_Clock_Disable
-                0x000000001a001044       0x34 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a001044                Chip_Clock_Disable
+                0x000000001a001050       0x34 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001050                Chip_Clock_Disable
  .text.Chip_Clock_GetRate
-                0x000000001a001078       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a001078                Chip_Clock_GetRate
+                0x000000001a001084       0x4c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001084                Chip_Clock_GetRate
  .text.SystemCoreClockUpdate
-                0x000000001a0010c4       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x000000001a0010c4                SystemCoreClockUpdate
+                0x000000001a0010d0       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x000000001a0010d0                SystemCoreClockUpdate
  .text.Chip_SetupCoreClock
-                0x000000001a0010d8      0x154 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
-                0x000000001a0010d8                Chip_SetupCoreClock
+                0x000000001a0010e4      0x154 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x000000001a0010e4                Chip_SetupCoreClock
  .text.Chip_GPIO_Init
-                0x000000001a00122c        0x2 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
-                0x000000001a00122c                Chip_GPIO_Init
- *fill*         0x000000001a00122e        0x2 ff
+                0x000000001a001238        0x2 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x000000001a001238                Chip_GPIO_Init
+ *fill*         0x000000001a00123a        0x2 ff
  .text.Chip_I2C_EventHandler
-                0x000000001a001230       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001230                Chip_I2C_EventHandler
+                0x000000001a00123c       0x20 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a00123c                Chip_I2C_EventHandler
  .text.Chip_I2C_Init
-                0x000000001a001250       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001250                Chip_I2C_Init
+                0x000000001a00125c       0x24 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a00125c                Chip_I2C_Init
  .text.Chip_I2C_SetClockRate
-                0x000000001a001274       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001274                Chip_I2C_SetClockRate
+                0x000000001a001280       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a001280                Chip_I2C_SetClockRate
  .text.Chip_SSP_GetClockIndex
-                0x000000001a0012ac       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012b8       0x14 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_GetPeriphClockIndex
-                0x000000001a0012c0       0x18 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012cc       0x18 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_SetClockRate
-                0x000000001a0012d8       0x12 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a0012d8                Chip_SSP_SetClockRate
+                0x000000001a0012e4       0x12 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012e4                Chip_SSP_SetClockRate
  .text.Chip_SSP_SetBitRate
-                0x000000001a0012ea       0x3e ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a0012ea                Chip_SSP_SetBitRate
+                0x000000001a0012f6       0x3e ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012f6                Chip_SSP_SetBitRate
  .text.Chip_SSP_Init
-                0x000000001a001328       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a001328                Chip_SSP_Init
+                0x000000001a001334       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a001334                Chip_SSP_Init
  .text.SystemInit
-                0x000000001a001360       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
-                0x000000001a001360                SystemInit
+                0x000000001a00136c       0x38 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
+                0x000000001a00136c                SystemInit
  .text.cyclesCounterInit
-                0x000000001a001398       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
-                0x000000001a001398                cyclesCounterInit
+                0x000000001a0013a4       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x000000001a0013a4                cyclesCounterInit
  .text.uartTxReady
-                0x000000001a0013b4       0x18 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a0013b4                uartTxReady
+                0x000000001a0013c0       0x18 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a0013c0                uartTxReady
  .text.uartTxWrite
-                0x000000001a0013cc       0x14 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a0013cc                uartTxWrite
+                0x000000001a0013d8       0x14 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a0013d8                uartTxWrite
  .text.uartInit
-                0x000000001a0013e0       0x7c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a0013e0                uartInit
+                0x000000001a0013ec       0x7c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a0013ec                uartInit
  .text.uartWriteByte
-                0x000000001a00145c       0x1a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a00145c                uartWriteByte
+                0x000000001a001468       0x1a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001468                uartWriteByte
  .text.uartWriteByteArray
-                0x000000001a001476       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a001476                uartWriteByteArray
- *fill*         0x000000001a001492        0x2 ff
+                0x000000001a001482       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001482                uartWriteByteArray
+ *fill*         0x000000001a00149e        0x2 ff
  .text.tickPowerSet
-                0x000000001a001494       0x18 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a001494                tickPowerSet
+                0x000000001a0014a0       0x18 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a0014a0                tickPowerSet
  .text.tickInit
-                0x000000001a0014ac       0x7c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a0014ac                tickInit
+                0x000000001a0014b8       0x7c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a0014b8                tickInit
  .text.SysTick_Handler
-                0x000000001a001528       0x34 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a001528                SysTick_Handler
- .text.adcInit  0x000000001a00155c       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
-                0x000000001a00155c                adcInit
- .text.adcRead  0x000000001a001614       0x58 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
-                0x000000001a001614                adcRead
+                0x000000001a001534       0x34 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a001534                SysTick_Handler
+ .text.adcInit  0x000000001a001568       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
+                0x000000001a001568                adcInit
+ .text.adcRead  0x000000001a001620       0x58 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
+                0x000000001a001620                adcRead
  .text.gpioObtainPinInit
-                0x000000001a00166c       0x34 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001678       0x34 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
  .text.gpioInit
-                0x000000001a0016a0      0x1ac ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a0016a0                gpioInit
+                0x000000001a0016ac      0x1ac ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a0016ac                gpioInit
  .text.gpioWrite
-                0x000000001a00184c       0x6a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a00184c                gpioWrite
+                0x000000001a001858       0x6a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001858                gpioWrite
  .text.gpioRead
-                0x000000001a0018b6       0x68 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a0018b6                gpioRead
+                0x000000001a0018c2       0x68 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a0018c2                gpioRead
  .text.gpioToggle
-                0x000000001a00191e       0x16 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a00191e                gpioToggle
+                0x000000001a00192a       0x16 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a00192a                gpioToggle
  .text.USB0_IRQHandler
-                0x000000001a001934       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
-                0x000000001a001934                USB0_IRQHandler
+                0x000000001a001940       0x1c ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x000000001a001940                USB0_IRQHandler
  .text.boardInit
-                0x000000001a001950       0x74 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
-                0x000000001a001950                boardInit
+                0x000000001a00195c       0x74 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+                0x000000001a00195c                boardInit
  .text.arm_max_q15
-                0x000000001a0019c4       0xb4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
-                0x000000001a0019c4                arm_max_q15
+                0x000000001a0019d0       0xb4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
+                0x000000001a0019d0                arm_max_q15
  .text.arm_split_rfft_q15
-                0x000000001a001a78       0xb4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
-                0x000000001a001a78                arm_split_rfft_q15
+                0x000000001a001a84       0xb4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
+                0x000000001a001a84                arm_split_rfft_q15
  .text.arm_rfft_q15
-                0x000000001a001b2c       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
-                0x000000001a001b2c                arm_rfft_q15
+                0x000000001a001b38       0xb8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
+                0x000000001a001b38                arm_rfft_q15
  .text.arm_rfft_init_q15
-                0x000000001a001be4       0xfc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
-                0x000000001a001be4                arm_rfft_init_q15
+                0x000000001a001bf0       0xfc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
+                0x000000001a001bf0                arm_rfft_init_q15
  .text.arm_conv_fast_q15
-                0x000000001a001ce0      0x5cc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
-                0x000000001a001ce0                arm_conv_fast_q15
+                0x000000001a001cec      0x5cc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
+                0x000000001a001cec                arm_conv_fast_q15
  .text.arm_cmplx_mag_squared_q15
-                0x000000001a0022ac       0x80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
-                0x000000001a0022ac                arm_cmplx_mag_squared_q15
+                0x000000001a0022b8       0x80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
+                0x000000001a0022b8                arm_cmplx_mag_squared_q15
  .text.arm_cfft_radix4by2_q15
-                0x000000001a00232c       0xc8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
-                0x000000001a00232c                arm_cfft_radix4by2_q15
+                0x000000001a002338       0xc8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
+                0x000000001a002338                arm_cfft_radix4by2_q15
  .text.arm_cfft_radix4by2_inverse_q15
-                0x000000001a0023f4       0xc8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
-                0x000000001a0023f4                arm_cfft_radix4by2_inverse_q15
+                0x000000001a002400       0xc8 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
+                0x000000001a002400                arm_cfft_radix4by2_inverse_q15
  .text.arm_cfft_q15
-                0x000000001a0024bc       0xbc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
-                0x000000001a0024bc                arm_cfft_q15
- .text          0x000000001a002578       0xc0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
-                0x000000001a002578                arm_bitreversal_32
-                0x000000001a0025e2                arm_bitreversal_16
+                0x000000001a0024c8       0xbc ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
+                0x000000001a0024c8                arm_cfft_q15
+ .text          0x000000001a002584       0xc0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
+                0x000000001a002584                arm_bitreversal_32
+                0x000000001a0025ee                arm_bitreversal_16
  .text.arm_radix4_butterfly_q15
-                0x000000001a002638      0x25c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
-                0x000000001a002638                arm_radix4_butterfly_q15
+                0x000000001a002644      0x25c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
+                0x000000001a002644                arm_radix4_butterfly_q15
  .text.arm_radix4_butterfly_inverse_q15
-                0x000000001a002894      0x25c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
-                0x000000001a002894                arm_radix4_butterfly_inverse_q15
- .text          0x000000001a002af0       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
-                0x000000001a002af0                __aeabi_uldivmod
- .text          0x000000001a002b20      0x2cc /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
-                0x000000001a002b20                __udivmoddi4
- .text          0x000000001a002dec        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
-                0x000000001a002dec                __aeabi_ldiv0
-                0x000000001a002dec                __aeabi_idiv0
- .text          0x000000001a002df0       0x48 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                0x000000001a002df0                __libc_init_array
- .text          0x000000001a002e38       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
-                0x000000001a002e38                memset
+                0x000000001a0028a0      0x25c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
+                0x000000001a0028a0                arm_radix4_butterfly_inverse_q15
+ .text          0x000000001a002afc       0x30 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+                0x000000001a002afc                __aeabi_uldivmod
+ .text          0x000000001a002b2c      0x2cc /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x000000001a002b2c                __udivmoddi4
+ .text          0x000000001a002df8        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+                0x000000001a002df8                __aeabi_ldiv0
+                0x000000001a002df8                __aeabi_idiv0
+ .text          0x000000001a002dfc       0x48 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x000000001a002dfc                __libc_init_array
+ .text          0x000000001a002e44       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+                0x000000001a002e44                memset
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.main.str1.4
-                0x000000001a002ecc        0x7 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
- *fill*         0x000000001a002ed3        0x1 ff
+                0x000000001a002ed8        0x7 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+ *fill*         0x000000001a002edf        0x1 ff
  .rodata.ExtRateIn
-                0x000000001a002ed4        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a002ed4                ExtRateIn
+                0x000000001a002ee0        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a002ee0                ExtRateIn
  .rodata.GpioButtons
-                0x000000001a002ed8        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a002ee4        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioLeds
-                0x000000001a002ee0        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a002eec        0xc ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioPorts
-                0x000000001a002eec       0x12 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- *fill*         0x000000001a002efe        0x2 ff
+                0x000000001a002ef8       0x12 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ *fill*         0x000000001a002f0a        0x2 ff
  .rodata.OscRateIn
-                0x000000001a002f00        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a002f00                OscRateIn
+                0x000000001a002f0c        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a002f0c                OscRateIn
  .rodata.InitClkStates
-                0x000000001a002f04        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a002f10        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.pinmuxing
-                0x000000001a002f08       0x74 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a002f14       0x74 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.UART_BClock
-                0x000000001a002f7c        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a002f88        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .rodata.UART_PClock
-                0x000000001a002f84        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .rodata        0x000000001a002f8c        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a002f90        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .rodata        0x000000001a002f98        0x4 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.Chip_Clock_SetDivider.str1.4
-                0x000000001a002f90        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a002f9c        0x8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                                           0x6 (size before relaxing)
  .rodata.periph_to_base
-                0x000000001a002f98       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a002fa4       0x6c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.InitClkStates
-                0x000000001a003004       0x48 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x000000001a003010       0x48 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .rodata.lpcUarts
-                0x000000001a00304c       0x48 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .rodata        0x000000001a003094        0x8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
+                0x000000001a003058       0x48 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .rodata        0x000000001a0030a0        0x8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
  .rodata.gpioPinsInit
-                0x000000001a00309c       0xe6 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a00309c                gpioPinsInit
- *fill*         0x000000001a003182        0x2 ff
+                0x000000001a0030a8       0xe6 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a0030a8                gpioPinsInit
+ *fill*         0x000000001a00318e        0x2 ff
  .rodata.realCoefAQ15
-                0x000000001a003184     0x4000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
-                0x000000001a003184                realCoefAQ15
+                0x000000001a003190     0x4000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
+                0x000000001a003190                realCoefAQ15
  .rodata.realCoefBQ15
-                0x000000001a007184     0x4000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
-                0x000000001a007184                realCoefBQ15
+                0x000000001a007190     0x4000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
+                0x000000001a007190                realCoefBQ15
  .rodata.arm_cfft_sR_q15_len256
-                0x000000001a00b184       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b184                arm_cfft_sR_q15_len256
+                0x000000001a00b190       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b190                arm_cfft_sR_q15_len256
  .rodata.arm_cfft_sR_q15_len128
-                0x000000001a00b194       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b194                arm_cfft_sR_q15_len128
+                0x000000001a00b1a0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1a0                arm_cfft_sR_q15_len128
  .rodata.arm_cfft_sR_q15_len512
-                0x000000001a00b1a4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1a4                arm_cfft_sR_q15_len512
+                0x000000001a00b1b0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1b0                arm_cfft_sR_q15_len512
  .rodata.arm_cfft_sR_q15_len1024
-                0x000000001a00b1b4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1b4                arm_cfft_sR_q15_len1024
+                0x000000001a00b1c0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1c0                arm_cfft_sR_q15_len1024
  .rodata.arm_cfft_sR_q15_len64
-                0x000000001a00b1c4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1c4                arm_cfft_sR_q15_len64
+                0x000000001a00b1d0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1d0                arm_cfft_sR_q15_len64
  .rodata.arm_cfft_sR_q15_len2048
-                0x000000001a00b1d4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1d4                arm_cfft_sR_q15_len2048
+                0x000000001a00b1e0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1e0                arm_cfft_sR_q15_len2048
  .rodata.arm_cfft_sR_q15_len4096
-                0x000000001a00b1e4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1e4                arm_cfft_sR_q15_len4096
+                0x000000001a00b1f0       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b1f0                arm_cfft_sR_q15_len4096
  .rodata.arm_cfft_sR_q15_len16
-                0x000000001a00b1f4       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b1f4                arm_cfft_sR_q15_len16
+                0x000000001a00b200       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b200                arm_cfft_sR_q15_len16
  .rodata.arm_cfft_sR_q15_len32
-                0x000000001a00b204       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
-                0x000000001a00b204                arm_cfft_sR_q15_len32
+                0x000000001a00b210       0x10 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+                0x000000001a00b210                arm_cfft_sR_q15_len32
  .rodata.armBitRevIndexTable_fixed_128
-                0x000000001a00b214       0xe0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00b214                armBitRevIndexTable_fixed_128
+                0x000000001a00b220       0xe0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00b220                armBitRevIndexTable_fixed_128
  .rodata.armBitRevIndexTable_fixed_2048
-                0x000000001a00b2f4      0xf80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00b2f4                armBitRevIndexTable_fixed_2048
+                0x000000001a00b300      0xf80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00b300                armBitRevIndexTable_fixed_2048
  .rodata.armBitRevIndexTable_fixed_4096
-                0x000000001a00c274     0x1f80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00c274                armBitRevIndexTable_fixed_4096
+                0x000000001a00c280     0x1f80 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00c280                armBitRevIndexTable_fixed_4096
  .rodata.armBitRevIndexTable_fixed_1024
-                0x000000001a00e1f4      0x7c0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00e1f4                armBitRevIndexTable_fixed_1024
+                0x000000001a00e200      0x7c0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00e200                armBitRevIndexTable_fixed_1024
  .rodata.twiddleCoef_1024_q15
-                0x000000001a00e9b4      0xc00 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00e9b4                twiddleCoef_1024_q15
+                0x000000001a00e9c0      0xc00 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00e9c0                twiddleCoef_1024_q15
  .rodata.twiddleCoef_32_q15
-                0x000000001a00f5b4       0x60 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00f5b4                twiddleCoef_32_q15
+                0x000000001a00f5c0       0x60 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00f5c0                twiddleCoef_32_q15
  .rodata.twiddleCoef_4096_q15
-                0x000000001a00f614     0x3000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a00f614                twiddleCoef_4096_q15
+                0x000000001a00f620     0x3000 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a00f620                twiddleCoef_4096_q15
  .rodata.twiddleCoef_16_q15
-                0x000000001a012614       0x30 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a012614                twiddleCoef_16_q15
+                0x000000001a012620       0x30 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a012620                twiddleCoef_16_q15
  .rodata.twiddleCoef_64_q15
-                0x000000001a012644       0xc0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a012644                twiddleCoef_64_q15
+                0x000000001a012650       0xc0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a012650                twiddleCoef_64_q15
  .rodata.twiddleCoef_2048_q15
-                0x000000001a012704     0x1800 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a012704                twiddleCoef_2048_q15
+                0x000000001a012710     0x1800 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a012710                twiddleCoef_2048_q15
  .rodata.twiddleCoef_256_q15
-                0x000000001a013f04      0x300 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a013f04                twiddleCoef_256_q15
+                0x000000001a013f10      0x300 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a013f10                twiddleCoef_256_q15
  .rodata.twiddleCoef_512_q15
-                0x000000001a014204      0x600 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014204                twiddleCoef_512_q15
+                0x000000001a014210      0x600 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014210                twiddleCoef_512_q15
  .rodata.armBitRevIndexTable_fixed_512
-                0x000000001a014804      0x3c0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014804                armBitRevIndexTable_fixed_512
+                0x000000001a014810      0x3c0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014810                armBitRevIndexTable_fixed_512
  .rodata.armBitRevIndexTable_fixed_16
-                0x000000001a014bc4       0x18 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014bc4                armBitRevIndexTable_fixed_16
+                0x000000001a014bd0       0x18 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014bd0                armBitRevIndexTable_fixed_16
  .rodata.twiddleCoef_128_q15
-                0x000000001a014bdc      0x180 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014bdc                twiddleCoef_128_q15
+                0x000000001a014be8      0x180 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014be8                twiddleCoef_128_q15
  .rodata.armBitRevIndexTable_fixed_32
-                0x000000001a014d5c       0x30 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014d5c                armBitRevIndexTable_fixed_32
+                0x000000001a014d68       0x30 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014d68                armBitRevIndexTable_fixed_32
  .rodata.armBitRevIndexTable_fixed_256
-                0x000000001a014d8c      0x1e0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014d8c                armBitRevIndexTable_fixed_256
+                0x000000001a014d98      0x1e0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014d98                armBitRevIndexTable_fixed_256
  .rodata.armBitRevIndexTable_fixed_64
-                0x000000001a014f6c       0x70 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x000000001a014f6c                armBitRevIndexTable_fixed_64
-                0x000000001a014fdc                . = ALIGN (0x4)
+                0x000000001a014f78       0x70 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x000000001a014f78                armBitRevIndexTable_fixed_64
+                0x000000001a014fe8                . = ALIGN (0x4)
 
-.glue_7         0x000000001a014fdc        0x0
- .glue_7        0x000000001a014fdc        0x0 linker stubs
+.glue_7         0x000000001a014fe8        0x0
+ .glue_7        0x000000001a014fe8        0x0 linker stubs
 
-.glue_7t        0x000000001a014fdc        0x0
- .glue_7t       0x000000001a014fdc        0x0 linker stubs
+.glue_7t        0x000000001a014fe8        0x0
+ .glue_7t       0x000000001a014fe8        0x0 linker stubs
 
-.vfp11_veneer   0x000000001a014fdc        0x0
- .vfp11_veneer  0x000000001a014fdc        0x0 linker stubs
+.vfp11_veneer   0x000000001a014fe8        0x0
+ .vfp11_veneer  0x000000001a014fe8        0x0 linker stubs
 
-.v4_bx          0x000000001a014fdc        0x0
- .v4_bx         0x000000001a014fdc        0x0 linker stubs
+.v4_bx          0x000000001a014fe8        0x0
+ .v4_bx         0x000000001a014fe8        0x0 linker stubs
 
-.iplt           0x000000001a014fdc        0x0
- .iplt          0x000000001a014fdc        0x0 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
-                0x000000001a014fdc                . = ALIGN (0x4)
+.iplt           0x000000001a014fe8        0x0
+ .iplt          0x000000001a014fe8        0x0 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+                0x000000001a014fe8                . = ALIGN (0x4)
 
-.preinit_array  0x000000001a014fdc        0x0
-                0x000000001a014fdc                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000001a014fe8        0x0
+                0x000000001a014fe8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000001a014fdc                PROVIDE (__preinit_array_end = .)
+                0x000000001a014fe8                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000001a014fdc        0x4
-                0x000000001a014fdc                PROVIDE (__init_array_start = .)
+.init_array     0x000000001a014fe8        0x4
+                0x000000001a014fe8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000001a014fdc        0x4 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
-                0x000000001a014fe0                PROVIDE (__init_array_end = .)
-                0x000000001a014fe0                . = ALIGN (0x4)
+ .init_array    0x000000001a014fe8        0x4 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
+                0x000000001a014fec                PROVIDE (__init_array_end = .)
+                0x000000001a014fec                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001a014fe0                __exidx_start = .
+                0x000000001a014fec                __exidx_start = .
 
-.ARM.exidx      0x000000001a014fe0        0x8
+.ARM.exidx      0x000000001a014fec        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000000001a014fe0        0x8 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
-                0x000000001a014fe8                __exidx_end = .
-                0x000000001a014fe8                _etext = .
+ .ARM.exidx     0x000000001a014fec        0x8 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x000000001a014ff4                __exidx_end = .
+                0x000000001a014ff4                _etext = .
 
-.rel.dyn        0x000000001a014fe8        0x0
- .rel.iplt      0x000000001a014fe8        0x0 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+.rel.dyn        0x000000001a014ff4        0x0
+ .rel.iplt      0x000000001a014ff4        0x0 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
 
-.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a014fe8
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a014ff4
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamLoc40)
@@ -17469,7 +17469,7 @@ END GROUP
  *(.data.$RamLoc40*)
                 0x0000000010080000                . = ALIGN (0x4)
 
-.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a014fe8
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a014ff4
  FILL mask 0xff
  *(.ramfunc.$RAM3)
  *(.ramfunc.$RamAHB32)
@@ -17477,7 +17477,7 @@ END GROUP
  *(.data.$RamAHB32*)
                 0x0000000020000000                . = ALIGN (0x4)
 
-.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a014fe8
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a014ff4
  FILL mask 0xff
  *(.ramfunc.$RAM4)
  *(.ramfunc.$RamAHB16)
@@ -17485,7 +17485,7 @@ END GROUP
  *(.data.$RamAHB16*)
                 0x0000000020008000                . = ALIGN (0x4)
 
-.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a014fe8
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a014ff4
  FILL mask 0xff
  *(.ramfunc.$RAM5)
  *(.ramfunc.$RamAHB_ETB16)
@@ -17499,7 +17499,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000     0x1240 load address 0x000000001a014fe8
+.data           0x0000000010000000     0x1240 load address 0x000000001a014ff4
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -17523,7 +17523,7 @@ END GROUP
                 0x0000000010001240                . = ALIGN (0x4)
                 0x0000000010001240                _edata = .
 
-.igot.plt       0x0000000010001240        0x0 load address 0x000000001a016228
+.igot.plt       0x0000000010001240        0x0 load address 0x000000001a016234
  .igot.plt      0x0000000010001240        0x0 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
 
 .bss_RAM2       0x0000000010080000        0x0
@@ -17611,48 +17611,48 @@ END GROUP
                 0x0000000010005a8c                _end_noinit = .
                 0x0000000010005a8c                PROVIDE (_pvHeapStart = .)
                 0x0000000010008000                PROVIDE (_vStackTop = (__top_RamLoc32 - 0x0))
-                0xffffffff53ff73e6                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0xffffffff53ff73da                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(../clases/6_clase/ciaa//psf1/out/psf1.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x226e3
- .debug_info    0x0000000000000000     0x32e9 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
- .debug_info    0x00000000000032e9      0x301 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_info    0x00000000000035ea      0xf38 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
- .debug_info    0x0000000000004522     0x2139 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_info    0x000000000000665b     0x14b8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_info    0x0000000000007b13     0x164f ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x0000000000009162      0xaef ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x0000000000009c51     0x18ed ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x000000000000b53e      0xc3d ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x000000000000c17b      0xab0 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x000000000000cc2b      0x219 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x000000000000ce44     0x1366 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x000000000000e1aa     0x1606 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x000000000000f7b0       0x3f ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_info    0x000000000000f7ef      0xbc7 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_info    0x00000000000103b6       0x74 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_info    0x000000000001042a      0xea4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_info    0x00000000000112ce     0x1ff8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_info    0x00000000000132c6     0x1497 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_info    0x000000000001475d      0xfc4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
- .debug_info    0x0000000000015721     0x1a3a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_info    0x000000000001715b     0x3303 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_info    0x000000000001a45e      0xbc3 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_info    0x000000000001b021      0x17a ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
- .debug_info    0x000000000001b19b      0x9eb ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
- .debug_info    0x000000000001bb86      0x35c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
- .debug_info    0x000000000001bee2      0x94a ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
- .debug_info    0x000000000001c82c      0x2fa ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
- .debug_info    0x000000000001cb26      0xe6b ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
- .debug_info    0x000000000001d991      0x9b1 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
- .debug_info    0x000000000001e342      0x9a0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
- .debug_info    0x000000000001ece2       0x98 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
- .debug_info    0x000000000001ed7a     0x1cec ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
- .debug_info    0x0000000000020a66       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_info    0x0000000000020a8c      0xd0b /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_info    0x0000000000021797       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
- .debug_info    0x00000000000217bd      0x109 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_info    0x00000000000218c6      0xe1d /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+.debug_info     0x0000000000000000    0x226f1
+ .debug_info    0x0000000000000000     0x32f7 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+ .debug_info    0x00000000000032f7      0x301 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_info    0x00000000000035f8      0xf38 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
+ .debug_info    0x0000000000004530     0x2139 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_info    0x0000000000006669     0x14b8 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_info    0x0000000000007b21     0x164f ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x0000000000009170      0xaef ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x0000000000009c5f     0x18ed ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x000000000000b54c      0xc3d ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x000000000000c189      0xab0 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x000000000000cc39      0x219 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x000000000000ce52     0x1366 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x000000000000e1b8     0x1606 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x000000000000f7be       0x3f ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_info    0x000000000000f7fd      0xbc7 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_info    0x00000000000103c4       0x74 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_info    0x0000000000010438      0xea4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_info    0x00000000000112dc     0x1ff8 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_info    0x00000000000132d4     0x1497 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_info    0x000000000001476b      0xfc4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
+ .debug_info    0x000000000001572f     0x1a3a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_info    0x0000000000017169     0x3303 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_info    0x000000000001a46c      0xbc3 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_info    0x000000000001b02f      0x17a ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
+ .debug_info    0x000000000001b1a9      0x9eb ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
+ .debug_info    0x000000000001bb94      0x35c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
+ .debug_info    0x000000000001bef0      0x94a ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
+ .debug_info    0x000000000001c83a      0x2fa ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
+ .debug_info    0x000000000001cb34      0xe6b ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+ .debug_info    0x000000000001d99f      0x9b1 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_info    0x000000000001e350      0x9a0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
+ .debug_info    0x000000000001ecf0       0x98 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
+ .debug_info    0x000000000001ed88     0x1cec ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
+ .debug_info    0x0000000000020a74       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0000000000020a9a      0xd0b /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x00000000000217a5       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00000000000217cb      0x109 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_info    0x00000000000218d4      0xe1d /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
 
 .debug_abbrev   0x0000000000000000     0x4a34
  .debug_abbrev  0x0000000000000000      0x314 ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
@@ -17990,45 +17990,45 @@ OUTPUT(../clases/6_clase/ciaa//psf1/out/psf1.elf elf32-littlearm)
  .debug_macro   0x000000000000b82b      0x54f ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
  .debug_macro   0x000000000000bd7a      0x47d ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
 
-.debug_line     0x0000000000000000     0xceb8
- .debug_line    0x0000000000000000     0x101d ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
- .debug_line    0x000000000000101d       0xfa ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_line    0x0000000000001117      0x3d6 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
- .debug_line    0x00000000000014ed      0x99b ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_line    0x0000000000001e88      0x79d ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_line    0x0000000000002625      0x90c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_line    0x0000000000002f31      0x753 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_line    0x0000000000003684      0xa64 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_line    0x00000000000040e8      0x66e ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_line    0x0000000000004756      0x6cb ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_line    0x0000000000004e21      0x62c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_line    0x000000000000544d      0x911 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_line    0x0000000000005d5e      0xab6 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_line    0x0000000000006814       0x44 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_line    0x0000000000006858      0x73a ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_line    0x0000000000006f92       0x61 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_line    0x0000000000006ff3      0x815 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_line    0x0000000000007808      0xa8a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_line    0x0000000000008292      0x8c4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_line    0x0000000000008b56      0x82f ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
- .debug_line    0x0000000000009385      0x914 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_line    0x0000000000009c99      0xa8f ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_line    0x000000000000a728      0x851 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_line    0x000000000000af79      0x167 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
- .debug_line    0x000000000000b0e0      0x2b0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
- .debug_line    0x000000000000b390      0x20e ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
- .debug_line    0x000000000000b59e      0x3c4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
- .debug_line    0x000000000000b962      0x1d3 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
- .debug_line    0x000000000000bb35      0x14c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
- .debug_line    0x000000000000bc81      0x135 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
- .debug_line    0x000000000000bdb6      0x35b ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
- .debug_line    0x000000000000c111       0xa2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
- .debug_line    0x000000000000c1b3      0x758 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
- .debug_line    0x000000000000c90b       0x63 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_line    0x000000000000c96e      0x264 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_line    0x000000000000cbd2       0x63 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
- .debug_line    0x000000000000cc35       0xbf /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_line    0x000000000000ccf4      0x1c4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+.debug_line     0x0000000000000000     0xceb9
+ .debug_line    0x0000000000000000     0x101e ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
+ .debug_line    0x000000000000101e       0xfa ../clases/6_clase/ciaa//psf1/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_line    0x0000000000001118      0x3d6 ../clases/6_clase/ciaa//psf1/out/libs/sys_newlib//src/system.o
+ .debug_line    0x00000000000014ee      0x99b ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_line    0x0000000000001e89      0x79d ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_line    0x0000000000002626      0x90c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_line    0x0000000000002f32      0x753 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_line    0x0000000000003685      0xa64 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_line    0x00000000000040e9      0x66e ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_line    0x0000000000004757      0x6cb ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_line    0x0000000000004e22      0x62c ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_line    0x000000000000544e      0x911 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_line    0x0000000000005d5f      0xab6 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_line    0x0000000000006815       0x44 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_line    0x0000000000006859      0x73a ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_line    0x0000000000006f93       0x61 ../clases/6_clase/ciaa//psf1/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_line    0x0000000000006ff4      0x815 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_line    0x0000000000007809      0xa8a ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_line    0x0000000000008293      0x8c4 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_line    0x0000000000008b57      0x82f ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_adc.o
+ .debug_line    0x0000000000009386      0x914 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_line    0x0000000000009c9a      0xa8f ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_line    0x000000000000a729      0x851 ../clases/6_clase/ciaa//psf1/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_line    0x000000000000af7a      0x167 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_max_q15.o)
+ .debug_line    0x000000000000b0e1      0x2b0 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_q15.o)
+ .debug_line    0x000000000000b391      0x20e ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_rfft_init_q15.o)
+ .debug_line    0x000000000000b59f      0x3c4 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_conv_fast_q15.o)
+ .debug_line    0x000000000000b963      0x1d3 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cmplx_mag_squared_q15.o)
+ .debug_line    0x000000000000bb36      0x14c ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_const_structs.o)
+ .debug_line    0x000000000000bc82      0x135 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_line    0x000000000000bdb7      0x35b ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_q15.o)
+ .debug_line    0x000000000000c112       0xa2 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_bitreversal2.o)
+ .debug_line    0x000000000000c1b4      0x758 ../clases/6_clase/ciaa//psf1/out/libs/cmsis_dsp//lib//libarm_cortexM4lf_math.a(arm_cfft_radix4_q15.o)
+ .debug_line    0x000000000000c90c       0x63 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x000000000000c96f      0x264 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x000000000000cbd3       0x63 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x000000000000cc36       0xbf /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_line    0x000000000000ccf5      0x1c4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
 
 .debug_str      0x0000000000000000    0x2aee6
  .debug_str     0x0000000000000000    0x24a4e ../clases/6_clase/ciaa//psf1/out/../clases/6_clase/ciaa//psf1/src/psf.o
