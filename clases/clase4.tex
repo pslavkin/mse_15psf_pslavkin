@@ -12,7 +12,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{repaso DFT}{$e^{j2\pi ft}$ modulado por $\sin(t)$ y centro de masas en f, DFT?}
-   \videoicon{04m50s}
+   \videoicon{4}{04m50s}
    \handsonicon
    \footnotesize
    \begin{columns}[c]
@@ -48,7 +48,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso DFT}{Analisis, Transformada discreta de Fourier}
-   \videoicon{07m48s}
+   \videoicon{4}{07m48s}
    \begin{itemize}
       \item{Definicion formal de la DFT}
       \item{Notar que hay un faltor de escala que puede ser 1/N, $1/\sqrt{N}$ o 1 dependiendo de cada implementacion}
@@ -59,7 +59,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Síntesis}{Como reconstruyo la señal en el tiempo}
-   \videoicon{10m45s}
+   \videoicon{4}{10m45s}
    \handsonicon
    \footnotesize
    \begin{columns}[c]
@@ -96,7 +96,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Síntesis, Transformada inversa discreta de Fourier}{IDFT}
-   \videoicon{23m42s}
+   \videoicon{4}{23m42s}
    \begin{itemize}
       \item{La IDFT es la suma de todos los bines en f evalueados en cada n}
       \item{La IDFT toma N numeros complejos y devuelve N numeros complejos}
@@ -114,7 +114,7 @@ Convolucion}
  \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{IDFT}{Señales complejas como entrada?}
-   \videoicon{48m40s}
+   \videoicon{4}{48m40s}
    \handsonicon
    \footnotesize
    \begin{columns}[c]
@@ -150,7 +150,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
-   \videoicon{56m48s}
+   \videoicon{4}{56m48s}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Delta
@@ -174,7 +174,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
-   \videoicon{1h08m10s}
+   \videoicon{4}{1h08m10s}
    \begin{columns}[c]
       \begin{column}{.5\textwidth}
          Triangular
@@ -196,7 +196,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{DFT<>IDFT}{Transformadas relevantes}
-   \videoicon{1h22m55s}
+   \videoicon{4}{1h22m55s}
    \begin{columns}[c]
       \begin{column}{.33\textwidth}
          Sin
@@ -215,7 +215,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{IDFT}{Un conejo como entrada?}
-   \videoicon{1h16m40s}
+   \videoicon{4}{1h16m40s}
    \handsonicon
    \begin{columns}[c]
       \hspace{2pt}
@@ -245,7 +245,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{FFT-IFFT}{Transformadas usando FFT en Python}
-   \videoicon{1h26m00s}
+   \videoicon{4}{1h26m00s}
    \handsonicon
    Ejemplo de codigo de como calcular la FFT e IFFT usando la biblioteca numpy
    \lstset{ basicstyle=\fontsize{ 5}{ 0}\selectfont\ttfamily,language=Python,tabsize=4}
@@ -272,7 +272,7 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Respuesta al impulso}
 \begin{frame}{Cambio de tema?}{}
-   \videoicon{1h50m40s}
+   \videoicon{4}{1h50m40s}
    \begin{enumerate}
       \item{Función delta}
       \item{Respuesta al impulso}
@@ -287,7 +287,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Función delta}{Respuesta al impulso}
-   \videoicon{1h50m50s}
+   \videoicon{4}{1h50m50s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/respuesta_impulso}
@@ -305,7 +305,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Todo esta en la respuesta al impulso}
-   \videoicon{1h53m50s}
+   \videoicon{4}{1h53m50s}
     \center{
        \href{run:./4_clase/video_homero_panza.mp4}{
           \includegraphics[width=0.8\textwidth]{4_clase/homero_panza}
@@ -320,7 +320,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso Sistemas}
-   \videoicon{1h54m58s}
+   \videoicon{4}{1h54m58s}
    \begin{block}{Linealidad}
       Un sistema es lineal cuando su salida depende linealmente de la entrada.
       Satisface el principio de superposición.
@@ -348,7 +348,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Repaso - Sistemas}{Invariantes en el tiempo}
-   \videoicon{1h57m52s}
+   \videoicon{4}{1h57m52s}
    \begin{block}{Invariantes en el tiempo}
       Un sistema es invariante en el tiempo cuando la salida para una determinada entrada es la misma sin importar el tiempo en el cual se aplica la entrada
    \end{block}
@@ -367,7 +367,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Convolución}{Señal vs h(n)}
-   \videoicon{1h58m57s}
+   \videoicon{4}{1h58m57s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/signal_vs_h}
@@ -383,7 +383,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Convolución}{Descomposición delta}
-   \videoicon{2h00m00s}
+   \videoicon{4}{2h00m00s}
    \begin{columns}[c]
       \begin{column}{1\textwidth}
          \centering\includegraphics[width=0.8\textwidth]{4_clase/descomposicion_delta}
@@ -401,7 +401,7 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Convolución}
 \begin{frame}{Convolución}{Respuesta al impulso}
-   \videoicon{2h18m00s}
+   \videoicon{4}{2h18m00s}
    \lstset{ basicstyle=\fontsize{ 5}{ 2}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
@@ -435,7 +435,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Funcion delta}{Respuesta al impulso}
-   \videoicon{2h16m40s}
+   \videoicon{4}{2h16m40s}
    \centering\includegraphics[width=0.6\textwidth]{4_clase/entrada_conv_h}\\
    \centering\includegraphics[width=0.6\textwidth]{4_clase/convolucion_eq}
    \vfill
@@ -443,7 +443,7 @@ Convolucion}
 %-------------------------------------------------------------------------------
 \section{Filtrado}
 \begin{frame}{Filtrado}{Pasa bajos}
-   \videoicon{2h23m00s}
+   \videoicon{4}{2h23m00s}
    \lstset{ basicstyle=\fontsize{ 5}{ 1}\selectfont\ttfamily,language=python,tabsize=4}
    \begin{columns}[c]
       \hspace{5pt}
@@ -471,13 +471,13 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}{Filtrado}{diferenciador}
-   \videoicon{2h37m50s}
+   \videoicon{4}{2h37m50s}
          \centering\includegraphics[width=0.5\textwidth]{4_clase/diferenciador}
    \vfill
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[c]{Convolución}{Análisis en la CIAA}
-   \videoicon{2h41m20s}
+   \videoicon{4}{2h41m20s}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]
@@ -496,7 +496,7 @@ Convolucion}
 \end{frame}
 %-------------------------------------------------------------------------------
 \begin{frame}[c]{Convolución}{Análisis en la CIAA}
-   \videoicon{2h21m11s}
+   \videoicon{4}{2h21m11s}
    \protoboardicon
    \lstset{ basicstyle=\fontsize{ 4}{ 0}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}[c]

@@ -1,15 +1,15 @@
 listado alumnos 2020                                       |1|2|3|4|5|6|7|6|                       |1 |2 | TP final
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1  Jacobo     Salvador     jacosalvador@gmail.com          |x|x|x|x|x| | | | docente               |. |  | correlacionar 2 seniales con CIAA  
+1  Jacobo     Salvador     jacosalvador@gmail.com          |x|x|x|x|x|x| | | docente               |. |  | correlacionar 2 seniales con CIAA  
 2  Pablo      Zizzutti     pablozizzutti@gmail.com         |x|x|x|x|x| | | | automatizacion        |. |  | analizador de espetro con M7 de STM a Python o en LCD
 3  Leopoldo   Zimperz      leopoldo.a.zimperz@gmail.com    |x|x|x|x|x| | | | sistemas pero en elec |. |  | analizador de espectro con la CIAA 
-4  Jhonattan  Camargo      u1802296@unimilitar.edu.co      |x|x|x|x|x| | | | mecatronico           |. |  | detector de taps con aceleromtro 
+4  Jhonattan  Camargo      u1802296@unimilitar.edu.co      |x|x|x|x|x|x| | | mecatronico           |. |  | detector de taps con aceleromtro 
 5  Nelson     Fortunatti   nelson.90.05@gmail.com          |x|x|x|x|x| | | | ing. electronico ITBA |  |  | calculo acelerometro con openGL y super algoritmo 
-6  Alejandro  Permingeat   apermingeat@gmail.com           |x|x|x|x|x| | | | informatico           |. |  | calculo de desplazamiento lineal en 3ejes diferenciando acelermotro 
+6  Alejandro  Permingeat   apermingeat@gmail.com           |x|x|x|x|x|x| | | informatico           |. |  | calculo de desplazamiento lineal en 3ejes diferenciando acelermotro 
 7  Matías     Brignone     mnbrignone@gmail.com            |x|x|x|x|x| | | | seniales              |. |  | detector de f max de una senial desde la PC a PC o LED
-8  Sebastian  Guarino      sebastian.guarino@gmail.com     |x|x|x|x|x| | | | electronico           |. |  | medicion de ruido ambiente
+8  Sebastian  Guarino      sebastian.guarino@gmail.com     |x|x|x|x|x|x| | | electronico           |. |  | medicion de ruido ambiente
 9  Edgardo    Torrelli     edgar.torre.acad.2019@gmail.com |x|x|x|x|x| | | | sistemas              |E |  |  
-10 Jairo      Muñoz        jamenaso@gmail.com              |x|x|x|x|x| | | | electronico iot       |. |  | medir armonicos de V y I para medir calidad de energia 
+10 Jairo      Muñoz        jamenaso@gmail.com              |x|x|x|x|x|x| | | electronico iot       |. |  | medir armonicos de V y I para medir calidad de energia 
 11 Leonardo   Urrego       l.urrego@gmail.com              |x|x|x|x| | | | | electronico           |  |  | direccion de audio 
-12 Danilo     Zecchin      d.zecchin@gmail.com             |x|x|x|x|x| | | | informatico           |. |  | captura seniales y usa SIMD 
-13 Jenny      Chavez       jenniffer.chavez@gmail.com      |x|x|x|x|x| | | | informatica           |. |  | acelerometro para detectar pulsos y encender alarma 
+12 Danilo     Zecchin      d.zecchin@gmail.com             |x|x|x|x|x|x| | | informatico           |. |  | captura seniales y usa SIMD 
+13 Jenny      Chavez       jenniffer.chavez@gmail.com      |x|x|x|x|x|x| | | informatica           |. |  | acelerometro para detectar pulsos y encender alarma 

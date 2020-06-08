@@ -162,43 +162,62 @@
  \section{Generación de señales con el DAC}
 %-------------------------------------------------------------------------------
  \subsection{Generación de señales con el DAC}
- \begin{frame}[t]{Generación de audio con el DAC de la CIAA}{ARM CMSIS-DSP lib \tiny
-    \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.HTML}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
-    }
+ \begin{frame}[t]{Generación de audio con el DAC de la CIAA}{}
     \protoboardicon
-    Con arm\_sin\_f32 se genera un tono y se convierte a analógico con el DAC
-    \normalsize
-       \lstset{ basicstyle=\fontsize{ 7}{ 5}\selectfont\ttfamily,language=c,tabsize=4}
-       \begin{columns}[t]
-          \hspace{2pt}
-          \begin{column}[c]{.2\textwidth}
-             \lstinputlisting[lastline=18]{2_clase/ciaa/psf2/src/psf.c}
-          \end{column}
-          \hspace{2pt}
-          \vrule
-          \hspace{2pt}
-          \begin{column}[c]{.4\textwidth}
-             \lstinputlisting[firstline=19]{2_clase/ciaa/psf2/src/psf.c}
-          \end{column}
-          \hspace{2pt}
-          \vrule
-          \hspace{2pt}
-          \begin{column}[c]{.4\textwidth}
-             \begin{center}
-                \includegraphics[width=6cm,height=2.8cm]{2_clase/ciaa_audio_gen1.png} \\
-                \includegraphics[width=6cm,height=2.8cm]{2_clase/ciaa_audio_gen2.png}
-             \end{center}
-          \end{column}
-          \hspace{2pt}
-       \end{columns}
-   \vfill
+    \videoicon{2}{54m18s}
+    \footnotesize
+    \begin{itemize}
+       \item{Con arm\_sin\_f32 se genera un tono y se convierte a analógico con el DAC}
+       \item{Se utiliza visualize.py del lado de la PC para graficar lo recibido}
+       \item{Se samplean 512 (LENGTH) datos y luego mientras se envían por la uart se siguen capturando}
+       \item{De esta manera no se pierden samples y se logra reconstruir en la PC la señal completa sin cortes}
+    \end{itemize}
+
+    \begin{columns}[t]
+       \hspace{2pt}
+       \begin{column}[c]{.5\textwidth}
+          \pythonpic{2\_clase/ciaa/psf2/src/psf.c}
+          {https://drive.google.com/open?id=1lGD5CJoPD1GmGyu78g_W9f37QP9JPP6Z}
+          {0.7}
+          {2_clase/audio_gen1}
+       \end{column}
+       \hspace{2pt}
+       \vrule
+       \hspace{2pt}
+       \begin{column}[c]{.5\textwidth}
+          \pythonpic{2\_clase/ciaa/psf2/visualize.py}
+          {https://drive.google.com/open?id=1vgw68wDJ6770iPy_t5rtMYXXovEY7wXw}
+          {0.7}
+          {2_clase/audio_gen2}
+       \end{column}
+       \hspace{2pt}
+    \end{columns}
+    \vfill
  \end{frame}
 %-------------------------------------------------------------------------------
  \subsection{CMSIS}
  \begin{frame}[t]{Documentación}{ARM CMSIS-DSP lib \tiny
     \href{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}{https://www.keil.com/pack/doc/CMSIS/DSP/html/group\_\_sin.html}
     }
-    \center\includegraphics[width=0.5\textwidth]{2_clase/cmsis_page}
+    \videoicon{2}{58m41s}
+    \footnotesize
+    \begin{columns}[t]
+       \hspace{2pt}
+       \begin{column}[c]{.4\textwidth}
+    \begin{itemize}
+       \item{CMSIS-DSP Cuenta con una buena documentation on line de la API}
+       \item{Es muy importante consultar la documentación de las funciones que se dispongan a usar para evitar errores}
+       \item{Esta biblioteca esta portada para muchas familias de procesadores, permitiendo la reutilización de código}
+    \end{itemize}
+       \end{column}
+       \hspace{2pt}
+       \vrule
+       \hspace{2pt}
+       \begin{column}[c]{.6\textwidth}
+          \center\includegraphics[width=0.85\textwidth]{2_clase/cmsis_page}
+       \end{column}
+       \hspace{2pt}
+    \end{columns}
  \end{frame}
 %-------------------------------------------------------------------------------
  \section{Números formato Q}

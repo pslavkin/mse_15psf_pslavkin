@@ -1,2 +1,4 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{CIAA}{8}{0}{1}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{Python}{7}{0}{1}
+\beamer@sectionintoc {2}{numpy}{13}{0}{2}

@@ -82,18 +82,28 @@
    \end{center}
 }
 
-\newcommand{\videoicon}[1]{
-   \begin{tikzpicture}[overlay,remember picture]
-      \node[anchor=south east,xshift=-45pt,yshift=0.89\textheight]
-      at (current page.south east) {
-         \href{https://drive.google.com/file/d/1L23UbjTB2uUvOeMPF_yV5QS6gWkCxPnN/view?t=#1}
-         {\includegraphics[width=10mm]{resources/video_icon}}
-      };
-      \node[anchor=south east,xshift=-47pt,yshift=0.86\textheight]
-      at (current page.south east) {
-         \tiny{#1}
-      };
-   \end{tikzpicture}
+\newcommand{\videoslink}[1]{
+   \let\videolink\undefined %primero lo borro porque si llamo con otro parametro en el mismo documento se queja
+   \ifthenelse{\equal{#1}{1}}{\newcommand\videolink{https://drive.google.com/file/d/1c2TZLObWEAacB-EzCjFczHrTLzeaOhSI}}{}
+   \ifthenelse{\equal{#1}{2}}{\newcommand\videolink{https://drive.google.com/file/d/1dguQYABcfy_BVhJNta_jARjZp1a48pqa}}{}
+   \ifthenelse{\equal{#1}{3}}{\newcommand\videolink{https://drive.google.com/file/d/1ZenOaxlZaxevdkB5JrGS_1dV5ME9edIS}}{}
+   \ifthenelse{\equal{#1}{4}}{\newcommand\videolink{https://drive.google.com/file/d/1TBlo1pg1OS6e8gbgBsHCAlncdCb4wPtr}}{}
+   \ifthenelse{\equal{#1}{5}}{\newcommand\videolink{https://drive.google.com/file/d/1L23UbjTB2uUvOeMPF_yV5QS6gWkCxPnN}}{}
+   \ifthenelse{\equal{#1}{6}}{\newcommand\videolink{https://drive.google.com/file/d/195_PoRe4Hd9CqPcAU0gmStt_dX00PJ62}}{}
+}
+
+\newcommand{\videoicon}[2]{
+   \videoslink{#1}
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south east,xshift=-45pt,yshift=0.89\textheight]
+         at (current page.south east) {
+           \href{\videolink/view?t=#2}{\includegraphics[width=10mm]{resources/video_icon}}
+         };
+         \node[anchor=south east,xshift=-47pt,yshift=0.86\textheight]
+         at (current page.south east) {
+            \tiny{#2}
+         };
+      \end{tikzpicture}
 }
 \newcommand{\handsonicon}{
   \begin{tikzpicture}[overlay,remember picture]
