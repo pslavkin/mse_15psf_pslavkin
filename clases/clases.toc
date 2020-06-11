@@ -1,4 +1,9 @@
-\babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{7}{0}{1}
-\beamer@subsectionintoc {1}{1}{Python}{7}{0}{1}
-\beamer@sectionintoc {2}{numpy}{13}{0}{2}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{LTI}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Sistemas LTI}{2}{0}{1}
+\beamer@sectionintoc {2}{Ruido de cuantizaci\IeC {\'o}n}{3}{0}{2}
+\beamer@sectionintoc {3}{FAA}{4}{0}{3}
+\beamer@sectionintoc {4}{Python - Numpy}{5}{0}{4}
+\beamer@sectionintoc {5}{CIAA}{6}{0}{5}
+\beamer@sectionintoc {6}{CMSIS}{7}{0}{6}
