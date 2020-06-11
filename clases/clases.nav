@@ -1,7 +1,13 @@
+\beamer@endinputifotherversion {3.33pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\sectionentry {1}{LTI}{2}{LTI}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Sistemas LTI}}\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\slideentry {1}{1}{1}{2/2}{Sistemas LTI}{0}}
 \headcommand {\beamer@framepages {2}{2}}
+<<<<<<< HEAD
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\sectionentry {1}{CIAA}{3}{CIAA}{0}}
@@ -14,3 +20,35 @@
 \headcommand {\beamer@sectionpages {1}{4}}
 \headcommand {\beamer@documentpages {4}}
 \headcommand {\gdef \inserttotalframenumber {3}}
+=======
+\headcommand {\sectionentry {2}{Ruido de cuantizaci\IeC {\'o}n}{3}{Ruido de cuantizaci\IeC {\'o}n}{0}}
+\headcommand {\beamer@sectionpages {2}{2}}
+\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {2}{0}{2}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {3}{FAA}{4}{FAA}{0}}
+\headcommand {\beamer@sectionpages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {3}{0}{3}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\sectionentry {4}{Python - Numpy}{5}{Python - Numpy}{0}}
+\headcommand {\beamer@sectionpages {4}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {4}{0}{4}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\sectionentry {5}{CIAA}{6}{CIAA}{0}}
+\headcommand {\beamer@sectionpages {5}{5}}
+\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {5}{0}{5}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@partpages {1}{7}}
+\headcommand {\beamer@subsectionpages {1}{7}}
+\headcommand {\beamer@sectionpages {1}{7}}
+\headcommand {\beamer@documentpages {7}}
+\headcommand {\def \inserttotalframenumber {6}}
+\headcommand {\sectionentry {6}{CMSIS}{7}{CMSIS}{0}}
+\headcommand {\beamer@sectionpages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {6}{0}{6}{7/7}{}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+>>>>>>> 0984a2200dc94367d7f037581acaad53386767d9
