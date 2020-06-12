@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import scipy.signal as sc
 #--------------------------------------
 fig        = plt.figure()
-fs         = 10000
-N          = 1024
-firData,=np.load("6_clase/l.npy").astype(float)
+fs         = 1000
+N          = 2048
+firData=np.transpose(np.load("7_clase/ciaa/psf2/band_pass.npy").astype(float))[0]
 
 #firData=np.insert(firData,0,firData[-1]) #ojo que pydfa me guarda 1 dato menos...
 M          = len(firData)
@@ -49,6 +49,6 @@ def convertToC(h,H,fileName):
         cFile.write("{},{},\n".format(np.real(i).astype(np.int16),np.imag(i).astype(np.int16)))
     cFile.write("};\n")
 
-convertToC(firExtendedData,HData,"6_clase/ciaa/psf2/fir.h")
+convertToC(firExtendedData,HData,"7_clase/ciaa/psf2/src/fir.h")
 plt.get_current_fig_manager().window.showMaximized()
 plt.show()

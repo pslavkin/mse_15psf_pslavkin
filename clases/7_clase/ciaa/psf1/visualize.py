@@ -5,10 +5,10 @@ import os
 import scipy.fftpack as sc
 from   scipy.io.wavfile import write
 
-fs=10000
+fs=1000
 
-fftLength  = 32
-convLength = 32
+fftLength  = 256
+convLength = 2048
 fig                 = plt.figure ( )
 adcAxe            = fig.add_subplot ( 3,1,1 )
 adcAxe.grid ( True )
@@ -41,12 +41,12 @@ def initFiles():
     logFile.seek(0, os.SEEK_END)
 
 def fileForward(f):
-    packetLegth=len(b'header')+2+2+6*convLength+2+2
+    packetLegth=len(b'header')+4*fftLength+2+2
     oldPos = f.tell()
     f.seek(0, os.SEEK_END)
     size = f.tell()
     packetLoss=(size-oldPos)//packetLegth
-    print(packetLoss)
+    #print(packetLoss)
     f.seek(oldPos+packetLoss*packetLegth, os.SEEK_SET)
 
 def findHeader(f):
@@ -73,42 +73,45 @@ def readInt4File(f):
     return (int.from_bytes(raw[0:2],"little",signed=True))
 
 def readFile(f):
+    global convLength,fftLength
     fileForward(f)
     findHeader(f)
-    fftLength  = readInt4File(f)
-    convLength = readInt4File(f)
     ciaaDft    = []
     adc        = []
     h          = []
-    for chunk in range(convLength):
+    for chunk in range(fftLength):
         adc.append ( readInt4File(f )/(2**15))
-    for chunk in range(convLength):
-        h.append ( readInt4File(f )/(2**15))
-    for chunk in range(convLength):
-        if(chunk%2==0):
-            real = readInt4File(f )/2**15
-        else:
-            im   = readInt4File(f )*1j/2**15
-            ciaaDft.append (real+im)
-    maxValue = readInt4File(f)/2**13
+        h.append ( 0)
+        ciaaDft.append ( readInt4File(f )/(2**0))
+        #if(chunk%2==0):
+        #    real = readInt4File(f )/2**0
+        #else:
+        #    im   = readInt4File(f )*1j/2**0
+        #    ciaaDft.append (real+im)
+    for chunk in range(convLength-fftLength):
+        h.append ( 0)
+        adc.append (0)
+    maxValue = readInt4File(f)/2**0
     maxIndex = readInt4File(f)
-    print(convLength)
+    print(maxIndex*fs/convLength)
+    print(maxValue)
+    #print(ciaaDft)
     #q6rint(maxIndex)
     #maxValue = (np.abs(ciaaDft[maxIndex])**2)
-    return maxIndex,maxValue,adc,h,ciaaDft,fftLength,convLength
+    return maxIndex,maxValue,adc,h,ciaaDft
 
 def init():
     global fftLength,convLength,dft,ciaaDft
     adcAxe.set_xlim     ( 0  ,convLength)
     hAxe.set_xlim     ( 0  ,convLength)
     dftAxe.set_ylim     ( 0  ,np.max(dft            )+0.001)
-    ciaaDftAxe.set_ylim ( 0  ,np.max(np.abs(ciaaDft )**2)+0.001)
+    ciaaDftAxe.set_ylim ( 0  ,1000)#np.max(ciaaDft))#np.max(np.abs(ciaaDft )**2)+0.001)
     plt.draw()
     return adcLn,dftLn,ciaaDftLn,ciaaMaxLn,hLn
 
 def update(t):
     global logFile,fftLength,convLength,dft,ciaaDft,fs
-    maxIndex,maxValue,adc,h,ciaaDft,fftLength,convLength=readFile(logFile)
+    maxIndex,maxValue,adc,h,ciaaDft=readFile(logFile)
     time = np.arange(0,convLength,1)
     frec = np.linspace(0,fs//2,convLength//2)
     dft  = (np.abs(np.fft.fft(adc))/len(adc))**2
@@ -117,7 +120,9 @@ def update(t):
 
     adcLn.set_data(time,adc)
     dftLn.set_data(frec,dft[:convLength//2])
-    ciaaDftLn.set_data(frec,np.abs(ciaaDft)**2)
+    #ciaaDftLn.set_data(frec[32:fftLength//2],np.abs(ciaaDft)**2)
+    firstIndex=max(maxIndex-fftLength//2,0)
+    ciaaDftLn.set_data(frec[firstIndex:firstIndex+fftLength],ciaaDft[:fftLength])
     ciaaMaxLn.set_data(frec[maxIndex],maxValue)
     return adcLn,dftLn,ciaaDftLn,ciaaMaxLn,hLn
 

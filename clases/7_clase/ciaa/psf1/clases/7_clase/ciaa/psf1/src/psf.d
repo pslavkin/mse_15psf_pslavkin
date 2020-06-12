@@ -1,5 +1,5 @@
-../clases/5_clase/ciaa//psf1/out/../clases/5_clase/ciaa//psf1/src/psf.o: \
- ../clases/5_clase/ciaa//psf1/src/psf.c \
+../clases/7_clase/ciaa//psf1/out/../clases/7_clase/ciaa//psf1/src/psf.o: \
+ ../clases/7_clase/ciaa//psf1/src/psf.c \
  libs/sapi/sapi_v0.5.2/base/inc/sapi.h \
  libs/sapi/sapi_v0.5.2/base/inc/sapi_datatypes.h \
  libs/lpc_open/lpc_chip_43xx/inc/chip.h \
@@ -123,4 +123,4 @@
  libs/sapi/sapi_v0.5.2/external_peripherals/ultrasonic/hcsr04/inc/sapi_ultrasonic_hcsr04.h \
  libs/cmsis_dsp//inc/arm_math.h libs/cmsis_dsp//inc/arm_const_structs.h \
  libs/cmsis_dsp//inc/arm_math.h libs/cmsis_dsp//inc/arm_common_tables.h \
- ../clases/5_clase/ciaa//psf1/src/fir.h
+ ../clases/7_clase/ciaa//psf1/src/fir.h
