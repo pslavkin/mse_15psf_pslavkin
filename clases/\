@@ -1,0 +1,135 @@
+\subtitle{Clase 7 - Ejemplo de presentacion - Repaso}
+
+\begin{frame}[c]
+\maketitle
+\begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,xshift=-30pt,yshift=45pt]
+      at (current page.south east) {
+        \includegraphics[width=0.2\textwidth]{7_clase/afinador_icon}
+      };
+  \end{tikzpicture}
+     \note{
+        \begin{itemize}
+           \item{comentar lo de los cambios en los archivos del drive}
+           \item{comentar lo del espacio para que suban los trabajos los alumnos}
+        \end{itemize}
+     }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Requisitos:Medir y comparar los tonos de las cuerdas al aire}
+   \videoicon{7}{00m00s}
+   \begin{columns}
+      \begin{column}{.3\textwidth}
+         \begin{itemize}
+            \item{E=329.63}
+            \item{B=246.94}
+            \item{G=196.00}
+            \item{D=146.83}
+            \item{A=110.00}
+            \item{E= 82.41}
+         \end{itemize}
+      \end{column}
+      \begin{column}{.7\textwidth}
+         \center\includegraphics[width=1.0\textwidth]{7_clase/chords_frec}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Requisitos}
+   \videoicon{7}{00m00s}
+         \begin{itemize}
+            \item{Se define un rango de 60Hz a 380Hz}
+            \item{Se samplea a FS=1000hz dado que 1000/2>380}
+            \item{Reolucion en frecuencia esperada 0.1hz}
+            \item{Refresco de muestras en grafico ~4hz => N=256 dado que a 1k son 256msegs ~4hz}
+            \item{Resolucion en f=fs/N = 1000/256 = 4hz => Se hace padding hasta 2048. 1000/2048=0.5}
+         \end{itemize}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Plantilla de filtro}
+   \videoicon{7}{00m00s}
+   \begin{columns}[t]
+      \footnotesize
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{Pasabanda de 60 a 380}
+            \item{Elimino los 50Hz}
+            \item{h(n) con n~156}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+         \center\includegraphics[width=1.0\textwidth]{7_clase/filter_template}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\section{CIAA}
+\begin{frame}[t]{Filtrado con CIAA}{Conversor PyFDA a fir.h para C}
+   \handsonicon
+   \videoicon{7}{0h00m00s}
+   \begin{columns}[t]
+      \begin{column}{.4\textwidth}
+         \begin{itemize}
+            \item{bla}
+            \item{bla}
+            \item{bla}
+         \end{itemize}
+      \end{column}
+      \hspace{2pt}
+      \vrule
+      \hspace{2pt}
+      \begin{column}{.6\textwidth}
+      \end{column}
+      \hspace{2pt}
+   \end{columns}
+
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{bla}
+         \item{bla}
+         \item{bla}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}{Bibliografía}
+   \framesubtitle{Libros, links y otro material}
+   \begin{thebibliography}{9}
+         \bibitem{cmsisdsp}
+         \emph{ARM CMSIS DSP}. \\
+         \href {https://arm-software.github.io/CMSIS_5/DSP/html/index.html}{https://arm-software.github.io/CMSIS\_5/DSP/html/index.html}
+         \bibitem{dsp}
+         Steven W. Smith.
+         \emph{The Scientist and Engineer's Guide to Digital Signal Processing}.
+         Second Edition, 1999.
+         \bibitem{Teorema de la convolucion}
+         \emph{Wikipedia}. \\
+         \href {https://en.wikipedia.org/wiki/Convolution\_theorem}{https://en.wikipedia.org/wiki/Convolution\_theorem}
+   \end{thebibliography}
+\end{frame}

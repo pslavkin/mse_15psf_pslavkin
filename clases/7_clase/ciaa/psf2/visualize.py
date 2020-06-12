@@ -19,7 +19,8 @@ chordsColors=["green","yellow","red","blue","magenta","black"]
 fftLength  = 128
 convLength = 2048
 
-fig    = plt.figure ( )
+fig    = plt.figure ()
+plt.title("CIAA Guitar Tuner",fontsize=20)
 adcAxe = fig.add_subplot ( 3,1,1 )
 adcAxe.grid ( True )
 adcLn, = plt.plot ( [0],[0],'r-' )
@@ -29,6 +30,7 @@ adcAxe.set_ylim     ( -0.6 ,0.6         )
 ciaaDftAxe          = fig.add_subplot ( 3,1,3 )
 ciaaDftLn , = plt.step ( [0] ,[0] ,'k-' )
 ciaaMaxLn , = plt.plot ( 0   ,0   ,'bo')
+ciaaFftLn , = plt.plot ( 0   ,0   ,'m-')
 ciaaDftAxe.grid ( True )
 ciaaDftAxe.set_xlim ( 0  ,fs//2   )
 ciaaDftAxe.legend(loc='upper center')
@@ -43,8 +45,9 @@ for i in range(6):
 #    chordAxe.fill_between( chordsFrecs[i]-CHORD_WIDTh ,chordsFrecs[i]+CHORD_WIDTh,0,10,facecolor = "green",alpha   = 0.4)
     chordAxe.set_xlim ( chordsFrecs[i]-CHORD_WIDTh  ,chordsFrecs[i]+CHORD_WIDTh   )
     chordAxe.set_ylim ( 0  ,10   )
+    plt.axvline(chordsFrecs[i])
     Ln,  = plt.plot ( 0,0,'k',label=chordsFrecs[i])
-    chordAxe.legend(loc='upper center',prop={'size': 20})
+    chordAxe.legend(loc='upper right',prop={'size': 16})
     chordLn.append(Ln)
     chordAxe.grid ( True )
 
@@ -111,9 +114,12 @@ def readFile(f):
 
 def init():
     global fftLength,convLength,dft,ciaaDft,maxIndex
-    ciaaDftAxe.set_ylim ( 0  ,np.max(ciaaDft))
+    ylim=np.max(ciaaDft)
+    if ylim<100:
+        ylim=100
+    ciaaDftAxe.set_ylim ( 0  ,ylim)
     plt.draw()
-    return adcLn,ciaaDftLn,ciaaMaxLn
+    return adcLn,ciaaDftLn,ciaaMaxLn,ciaaFftLn
 
 def update(t):
     global logFile,fftLength,convLength,dft,ciaaDft,fs,maxIndex,chordLn
@@ -122,16 +128,14 @@ def update(t):
     frec = np.linspace(0,fs//2,convLength//2)
 
     adcLn.set_data(time,adc)
-
+    ciaaFftLn.set_data(frec,np.abs(np.fft.fft(adc)[:convLength//2])**2)
     firstIndex=max(maxIndex-fftLength//2,0)
     lastIndex=min(convLength//2,firstIndex+fftLength)
     ciaaDftLn.set_data(frec[firstIndex:lastIndex],ciaaDft[:lastIndex-firstIndex])
     ciaaMaxLn.set_data(frec[maxIndex],maxValue)
     ciaaMaxLn.set_label(round(maxPromIndex,2))
-    ciaaLegendLn=ciaaDftAxe.legend(loc='upper center',prop={'size': 26})
+    ciaaLegendLn=ciaaDftAxe.legend(loc='upper right',prop={'size': 26})
 
-#    for i in chordLn:
-#        i.set_data(maxPromIndex)
     multiIndex=np.full(10,maxPromIndex)
     multiData=np.arange(0,10,1)
     for i in chordLn:
@@ -141,10 +145,11 @@ def update(t):
         i.set_data(multiIndex,multiData)
         i.set_data(multiIndex,multiData)
         i.set_data(multiIndex,multiData)
-    return adcLn,ciaaDftLn,ciaaMaxLn,ciaaLegendLn,chordLn[0],chordLn[1],chordLn[2],chordLn[3],chordLn[4],chordLn[5]
+    return adcLn,ciaaDftLn,ciaaMaxLn,ciaaLegendLn,chordLn[0],chordLn[1],chordLn[2],chordLn[3],chordLn[4],chordLn[5],ciaaFftLn
 
 
 initFiles()
-ani=FuncAnimation(fig, update, 10, init, blit=True, interval=20, repeat=True)
+ani=FuncAnimation(fig, update, 10, init, blit=True, interval=50, repeat=True)
+plt.get_current_fig_manager().window.showMaximized()
 plt.show()
 

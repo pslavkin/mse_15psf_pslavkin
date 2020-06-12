@@ -16,25 +16,100 @@
      }
 \end{frame}
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Afinador de Guitarra}{Requisitos}
+\begin{frame}[t]{Afinador de Guitarra}{Requisitos:Medir y comparar los tonos de las cuerdas al aire}
    \videoicon{7}{00m00s}
-
-   \begin{columns}[t]
-      \footnotesize
-      \begin{column}{.4\textwidth}
+   \begin{columns}
+      \begin{column}{.3\textwidth}
          \begin{itemize}
-            \item{bla}
-            \item{bla}
-            \item{bla}
+            \item{E=329.63}
+            \item{B=246.94}
+            \item{G=196.00}
+            \item{D=146.83}
+            \item{A=110.00}
+            \item{E= 82.41}
          \end{itemize}
       \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.6\textwidth}
-         \center\includegraphics[width=0.4\textwidth]{7_clase/afinador_icon}
+      \begin{column}{.7\textwidth}
+         \center\includegraphics[width=1.0\textwidth]{7_clase/chords_frec}
       \end{column}
-      \hspace{2pt}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Estrategia}
+   \videoicon{7}{00m00s}
+   \footnotesize
+   \begin{columns}
+      \begin{column}{.5\textwidth}
+         \begin{itemize}
+            \item{Se define un rango de 60Hz a 380Hz}
+            \item{Filtro antialiasing 1er orden en 350Hz. R=15k C=33nF}
+            \item{Se samplea a FS=1000hz dado que 1000/2>380}
+            \item{Resolucion en frecuencia deseada 0.1hz}
+            \item{Refresco de muestras en grafico ~8hz => N=128 dado que a 1k son 128msegs ~8hz}
+            \item{Resolucion en f=fs/N = 1000/128 ~8hz => Se hace padding hasta 2048. 1000/2048=0.5Hz}
+            \item{Se utiliza centroide en f para mejorar la resolucion}
+         \end{itemize}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         \center\includegraphics[width=0.8\textwidth]{7_clase/bloques}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Plantilla de filtro}
+   \videoicon{7}{00m00s}
+      \footnotesize
+         \begin{itemize}
+            \item{Pasabanda de 60 a 380}
+            \item{Elimino los 50Hz}
+            \item{h(n) con n~156}
+         \end{itemize}
+         \begin{columns}
+            \begin{column}{.5\textwidth}
+               \includegraphics[width=1.0\textwidth]{7_clase/filter_template}
+            \end{column}
+            \begin{column}{.5\textwidth}
+               \includegraphics[width=0.8\textwidth]{7_clase/fir_to_c}
+            \end{column}
+         \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Max y Local Max}
+   \videoicon{7}{00m00s}
+   \footnotesize
+   \lstset{ basicstyle=\fontsize{ 8}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}
+      \begin{column}{.5\textwidth}
+         \begin{itemize}
+            \item{Busco el maximo bin de la DFT}
+            \item{Usando un threshold de 1/10 de ese maximo busco un maximo local}
+         \end{itemize}
+      \lstinputlisting[firstline=84,lastline=102]{7_clase/ciaa/psf2/src/psf.c}
+      \end{column}
+      \begin{column}{.5\textwidth}
+         \includegraphics[width=0.9\textwidth]{7_clase/local_max}
+      \end{column}
    \end{columns}
    \vfill
    \note{
@@ -46,32 +121,55 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
-\section{CIAA}
-\begin{frame}[t]{Filtrado con CIAA}{Conversor PyFDA a fir.h para C}
-   \handsonicon
-   \videoicon{7}{0h00m00s}
-   \begin{columns}[t]
-      \begin{column}{.4\textwidth}
+\begin{frame}[t]{Afinador de Guitarra}{Centroide}
+   \videoicon{7}{00m00s}
+   \footnotesize
+   \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily,language=c,tabsize=4}
+   \begin{columns}
+      \begin{column}{.5\textwidth}
          \begin{itemize}
-            \item{bla}
-            \item{bla}
-            \item{bla}
+            \item{Calculo el centroide de 21 puntos para aumentar la resolucion de 0.5 a 0.025}
          \end{itemize}
+      \lstinputlisting[firstline=103,lastline=115]{7_clase/ciaa/psf2/src/psf.c}
       \end{column}
-      \hspace{2pt}
-      \vrule
-      \hspace{2pt}
-      \begin{column}{.6\textwidth}
+      \begin{column}{.5\textwidth}
+         \includegraphics[width=1.0\textwidth]{7_clase/centroide}
       \end{column}
-      \hspace{2pt}
    \end{columns}
-
    \vfill
    \note{
       \begin{itemize}
-         \item{bla}
-         \item{bla}
-         \item{bla}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{GUI}
+   \videoicon{7}{00m00s}
+   \footnotesize
+   \begin{columns}
+      \begin{column}{.3\textwidth}
+         \begin{itemize}
+            \item{Señal analogica de 128 pts}
+            \item{DFT de 128pts desde CIAA}
+            \item{DFT de 2048pts en Python para referencia}
+            \item{Indicador de maximo local}
+            \item{Indicador de frecuencia estimada con centroide}
+            \item{Zoom de frecuencia para cada cuerda}
+         \end{itemize}
+      \end{column}
+      \begin{column}{.7\textwidth}
+       \href{run:./1_clase/tuner.mp4}{
+         \includegraphics[width=1.0\textwidth]{7_clase/tuner1}
+       }
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
       \end{itemize}
    }
 \end{frame}
