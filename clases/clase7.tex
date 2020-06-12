@@ -54,6 +54,7 @@
             \item{Resolucion en frecuencia deseada 0.1hz}
             \item{Refresco de muestras en grafico ~8hz => N=128 dado que a 1k son 128msegs ~8hz}
             \item{Resolucion en f=fs/N = 1000/128 ~8hz => Se hace padding hasta 2048. 1000/2048=0.5Hz}
+            \item{Se realiza un average de 2 espectros consecutivos para aumentar la SNR}
             \item{Se utiliza centroide en f para mejorar la resolucion}
          \end{itemize}
       \end{column}
@@ -102,10 +103,10 @@
    \begin{columns}
       \begin{column}{.5\textwidth}
          \begin{itemize}
-            \item{Busco el maximo bin de la DFT}
-            \item{Usando un threshold de 1/10 de ese maximo busco un maximo local}
+            \item{Busco el máximo bin de la DFT}
+            \item{Usando un threshold de 1/10 de ese máximo busco un máximo local}
          \end{itemize}
-      \lstinputlisting[firstline=84,lastline=102]{7_clase/ciaa/psf2/src/psf.c}
+      \lstinputlisting[firstline=81,lastline=99]{7_clase/ciaa/psf3/src/psf.c}
       \end{column}
       \begin{column}{.5\textwidth}
          \includegraphics[width=0.9\textwidth]{7_clase/local_max}
@@ -121,19 +122,46 @@
 \end{frame}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
-\begin{frame}[t]{Afinador de Guitarra}{Centroide}
+\begin{frame}[t]{Afinador de Guitarra}{Centroide y average}
    \videoicon{7}{00m00s}
    \footnotesize
-   \lstset{ basicstyle=\fontsize{ 9}{ 2}\selectfont\ttfamily,language=c,tabsize=4}
+   \lstset{ basicstyle=\fontsize{ 6}{ 1}\selectfont\ttfamily,language=c,tabsize=4}
    \begin{columns}
       \begin{column}{.5\textwidth}
          \begin{itemize}
+            \item{Se toma el promedio del espectro actual con el promedio de todos los anteriores para aumentar la SNR y disminuir los saltos en amplitud en el espectro}
             \item{Calculo el centroide de 21 puntos para aumentar la resolucion de 0.5 a 0.025}
          \end{itemize}
-      \lstinputlisting[firstline=103,lastline=115]{7_clase/ciaa/psf2/src/psf.c}
+      \lstinputlisting[firstline=100,lastline=112]{7_clase/ciaa/psf3/src/psf.c}
+      \lstinputlisting[firstline=113,lastline=117]{7_clase/ciaa/psf3/src/psf.c}
       \end{column}
       \begin{column}{.5\textwidth}
          \includegraphics[width=1.0\textwidth]{7_clase/centroide}
+      \end{column}
+   \end{columns}
+   \vfill
+   \note{
+      \begin{itemize}
+         \item{}
+         \item{}
+      \end{itemize}
+   }
+\end{frame}
+%-------------------------------------------------------------------------------
+\begin{frame}[t]{Afinador de Guitarra}{Hardware Setup}
+   \videoicon{7}{00m00s}
+   \footnotesize
+   \begin{columns}[t]
+      \begin{column}{.3\textwidth}
+         \begin{itemize}
+            \item{Guitarra conectada a amplificado}
+            \item{Salida auriculares al antialias}
+            \item{Antialias a CIAA}
+            \item{CIAA a PC}
+         \end{itemize}
+      \end{column}
+      \begin{column}{.7\textwidth}
+         \center\includegraphics[width=0.55\textwidth]{7_clase/bloques_setup}
       \end{column}
    \end{columns}
    \vfill
@@ -154,14 +182,14 @@
             \item{Señal analogica de 128 pts}
             \item{DFT de 128pts desde CIAA}
             \item{DFT de 2048pts en Python para referencia}
-            \item{Indicador de maximo local}
+            \item{Indicador de máximo local}
             \item{Indicador de frecuencia estimada con centroide}
             \item{Zoom de frecuencia para cada cuerda}
          \end{itemize}
       \end{column}
       \begin{column}{.7\textwidth}
-       \href{run:./1_clase/tuner.mp4}{
-         \includegraphics[width=1.0\textwidth]{7_clase/tuner1}
+       \href{run:./7_clase/demo.mp4}{
+         \includegraphics[width=1.0\textwidth]{7_clase/tuner2}
        }
       \end{column}
    \end{columns}
