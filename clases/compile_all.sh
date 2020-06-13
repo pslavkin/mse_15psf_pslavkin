@@ -29,6 +29,11 @@ pdflatex "\def\CurrentAudience{clase6}\input{clases}"
 pdflatex "\def\CurrentAudience{clase6}\input{clases}"
 mv clases.pdf 6_clase/clase6.pdf
 latexmk -c
+pdflatex "\def\CurrentAudience{clase7}\input{clases}"
+pdflatex "\def\CurrentAudience{clase7}\input{clases}"
+pdflatex "\def\CurrentAudience{clase7}\input{clases}"
+mv clases.pdf 7_clase/clase7.pdf
+latexmk -c
 pdflatex "\def\CurrentAudience{tp1}\input{clases}"
 pdflatex "\def\CurrentAudience{tp1}\input{clases}"
 pdflatex "\def\CurrentAudience{tp1}\input{clases}"

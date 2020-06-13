@@ -8,7 +8,7 @@ listado alumnos 2020                                       |1|2|3|4|5|6|7|6|    
 6  Alejandro  Permingeat   apermingeat@gmail.com           |x|x|x|x|x|x| | | informatico           |. |  | calculo de desplazamiento lineal en 3ejes diferenciando acelermotro 
 7  Matías     Brignone     mnbrignone@gmail.com            |x|x|x|x|x| | | | seniales              |. |  | detector de f max de una senial desde la PC a PC o LED
 8  Sebastian  Guarino      sebastian.guarino@gmail.com     |x|x|x|x|x|x| | | electronico           |10|  | medicion de ruido ambiente
-9  Edgardo    Torrelli     edgar.torre.acad.2019@gmail.com |x|x|x|x|x| | | | sistemas              |9 |  |  
+9  Edgardo    Torrelli     edgar.torre.acad.2019@gmail.com |x|x|x|x|x| | | | sistemas              |9 |  |
 10 Jairo      Muñoz        jamenaso@gmail.com              |x|x|x|x|x|x| | | electronico iot       |. |  | medir armonicos de V y I para medir calidad de energia 
 11 Leonardo   Urrego       l.urrego@gmail.com              |x|x|x|x| | | | | electronico           |  |  | direccion de audio 
 12 Danilo     Zecchin      d.zecchin@gmail.com             |x|x|x|x|x|x| | | informatico           |. |  | captura seniales y usa SIMD 

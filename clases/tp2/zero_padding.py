@@ -5,7 +5,7 @@ from matplotlib.animation import FuncAnimation
 fig        = plt.figure()
 fs         = 200
 N1          =100
-N2          =0
+N2          =100000
 N=N1+N2
 frecIter   = 0
 signalFrec = 50
@@ -15,7 +15,7 @@ n1Data      = np.arange(0,N1,1)
 n2Data      = np.arange(N1,N1+N2,1)
 circleFrec = np.arange(-fs/2,fs/2,fs/N)
 #------------SIGNAL--------------------------
-signalData1 = 0.5*np.sin(2*np.pi*signalFrec*n1Data*1/fs)+0.5*np.sin(2*np.pi*(2.5+signalFrec)*n1Data*1/fs)
+signalData1 = 0.5*np.sin(2*np.pi*signalFrec*n1Data*1/fs)+0.1*np.sin(2*np.pi*(2.5+signalFrec)*n1Data*1/fs)
 signalData2 = np.zeros(abs(N2))
 signalData=np.concatenate((signalData1,signalData2))
 print(signalData)

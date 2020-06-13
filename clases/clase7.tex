@@ -1,4 +1,4 @@
-\subtitle{Clase 7 - Ejemplo de presentacion - Repaso}
+\subtitle{Clase 7 - Ejemplo de presentación\\Afinador de guitarra con la CIAA}
 
 \begin{frame}[c]
 \maketitle
@@ -51,11 +51,11 @@
             \item{Se define un rango de 60Hz a 380Hz}
             \item{Filtro antialiasing 1er orden en 350Hz. R=15k C=33nF}
             \item{Se samplea a FS=1000hz dado que 1000/2>380}
-            \item{Resolucion en frecuencia deseada 0.1hz}
-            \item{Refresco de muestras en grafico ~8hz => N=128 dado que a 1k son 128msegs ~8hz}
-            \item{Resolucion en f=fs/N = 1000/128 ~8hz => Se hace padding hasta 2048. 1000/2048=0.5Hz}
+            \item{Resolución en frecuencia deseada 0.1hz}
+            \item{Refresco de muestras en gráfico ~8hz => N=128 dado que a 1k son 128msegs ~8hz}
+            \item{Resolución en f=fs/N = 1000/128 ~8hz => Se hace padding hasta 2048. 1000/2048=0.5Hz}
             \item{Se realiza un average de 2 espectros consecutivos para aumentar la SNR}
-            \item{Se utiliza centroide en f para mejorar la resolucion}
+            \item{Se utiliza centroide en f para mejorar la resolución}
          \end{itemize}
       \end{column}
       \begin{column}{.5\textwidth}
@@ -109,7 +109,10 @@
       \lstinputlisting[firstline=81,lastline=99]{7_clase/ciaa/psf3/src/psf.c}
       \end{column}
       \begin{column}{.5\textwidth}
-         \includegraphics[width=0.9\textwidth]{7_clase/local_max}
+         \pythonpic{7\_clase/ciaa/psf3/src/psf.c}
+         {https://drive.google.com/open?id=1BS0hbD6D5TK63b13mqsn49tqGIzYUlUR}
+         {0.9}
+         {7_clase/local_max}
       \end{column}
    \end{columns}
    \vfill
@@ -130,13 +133,16 @@
       \begin{column}{.5\textwidth}
          \begin{itemize}
             \item{Se toma el promedio del espectro actual con el promedio de todos los anteriores para aumentar la SNR y disminuir los saltos en amplitud en el espectro}
-            \item{Calculo el centroide de 21 puntos para aumentar la resolucion de 0.5 a 0.025}
+            \item{Calculo el centroide de 21 puntos para aumentar la resolución de 0.5 a 0.025}
          \end{itemize}
       \lstinputlisting[firstline=100,lastline=112]{7_clase/ciaa/psf3/src/psf.c}
       \lstinputlisting[firstline=113,lastline=117]{7_clase/ciaa/psf3/src/psf.c}
       \end{column}
       \begin{column}{.5\textwidth}
-         \includegraphics[width=1.0\textwidth]{7_clase/centroide}
+         \pythonpic{7\_clase/ciaa/psf3/src/psf.c}
+         {https://drive.google.com/open?id=1BS0hbD6D5TK63b13mqsn49tqGIzYUlUR}
+         {1.0}
+         {7_clase/centroide}
       \end{column}
    \end{columns}
    \vfill
@@ -179,7 +185,7 @@
    \begin{columns}
       \begin{column}{.3\textwidth}
          \begin{itemize}
-            \item{Señal analogica de 128 pts}
+            \item{Señal analógica de 128 pts}
             \item{DFT de 128pts desde CIAA}
             \item{DFT de 2048pts en Python para referencia}
             \item{Indicador de máximo local}

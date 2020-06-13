@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  12 JUN 2020 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.11.6)  12 JUN 2020 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1520,39 +1520,39 @@ LaTeX Info: Redefining \selectfont on input line 9.
  (./clases.nav)
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 9.
- (./clase7.tex
-<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=14, 1271.75125pt x 427.5975pt>
+ (./tp2.tex
+<fibeamer/logo/mu/fibeamer-mu-fi-english.pdf, id=18, 1271.75125pt x 427.5975pt>
 
 File: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf Graphic file (type pdf)
 <use fibeamer/logo/mu/fibeamer-mu-fi-english.pdf>
 Package pdftex.def Info: fibeamer/logo/mu/fibeamer-mu-fi-english.pdf  used on i
-nput line 17.
+nput line 11.
 (pdftex.def)             Requested size: 149.36287pt x 44.81097pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 17.
+(Font)              scaled to size 17.28pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <17.28> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 17.
+(Font)              scaled to size 17.28pt on input line 11.
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 17--17
+Overfull \hbox (2.0pt too wide) in paragraph at lines 11--11
 [][]  
  []
 
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10.95> not availab
 le
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 17.
+(Font)              scaled to size 10.95pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <10> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 17.
-LaTeX Font Info:    Try loading font information for OT1+zavm on input line 17.
+(Font)              scaled to size 10.0pt on input line 11.
+LaTeX Font Info:    Try loading font information for OT1+zavm on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/arev/ot1zavm.fd
 File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
@@ -1580,24 +1580,24 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 8.50006pt on input line 17.
+(Font)              scaled to size 8.50006pt on input line 11.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.95004pt on input line 17.
+(Font)              scaled to size 5.95004pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 4.25003pt on input line 17.
-LaTeX Font Info:    Try loading font information for OMS+zavm on input line 17.
+(Font)              scaled to size 4.25003pt on input line 11.
+LaTeX Font Info:    Try loading font information for OMS+zavm on input line 11.
 
  (/usr/share/texlive/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+iwona on input line 17
+LaTeX Font Info:    Try loading font information for OMX+iwona on input line 11
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )<<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1605,7 +1605,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1614,23 +1614,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 17.
+(Font)              scaled to size 10.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 17.
+(Font)              scaled to size 7.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 17.
+(Font)              scaled to size 5.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 17.
+(Font)              scaled to size 10.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 17.
+(Font)              scaled to size 7.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 17.
+(Font)              scaled to size 5.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <14.4> not availabl
 e
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 17.
+(Font)              scaled to size 14.4pt on input line 11.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1638,21 +1638,21 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 12.24008pt on input line 17.
+(Font)              scaled to size 12.24008pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 17.
+(Font)              scaled to size 14.4pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 17.
+(Font)              scaled to size 14.4pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <12> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 17.
+(Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/bx/n' in size <8> not available
 (Font)              Font shape `T1/Carlito-LF/b/n' tried instead on input line 
-17.
+11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 17.
+(Font)              scaled to size 8.0pt on input line 11.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `OT1/zavm/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1672,176 +1672,89 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `OT1/zavm/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 10.20007pt on input line 17.
+(Font)              scaled to size 10.20007pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 6.80005pt on input line 17.
+(Font)              scaled to size 6.80005pt on input line 11.
 LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 5.10004pt on input line 17.
+(Font)              scaled to size 5.10004pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 17.
+(Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 17.
+(Font)              scaled to size 8.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 17.
+(Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 17.
+(Font)              scaled to size 8.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 17.
-<7_clase/afinador_icon.png, id=20, 170.6375pt x 170.6375pt>
-File: 7_clase/afinador_icon.png Graphic file (type png)
-<use 7_clase/afinador_icon.png>
-Package pdftex.def Info: 7_clase/afinador_icon.png  used on input line 17.
-(pdftex.def)             Requested size: 86.77957pt x 86.7792pt.
+(Font)              scaled to size 6.0pt on input line 11.
+<4_clase/euler6.png, id=24, 462.528pt x 346.896pt>
+File: 4_clase/euler6.png Graphic file (type png)
+<use 4_clase/euler6.png>
+Package pdftex.def Info: 4_clase/euler6.png  used on input line 11.
+(pdftex.def)             Requested size: 156.49014pt x 117.3661pt.
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 17.
+(Font)              scaled to size 4.0pt on input line 11.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fibeamer/logo/mu/fibeame
-r-mu-fi-english.pdf> <./7_clase/afinador_icon.png>]
-<resources/video_icon.jpg, id=33, 871.255pt x 583.17876pt>
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 43.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `OT1/zavm/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `OT1/zavm/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 43.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 43.
-<7_clase/chords_frec.png, id=34, 916.42375pt x 194.7275pt>
-File: 7_clase/chords_frec.png Graphic file (type png)
-<use 7_clase/chords_frec.png>
-Package pdftex.def Info: 7_clase/chords_frec.png  used on input line 43.
-(pdftex.def)             Requested size: 303.73184pt x 64.53957pt.
- [2
+r-mu-fi-english.pdf> <./4_clase/euler6.png>] [2
 
- <./resources/video_icon.jpg> <./7_clase/chords_frec.png>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 72.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 72.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `OT1/zavm/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `OT1/zavm/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
-(Font)              scaled to size 7.65005pt on input line 72.
-LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 72.
-<7_clase/bloques.pdf, id=44, 455.2441pt x 483.69685pt>
-File: 7_clase/bloques.pdf Graphic file (type pdf)
-<use 7_clase/bloques.pdf>
-Package pdftex.def Info: 7_clase/bloques.pdf  used on input line 72.
-(pdftex.def)             Requested size: 173.56247pt x 184.41191pt.
- [3
-
- <./7_clase/bloques.pdf>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 97.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-<7_clase/filter_template.png, id=58, 1332.98pt x 769.87625pt>
-File: 7_clase/filter_template.png Graphic file (type png)
-<use 7_clase/filter_template.png>
-Package pdftex.def Info: 7_clase/filter_template.png  used on input line 97.
-(pdftex.def)             Requested size: 216.95227pt x 125.29724pt.
-<7_clase/fir_to_c.png, id=59, 462.528pt x 346.896pt>
-File: 7_clase/fir_to_c.png Graphic file (type png)
-<use 7_clase/fir_to_c.png>
-Package pdftex.def Info: 7_clase/fir_to_c.png  used on input line 97.
-(pdftex.def)             Requested size: 173.56247pt x 130.17036pt.
- [4
-
- <./7_clase/filter_template.png> <./7_clase/fir_to_c.png>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 122.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-
+]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-)
 LaTeX Font Info:    Try loading font information for T1+DejaVuSansMono-TLF on i
-nput line 122.
+nput line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/dejavu/T1DejaVuSansMono-TLF.fd
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono
 -TLF.
 )
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 122.
+(Font)              scaled to size 5.10004pt on input line 59.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(./7_clase/ciaa/psf3/src/psf.c)
-<7_clase/local_max.png, id=68, 431.6125pt x 194.7275pt>
-File: 7_clase/local_max.png Graphic file (type png)
-<use 7_clase/local_max.png>
-Package pdftex.def Info: 7_clase/local_max.png  used on input line 122.
-(pdftex.def)             Requested size: 195.2557pt x 88.09007pt.
+(./tp2/zero_padding.txt)
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `OT1/zavm/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `OML/zavm/m/it' will be
+(Font)              scaled to size 9.30756pt on input line 59.
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 59.
+<tp2/zero_padding.png, id=42, 462.528pt x 346.896pt>
+File: tp2/zero_padding.png Graphic file (type png)
+<use tp2/zero_padding.png>
+Package pdftex.def Info: tp2/zero_padding.png  used on input line 59.
+(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+ [3
 
-Overfull \vbox (3.76617pt too high) detected at line 122
- []
+ <./tp2/zero_padding.png>]
+LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 83.
+<tp2/homer.png, id=51, 462.528pt x 346.896pt>
+File: tp2/homer.png Graphic file (type png)
+<use tp2/homer.png>
+Package pdftex.def Info: tp2/homer.png  used on input line 83.
+(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
+ [4
+
+ <./tp2/homer.png>]
+<tp2/chapu.png, id=59, 462.528pt x 346.896pt>
+File: tp2/chapu.png Graphic file (type png)
+<use tp2/chapu.png>
+Package pdftex.def Info: tp2/chapu.png  used on input line 104.
+(pdftex.def)             Requested size: 173.55916pt x 130.17036pt.
 
 [5
 
- <./7_clase/local_max.png>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 149.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 5.10004pt on input line 149.
- (./7_clase/ciaa/psf3/src/psf.c)
-(./7_clase/ciaa/psf3/src/psf.c)
-<7_clase/centroide.png, id=76, 673.51625pt x 161.60374pt>
-File: 7_clase/centroide.png Graphic file (type png)
-<use 7_clase/centroide.png>
-Package pdftex.def Info: 7_clase/centroide.png  used on input line 149.
-(pdftex.def)             Requested size: 216.95227pt x 52.05453pt.
- [6
-
- <./7_clase/centroide.png>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 174.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-<7_clase/bloques_setup.pdf, id=83, 455.2441pt x 483.69685pt>
-File: 7_clase/bloques_setup.pdf Graphic file (type pdf)
-<use 7_clase/bloques_setup.pdf>
-Package pdftex.def Info: 7_clase/bloques_setup.pdf  used on input line 174.
-(pdftex.def)             Requested size: 167.05344pt x 177.49629pt.
- [7
-
- <./7_clase/bloques_setup.pdf>]
-File: resources/video_icon.jpg Graphic file (type jpg)
-<use resources/video_icon.jpg>
-Package pdftex.def Info: resources/video_icon.jpg  used on input line 203.
-(pdftex.def)             Requested size: 28.45274pt x 19.04295pt.
-<7_clase/tuner2.png, id=105, 1371.1225pt x 770.88pt>
-File: 7_clase/tuner2.png Graphic file (type png)
-<use 7_clase/tuner2.png>
-Package pdftex.def Info: 7_clase/tuner2.png  used on input line 203.
-(pdftex.def)             Requested size: 303.73184pt x 170.75862pt.
- [8
-
- <./7_clase/tuner2.png>] [9
-
-])
+ <./tp2/chapu.png>])
 \tf@nav=\write6
 \openout6 = `clases.nav'.
 
@@ -1860,27 +1773,26 @@ LaTeX Info: Redefining \% on input line 24.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `clases.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 0C927748D7275FA5BB1DEED024B19C82;42.
  ) 
 Here is how much of TeX's memory you used:
- 32553 strings out of 492615
- 614386 string characters out of 6131390
- 1023824 words of memory out of 5000000
- 35552 multiletter control sequences out of 15000+600000
- 230024 words of font info for 149 fonts, out of 8000000 for 9000
+ 32459 strings out of 492615
+ 611701 string characters out of 6131390
+ 1124925 words of memory out of 5000000
+ 35507 multiletter control sequences out of 15000+600000
+ 216788 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,79p,823b,2113s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,16n,79p,823b,2125s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc
 }{/usr/share/texlive/texmf-dist/fonts/enc/dvips/carlito/crlt_csjzgd.enc}</usr/s
 hare/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb>
-Output written on clases.pdf (9 pages, 4726046 bytes).
+Output written on clases.pdf (5 pages, 234852 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 39548 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 34406 words of extra memory for PDF output out of 35830 (max. 10000000)
 
