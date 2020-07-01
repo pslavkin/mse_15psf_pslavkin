@@ -23,8 +23,6 @@ audioLn,= plt.plot(np.linspace(0,3,len(a)),a,'b-')
 
 play_obj = sa.play_buffer(a, 1, 2, fs)
 play_obj.wait_done()
-play_obj = sa.play_buffer(a, 1, 2, fs)
-play_obj.wait_done()
 
 signalAxe  = fig.add_subplot(4,1,2)
 signalLn,  = plt.plot(np.linspace(0,len(a)/fs,len(a)),a,'b-')
