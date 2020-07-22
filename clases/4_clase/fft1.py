@@ -1,21 +1,24 @@
 import numpy as np
+import scipy.signal as sc
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 #--------------------------------------
 fig        = plt.figure()
-fs         = 1000
-N          = 1000
+fs         = 100
+N          = 100
 frecIter   = 0
-signalFrec = 20
+signalFrec = 2
 #--------------------------------------
 tData      = np.arange(0,N/fs,1/fs)
 nData      = np.arange(0,N,1)
 circleFrec = np.arange(-fs/2,fs/2,fs/N)
 tt = np.full(N,0)
-tt[0]=1
+tt[0]=100
 
 #------------SIGNAL--------------------------
-signalData = np.sin(2*np.pi*signalFrec*nData*1/fs)
+#signalData = 1*np.sin(2*np.pi*signalFrec*nData*1/fs)
+#signalData = 2*sc.square(2*np.pi*signalFrec*nData*1/fs,0.5)
+signalData = 2*sc.sawtooth(2*np.pi*signalFrec*nData*1/fs,1)
 signalData = tt
 print("potencia en tiempo=",np.sum(signalData**2*1/fs)*fs/N)
 signalAxe  = fig.add_subplot(2,2,2)
